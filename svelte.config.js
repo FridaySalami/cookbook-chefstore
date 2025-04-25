@@ -29,7 +29,7 @@ const config = {
       strict: true
     }),
     paths: {
-      base: '/cookbook-chefstore'
+      base: ''
     },
     alias: {
       // Make sure the $lib alias is explicitly defined
