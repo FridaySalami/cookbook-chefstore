@@ -8,18 +8,20 @@
   export let cookTime = null;
   export let totalTime = null;
   export let difficulty = '';
-  
-  // These are unused but still exported - typed as empty strings/arrays
-  /** @type {string} */
-  export let date = '';
-  /** @type {string} */
-  export let updated = '';
-  /** @type {number|null} */
   export let servings = null;
+  
+  // These are unused but exported as constants since they're only for reference
+  /** @type {string} */
+  export const date = '';
+  /** @type {string} */
+  export const updated = '';
   /** @type {string[]} */
-  export let categories = [];
+  export const categories = [];
   /** @type {string[]} */
   export let tags = [];
+
+  // Optional: Display the date if desired
+  const formattedDate = date ? new Date(date).toLocaleDateString() : '';
 </script>
 
 <article class="max-w-3xl mx-auto px-6 md:px-8 py-8">
@@ -39,6 +41,11 @@
     <h1 class="text-3xl md:text-4xl font-bold mb-4" style="letter-spacing: -0.01em;">
       {title}
     </h1>
+    
+    <!-- Optional: Show the date if available -->
+    {#if formattedDate}
+      <p class="text-gray-500 text-sm mb-2">{formattedDate}</p>
+    {/if}
     
     {#if description}
       <p class="text-gray-600 text-lg mb-6">
