@@ -74,6 +74,8 @@
 	if (schema.image && (!schema.image[0] || !data.metadata?.image)) {
 		delete schema.image;
 	}
+
+	// NOTE: Removed the jsonLdScript variable and its construction logic
 </script>
 
 <svelte:head>
@@ -81,11 +83,15 @@
 	{#if data.metadata?.description}
 		<meta name="description" content={data.metadata.description} />
 	{/if}
-	<!-- Add JSON-LD Schema -->
+
+	<!-- Construct and render JSON-LD directly inside @html -->
 	{#if Object.keys(schema).length > 2}
-		<script type="application/ld+json">
-		{@html JSON.stringify(schema, null, 2)}
-		</script>
+		{@html (() => {
+			// Escape '<' for HTML safety
+			const safeJsonString = JSON.stringify(schema, null, 2).replace(/</g, '\\u003c');
+			// Return the full script tag string
+			return `<script type="application/ld+json">${safeJsonString}</script>`;
+		})()}
 	{/if}
 </svelte:head>
 
