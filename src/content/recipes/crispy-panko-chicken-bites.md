@@ -4,14 +4,13 @@ slug: crispy-panko-chicken-bites
 description: Golden, crunchy chicken bites coated in light panko breadcrumbs—perfect for dipping, snacking, or tossing into wraps and salads.
 date: 2025-04-24
 featured: true
-image: https://unsplash.com/photos/def456
+image: /images/recipes/category-name/recipe-name/crispy-panko-chicken-bites.png
 prepTime: 15
 cookTime: 10
 totalTime: 25
 servings: 4
 categories: [snack, main course]
-tags: [quick, family-friendly, crispy]
-difficulty: Easy
+tags: [quick, family-friendly, crispy, difficulty-easy]
 ---
 
 ## Why You'll Love This

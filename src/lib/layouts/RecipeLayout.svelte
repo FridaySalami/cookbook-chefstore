@@ -1,8 +1,10 @@
 <script lang="ts">
+	import { onMount, onDestroy } from 'svelte';
+	import { browser } from '$app/environment'; // Import browser check
 	import type { Snippet } from 'svelte'; // Import Snippet type
 	import { Badge } from '$lib/components/ui/badge';
 	import { Separator } from '$lib/components/ui/separator';
-	import { Clock, ChefHat, Users, ArrowLeft } from 'lucide-svelte'; // Import icons
+	import { Clock, ChefHat, Users, ArrowLeft, ArrowUp } from 'lucide-svelte'; // Import icons
 
 	// Metadata from the markdown frontmatter
 	let {
@@ -49,9 +51,39 @@
 			}
 		};
 	}
+
+	// State for Back to Top button visibility
+	let showBackToTop = $state(false); // Use $state for reactivity
+	let scrollY = 0;
+
+	function handleScroll() {
+		if (!browser) return; // Guard: Only run on client
+		scrollY = window.scrollY;
+		showBackToTop = scrollY > 300; // Show button after scrolling 300px
+	}
+
+	function scrollToTop() {
+		if (!browser) return; // Guard: Only run on client
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
+
+	onMount(() => {
+		// onMount only runs in the browser, no need for browser check here
+		window.addEventListener('scroll', handleScroll);
+		// Initial check in case the page loads scrolled down
+		handleScroll();
+	});
+
+	onDestroy(() => {
+		// onDestroy only runs in the browser, no need for browser check here
+		// Check if running in browser before removing listener, just to be safe
+		if (browser) {
+			window.removeEventListener('scroll', handleScroll);
+		}
+	});
 </script>
 
-<article class="mx-auto max-w-3xl px-4 py-8 md:px-6 lg:px-8">
+<article class="relative mx-auto max-w-3xl px-4 py-8 md:px-6 lg:px-8">
 	<!-- Hero Image -->
 	<div class="relative mb-8 h-[300px] overflow-hidden rounded-lg shadow-md md:h-[400px]">
 		<img use:fallbackImage src={image} alt={title} class="h-full w-full object-cover" />
@@ -132,6 +164,18 @@
 			Back to All Recipes
 		</a>
 	</div>
+
+	<!-- Back to Top Button -->
+	<!-- Use onclick attribute instead of on:click -->
+	{#if showBackToTop}
+		<button
+			onclick={scrollToTop}
+			aria-label="Scroll back to top"
+			class="bg-primary text-primary-foreground hover:bg-primary/90 focus:ring-ring fixed right-6 bottom-6 z-50 rounded-full p-3 shadow-lg transition-opacity focus:ring-2 focus:ring-offset-2 focus:outline-none md:right-8 md:bottom-8"
+		>
+			<ArrowUp class="h-5 w-5" />
+		</button>
+	{/if}
 </article>
 
 <style>

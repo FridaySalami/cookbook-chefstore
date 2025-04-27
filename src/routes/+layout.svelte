@@ -37,7 +37,7 @@
 
 	<!-- Main Content -->
 	<!-- Keep increased margin-top -->
-	<main class="container mx-auto mt-20 flex-grow px-4 py-8 md:px-6 lg:py-12">
+	<main class="container mx-auto mt-16 flex-grow px-4 py-8 md:px-6 lg:py-12">
 		{@render children()}
 	</main>
 

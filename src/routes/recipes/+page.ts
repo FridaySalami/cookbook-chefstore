@@ -17,6 +17,7 @@ interface RecipeMetadata {
   cookTime?: number;
   totalTime?: number;
   servings?: number; // Add missing servings property
+  tags?: string[]; // Add tags property
 }
 
 export const load: PageLoad = async () => {
@@ -31,14 +32,16 @@ export const load: PageLoad = async () => {
     const recipes = Object.entries(recipeModules)
       // Filter out modules that didn't load metadata correctly (e.g., empty files)
       .filter(([, module]) => module) // Simplified filter: just check if module exists
-      .map(([path, module]) => { // module here IS RecipeMetadata because of `import: 'metadata'`
+      .map(([path, module]) => {
+        // module here IS RecipeMetadata because of `import: 'metadata'`
         // Extract filename from path for fallback slug
         const filename = path.split('/').pop()?.replace('.md', '') || '';
 
         // module IS the metadata object directly
         return {
           ...module, // Spread the metadata object directly
-          slug: module.slug || filename
+          slug: module.slug || filename,
+          tags: module.tags || [] // Ensure tags is always an array
         };
       })
       // Filter out drafts in production
@@ -46,10 +49,13 @@ export const load: PageLoad = async () => {
       // Sort by date (newest first)
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-    return { recipes };
+    // Extract all unique tags
+    const allTags = [...new Set(recipes.flatMap(recipe => recipe.tags))].sort();
+
+    return { recipes, allTags }; // Return recipes and unique tags
   } catch (error) {
     console.error("Error loading recipes:", error);
 
-    return { recipes: [] };
+    return { recipes: [], allTags: [] }; // Return empty arrays on error
   }
 }

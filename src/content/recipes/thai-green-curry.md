@@ -7,16 +7,16 @@ image: https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd
 prepTime: 10
 cookTime: 20
 totalTime: 30
-difficulty: Medium
 servings: 4
 categories:
   - Asian
   - Main Course
 tags:
-  - Thai
-  - Curry
-  - Chicken
-  - Quick Dinner
+  - thai
+  - curry
+  - chicken
+  - quick
+  - difficulty-medium
 ---
 
 ## Ingredients
