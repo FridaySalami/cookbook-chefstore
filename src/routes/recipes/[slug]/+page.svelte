@@ -84,7 +84,7 @@
 	<!-- Add JSON-LD Schema -->
 	{#if Object.keys(schema).length > 2}
 		<script type="application/ld+json">
-		{JSON.stringify(schema, null, 2)}
+		{@html JSON.stringify(schema, null, 2)}
 		</script>
 	{/if}
 </svelte:head>
