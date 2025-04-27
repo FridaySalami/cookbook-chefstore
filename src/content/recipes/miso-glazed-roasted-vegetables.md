@@ -10,7 +10,7 @@ cookTime: 25
 totalTime: 35
 servings: 4
 categories: [side, vegan]
-tags: [umami, plant-based, difficulty-easy]
+tags: [plant-based, difficulty-easy]
 ---
 
 ## Why You'll Love This

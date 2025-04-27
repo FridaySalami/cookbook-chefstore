@@ -88,6 +88,16 @@
 	});
 </script>
 
+<svelte:head>
+	<title>{title} | Chefstore Cookbook</title>
+	<meta name="description" content={description} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	{#if image}
+		<meta property="og:image" content={image} />
+	{/if}
+</svelte:head>
+
 <article class="relative mx-auto max-w-3xl px-4 py-8 md:px-6 lg:px-8">
 	<!-- Hero Image -->
 	<div class="relative mb-8 h-[300px] overflow-hidden rounded-lg shadow-md md:h-[400px]">
