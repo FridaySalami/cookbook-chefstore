@@ -10,7 +10,7 @@ cookTime: 10
 totalTime: 25
 servings: 4
 categories: [snack, main course]
-tags: [quick, family-friendly, crispy, difficulty-easy]
+tags: [quick, family-friendly, difficulty-easy, chicken]
 ---
 
 ## Why You'll Love This
