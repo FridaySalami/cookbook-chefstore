@@ -40,11 +40,16 @@
 				node.src = '/placeholder.png';
 			}
 		};
-		// Handle error immediately if src is initially empty or invalid
-		if (!node.src || node.naturalWidth === 0) {
+
+		// Rely primarily on the error event
+		node.addEventListener('error', handleError);
+
+		// Optional: Check if src is truly empty/null on initial mount,
+		// but avoid checking naturalWidth immediately.
+		if (!node.src) {
 			handleError();
 		}
-		node.addEventListener('error', handleError);
+
 		return {
 			destroy() {
 				node.removeEventListener('error', handleError);
