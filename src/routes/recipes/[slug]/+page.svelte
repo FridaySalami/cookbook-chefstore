@@ -33,6 +33,9 @@
 		[key: string]: any; // Allow string indexing
 	};
 
+	// Define your site's base URL
+	const siteBaseUrl = 'https://chefstorecookbook.netlify.app';
+
 	// Construct the JSON-LD schema object
 	const schema: RecipeSchema = {
 		'@context': 'https://schema.org',
@@ -40,8 +43,8 @@
 		name: data.metadata?.title,
 		image: data.metadata?.image
 			? [
-					// Construct the full image URL - adjust base URL if needed
-					$page.url.origin + (data.metadata.image.startsWith('/') ? '' : '/') + data.metadata.image
+					// Use the defined siteBaseUrl instead of $page.url.origin
+					siteBaseUrl + (data.metadata.image.startsWith('/') ? '' : '/') + data.metadata.image
 				]
 			: undefined,
 		author: {
