@@ -11,7 +11,7 @@
 <div class="flex min-h-screen flex-col font-sans">
 	<!-- Header -->
 	<!-- Apply header background and text colors, remove border/shadow -->
-	<header class="bg-header text-header-foreground fixed top-0 z-50 w-full py-4">
+	<header class="text-header-foreground fixed top-0 z-50 w-full bg-white py-4 shadow-md">
 		<div class="container mx-auto flex max-w-7xl items-center justify-between px-4 md:px-6">
 			<a
 				href="/"
