@@ -1,38 +1,101 @@
-@import 'tailwindcss/preflight';
-@import 'tailwindcss';
-@import 'tailwindcss/utilities';
+/* Use the single import directive for Tailwind v4 compatibility */
+@import "tailwindcss";
 
-:root {
-  --color-primary: #C8102E;
-  --color-primary-dark: #9A0C24;
-  --color-accent: #FFD700;
-  --color-background: #FAFAFA;
-  --color-text: #333333;
+/* Updated Color Palette based on target image */
+@layer base {
+  :root {
+    /* Light background for main content */
+    --background: 40 100% 98.6%;
+    /* Light Beige/Off-white: #FFFBF5 */
+    --foreground: 203 48% 15%;
+    /* Dark Blue-Gray for text on light bg */
+
+    /* Card styling matching light background */
+    --card: 40 100% 99.2%;
+    /* Slightly darker Off-white: #FFFCF8 */
+    --card-foreground: 203 48% 15%;
+    /* Dark Blue-Gray */
+
+    /* Popover styling matching light background */
+    --popover: 40 100% 99.2%;
+    /* Slightly darker Off-white: #FFFCF8 */
+    --popover-foreground: 203 48% 15%;
+    /* Dark Blue-Gray */
+
+    /* Primary can be an accent, maybe the olive/beige from quote */
+    --primary: 76 15% 80%;
+    /* Muted Olive/Beige: approx #CACCC8 */
+    --primary-foreground: 0 0% 10%;
+    /* Dark Gray for contrast */
+
+    /* Secondary can be another accent or kept */
+    --secondary: 38 88% 82%;
+    /* Soft Peach/Light Tan: #F9D5A7 */
+    --secondary-foreground: 0 0% 20%;
+    /* Darker Gray for contrast */
+
+    /* Header specific colors */
+    --header-bg: 203 48% 20%;
+    /* Dark Blue: #1A3A4A */
+    --header-fg: 0 0% 100%;
+    /* White */
+
+    /* Shadcn specific variables - adjust if needed */
+    --border: 203 10% 80%;
+    /* Lighter blue-gray border */
+    --input: 203 10% 85%;
+    /* Lighter blue-gray input */
+    --ring: 203 48% 40%;
+    /* Mid Blue for focus rings */
+
+    --radius: 0.5rem;
+    /* Default border radius */
+
+    /* Destructive/Error colors - keep or adjust */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Muted colors for less emphasis */
+    --muted: 203 10% 90%;
+    /* Very light blue-gray */
+    --muted-foreground: 203 10% 40%;
+    /* Mid blue-gray */
+
+    /* Accent colors (can reuse primary/secondary or define new) */
+    --accent: 203 10% 90%;
+    /* Same as muted */
+    --accent-foreground: 203 48% 15%;
+    /* Dark Blue-Gray */
+
+    /* Define font variables */
+    --font-sans: 'Poppins', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+  }
+
+  /* Add dark mode overrides if needed later */
+  /* .dark { ... } */
 }
 
-body {
-  background-color: var(--color-background);
-  color: var(--color-text);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+@layer base {
+  html {
+    /* Apply base background and text colors to the html element */
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-sans);
+  }
 
-/* Custom utility classes */
-.bg-primary {
-  background-color: var(--color-primary);
-}
+  * {
+    /* Revert back to using the CSS variable directly */
+    border-color: hsl(var(--border));
+  }
 
-.bg-primary-dark {
-  background-color: var(--color-primary-dark);
-}
-
-.bg-accent {
-  background-color: var(--color-accent);
-}
-
-.text-primary {
-  color: var(--color-primary);
-}
-
-.text-accent {
-  color: var(--color-accent);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    /* Use CSS variable for font family */
+    font-family: var(--font-serif);
+  }
 }

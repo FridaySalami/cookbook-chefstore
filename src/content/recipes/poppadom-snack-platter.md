@@ -1,5 +1,5 @@
 ---
-title: Poppin’ Popadom Snack Platter
+title: Poppadom Snack Platter
 slug: poppadom-snack-platter
 description: Turn humble uncooked popadoms into a crowd-pleasing snack board with dips, toppings, and spice. Fast, crispy, and endlessly customizable.
 date: 2025-04-24

@@ -1,0 +1,9 @@
+// filepath: /Users/jackweston/cookbook-chefstore/.vscode/settings.json
+{
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
+}

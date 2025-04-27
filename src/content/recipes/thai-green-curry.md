@@ -1,5 +1,6 @@
 ---
 title: Thai Green Curry
+slug: thai-green-curry
 description: A bold, aromatic Thai green curry loaded with tender chicken, sweet corn, and snap peas—all brought to life with our Chefstore curry paste.
 date: 2025-04-20
 image: https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd
