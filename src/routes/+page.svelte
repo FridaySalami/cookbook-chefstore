@@ -61,7 +61,7 @@
 	{#if featuredRecipes && featuredRecipes.length > 0}
 		<section class="mb-12">
 			<h2 class="text-foreground mb-8 text-center font-serif text-3xl font-semibold md:text-4xl">
-				Featured Recipes!
+				Featured Recipes
 			</h2>
 			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 				{#each featuredRecipes as recipe (recipe.slug)}
