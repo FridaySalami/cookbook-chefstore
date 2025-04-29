@@ -40,18 +40,20 @@
 	<!-- Hero Section: Adjusted text colors and button style -->
 	<section class="mb-16 text-center">
 		<h1
-			class="text-foreground mb-4 font-serif text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl"
+			class="text-foreground mb-4 font-serif text-4xl font-bold tracking-tight md:text-5xl lg:text-5xl"
 		>
-			Welcome to Chefstore Cookbook
+			Real meals for real tables
 		</h1>
 		<p class="text-muted-foreground mx-auto mb-8 max-w-3xl text-lg md:text-xl">
-			Discover delicious, family-friendly recipes for every occasion. Simple, tasty, and made with
-			love, inspired by chefs.
+			Simple, satisfying recipes for your everyday life.
+		</p>
+		<p class="text-muted-foreground mx-auto mb-8 max-w-3xl text-sm md:text-base">
+			Browse recipes and shop ingredients straight from the kitchen.
 		</p>
 		<Button
 			href="/recipes"
 			size="lg"
-			class="bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:ring-ring rounded-full px-8 py-3 text-base font-semibold shadow-md transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+			class="bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:ring-ring mb-8 rounded-full px-8 py-3 text-base font-semibold shadow-md transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
 		>
 			Explore All Recipes
 		</Button>
@@ -63,8 +65,16 @@
 			<h2 class="text-foreground mb-8 text-center font-serif text-3xl font-semibold md:text-4xl">
 				Featured Recipes
 			</h2>
+
+			<!-- Category Filter Placeholder -->
+			<div class="mb-8 flex justify-center gap-2">
+				<Button variant="outline" size="sm">Quick Dinners</Button>
+				<Button variant="outline" size="sm">Plant-Based</Button>
+				<Button variant="outline" size="sm">Desserts</Button>
+			</div>
+
 			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-				{#each featuredRecipes as recipe (recipe.slug)}
+				{#each featuredRecipes as recipe, index (recipe.slug)}
 					<Card
 						class="group bg-card text-card-foreground flex flex-col overflow-hidden rounded-lg border shadow-sm transition-shadow hover:shadow-lg"
 					>
@@ -75,6 +85,8 @@
 									alt={recipe.title}
 									class="aspect-[16/10] w-full object-cover transition-transform duration-300 group-hover:scale-105"
 									use:fallbackImage
+									loading={index === 0 ? 'eager' : 'lazy'}
+									fetchpriority={index === 0 ? 'high' : 'auto'}
 								/>
 							</div>
 							<div class="flex flex-grow flex-col p-4 md:p-5">

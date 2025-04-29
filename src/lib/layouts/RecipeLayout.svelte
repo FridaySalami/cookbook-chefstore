@@ -101,7 +101,14 @@
 <article class="relative mx-auto max-w-3xl px-4 py-8 md:px-6 lg:px-8">
 	<!-- Hero Image -->
 	<div class="relative mb-8 h-[300px] overflow-hidden rounded-lg shadow-md md:h-[400px]">
-		<img use:fallbackImage src={image} alt={title} class="h-full w-full object-cover" />
+		<img
+			use:fallbackImage
+			src={image}
+			alt={title}
+			class="h-full w-full object-cover"
+			loading="eager"
+			fetchpriority="high"
+		/>
 	</div>
 
 	<!-- Recipe Header -->

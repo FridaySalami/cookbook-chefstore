@@ -144,6 +144,7 @@
 								alt={recipe.title}
 								class="aspect-video w-full object-cover"
 								use:fallbackImage
+								loading="lazy"
 							/>
 							<Badge
 								variant="secondary"
