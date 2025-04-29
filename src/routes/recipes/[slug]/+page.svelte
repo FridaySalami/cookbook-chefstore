@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { PageData } from './$types'; // Import PageData
 	import { page } from '$app/stores'; // Import page store for URL
 	import { formatDuration } from '$lib/utils'; // Import the helper function
 	import {
@@ -10,10 +11,16 @@
 		BreadcrumbSeparator
 	} from '$lib/components/ui/breadcrumb';
 
-	export let data;
+	export let data: PageData; // Explicitly type data with PageData
 
 	// Assuming recipe title is available like this, adjust if needed
 	const recipeTitle = data.metadata?.title ?? 'Recipe';
+
+	// Define a type for the HowToStep object used in instructions
+	interface HowToStep {
+		'@type': 'HowToStep';
+		text: string;
+	}
 
 	// Define a type for the schema object to allow string indexing
 	type RecipeSchema = {
@@ -30,6 +37,9 @@
 		recipeYield?: string;
 		recipeCategory?: string;
 		keywords?: string;
+		recipeIngredient?: string[];
+		// Update the type for recipeInstructions
+		recipeInstructions?: HowToStep[];
 		[key: string]: any; // Allow string indexing
 	};
 
@@ -60,10 +70,12 @@
 		totalTime: formatDuration(data.metadata?.totalTime),
 		recipeYield: data.metadata?.servings ? `${data.metadata.servings} servings` : undefined,
 		recipeCategory: data.metadata?.categories?.join(', '),
-		keywords: data.metadata?.tags?.join(', ')
-		// Placeholder: Ingredients and instructions ideally parsed from MD content
-		// recipeIngredient: [],
-		// recipeInstructions: []
+		keywords: data.metadata?.tags?.join(', '),
+		// Use parsed ingredients and instructions from load function
+		recipeIngredient:
+			data.ingredients && data.ingredients.length > 0 ? data.ingredients : undefined,
+		recipeInstructions:
+			data.instructions && data.instructions.length > 0 ? data.instructions : undefined
 	};
 
 	// Remove undefined or null properties from schema for cleaner output

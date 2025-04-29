@@ -27,6 +27,15 @@ interface RecipeModule {
 type RecipeModuleImporter = () => Promise<RecipeModule>;
 type RecipeModuleMap = Record<string, RecipeModuleImporter>;
 
+// Define and EXPORT the expected return type for the load function
+export interface LoadReturn {
+  component: any;
+  metadata: RecipeModule['metadata'];
+  ingredients: string[];
+  // Explicitly define '@type' as the literal 'HowToStep'
+  instructions: { '@type': 'HowToStep'; text: string }[];
+}
+
 // Add this entries function
 export const entries: EntryGenerator = async () => {
   // Use import.meta.glob to find all markdown files
@@ -47,28 +56,76 @@ export const entries: EntryGenerator = async () => {
 // Add this line
 export const prerender = true;
 
-export const load: PageLoad = async ({ params }) => {
+// Explicitly type the load function with LoadReturn
+export const load: PageLoad<LoadReturn> = async ({ params }) => {
   const { slug } = params;
 
   try {
     // Dynamic import of all markdown files (returns functions to load modules)
-    const modules: RecipeModuleMap = import.meta.glob<RecipeModule>('/src/content/recipes/*.md');
+    const modules: Record<string, () => Promise<RecipeModule>> =
+      import.meta.glob<RecipeModule>('/src/content/recipes/*.md');
+    // Import raw content as well - Updated to use 'query'
+    const rawModules: Record<string, () => Promise<string>> = import.meta.glob<string>(
+      '/src/content/recipes/*.md',
+      { query: '?raw', import: 'default' } // Updated from 'as: "raw"'
+    );
 
     // Construct the expected path and get the importer function directly
     const modulePath = `/src/content/recipes/${slug}.md`;
     const moduleImporter = modules[modulePath];
+    const rawImporter = rawModules[modulePath]; // Get raw importer
 
-    if (!moduleImporter) {
+    if (!moduleImporter || !rawImporter) {
       throw error(404, `Recipe "${slug}" not found`);
     }
 
-    // Load the matching module by calling the importer function
-    const post = await moduleImporter();
+    // Load the matching module and raw content by calling the importer functions
+    const [post, rawContent] = await Promise.all([moduleImporter(), rawImporter()]);
 
-    // Return both the component and metadata
+    // --- Simple Parsing Logic ---
+    const ingredients: string[] = [];
+    // Use the HowToStep type from the LoadReturn interface
+    const instructions: LoadReturn['instructions'] = [];
+    let currentSection: 'ingredients' | 'instructions' | null = null;
+
+    const lines = rawContent.split('\n'); // Use '\n' for splitting lines from raw import
+
+    for (const line of lines) {
+      const trimmedLine = line.trim();
+      // Use startsWith for section headers
+      if (trimmedLine.startsWith('## Ingredients')) {
+        currentSection = 'ingredients';
+        continue;
+      }
+      if (trimmedLine.startsWith('## Instructions')) {
+        currentSection = 'instructions';
+        continue;
+      }
+      // Reset section if another H2 is encountered
+      if (trimmedLine.startsWith('## ')) {
+        currentSection = null;
+        continue;
+      }
+
+      // Extract list items based on current section
+      if (currentSection === 'ingredients' && trimmedLine.startsWith('- ')) {
+        ingredients.push(trimmedLine.substring(2).trim());
+      } else if (currentSection === 'instructions' && /^\d+\.\s/.test(trimmedLine)) {
+        // Regex for numbered list items (e.g., "1. ")
+        instructions.push({
+          '@type': 'HowToStep', // This will now correctly match the type
+          text: trimmedLine.replace(/^\d+\.\s/, '').trim()
+        });
+      }
+    }
+    // --- End Parsing Logic ---
+
+    // Return component, metadata, and parsed content
     return {
       component: post.default,
-      metadata: post.metadata
+      metadata: post.metadata,
+      ingredients, // Add parsed ingredients
+      instructions // Add parsed instructions
     };
   } catch (e) {
     // Catch potential errors during import or if the file doesn't exist
