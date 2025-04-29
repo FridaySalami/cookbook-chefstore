@@ -11,6 +11,7 @@ totalTime: 25
 servings: 4
 categories: [snack, main course]
 tags: [quick, family-friendly, difficulty-easy, chicken]
+recipeCuisine: [Japanese, American]
 ---
 
 ## Why You'll Love This

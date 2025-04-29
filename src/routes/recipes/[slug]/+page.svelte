@@ -38,8 +38,8 @@
 		recipeCategory?: string;
 		keywords?: string;
 		recipeIngredient?: string[];
-		// Update the type for recipeInstructions
 		recipeInstructions?: HowToStep[];
+		recipeCuisine?: string; // <-- Add this (as string)
 		[key: string]: any; // Allow string indexing
 	};
 
@@ -75,7 +75,9 @@
 		recipeIngredient:
 			data.ingredients && data.ingredients.length > 0 ? data.ingredients : undefined,
 		recipeInstructions:
-			data.instructions && data.instructions.length > 0 ? data.instructions : undefined
+			data.instructions && data.instructions.length > 0 ? data.instructions : undefined,
+		// Add recipeCuisine, joining the array if it exists
+		recipeCuisine: data.metadata?.recipeCuisine?.join(', ')
 	};
 
 	// Remove undefined or null properties from schema for cleaner output

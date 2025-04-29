@@ -19,6 +19,7 @@ interface RecipeModule {
     tags?: string[];
     difficulty?: string;
     draft?: boolean;
+    recipeCuisine?: string[]; // <-- Add this
   };
   default: any; // This will be the rendered component
 }
@@ -125,7 +126,7 @@ export const load: PageLoad<LoadReturn> = async ({ params }) => {
     // Return component, metadata, and parsed content
     return {
       component: post.default,
-      metadata: post.metadata,
+      metadata: post.metadata, // recipeCuisine is already in here
       ingredients, // Add parsed ingredients
       instructions // Add parsed instructions
     };
