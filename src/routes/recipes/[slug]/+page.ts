@@ -109,7 +109,9 @@ export const load: PageLoad<LoadReturn> = async ({ params }) => {
 
       // Extract list items based on current section
       if (currentSection === 'ingredients' && trimmedLine.startsWith('- ')) {
-        ingredients.push(trimmedLine.substring(2).trim());
+        // Remove markdown link formatting: [text](url) -> text
+        const ingredientText = trimmedLine.substring(2).trim().replace(/\[(.*?)\]\(.*?\)/g, '$1');
+        ingredients.push(ingredientText);
       } else if (currentSection === 'instructions' && /^\d+\.\s/.test(trimmedLine)) {
         // Regex for numbered list items (e.g., "1. ")
         instructions.push({
