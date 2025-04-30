@@ -10,6 +10,9 @@
 		BreadcrumbPage,
 		BreadcrumbSeparator
 	} from '$lib/components/ui/breadcrumb';
+	import * as Card from '$lib/components/ui/card'; // Import Card components
+	import { Badge } from '$lib/components/ui/badge'; // Import Badge
+	import { Clock, Users } from 'lucide-svelte'; // Import icons
 
 	export let data: PageData; // Explicitly type data with PageData
 
@@ -92,7 +95,25 @@
 		delete schema.image;
 	}
 
-	// NOTE: Removed the jsonLdScript variable and its construction logic
+	// Helper function to get difficulty (can reuse from recipes/+page.svelte or define here)
+	function getDifficultyFromTags(tags: string[] | undefined): string {
+		if (!tags) return 'N/A';
+		const difficultyTag = tags.find((tag) => tag.startsWith('difficulty-'));
+		return difficultyTag ? difficultyTag.replace('difficulty-', '') : 'N/A';
+	}
+
+	/** @type {import('svelte/action').Action<HTMLImageElement>} */
+	function fallbackImage(node: HTMLImageElement) {
+		const handleError = () => {
+			node.src = '/placeholder.png'; // Use your placeholder image path
+		};
+		node.addEventListener('error', handleError);
+		return {
+			destroy() {
+				node.removeEventListener('error', handleError);
+			}
+		};
+	}
 </script>
 
 <svelte:head>
@@ -135,3 +156,67 @@
 </Breadcrumb>
 
 <svelte:component this={data.component} />
+
+<!-- Related Recipes Section -->
+{#if data.relatedRecipes && data.relatedRecipes.length > 0}
+	<section class="mt-16 border-t pt-12">
+		<h2 class="mb-8 text-3xl font-bold tracking-tight">You might also like</h2>
+		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+			{#each data.relatedRecipes as recipe (recipe.slug)}
+				<a href={`/recipes/${recipe.slug}`} class="group block">
+					<article>
+						<Card.Root
+							class="flex h-full flex-col overflow-hidden transition-all group-hover:-translate-y-1 group-hover:shadow-lg"
+						>
+							<Card.Header class="relative p-0">
+								<img
+									src={recipe.image || '/placeholder.png'}
+									alt={recipe.title}
+									class="aspect-video w-full object-cover"
+									use:fallbackImage
+									loading="lazy"
+								/>
+								<Badge
+									variant="secondary"
+									class="absolute top-3 right-3 border border-white/20 bg-black/60 text-white capitalize backdrop-blur-sm"
+								>
+									{getDifficultyFromTags(recipe.tags)}
+								</Badge>
+							</Card.Header>
+							<Card.Content class="flex-grow p-4">
+								<Card.Title class="mb-1 text-lg leading-tight font-semibold tracking-tight">
+									{recipe.title}
+								</Card.Title>
+								{#if recipe.description}
+									<Card.Description class="text-muted-foreground mb-3 line-clamp-3 text-sm">
+										{recipe.description}
+									</Card.Description>
+								{/if}
+								{#if recipe.tags && recipe.tags.length > 0}
+									<div class="mt-2 flex flex-wrap gap-1">
+										{#each recipe.tags as tag}
+											<Badge variant="secondary">{tag}</Badge>
+										{/each}
+									</div>
+								{/if}
+							</Card.Content>
+							<Card.Footer class="mt-auto flex items-center justify-between p-4 pt-0">
+								<div class="text-muted-foreground flex items-center gap-1 text-xs">
+									<Clock class="h-4 w-4" />
+									<!-- Display totalTime if available, otherwise 'N/A' -->
+									<span>{recipe.totalTime ? `${recipe.totalTime} min` : 'N/A'}</span>
+								</div>
+								{#if recipe.servings}
+									<div class="text-muted-foreground flex items-center gap-1 text-xs">
+										<Users class="h-4 w-4" />
+										<span>{recipe.servings} servings</span>
+									</div>
+								{/if}
+							</Card.Footer>
+						</Card.Root>
+					</article>
+				</a>
+			{/each}
+		</div>
+	</section>
+{/if}

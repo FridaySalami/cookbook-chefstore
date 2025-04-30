@@ -1,26 +1,30 @@
 import { error, type HttpError } from '@sveltejs/kit'; // Import HttpError
 import type { PageLoad, EntryGenerator } from './$types'; // Import EntryGenerator
+import { dev } from '$app/environment'; // Import dev
+
+// Define the type for our markdown module metadata
+interface RecipeMetadata {
+  title: string;
+  slug?: string;
+  description?: string;
+  date: string;
+  updated?: string;
+  featured?: boolean;
+  image: string;
+  prepTime?: number | string; // Allow string for parsing flexibility
+  cookTime?: number | string; // Allow string for parsing flexibility
+  totalTime?: number | string; // Allow string for parsing flexibility
+  servings?: number;
+  categories?: string[];
+  tags?: string[];
+  difficulty?: string;
+  draft?: boolean;
+  recipeCuisine?: string[];
+}
 
 // Define the type for our markdown module
 interface RecipeModule {
-  metadata: {
-    title: string;
-    slug?: string;
-    description?: string;
-    date: string;
-    updated?: string;
-    featured?: boolean;
-    image: string;
-    prepTime?: number;
-    cookTime?: number;
-    totalTime?: number;
-    servings?: number;
-    categories?: string[];
-    tags?: string[];
-    difficulty?: string;
-    draft?: boolean;
-    recipeCuisine?: string[]; // <-- Add this
-  };
+  metadata: RecipeMetadata;
   default: any; // This will be the rendered component
 }
 
@@ -31,10 +35,10 @@ type RecipeModuleMap = Record<string, RecipeModuleImporter>;
 // Define and EXPORT the expected return type for the load function
 export interface LoadReturn {
   component: any;
-  metadata: RecipeModule['metadata'];
+  metadata: RecipeMetadata;
   ingredients: string[];
-  // Explicitly define '@type' as the literal 'HowToStep'
   instructions: { '@type': 'HowToStep'; text: string }[];
+  relatedRecipes: RecipeMetadata[]; // Add relatedRecipes
 }
 
 // Add this entries function
@@ -123,12 +127,43 @@ export const load: PageLoad<LoadReturn> = async ({ params }) => {
     }
     // --- End Parsing Logic ---
 
-    // Return component, metadata, and parsed content
+    // --- Find Related Recipes ---
+    const allRecipeModules = import.meta.glob<RecipeMetadata>('/src/content/recipes/*.md', {
+      import: 'metadata',
+      eager: true
+    });
+
+    const allRecipes = Object.entries(allRecipeModules)
+      .filter(([, module]) => module)
+      .map(([path, module]) => {
+        const filename = path.split('/').pop()?.replace('.md', '') || '';
+        return {
+          ...module,
+          slug: module.slug || filename
+        };
+      })
+      .filter(recipe => dev ? true : !recipe.draft)
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    const currentTags = post.metadata.tags || [];
+    const relatedRecipes = allRecipes
+      .filter(recipe => {
+        // Exclude the current recipe
+        if (recipe.slug === slug) return false;
+        // Check for shared tags
+        const recipeTags = recipe.tags || [];
+        return currentTags.some(tag => recipeTags.includes(tag));
+      })
+      .slice(0, 4); // Limit to 4 related recipes
+    // --- End Find Related Recipes ---
+
+    // Return component, metadata, parsed content, and related recipes
     return {
       component: post.default,
-      metadata: post.metadata, // recipeCuisine is already in here
-      ingredients, // Add parsed ingredients
-      instructions // Add parsed instructions
+      metadata: post.metadata,
+      ingredients,
+      instructions,
+      relatedRecipes // Add related recipes to the return object
     };
   } catch (e) {
     // Catch potential errors during import or if the file doesn't exist

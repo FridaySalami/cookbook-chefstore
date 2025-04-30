@@ -1,61 +1,127 @@
 import { dev } from '$app/environment';
 import type { PageLoad } from './$types';
 
-// Assuming RecipeMetadata is defined elsewhere or copy it here if needed
+// Define metadata type (ensure it matches the actual metadata structure)
 interface RecipeMetadata {
   title: string;
   slug: string;
   description?: string;
   date: string;
-  // ... other metadata fields
+  updated?: string;
+  featured?: boolean;
+  image: string;
+  prepTime?: number | string; // Allow string for parsing flexibility
+  cookTime?: number | string; // Allow string for parsing flexibility
+  totalTime?: number | string; // Allow string for parsing flexibility
+  servings?: number;
+  categories?: string[];
+  tags?: string[];
+  difficulty?: string;
   draft?: boolean;
-  featured?: boolean; // Add missing featured property
-  image: string; // Keep image for card display
-  difficulty?: string; // Keep difficulty for card display
-  // Add other properties used in mock data if necessary
-  prepTime?: number;
-  cookTime?: number;
-  totalTime?: number;
-  servings?: number; // Add missing servings property
-  tags?: string[]; // Add tags property
 }
 
-export const load: PageLoad = async () => {
-  // Import only metadata eagerly - Corrected type annotation
-  const recipeModules = import.meta.glob<RecipeMetadata>('/src/content/recipes/*.md', {
-    import: 'metadata',
-    eager: true
-  });
+// Define the expected return type for the load function
+export interface LoadReturn {
+  recipes: RecipeMetadata[];
+  allTags: string[];
+  currentPage: number;
+  totalPages: number;
+  totalRecipes: number;
+  selectedTag: string | null;
+}
 
+const PAGE_SIZE = 12; // Number of recipes per page
+
+export const load: PageLoad<LoadReturn> = async ({ url }) => {
   try {
-    // Process the metadata into recipe data
-    const recipes = Object.entries(recipeModules)
-      // Filter out modules that didn't load metadata correctly (e.g., empty files)
-      .filter(([, module]) => module) // Simplified filter: just check if module exists
-      .map(([path, module]) => {
-        // module here IS RecipeMetadata because of `import: 'metadata'`
-        // Extract filename from path for fallback slug
-        const filename = path.split('/').pop()?.replace('.md', '') || '';
+    // --- Fetch All Recipe Metadata ---
+    const recipeModules = import.meta.glob<RecipeMetadata>('/src/content/recipes/*.md', {
+      import: 'metadata',
+      eager: true
+    });
 
-        // module IS the metadata object directly
+    const allRecipes = Object.entries(recipeModules)
+      .filter(([, module]) => module)
+      .map(([path, module]) => {
+        const filename = path.split('/').pop()?.replace('.md', '') || '';
         return {
-          ...module, // Spread the metadata object directly
-          slug: module.slug || filename,
-          tags: module.tags || [] // Ensure tags is always an array
+          ...module,
+          slug: module.slug || filename // Ensure slug exists
         };
       })
-      // Filter out drafts in production
-      .filter(recipe => dev ? true : !recipe.draft)
-      // Sort by date (newest first)
-      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+      .filter((recipe): recipe is RecipeMetadata & { slug: string } => !!recipe.slug) // Type guard for slug
+      .filter((recipe) => (dev ? true : !recipe.draft)) // Filter drafts in production
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // Sort by date
 
-    // Extract all unique tags
-    const allTags = [...new Set(recipes.flatMap(recipe => recipe.tags))].sort();
+    // --- Extract All Unique Tags (Normalized to Lowercase) ---
+    const allTags = [
+      ...new Set(
+        allRecipes.flatMap((recipe) => recipe.tags?.map((t) => t.toLowerCase()) || [])
+      )
+    ].sort(); // Get unique lowercase tags and sort
 
-    return { recipes, allTags }; // Return recipes and unique tags
+    // --- Filtering (Using Lowercase) ---
+    const selectedTagParam = url.searchParams.get('tag'); // Get raw param
+    const selectedTag = selectedTagParam ? selectedTagParam.toLowerCase() : null; // Normalize selected tag
+
+    console.log('Server: selectedTag:', selectedTag);
+    console.log('Server: allTags:', allTags); // Verify these are lowercase
+
+    const filteredRecipes = selectedTag
+      ? allRecipes.filter((recipe) => {
+          const lowerCaseRecipeTags = recipe.tags?.map((t) => t.toLowerCase()) || [];
+          const isIncluded = lowerCaseRecipeTags.includes(selectedTag);
+          // Optional: Log individual recipe checks
+          // console.log(`Server: Recipe ${recipe.slug}, Tags: ${lowerCaseRecipeTags.join(', ')}, Includes ${selectedTag}? ${isIncluded}`);
+          return isIncluded;
+        })
+      : allRecipes;
+
+    console.log('Server: Number of recipes BEFORE pagination:', filteredRecipes.length); // Check count after filtering
+
+    // --- Pagination ---
+    const pageParam = url.searchParams.get('page');
+    const currentPage = pageParam ? parseInt(pageParam, 10) : 1;
+    const totalRecipes = filteredRecipes.length;
+    const totalPages = Math.ceil(totalRecipes / PAGE_SIZE);
+    const startIndex = (currentPage - 1) * PAGE_SIZE;
+    const endIndex = startIndex + PAGE_SIZE;
+    const paginatedRecipes = filteredRecipes.slice(startIndex, endIndex);
+
+    // Validate currentPage
+    if (currentPage > totalPages && totalPages > 0) {
+      // Redirect to last page if requested page is out of bounds
+      // Or handle as an error, depending on desired UX
+      // For now, let's return an empty array for the recipes on this invalid page
+      // A better approach might be a redirect in a hook or returning an error
+      return {
+        recipes: [], // Return empty if page is invalid
+        allTags,
+        currentPage,
+        totalPages,
+        totalRecipes,
+        selectedTag
+      };
+    }
+
+    return {
+      recipes: paginatedRecipes,
+      allTags, // Return the unique lowercase tags
+      currentPage,
+      totalPages,
+      totalRecipes,
+      selectedTag // Return the normalized (lowercase) selected tag
+    };
   } catch (error) {
-    console.error("Error loading recipes:", error);
-
-    return { recipes: [], allTags: [] }; // Return empty arrays on error
+    console.error('Error loading recipes:', error);
+    // Return empty state on error
+    return {
+      recipes: [],
+      allTags: [],
+      currentPage: 1,
+      totalPages: 0,
+      totalRecipes: 0,
+      selectedTag: null
+    };
   }
-}
+};

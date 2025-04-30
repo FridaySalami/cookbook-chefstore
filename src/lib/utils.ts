@@ -133,3 +133,10 @@ export function formatDuration(duration: number | string | undefined): string | 
 	// If duration was 0 or invalid, formatted might just be "PT"
 	return formatted === 'PT' ? null : formatted;
 }
+
+export function formatTag(tag: string) {
+	return tag
+		.split('-')
+		.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+		.join(' ');
+}

@@ -57,6 +57,14 @@
 		};
 	}
 
+	// Helper function to format tags
+	function formatTag(tag: string) {
+		return tag
+			.split('-')
+			.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+			.join(' ');
+	}
+
 	// State for Back to Top button visibility
 	let showBackToTop = $state(false); // Use $state for reactivity
 	let scrollY = 0;
@@ -170,7 +178,7 @@
 		<div class="flex flex-wrap items-center gap-2">
 			<span class="text-muted-foreground text-sm font-medium">Tags:</span>
 			{#each tags as tag}
-				<Badge variant="secondary">{tag}</Badge>
+				<Badge variant="secondary">{formatTag(tag)}</Badge>
 			{/each}
 		</div>
 	{/if}
