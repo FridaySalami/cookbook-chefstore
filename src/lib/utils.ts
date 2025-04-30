@@ -75,22 +75,38 @@ export function formatDuration(duration: number | string | undefined): string | 
 	let minutes: number;
 
 	if (typeof duration === 'string') {
-		// Try to extract the first number from strings like "2 hours (chilling)"
-		const match = duration.match(/\d+/);
-		if (match) {
-			// Assuming the first number represents the primary duration unit (e.g., hours)
-			// This part might need refinement based on how 'totalTime' strings are structured.
-			// For "2 hours (chilling)", we'll assume it means 120 minutes for simplicity here.
-			// A more robust solution would parse "hours", "minutes" etc.
-			const value = parseInt(match[0], 10);
-			if (duration.toLowerCase().includes('hour')) {
-				minutes = value * 60;
-			} else {
-				minutes = value; // Assume minutes if no unit specified
-			}
-		} else {
-			return null; // Cannot parse duration from string
+		// Standardize the input string
+		duration = duration.trim().toLowerCase();
+
+		let totalMinutes = 0;
+
+		// Use regex to find hours and minutes (allowing decimals)
+		const hourMatch = duration.match(/(\d+(\.\d+)?)\s*hour/);
+		const minMatch = duration.match(/(\d+(\.\d+)?)\s*min/);
+
+		if (hourMatch) {
+			// Use parseFloat to handle potential decimals
+			totalMinutes += parseFloat(hourMatch[1]) * 60;
 		}
+		if (minMatch) {
+			// Use parseFloat to handle potential decimals
+			totalMinutes += parseFloat(minMatch[1]);
+		}
+
+		// If neither hours nor minutes were found, try matching just a number
+		if (!hourMatch && !minMatch) {
+			const numberMatch = duration.match(/\d+(\.\d+)?/);
+			if (numberMatch) {
+				// Use parseFloat here as well
+				totalMinutes = parseFloat(numberMatch[0]);
+				// Simple assumption: if no unit, assume minutes.
+			} else {
+				return null; // Cannot parse duration from string
+			}
+		}
+
+		minutes = totalMinutes;
+
 	} else {
 		minutes = duration;
 	}
@@ -99,6 +115,9 @@ export function formatDuration(duration: number | string | undefined): string | 
 	if (isNaN(minutes) || minutes <= 0) {
 		return null;
 	}
+
+	// Round minutes to the nearest whole number before calculating hours/remaining minutes
+	minutes = Math.round(minutes);
 
 	const hours = Math.floor(minutes / 60);
 	const remainingMinutes = minutes % 60;

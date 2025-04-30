@@ -55,7 +55,14 @@ export const load: PageLoad = async () => {
       featuredRecipes
     };
   } catch (error) {
-    console.error("Error loading recipes:", error);
+    // Check if the error is an instance of Error before logging
+    if (error instanceof Error) {
+      console.error("Error loading recipes:", error.message);
+      // Optionally log the full error object for more details
+      // console.error(error);
+    } else {
+      console.error("An unexpected error occurred:", error);
+    }
 
     return {
       recipes: [],

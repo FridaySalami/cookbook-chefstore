@@ -101,6 +101,12 @@
 		<meta name="description" content={data.metadata.description} />
 	{/if}
 
+	<!-- Canonical URL -->
+	<link
+		rel="canonical"
+		href={`https://www.chefstorecookbook.netlify.app/recipes/${$page.params.slug}`}
+	/>
+
 	<!-- Construct and render JSON-LD directly inside @html -->
 	{#if Object.keys(schema).length > 2}
 		{@html (() => {

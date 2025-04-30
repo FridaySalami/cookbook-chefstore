@@ -1,16 +1,33 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte'; // Import Snippet type
+	import type { Snippet } from 'svelte';
 	import '../app.css';
-	import { ModeWatcher } from 'mode-watcher'; // Keep mode watcher if you want dark mode toggle later
+	import { ModeWatcher } from 'mode-watcher';
 
 	let { children }: { children: Snippet } = $props();
 </script>
 
+<svelte:head>
+	<title>Chefstore Cookbook</title>
+	<meta name="description" content="Delicious recipes from the Chefstore team." />
+
+	<!-- OpenGraph & Twitter Card Meta Tags -->
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Chefstore Cookbook" />
+	<meta property="og:image" content="/default-og-image.png" />
+	<!-- Ensure this image exists -->
+	<meta name="twitter:card" content="summary_large_image" />
+</svelte:head>
+
 <ModeWatcher />
 
 <div class="flex min-h-screen flex-col font-sans">
+	<a
+		href="#main-content"
+		class="focus:bg-background focus:text-foreground sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4"
+	>
+		Skip to main content
+	</a>
 	<!-- Header -->
-	<!-- Apply header background and text colors, remove border/shadow -->
 	<header class="text-header-foreground fixed top-0 z-50 w-full bg-white py-4 shadow-md">
 		<div class="container mx-auto flex max-w-7xl items-center justify-between px-4 md:px-6">
 			<a
@@ -19,7 +36,7 @@
 				>Chefstore Cookbook</a
 			>
 			<!-- Navigation Links -->
-			<nav class="flex items-center space-x-4">
+			<nav class="flex items-center space-x-4" aria-label="Primary Navigation">
 				<a
 					href="/recipes"
 					class="text-sm font-medium text-inherit transition-colors hover:text-inherit/80"
@@ -36,8 +53,7 @@
 	</header>
 
 	<!-- Main Content -->
-	<!-- Keep increased margin-top -->
-	<main class="container mx-auto mt-16 flex-grow px-4 py-8 md:px-6 lg:py-12">
+	<main id="main-content" class="container mx-auto mt-16 flex-grow px-4 py-8 md:px-6 lg:py-12">
 		{@render children()}
 	</main>
 

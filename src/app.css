@@ -31,8 +31,9 @@
     /* Secondary can be another accent or kept */
     --secondary: 38 88% 82%;
     /* Soft Peach/Light Tan: #F9D5A7 */
-    --secondary-foreground: 0 0% 20%;
-    /* Darker Gray for contrast */
+    --secondary-foreground: 0 0% 10%;
+    /* Darkened for AAA contrast */
+    /* Dark Gray for contrast */
 
     /* Header specific colors */
     --header-bg: 203 48% 20%;
