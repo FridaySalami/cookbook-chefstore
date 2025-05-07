@@ -1,6 +1,7 @@
 <!-- src/lib/components/RelatedProducts.svelte -->
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { dev } from '$app/environment';
 	import type { ShopifyProduct } from '$lib/auth/shopify/shopify';
 	import * as Card from '$lib/components/ui/card';
 	import { Badge } from '$lib/components/ui/badge';
@@ -18,7 +19,7 @@
 	// Base URL for external product links
 	const externalStoreUrl = 'https://www.thechefstoreuk.com/products/';
 
-	// Generate placeholder products when API fails
+	// Generate placeholder products with readable titles
 	function generatePlaceholderProducts() {
 		return productHandles.map(({ handle, featured }: { handle: string; featured?: boolean }) => {
 			// Convert handle to a more readable title
@@ -48,42 +49,48 @@
 		}
 
 		try {
-			// Fetch each product individually
-			const productPromises = productHandles.map(
-				async ({ handle }: { handle: string; featured?: boolean }) => {
-					try {
-						// Use the utility function to get the correct API URL
-						const apiUrl = getApiUrl(`products?handle=${handle}`);
-						console.log(`Fetching product from: ${apiUrl}`);
-						const res = await fetch(apiUrl, {
-							// Short timeout to prevent long waits
-							signal: AbortSignal.timeout(5000)
-						});
+			 // In development, use the API; in production, use placeholder data
+			if (dev) {
+				// Development - use API
+				const productPromises = productHandles.map(
+					async ({ handle }: { handle: string; featured?: boolean }) => {
+						try {
+							const apiUrl = getApiUrl(`products?handle=${handle}`);
+							console.log(`Fetching product from: ${apiUrl}`);
+							const res = await fetch(apiUrl, { signal: AbortSignal.timeout(5000) });
 
-						if (!res.ok) {
-							throw new Error(`Failed to fetch product: ${handle}`);
+							if (!res.ok) {
+								throw new Error(`Failed to fetch product: ${handle}`);
+							}
+
+							const product = await res.json();
+							if (product && product.title) {
+								return product;
+							}
+							throw new Error("Invalid product data");
+						} catch (err) {
+							console.error(`Error fetching ${handle}:`, err);
+							return null;
 						}
-
-						return res.json();
-					} catch (err) {
-						console.error(`Error fetching ${handle}:`, err);
-						// Return null to indicate this product failed to load
-						return null;
 					}
+				);
+
+				const results = await Promise.all(productPromises);
+				
+				// If all results are null, use placeholder data
+				if (results.every((result) => result === null)) {
+					usePlaceholderData = true;
+					products = generatePlaceholderProducts();
+				} else {
+					usePlaceholderData = false;
+					products = results.filter((p) => p !== null);
 				}
-			);
-
-			const results = await Promise.all(productPromises);
-
-			// If all results are null, use placeholder data
-			if (results.every((result) => result === null)) {
+			} else {
+				// Production - use placeholder data with nice product names
 				usePlaceholderData = true;
 				products = generatePlaceholderProducts();
-			} else {
-				// Filter out failed requests and include successful ones
-				products = results.filter((p) => p !== null);
 			}
-
+			
 			loading = false;
 		} catch (err) {
 			console.error('Failed to load products:', err);
@@ -154,13 +161,13 @@
 									</div>
 
 									<div class="mt-1 flex items-center justify-between">
-										{#if product.variants && product.variants.length > 0 && !usePlaceholderData}
-											<span class="block text-sm font-bold text-amber-600">
+										<span class="block text-sm font-bold text-amber-600">
+											{#if !usePlaceholderData && product.variants && product.variants.length > 0 && product.variants[0].price !== '0.00'}
 												£{parseFloat(product.variants[0].price).toFixed(2)}
-											</span>
-										{:else}
-											<span class="block text-sm font-bold text-amber-600"> View Price </span>
-										{/if}
+											{:else}
+												View Price
+											{/if}
+										</span>
 										<span class="text-muted-foreground text-xs">Buy →</span>
 									</div>
 								</div>
