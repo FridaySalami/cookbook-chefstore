@@ -1,34 +1,12 @@
-import { G as getContext, I as sanitize_props, P as rest_props, Q as fallback, S as spread_attributes, T as clsx, K as slot, O as bind_props, A as push, U as attr_class, C as pop, E as head, M as ensure_array_like, D as attr, F as escape_html, V as store_get, W as unsubscribe_stores } from "../../../../chunks/index3.js";
-import "../../../../chunks/client.js";
+import { I as sanitize_props, P as rest_props, Q as fallback, S as spread_attributes, T as clsx, K as slot, O as bind_props, A as push, U as attr_class, C as pop, E as head, M as ensure_array_like, D as attr, F as escape_html, V as store_get, W as unsubscribe_stores } from "../../../../chunks/index3.js";
+import { R as RecipeLayout, p as page } from "../../../../chunks/RecipeLayout.js";
 import { c as cn, f as formatDuration, C as Clock } from "../../../../chunks/clock.js";
-import { a as Chevron_right, C as Card_footer } from "../../../../chunks/card-footer.js";
+import { a as Chevron_right, C as Card_footer } from "../../../../chunks/chevron-right.js";
 import { C as Card, a as Card_header, d as Card_content, b as Card_title, c as Card_description } from "../../../../chunks/card-title.js";
 import { B as Badge, U as Users } from "../../../../chunks/users.js";
-import { R as RecipeLayout } from "../../../../chunks/RecipeLayout.js";
 import "marked";
 import "clsx";
 import { h as html } from "../../../../chunks/html.js";
-const getStores = () => {
-  const stores$1 = getContext("__svelte__");
-  return {
-    /** @type {typeof page} */
-    page: {
-      subscribe: stores$1.page.subscribe
-    },
-    /** @type {typeof navigating} */
-    navigating: {
-      subscribe: stores$1.navigating.subscribe
-    },
-    /** @type {typeof updated} */
-    updated: stores$1.updated
-  };
-};
-const page = {
-  subscribe(fn) {
-    const store = getStores().page;
-    return store.subscribe(fn);
-  }
-};
 function Breadcrumb($$payload, $$props) {
   const $$sanitized_props = sanitize_props($$props);
   const $$restProps = rest_props($$sanitized_props, ["el", "class"]);
@@ -286,18 +264,8 @@ function _page($$payload, $$props) {
     $$slots: { default: true }
   });
   $$payload.out += `<!----> `;
-  RecipeLayout($$payload, {
-    title: data.metadata.title,
-    description: data.metadata.description,
-    image: data.metadata.image,
-    prepTime: prepTimeNum,
-    cookTime: cookTimeNum,
-    totalTime: totalTimeNum,
-    difficulty: data.metadata.difficulty,
-    servings: data.metadata.servings,
-    tags: data.metadata.tags,
-    relatedProducts: data.relatedProducts,
-    children: ($$payload2) => {
+  {
+    let content = function($$payload2) {
       {
         $$payload2.out += "<!--[!-->";
       }
@@ -327,8 +295,22 @@ function _page($$payload, $$props) {
         $$payload2.out += "<!--[!-->";
       }
       $$payload2.out += `<!--]-->`;
-    }
-  });
+    };
+    RecipeLayout($$payload, {
+      title: data.metadata.title,
+      description: data.metadata.description,
+      image: data.metadata.image,
+      prepTime: prepTimeNum,
+      cookTime: cookTimeNum,
+      totalTime: totalTimeNum,
+      difficulty: data.metadata.difficulty,
+      servings: data.metadata.servings,
+      tags: data.metadata.tags,
+      relatedProducts: data.relatedProducts,
+      content,
+      $$slots: { content: true }
+    });
+  }
   $$payload.out += `<!----> `;
   if (data.relatedRecipes && data.relatedRecipes.length > 0) {
     $$payload.out += "<!--[-->";

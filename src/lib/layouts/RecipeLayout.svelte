@@ -1,28 +1,17 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
-	import { browser } from '$app/environment'; // Import browser check
-	import type { Snippet } from 'svelte'; // Import Snippet type
+	import { page } from '$app/stores';
+	import * as Card from '$lib/components/ui/card';
 	import { Badge } from '$lib/components/ui/badge';
-	import { Separator } from '$lib/components/ui/separator';
-	import { Clock, ChefHat, Users, ArrowLeft, ArrowUp } from 'lucide-svelte'; // Import icons
-	import { ProductCard } from '$lib/components/ui/product-card'; // Import ProductCard
+	import { Clock, Users } from 'lucide-svelte';
+	import type { Snippet } from 'svelte';
 
-	// Metadata from the markdown frontmatter
-	let {
-		children, // Add children prop for rendering slot content
-		title = '',
-		description = '',
-		image = '', // Will use placeholder if empty
-		prepTime = null,
-		cookTime = null,
-		totalTime = null,
-		difficulty = '',
-		servings = null,
-		tags = [],
-		products = [], // Added products prop for Shopify integration
-		relatedProducts = [] // Add relatedProducts prop
-	}: {
-		children: Snippet; // Type children as Snippet
+	// Import necessary types
+	type ProductHandle = {
+		handle: string;
+		featured?: boolean;
+	};
+
+	interface Props {
 		title?: string;
 		description?: string;
 		image?: string;
@@ -32,261 +21,220 @@
 		difficulty?: string;
 		servings?: number | null;
 		tags?: string[];
-		products?: Array<{ name: string; image: string; price: string; url: string }>;
-		relatedProducts?: Array<{ handle: string; featured?: boolean }>;
-		// Add other frontmatter props if needed, e.g., date
-	} = $props();
-
-	/** @type {import('svelte/action').Action<HTMLImageElement>} */
-	function fallbackImage(node: HTMLImageElement) {
-		const handleError = () => {
-			// Check if the src is already the placeholder to prevent infinite loops
-			if (node.src !== '/placeholder.png') {
-				node.src = '/placeholder.png';
-			}
-		};
-
-		// Rely primarily on the error event
-		node.addEventListener('error', handleError);
-
-		// Optional: Check if src is truly empty/null on initial mount,
-		// but avoid checking naturalWidth immediately.
-		if (!node.src) {
-			handleError();
-		}
-
-		return {
-			destroy() {
-				node.removeEventListener('error', handleError);
-			}
-		};
+		date?: string | null;
+		author?: string;
+		relatedProducts?: ProductHandle[];
+		content?: Snippet;
 	}
 
-	// Helper function to format tags
-	function formatTag(tag: string) {
-		return tag
-			.split('-')
-			.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-			.join(' ');
+	// Get all props in one object - fixed to remove type argument that was causing an error
+	let props = $props();
+
+	// Define the props for the RecipeLayout component with proper defaults
+	let title = $derived(props.title ?? '');
+	let description = $derived(props.description ?? '');
+	let image = $derived(props.image ?? '');
+	let prepTime = $derived(props.prepTime ?? null);
+	let cookTime = $derived(props.cookTime ?? null);
+	let totalTime = $derived(props.totalTime ?? null);
+	let difficulty = $derived(props.difficulty ?? '');
+	let servings = $derived(props.servings ?? null);
+	let tags = $derived(props.tags ?? []);
+	let date = $derived(props.date ?? null);
+	let author = $derived(props.author ?? 'Chefstore Cookbook');
+	let relatedProducts = $derived(props.relatedProducts ?? []);
+	let content = $derived(props.content);
+
+	// Fix image path if needed
+	const siteBaseUrl = 'https://chefstorecookbook.netlify.app';
+	const fullImageUrl = $derived(
+		image
+			? image.startsWith('http')
+				? image
+				: `${siteBaseUrl}${image.startsWith('/') ? '' : '/'}${image}`
+			: `${siteBaseUrl}/default-og-image.png`
+	);
+
+	// Construct the canonical URL
+	const canonicalUrl = $derived(`${siteBaseUrl}/recipes/${$page.params.slug}`);
+
+	// Format time for display
+	function formatTime(minutes: number | null): string {
+		if (minutes === null) return 'N/A';
+		return `${minutes} min`;
 	}
-
-	// State for Back to Top button visibility
-	let showBackToTop = $state(false); // Use $state for reactivity
-	let scrollY = 0;
-
-	function handleScroll() {
-		if (!browser) return; // Guard: Only run on client
-		scrollY = window.scrollY;
-		showBackToTop = scrollY > 300; // Show button after scrolling 300px
-	}
-
-	function scrollToTop() {
-		if (!browser) return; // Guard: Only run on client
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	}
-
-	onMount(() => {
-		// onMount only runs in the browser, no need for browser check here
-		window.addEventListener('scroll', handleScroll);
-		// Initial check in case the page loads scrolled down
-		handleScroll();
-	});
-
-	onDestroy(() => {
-		// onDestroy only runs in the browser, no need for browser check here
-		// Check if running in browser before removing listener, just to be safe
-		if (browser) {
-			window.removeEventListener('scroll', handleScroll);
-		}
-	});
 </script>
 
 <svelte:head>
+	<!-- Primary meta tags -->
 	<title>{title} | Chefstore Cookbook</title>
 	<meta name="description" content={description} />
+	<meta name="author" content={author} />
+
+	<!-- Open Graph meta tags -->
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
-	{#if image}
-		<meta property="og:image" content={image} />
+	<meta property="og:image" content={fullImageUrl} />
+	<meta property="og:url" content={canonicalUrl} />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Chefstore Cookbook" />
+
+	<!-- Twitter meta tags -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={fullImageUrl} />
+
+	<!-- Article specific meta tags -->
+	{#if date}
+		<meta property="article:published_time" content={new Date(date).toISOString()} />
 	{/if}
+	{#if tags && tags.length > 0}
+		<meta property="article:tag" content={tags.join(', ')} />
+	{/if}
+
+	<!-- Canonical URL -->
+	<link rel="canonical" href={canonicalUrl} />
+
+	<!-- Schema.org Recipe structured data for Google rich snippets -->
+	{@html (() => {
+		const schema: {
+			'@context': string;
+			'@type': string;
+			name: any;
+			description: any;
+			image: any[];
+			datePublished?: string;
+			recipeCategory: string;
+			recipeCuisine: string;
+			author: { '@type': string; name: any };
+			recipeYield?: string;
+			prepTime?: string;
+			cookTime?: string;
+			totalTime?: string;
+			keywords: any;
+			[key: string]: any; // Add index signature to allow string indexing
+		} = {
+			'@context': 'https://schema.org',
+			'@type': 'Recipe',
+			name: title,
+			description,
+			image: [fullImageUrl],
+			datePublished: date ? new Date(date).toISOString() : undefined,
+			recipeCategory: 'Recipe',
+			recipeCuisine: 'Universal',
+			author: { '@type': 'Organization', name: author },
+			recipeYield: servings ? `${servings} servings` : undefined,
+			prepTime: prepTime ? `PT${prepTime}M` : undefined,
+			cookTime: cookTime ? `PT${cookTime}M` : undefined,
+			totalTime: totalTime ? `PT${totalTime}M` : undefined,
+			keywords: tags?.join(', ')
+		};
+		Object.keys(schema).forEach((k) => schema[k] === undefined && delete schema[k]);
+		return `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>`;
+	})()}
 </svelte:head>
 
-<article class="relative mx-auto max-w-3xl px-4 py-8 md:px-6 lg:px-8">
-	<!-- Hero Image -->
-	<div class="relative mb-8 h-[300px] overflow-hidden rounded-lg shadow-md md:h-[400px]">
-		<img
-			use:fallbackImage
-			src={image}
-			alt={title}
-			class="h-full w-full object-cover"
-			loading="eager"
-			fetchpriority="high"
-		/>
-	</div>
+<article class="recipe-article mx-auto max-w-3xl">
+	<!-- Hero image at the top -->
+	{#if image}
+		<div class="mb-6 overflow-hidden rounded-lg">
+			<img src={image} alt={title} class="aspect-video w-full object-cover" />
+		</div>
+	{/if}
 
-	<!-- Recipe Header -->
 	<header class="mb-8">
-		<h1 class="text-foreground mb-3 text-3xl font-bold tracking-tight md:text-4xl">{title}</h1>
+		<!-- Title follows the hero image -->
+		<h1 class="mb-4 text-3xl leading-tight font-bold lg:text-4xl">{title}</h1>
 
+		<!-- Description follows the title -->
 		{#if description}
 			<p class="text-muted-foreground mb-6 text-lg">{description}</p>
 		{/if}
 
-		<!-- Recipe Metadata -->
-		<div
-			class="text-muted-foreground flex flex-wrap items-center gap-x-6 gap-y-3 border-y py-4 text-sm"
-		>
-			{#if totalTime}
-				<div class="flex items-center gap-1.5">
-					<Clock class="h-4 w-4" />
-					<span><strong>Total:</strong> {totalTime} min</span>
+		<div class="flex flex-wrap items-center gap-x-6 gap-y-2">
+			{#if prepTime !== null || cookTime !== null || totalTime !== null}
+				<div class="flex items-center gap-2">
+					<Clock class="h-5 w-5 text-amber-600" />
+					<div class="text-sm">
+						{#if totalTime !== null}
+							<strong>Total:</strong> {formatTime(totalTime)}
+						{:else}
+							{#if prepTime !== null}<span><strong>Prep:</strong> {formatTime(prepTime)}</span>{/if}
+							{#if prepTime !== null && cookTime !== null}<span class="mx-1">•</span>{/if}
+							{#if cookTime !== null}<span><strong>Cook:</strong> {formatTime(cookTime)}</span>{/if}
+						{/if}
+					</div>
 				</div>
 			{/if}
-			{#if prepTime && !totalTime}
-				<div class="flex items-center gap-1.5">
-					<Clock class="h-4 w-4" />
-					<span><strong>Prep:</strong> {prepTime} min</span>
+
+			{#if servings !== null}
+				<div class="flex items-center gap-2">
+					<Users class="h-5 w-5 text-amber-600" />
+					<div class="text-sm">
+						<strong>Serves:</strong>
+						{servings}
+					</div>
 				</div>
 			{/if}
-			{#if cookTime && !totalTime}
-				<div class="flex items-center gap-1.5">
-					<Clock class="h-4 w-4" />
-					<span><strong>Cook:</strong> {cookTime} min</span>
-				</div>
-			{/if}
+
 			{#if difficulty}
-				<div class="flex items-center gap-1.5">
-					<ChefHat class="h-4 w-4" />
-					<span><strong>Difficulty:</strong> {difficulty}</span>
-				</div>
-			{/if}
-			{#if servings}
-				<div class="flex items-center gap-1.5">
-					<Users class="h-4 w-4" />
-					<span><strong>Servings:</strong> {servings}</span>
-				</div>
+				<Badge variant="outline" class="text-sm capitalize">{difficulty}</Badge>
 			{/if}
 		</div>
+
+		{#if tags && tags.length > 0}
+			<div class="mt-4 flex flex-wrap gap-2">
+				{#each tags.filter((tag: string) => !tag.startsWith('difficulty-')) as tag}
+					<Badge variant="secondary" class="text-xs">{tag}</Badge>
+				{/each}
+			</div>
+		{/if}
 	</header>
 
-	<!-- Recipe Content -->
-	<div
-		class="prose prose-slate dark:prose-invert prose-headings:mb-4 prose-headings:mt-8 prose-p:my-4 prose-ul:my-4 prose-ol:my-4 max-w-none"
-	>
-		{@render children()}
-		<!-- Use @render tag -->
+	<div class="prose prose-amber recipe-content max-w-none">
+		{#if content}
+			{@render content()}
+		{/if}
 	</div>
-
-	<!-- Tags Section -->
-	{#if tags && tags.length > 0}
-		<Separator class="my-8" />
-		<div class="flex flex-wrap items-center gap-2">
-			<span class="text-muted-foreground text-sm font-medium">Tags:</span>
-			{#each tags as tag}
-				<Badge variant="secondary">{formatTag(tag)}</Badge>
-			{/each}
-		</div>
-	{/if}
-
-	<!-- Back to Recipes Link -->
-	<Separator class="my-8" />
-	<div class="text-center">
-		<a
-			href="/recipes"
-			class="text-primary inline-flex items-center gap-2 text-sm transition-colors hover:underline"
-		>
-			<ArrowLeft class="h-4 w-4" />
-			Back to All Recipes
-		</a>
-	</div>
-
-	<!-- Back to Top Button -->
-	<!-- Use onclick attribute instead of on:click -->
-	{#if showBackToTop}
-		<button
-			onclick={scrollToTop}
-			aria-label="Scroll back to top"
-			class="bg-primary text-primary-foreground hover:bg-primary/90 focus:ring-ring fixed right-6 bottom-6 z-50 rounded-full p-3 shadow-lg transition-opacity focus:ring-2 focus:ring-offset-2 focus:outline-none md:right-8 md:bottom-8"
-		>
-			<ArrowUp class="h-5 w-5" />
-		</button>
-	{/if}
 </article>
 
 <style>
-	/* Keep existing global prose styles if needed, or adjust */
-	:global(.prose h2) {
-		margin-top: 2.5rem;
-		margin-bottom: 1rem;
-		font-size: 1.5rem;
-		font-weight: 600;
-		/* Use theme colors */
-		color: hsl(var(--foreground));
-		border-bottom: 1px solid hsl(var(--border));
+	/* Enhanced styling for recipe content */
+	:global(.recipe-content h2) {
+		font-size: 1.75rem !important;
+		margin-top: 2rem !important;
+		margin-bottom: 1rem !important;
+		font-weight: 600 !important;
+		color: #000000 !important;
+	}
+
+	:global(.recipe-content ul) {
+		list-style-type: disc !important;
+		padding-left: 1.5rem !important;
+		margin: 1rem 0 !important;
+	}
+
+	:global(.recipe-content li) {
+		margin-bottom: 0.5rem !important;
+	}
+
+	:global(.recipe-content p) {
+		margin-bottom: 1rem !important;
+		line-height: 1.6 !important;
+	}
+
+	:global(.recipe-content div[class*='mb-8'] h2) {
+		border-bottom: 1px solid #e5e7eb;
 		padding-bottom: 0.5rem;
 	}
 
-	:global(.prose h3) {
-		margin-top: 2rem;
-		margin-bottom: 0.75rem;
-		font-size: 1.25rem;
-		font-weight: 600;
-		color: hsl(var(--foreground));
+	/* Improve readability of ingredients */
+	:global(.recipe-content .ingredients ul) {
+		padding-left: 1.75rem !important;
 	}
 
-	:global(.prose ul),
-	:global(.prose ol) {
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-		padding-left: 1.25rem;
-	}
-
-	:global(.prose li) {
-		margin-top: 0.5rem;
-		margin-bottom: 0.5rem;
-	}
-
-	:global(.prose p) {
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-		line-height: 1.7;
-	}
-
-	:global(.prose > *:first-child) {
-		margin-top: 0;
-	}
-
-	:global(.prose hr) {
-		margin-top: 2rem;
-		margin-bottom: 2rem;
-		border-color: hsl(var(--border));
-	}
-
-	@media (max-width: 640px) {
-		:global(.prose) {
-			padding-left: 4px;
-			padding-right: 4px;
-		}
-
-		:global(.prose ul),
-		:global(.prose ol) {
-			padding-left: 1.5rem;
-		}
-	}
-
-	:global(.prose h2) {
-		margin-top: 2.5rem;
-		margin-bottom: 1rem;
-		font-size: 1.5rem;
-		font-weight: 600;
-		border-bottom: 1px solid hsl(var(--border));
-		padding-bottom: 0.5rem;
-	}
-
-	:global(.prose h2 + ul) {
-		margin-top: 1rem;
-		margin-bottom: 2rem;
-		padding-left: 1.25rem;
-		list-style-type: disc;
+	:global(.recipe-content .ingredients li::marker) {
+		color: #000000 !important;
 	}
 </style>

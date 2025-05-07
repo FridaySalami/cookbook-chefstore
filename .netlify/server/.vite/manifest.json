@@ -9,34 +9,35 @@
       "_environment.js"
     ]
   },
-  "_RecipeLayout.Rlg9CDWI.css": {
-    "file": "_app/immutable/assets/RecipeLayout.Rlg9CDWI.css",
-    "src": "_RecipeLayout.Rlg9CDWI.css"
+  "_RecipeLayout.B3wuGmy0.css": {
+    "file": "_app/immutable/assets/RecipeLayout.B3wuGmy0.css",
+    "src": "_RecipeLayout.B3wuGmy0.css"
   },
   "_RecipeLayout.js": {
     "file": "chunks/RecipeLayout.js",
     "name": "RecipeLayout",
     "imports": [
       "_index3.js",
+      "_client.js",
       "_users.js",
       "_clock.js",
-      "_index2.js"
+      "_html.js"
     ],
     "css": [
-      "_app/immutable/assets/RecipeLayout.Rlg9CDWI.css"
-    ]
-  },
-  "_card-footer.js": {
-    "file": "chunks/card-footer.js",
-    "name": "card-footer",
-    "imports": [
-      "_index3.js",
-      "_clock.js"
+      "_app/immutable/assets/RecipeLayout.B3wuGmy0.css"
     ]
   },
   "_card-title.js": {
     "file": "chunks/card-title.js",
     "name": "card-title",
+    "imports": [
+      "_index3.js",
+      "_clock.js"
+    ]
+  },
+  "_chevron-right.js": {
+    "file": "chunks/chevron-right.js",
+    "name": "chevron-right",
     "imports": [
       "_index3.js",
       "_clock.js"
@@ -55,7 +56,6 @@
     "file": "chunks/clock.js",
     "name": "clock",
     "imports": [
-      "_index2.js",
       "_index3.js"
     ]
   },
@@ -136,7 +136,8 @@
     "name": "index",
     "imports": [
       "_index3.js",
-      "_clock.js"
+      "_clock.js",
+      "_index2.js"
     ]
   },
   "_internal.js": {
@@ -286,7 +287,7 @@
       "_html.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.uJaNckyD.css"
+      "_app/immutable/assets/_layout.C2jGInr2.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -330,7 +331,7 @@
     "imports": [
       "_index3.js",
       "_card-title.js",
-      "_card-footer.js",
+      "_chevron-right.js",
       "_users.js",
       "_index5.js",
       "_clock.js",
@@ -390,12 +391,11 @@
     "isEntry": true,
     "imports": [
       "_index3.js",
-      "_client.js",
+      "_RecipeLayout.js",
       "_clock.js",
-      "_card-footer.js",
+      "_chevron-right.js",
       "_card-title.js",
       "_users.js",
-      "_RecipeLayout.js",
       "_html.js"
     ]
   },

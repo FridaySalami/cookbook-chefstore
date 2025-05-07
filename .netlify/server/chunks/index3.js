@@ -1579,7 +1579,6 @@ function ensure_array_like(array_like_or_iterator) {
   return [];
 }
 export {
-  run_all as $,
   push as A,
   setContext as B,
   pop as C,
@@ -1604,9 +1603,9 @@ export {
   store_get as V,
   unsubscribe_stores as W,
   noop as X,
-  current_component as Y,
-  safe_not_equal as Z,
-  subscribe_to_store as _,
+  safe_not_equal as Y,
+  subscribe_to_store as Z,
+  run_all as _,
   set_active_effect as a,
   active_effect as b,
   active_reaction as c,

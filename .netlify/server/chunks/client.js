@@ -2,6 +2,12 @@ import "clsx";
 import "./exports.js";
 import { w as writable } from "./index2.js";
 import { X as noop } from "./index3.js";
+function get(key, parse = JSON.parse) {
+  try {
+    return parse(sessionStorage[key]);
+  } catch {
+  }
+}
 const SNAPSHOT_KEY = "sveltekit:snapshot";
 const SCROLL_KEY = "sveltekit:scroll";
 function create_updated_store() {
@@ -26,12 +32,6 @@ if (is_legacy) {
     status: -1,
     url: new URL("https://example.com")
   });
-}
-function get(key, parse = JSON.parse) {
-  try {
-    return parse(sessionStorage[key]);
-  } catch {
-  }
 }
 get(SCROLL_KEY) ?? {};
 get(SNAPSHOT_KEY) ?? {};

@@ -1,6 +1,6 @@
 import { I as sanitize_props, J as spread_props, K as slot, E as head, M as ensure_array_like, F as escape_html, D as attr, O as bind_props, C as pop, A as push } from "../../../chunks/index3.js";
 import { C as Card, a as Card_header, d as Card_content, b as Card_title, c as Card_description } from "../../../chunks/card-title.js";
-import { C as Card_footer, a as Chevron_right } from "../../../chunks/card-footer.js";
+import { C as Card_footer, a as Chevron_right } from "../../../chunks/chevron-right.js";
 import { B as Badge, U as Users } from "../../../chunks/users.js";
 import { B as Button } from "../../../chunks/index5.js";
 import { I as Icon, C as Clock } from "../../../chunks/clock.js";

@@ -1,4 +1,4 @@
-import { X as noop, Z as safe_not_equal, _ as subscribe_to_store, $ as run_all } from "./index3.js";
+import { X as noop, Y as safe_not_equal, Z as subscribe_to_store, _ as run_all } from "./index3.js";
 const subscriber_queue = [];
 function readable(value, start) {
   return {
@@ -100,14 +100,8 @@ function derived(stores, fn, initial_value) {
     };
   });
 }
-function get(store) {
-  let value;
-  subscribe_to_store(store, (_) => value = _)();
-  return value;
-}
 export {
   derived as d,
-  get as g,
   readable as r,
   writable as w
 };

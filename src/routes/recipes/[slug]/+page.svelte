@@ -220,50 +220,54 @@
 		tags={data.metadata.tags}
 		relatedProducts={data.relatedProducts}
 	>
-		<!-- Render the parsed markdown content by section -->
-		{#if whyYouLlLoveThis}
-			<div class="mb-8">
-				<h2 class="border-border mb-4 border-b pb-2 text-xl font-semibold">Why You'll Love This</h2>
-				{@html whyYouLlLoveThis}
-			</div>
-		{/if}
+		{#snippet content()}
+			<!-- Render the parsed markdown content by section -->
+			{#if whyYouLlLoveThis}
+				<div class="mb-8">
+					<h2 class="border-border mb-4 border-b pb-2 text-xl font-semibold">
+						Why You'll Love This
+					</h2>
+					{@html whyYouLlLoveThis}
+				</div>
+			{/if}
 
-		{#if ingredients}
-			<div class="mb-8">
-				<h2 class="border-border mb-4 border-b pb-2 text-xl font-semibold">Ingredients</h2>
-				{@html ingredients}
-			</div>
-		{/if}
+			{#if ingredients}
+				<div class="mb-8">
+					<h2 class="border-border mb-4 border-b pb-2 text-xl font-semibold">Ingredients</h2>
+					{@html ingredients}
+				</div>
+			{/if}
 
-		<!-- Shopify Related Products (from frontmatter) -->
-		{#if data.relatedProducts && data.relatedProducts.length > 0}
-			<div class="mb-8">
-				<RelatedProducts productHandles={data.relatedProducts} />
-			</div>
-		{/if}
+			<!-- Shopify Related Products (from frontmatter) -->
+			{#if data.relatedProducts && data.relatedProducts.length > 0}
+				<div class="mb-8">
+					<RelatedProducts productHandles={data.relatedProducts} />
+				</div>
+			{/if}
 
-		{#if instructions}
-			<div class="mb-8">
-				<h2 class="border-border mb-4 border-b pb-2 text-xl font-semibold">Instructions</h2>
-				{@html instructions}
-			</div>
-		{/if}
+			{#if instructions}
+				<div class="mb-8">
+					<h2 class="border-border mb-4 border-b pb-2 text-xl font-semibold">Instructions</h2>
+					{@html instructions}
+				</div>
+			{/if}
 
-		{#if tips}
-			<div class="mb-8">
-				<h2 id="tips" class="border-border mb-4 border-b pb-2 text-xl font-semibold">Tips</h2>
-				{@html tips}
-			</div>
-		{/if}
+			{#if tips}
+				<div class="mb-8">
+					<h2 id="tips" class="border-border mb-4 border-b pb-2 text-xl font-semibold">Tips</h2>
+					{@html tips}
+				</div>
+			{/if}
 
-		{#if goesGreatWith}
-			<div class="mb-8">
-				<h2 id="goes-great-with" class="border-border mb-4 border-b pb-2 text-xl font-semibold">
-					Goes Great With
-				</h2>
-				{@html goesGreatWith}
-			</div>
-		{/if}
+			{#if goesGreatWith}
+				<div class="mb-8">
+					<h2 id="goes-great-with" class="border-border mb-4 border-b pb-2 text-xl font-semibold">
+						Goes Great With
+					</h2>
+					{@html goesGreatWith}
+				</div>
+			{/if}
+		{/snippet}
 	</RecipeLayout>
 
 	<!-- Related Recipes Section - Outside the RecipeLayout -->
