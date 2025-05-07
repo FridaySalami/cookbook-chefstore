@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import type { ShopifyProduct } from '$lib/auth/shopify/shopify';
+	import { getApiUrl } from '$lib/utils/api';
 
 	let products = $state<ShopifyProduct[]>([]);
 	let loading = $state(true);
@@ -8,7 +9,9 @@
 
 	onMount(async () => {
 		try {
-			const res = await fetch('/api/products');
+			const apiUrl = getApiUrl('products');
+			console.log(`Fetching products from: ${apiUrl}`);
+			const res = await fetch(apiUrl);
 			if (!res.ok) throw new Error('Failed to fetch products');
 			products = await res.json();
 			loading = false;

@@ -4,6 +4,7 @@
 	import type { ShopifyProduct } from '$lib/auth/shopify/shopify';
 	import * as Card from '$lib/components/ui/card';
 	import { Badge } from '$lib/components/ui/badge';
+	import { getApiUrl } from '$lib/utils/api';
 
 	let { productHandles = [] } = $props<{
 		productHandles: Array<{ handle: string; featured?: boolean }>;
@@ -26,7 +27,10 @@
 			// Fetch each product individually
 			const productPromises = productHandles.map(
 				async ({ handle }: { handle: string; featured?: boolean }) => {
-					const res = await fetch(`/api/products?handle=${handle}`);
+					// Use the utility function to get the correct API URL
+					const apiUrl = getApiUrl(`products?handle=${handle}`);
+					console.log(`Fetching product from: ${apiUrl}`);
+					const res = await fetch(apiUrl);
 
 					if (!res.ok) {
 						throw new Error(`Failed to fetch product: ${handle}`);
