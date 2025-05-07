@@ -42,11 +42,15 @@
 		});
 	}
 
-	onMount(async () => {
+	async function fetchProducts() {
 		if (productHandles.length === 0) {
 			loading = false;
 			return;
 		}
+
+		loading = true;
+		usePlaceholderData = false;
+		error = null;
 
 		try {
 			// Attempt to fetch from API in both dev and production
@@ -106,6 +110,22 @@
 			usePlaceholderData = true; // Fallback to placeholder data on any general error
 			products = generatePlaceholderProducts();
 			loading = false;
+		}
+	}
+
+	// Watch for changes to productHandles and refetch products when they change
+	$effect(() => {
+		// Create a dependency on productHandles to trigger when it changes
+		const currentHandles = JSON.stringify(productHandles);
+
+		// We need to call fetchProducts whenever productHandles changes
+		fetchProducts();
+
+		// Log for debugging
+		if (productHandles.length > 0) {
+			console.log(
+				`[RelatedProducts] Handles changed, fetching products for: ${productHandles.map((p: { handle: string; featured?: boolean }) => p.handle).join(', ')}`
+			);
 		}
 	});
 
