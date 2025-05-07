@@ -1,0 +1,59 @@
+	/* Keep existing global prose styles if needed, or adjust */
+	:global(.prose h2) {
+		margin-top: 2.5rem;
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+		font-weight: 600;
+		/* Use theme colors */
+		color: hsl(var(--foreground));
+		border-bottom: 1px solid hsl(var(--border));
+		padding-bottom: 0.5rem;
+	}
+
+	:global(.prose h3) {
+		margin-top: 2rem;
+		margin-bottom: 0.75rem;
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: hsl(var(--foreground));
+	}
+
+	:global(.prose ul),
+	:global(.prose ol) {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		padding-left: 1.25rem;
+	}
+
+	:global(.prose li) {
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	:global(.prose p) {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		line-height: 1.7;
+	}
+
+	:global(.prose > *:first-child) {
+		margin-top: 0;
+	}
+
+	:global(.prose hr) {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		border-color: hsl(var(--border));
+	}
+
+	@media (max-width: 640px) {
+		:global(.prose) {
+			padding-left: 4px;
+			padding-right: 4px;
+		}
+
+		:global(.prose ul),
+		:global(.prose ol) {
+			padding-left: 1.5rem;
+		}
+	}

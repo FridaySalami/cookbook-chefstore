@@ -11,6 +11,9 @@ totalTime: 25
 servings: 4
 categories: [breakfast]
 tags: [quick, family-friendly, difficulty-easy]
+relatedProducts: 
+  - handle: nielsen-massey-vanilla-extract-60ml
+    featured: true
 ---
 
 ## Why You'll Love These

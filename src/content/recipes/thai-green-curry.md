@@ -1,22 +1,19 @@
 ---
 title: Thai Green Curry
 slug: thai-green-curry
-description: A bold, aromatic Thai green curry loaded with tender chicken, sweet corn, and snap peas—all brought to life with our Chefstore curry paste.
-date: 2025-04-20
-image: https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd
-prepTime: 10
-cookTime: 20
-totalTime: 30
+description: A fragrant, coconut-based curry with tender chunks of chicken, vibrant vegetables, and the perfect balance of heat and sweetness.
+date: 2025-04-23
+featured: true
+image: /placeholder.png
+prepTime: 20
+cookTime: 25
+totalTime: 45
 servings: 4
-categories:
-  - Asian
-  - Main Course
-tags:
-  - thai
-  - curry
-  - chicken
-  - quick
-  - difficulty-medium
+categories: [mains, asian]
+tags: [curry, spicy, weeknight, chicken, difficulty-medium]
+relatedProducts:
+ - handle: thai-taste-gang-keow-wan-green-curry-paste-400gm
+   featured: true
 ---
 
 ## Ingredients

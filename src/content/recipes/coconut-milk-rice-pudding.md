@@ -1,16 +1,20 @@
 ---
 title: Coconut Milk Rice Pudding
 slug: coconut-milk-rice-pudding
-description: Creamy, comforting rice pudding made dairy-free with rich coconut milk—simple, satisfying, and naturally sweet.
-date: 2025-04-24
-featured: true
+description: A silky, tropical twist on comforting rice pudding—made with rich coconut milk and infused with warming cardamom and vanilla.
+date: 2025-04-22
+featured: false
 image: /images/recipes/category-name/recipe-name/coconut-milk-rice-pudding.png
 prepTime: 5
 cookTime: 30
 totalTime: 35
 servings: 4
 categories: [dessert]
-tags: [comfort-food, plant-based, dairy-free, family-friendly, difficulty-easy]
+tags: [comfort-food, tropical, make-ahead, difficulty-easy]
+relatedProducts:
+  - handle: ospiro-pudding-rice-3kg
+    featured: true
+  - handle: nielsen-massey-vanilla-extract-60ml
 ---
 
 ## Why You'll Love This
@@ -23,7 +27,7 @@ Perfect warm on a rainy evening or chilled straight from the fridge on a hot day
 
 ## Ingredients
 
-- 150g [Ospiro Pudding Rice](https://www.thechefstoreuk.com/products/ospiro-pudding-rice-3kg)
+- 150g Ospiro Pudding Rice
 - 400ml coconut milk (full-fat for extra creaminess)
 - 200ml water
 - 3 tablespoons sugar (adjust to taste)

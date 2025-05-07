@@ -7,10 +7,14 @@ featured: true
 image: /images/recipes/category-name/recipe-name/salted-caramel-chocolate-tart.png
 prepTime: 20
 cookTime: 10
-totalTime: 30 (plus chilling)
+totalTime: 30
 servings: 8
 categories: [dessert]
 tags: [indulgent, crowd-pleaser, difficulty-medium]
+relatedProducts:
+  - handle: callebaut-caramel-filling-5kg
+    featured: true
+  - handle: callebaut-extra-bitter-callets-5kg
 ---
 
 ## Why You'll Love This

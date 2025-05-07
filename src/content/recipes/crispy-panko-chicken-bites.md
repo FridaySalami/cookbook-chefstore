@@ -12,6 +12,9 @@ servings: 4
 categories: [snack, main course]
 tags: [quick, family-friendly, difficulty-easy, chicken]
 recipeCuisine: [Japanese, American]
+relatedProducts:
+ - handle: gluten-free-panko-style-crumbs
+   featured: true
 ---
 
 ## Why You'll Love This
@@ -24,7 +27,7 @@ Perfect for parties, kids’ dinners, or sneakin’ a few straight from the tray
 ## Ingredients
 
 - 2 chicken breasts, cut into bite-sized chunks  
-- 1 cup [panko breadcrumbs](https://www.thechefstoreuk.com/products/panko-breadcrumbs)  
+- 1 cup Panko Breadcrumbs 
 - 1/2 cup plain flour  
 - 2 large eggs, beaten  
 - 1 tsp garlic powder  

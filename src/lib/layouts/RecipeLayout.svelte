@@ -5,6 +5,7 @@
 	import { Badge } from '$lib/components/ui/badge';
 	import { Separator } from '$lib/components/ui/separator';
 	import { Clock, ChefHat, Users, ArrowLeft, ArrowUp } from 'lucide-svelte'; // Import icons
+	import { ProductCard } from '$lib/components/ui/product-card'; // Import ProductCard
 
 	// Metadata from the markdown frontmatter
 	let {
@@ -17,7 +18,9 @@
 		totalTime = null,
 		difficulty = '',
 		servings = null,
-		tags = []
+		tags = [],
+		products = [], // Added products prop for Shopify integration
+		relatedProducts = [] // Add relatedProducts prop
 	}: {
 		children: Snippet; // Type children as Snippet
 		title?: string;
@@ -29,6 +32,8 @@
 		difficulty?: string;
 		servings?: number | null;
 		tags?: string[];
+		products?: Array<{ name: string; image: string; price: string; url: string }>;
+		relatedProducts?: Array<{ handle: string; featured?: boolean }>;
 		// Add other frontmatter props if needed, e.g., date
 	} = $props();
 
@@ -267,5 +272,21 @@
 		:global(.prose ol) {
 			padding-left: 1.5rem;
 		}
+	}
+
+	:global(.prose h2) {
+		margin-top: 2.5rem;
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+		font-weight: 600;
+		border-bottom: 1px solid hsl(var(--border));
+		padding-bottom: 0.5rem;
+	}
+
+	:global(.prose h2 + ul) {
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+		padding-left: 1.25rem;
+		list-style-type: disc;
 	}
 </style>

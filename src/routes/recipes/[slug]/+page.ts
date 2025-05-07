@@ -20,6 +20,7 @@ interface RecipeMetadata {
   difficulty?: string;
   draft?: boolean;
   recipeCuisine?: string[];
+  relatedProducts?: Array<{ handle: string, featured?: boolean }>;
 }
 
 // Define the type for our markdown module
@@ -34,11 +35,13 @@ type RecipeModuleMap = Record<string, RecipeModuleImporter>;
 
 // Define and EXPORT the expected return type for the load function
 export interface LoadReturn {
-  component: any;
   metadata: RecipeMetadata;
   ingredients: string[];
   instructions: { '@type': 'HowToStep'; text: string }[];
-  relatedRecipes: RecipeMetadata[]; // Add relatedRecipes
+  relatedRecipes: RecipeMetadata[];
+  productLinks: Array<{ id: string, url: string }>;
+  rawContent: string; // Add this to store raw markdown content
+  relatedProducts: Array<{ handle: string, featured?: boolean }>;
 }
 
 // Add this entries function
@@ -62,7 +65,10 @@ export const entries: EntryGenerator = async () => {
 export const prerender = true;
 
 // Explicitly type the load function with LoadReturn
-export const load: PageLoad<LoadReturn> = async ({ params }) => {
+export const load: PageLoad<LoadReturn> = async ({ params, parent }) => {
+  // First, get any data that was returned from the server load function
+  const parentData = await parent() as { relatedProducts?: Array<{ handle: string, featured?: boolean }> };
+
   const { slug } = params;
 
   try {
@@ -93,6 +99,10 @@ export const load: PageLoad<LoadReturn> = async ({ params }) => {
     const instructions: LoadReturn['instructions'] = [];
     let currentSection: 'ingredients' | 'instructions' | null = null;
 
+    // Extract product links from ingredients
+    const productLinks: Array<{ id: string, url: string }> = [];
+    const linkRegex = /\[.*?\]\((.*?)\)/g;
+
     const lines = rawContent.split('\n'); // Use '\n' for splitting lines from raw import
 
     for (const line of lines) {
@@ -114,9 +124,20 @@ export const load: PageLoad<LoadReturn> = async ({ params }) => {
 
       // Extract list items based on current section
       if (currentSection === 'ingredients' && trimmedLine.startsWith('- ')) {
-        // Remove markdown link formatting: [text](url) -> text
+        // Extract the ingredient text (without link formatting)
         const ingredientText = trimmedLine.substring(2).trim().replace(/\[(.*?)\]\(.*?\)/g, '$1');
         ingredients.push(ingredientText);
+
+        // Extract product links from this ingredient line
+        let match;
+        while ((match = linkRegex.exec(trimmedLine)) !== null) {
+          const url = match[1];
+          // Extract product ID from URL
+          const urlParts = url.split('/');
+          const id = urlParts[urlParts.length - 1].split('?')[0];
+
+          productLinks.push({ id, url });
+        }
       } else if (currentSection === 'instructions' && /^\d+\.\s/.test(trimmedLine)) {
         // Regex for numbered list items (e.g., "1. ")
         instructions.push({
@@ -150,31 +171,31 @@ export const load: PageLoad<LoadReturn> = async ({ params }) => {
       .filter(recipe => {
         // Exclude the current recipe
         if (recipe.slug === slug) return false;
-        // Check for shared tags
-        const recipeTags = recipe.tags || [];
-        return currentTags.some(tag => recipeTags.includes(tag));
+        // Include if any tags match
+        return currentTags.some(tag => recipe.tags?.includes(tag));
       })
-      .slice(0, 4); // Limit to 4 related recipes
-    // --- End Find Related Recipes ---
+      .slice(0, 3); // Limit to 3 related recipes
 
-    // Return component, metadata, parsed content, and related recipes
+    // IMPORTANT: Check if the server already provided relatedProducts data
+    const relatedProducts = parentData.relatedProducts || post.metadata.relatedProducts || [];
+    console.log('Page.ts relatedProducts:', JSON.stringify(relatedProducts));
+
+    // Return only serializable data (exclude any functions like the component)
     return {
-      component: post.default,
       metadata: post.metadata,
       ingredients,
       instructions,
-      relatedRecipes // Add related recipes to the return object
+      relatedRecipes,
+      productLinks,
+      rawContent, // Add the raw markdown content to the returned data
+      relatedProducts // Use server data if available, fall back to local data
     };
   } catch (e) {
-    // Catch potential errors during import or if the file doesn't exist
-    console.error('Error loading recipe:', e);
-    // Use the slug in the error message if it's not the generic 404
-    if (e && typeof e === 'object' && 'status' in e && e.status === 404) {
-      // Cast to HttpError to safely access body.message
-      const httpError = e as HttpError;
-      throw error(404, httpError.body?.message || `Recipe "${slug}" not found`);
+    // Improve error handling
+    console.error(`Error loading recipe: ${e}`);
+    if (e instanceof Error) {
+      throw error(500, e.message);
     }
-    // Rethrow other errors or provide a generic message
-    throw error(500, 'Could not load recipe');
+    throw error(500, 'An unknown error occurred while loading the recipe');
   }
 };

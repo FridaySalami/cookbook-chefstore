@@ -11,6 +11,9 @@ totalTime: 2 hours (chilling)
 servings: 4
 categories: [dessert]
 tags: [quick, indulgent, crowd-pleaser, chocolate, difficulty-easy]
+relatedProducts:
+  - handle: callebaut-milk-dark-white-chocolate-callets-4-x-400g-bundle
+    featured: true
 ---
 
 ## Why You'll Love This
@@ -22,7 +25,7 @@ Made with real **Callebaut milk chocolate**, it’s got a deep cocoa flavor with
 
 ## Ingredients
 
-- 200g [Callebaut Milk Chocolate Callets](https://www.thechefstoreuk.com/products/callebaut-milk-chocolate-callets-5kg)  
+- 200g Callebaut Milk Chocolate Calletes
 - 300ml double cream (plus extra for topping)  
 - 2 large eggs, separated  
 - 2 tablespoons sugar  
