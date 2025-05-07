@@ -1,6 +1,5 @@
 <!-- src/lib/components/RelatedProducts.svelte -->
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { dev } from '$app/environment';
 	import type { ShopifyProduct } from '$lib/auth/shopify/shopify';
 	import * as Card from '$lib/components/ui/card';
@@ -42,71 +41,80 @@
 		});
 	}
 
-	onMount(async () => {
-		if (productHandles.length === 0) {
+	$effect(() => {
+		// Reset state each time productHandles changes
+		products = [];
+		loading = true;
+		error = null;
+		usePlaceholderData = false;
+
+		// Capture the current value of productHandles for use in the async function
+		// This ensures the effect uses the handles that triggered this specific run.
+		const currentProductHandles = productHandles;
+
+		if (currentProductHandles.length === 0) {
 			loading = false;
 			return;
 		}
 
-		try {
-			// Attempt to fetch from API in both dev and production
-			const productPromises = productHandles.map(
-				async ({ handle }: { handle: string; featured?: boolean }) => {
-					try {
-						const apiUrl = getApiUrl(`products?handle=${handle}`);
-						console.log(`[RelatedProducts] Fetching product from: ${apiUrl}`);
-						const res = await fetch(apiUrl, { signal: AbortSignal.timeout(5000) });
+		const fetchData = async () => {
+			try {
+				const productPromises = currentProductHandles.map(
+					async ({ handle }: { handle: string; featured?: boolean }) => {
+						try {
+							const response = await fetch(getApiUrl(`/api/shopify/product/${handle}`));
+							if (!response.ok) {
+								if (dev) {
+									console.warn(
+										`Shopify API error for related product ${handle}: ${response.status} ${response.statusText}`
+									);
+								}
+								return null; // Failed to fetch this specific product
+							}
+							return await response.json();
+						} catch (fetchError) {
+							if (dev) {
+								console.error(`Failed to fetch related product ${handle}:`, fetchError);
+							}
+							return null; // Network or other error for this specific product
+						}
+					}
+				);
 
-						if (!res.ok) {
-							const errorText = await res.text();
-							console.error(
-								`[RelatedProducts] Failed to fetch product: ${handle}, Status: ${res.status}, Response: ${errorText}`
-							);
-							throw new Error(`Failed to fetch product: ${handle}, Status: ${res.status}`);
-						}
+				const results = await Promise.all(productPromises);
+				const fetchedProducts = results.filter((p) => p !== null) as ShopifyProduct[];
 
-						const product = await res.json();
-						if (product && product.title && !product.error) {
-							// Check for product.error from our API
-							return product;
-						}
-						if (product && product.error) {
-							console.error(`[RelatedProducts] API error for ${handle}: ${product.error}`);
-							throw new Error(`API error for ${handle}: ${product.error}`);
-						}
-						console.warn(`[RelatedProducts] Invalid or empty product data for ${handle}:`, product);
-						throw new Error(`Invalid product data for ${handle}`);
-					} catch (err) {
-						console.error(`[RelatedProducts] Error fetching individual product ${handle}:`, err);
-						return null; // Return null if a specific product fetch fails
+				if (fetchedProducts.length > 0) {
+					products = fetchedProducts;
+				} else {
+					// No products were successfully fetched
+					if (dev) {
+						products = generatePlaceholderProducts();
+						usePlaceholderData = true;
+						console.warn(
+							'Related products API request returned no products or all failed. Using placeholder data.'
+						);
+					} else {
+						// In production, if no products, the products array will remain empty.
+						// You might want to set an error or a specific message here.
+						console.warn('Related products API request returned no products or all failed.');
 					}
 				}
-			);
-
-			const results = await Promise.all(productPromises);
-
-			const fetchedProducts = results.filter((p) => p !== null) as ShopifyProduct[];
-
-			if (fetchedProducts.length > 0) {
-				console.log('[RelatedProducts] Successfully fetched products from API:', fetchedProducts);
-				usePlaceholderData = false;
-				products = fetchedProducts;
-			} else {
-				console.warn(
-					'[RelatedProducts] All product fetches failed or returned no valid data. Using placeholder data.'
-				);
-				usePlaceholderData = true;
-				products = generatePlaceholderProducts();
+			} catch (e: any) {
+				// This catch handles errors from Promise.all or other synchronous parts within fetchData
+				error = e.message || 'Failed to fetch related products';
+				console.error('Error processing related products:', e);
+				if (dev) {
+					products = generatePlaceholderProducts();
+					usePlaceholderData = true;
+					console.warn('Using placeholder data for related products due to an overall error.');
+				}
+			} finally {
+				loading = false;
 			}
+		};
 
-			loading = false;
-		} catch (err) {
-			// Catch errors from Promise.all or other general errors
-			console.error('[RelatedProducts] General error loading products:', err);
-			usePlaceholderData = true; // Fallback to placeholder data on any general error
-			products = generatePlaceholderProducts();
-			loading = false;
-		}
+		fetchData();
 	});
 
 	// Handle image error
