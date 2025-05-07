@@ -7,8 +7,6 @@
 
 [functions]
   directory = "netlify/functions"
-
-[[headers]]
-  for = "/api/*"
-  [headers.values]
-    Cache-Control = "no-store, max-age=0"
+  
+[dev]
+  command = "npm run dev"
