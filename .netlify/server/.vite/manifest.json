@@ -1,0 +1,373 @@
+{
+  ".svelte-kit/generated/server/internal.js": {
+    "file": "internal.js",
+    "name": "internal",
+    "src": ".svelte-kit/generated/server/internal.js",
+    "isEntry": true,
+    "imports": [
+      "_internal.js"
+    ]
+  },
+  "_RecipeLayout.Rlg9CDWI.css": {
+    "file": "_app/immutable/assets/RecipeLayout.Rlg9CDWI.css",
+    "src": "_RecipeLayout.Rlg9CDWI.css"
+  },
+  "_RecipeLayout.js": {
+    "file": "chunks/RecipeLayout.js",
+    "name": "RecipeLayout",
+    "imports": [
+      "_index3.js",
+      "_users.js",
+      "_clock.js",
+      "_index2.js"
+    ],
+    "css": [
+      "_app/immutable/assets/RecipeLayout.Rlg9CDWI.css"
+    ]
+  },
+  "_card-footer.js": {
+    "file": "chunks/card-footer.js",
+    "name": "card-footer",
+    "imports": [
+      "_index3.js",
+      "_clock.js"
+    ]
+  },
+  "_card-title.js": {
+    "file": "chunks/card-title.js",
+    "name": "card-title",
+    "imports": [
+      "_index3.js",
+      "_clock.js"
+    ]
+  },
+  "_client.js": {
+    "file": "chunks/client.js",
+    "name": "client",
+    "imports": [
+      "_exports.js",
+      "_index2.js",
+      "_index3.js"
+    ]
+  },
+  "_clock.js": {
+    "file": "chunks/clock.js",
+    "name": "clock",
+    "imports": [
+      "_index2.js",
+      "_index3.js"
+    ]
+  },
+  "_exports.js": {
+    "file": "chunks/exports.js",
+    "name": "exports"
+  },
+  "_false.js": {
+    "file": "chunks/false.js",
+    "name": "false"
+  },
+  "_html.js": {
+    "file": "chunks/html.js",
+    "name": "html"
+  },
+  "_index.js": {
+    "file": "chunks/index.js",
+    "name": "index"
+  },
+  "_index2.js": {
+    "file": "chunks/index2.js",
+    "name": "index",
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "_index3.js": {
+    "file": "chunks/index3.js",
+    "name": "index",
+    "imports": [
+      "_false.js"
+    ]
+  },
+  "_index4.js": {
+    "file": "chunks/index4.js",
+    "name": "index",
+    "imports": [
+      "_false.js"
+    ]
+  },
+  "_index5.js": {
+    "file": "chunks/index5.js",
+    "name": "index",
+    "imports": [
+      "_index3.js",
+      "_clock.js"
+    ]
+  },
+  "_internal.js": {
+    "file": "chunks/internal.js",
+    "name": "internal",
+    "imports": [
+      "_index3.js"
+    ]
+  },
+  "_thai-green-curry.js": {
+    "file": "chunks/thai-green-curry.js",
+    "name": "thai-green-curry",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
+  "_users.js": {
+    "file": "chunks/users.js",
+    "name": "users",
+    "imports": [
+      "_index3.js",
+      "_clock.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "name": "entries/fallbacks/error.svelte",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index3.js",
+      "_client.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
+    "file": "index.js",
+    "name": "index",
+    "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js",
+    "isEntry": true,
+    "imports": [
+      "_false.js",
+      "_internal.js",
+      "_index.js",
+      "_exports.js",
+      "_index2.js"
+    ]
+  },
+  "src/content/recipes/coconut-milk-rice-pudding.md?raw": {
+    "file": "chunks/coconut-milk-rice-pudding.js",
+    "name": "coconut-milk-rice-pudding",
+    "src": "src/content/recipes/coconut-milk-rice-pudding.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/crispy-panko-chicken-bites.md?raw": {
+    "file": "chunks/crispy-panko-chicken-bites.js",
+    "name": "crispy-panko-chicken-bites",
+    "src": "src/content/recipes/crispy-panko-chicken-bites.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/fluffy-buttermilk-pancakes.md?raw": {
+    "file": "chunks/fluffy-buttermilk-pancakes.js",
+    "name": "fluffy-buttermilk-pancakes",
+    "src": "src/content/recipes/fluffy-buttermilk-pancakes.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/miso-glazed-roasted-vegetables.md?raw": {
+    "file": "chunks/miso-glazed-roasted-vegetables.js",
+    "name": "miso-glazed-roasted-vegetables",
+    "src": "src/content/recipes/miso-glazed-roasted-vegetables.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/poppadom-snack-platter.md?raw": {
+    "file": "chunks/poppadom-snack-platter.js",
+    "name": "poppadom-snack-platter",
+    "src": "src/content/recipes/poppadom-snack-platter.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/salted-caramel-chocolate-tart.md?raw": {
+    "file": "chunks/salted-caramel-chocolate-tart.js",
+    "name": "salted-caramel-chocolate-tart",
+    "src": "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/silky-milk-chocolate-mousse.md?raw": {
+    "file": "chunks/silky-milk-chocolate-mousse.js",
+    "name": "silky-milk-chocolate-mousse",
+    "src": "src/content/recipes/silky-milk-chocolate-mousse.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/thai-green-curry.md?raw": {
+    "file": "chunks/thai-green-curry2.js",
+    "name": "thai-green-curry",
+    "src": "src/content/recipes/thai-green-curry.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/routes/+layout.svelte": {
+    "file": "entries/pages/_layout.svelte.js",
+    "name": "entries/pages/_layout.svelte",
+    "src": "src/routes/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index3.js",
+      "_html.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_layout.B35vqA2P.css"
+    ]
+  },
+  "src/routes/+page.svelte": {
+    "file": "entries/pages/_page.svelte.js",
+    "name": "entries/pages/_page.svelte",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index3.js",
+      "_card-title.js",
+      "_index5.js",
+      "_clock.js"
+    ]
+  },
+  "src/routes/+page.ts": {
+    "file": "entries/pages/_page.ts.js",
+    "name": "entries/pages/_page.ts",
+    "src": "src/routes/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "_thai-green-curry.js",
+      "_index4.js"
+    ]
+  },
+  "src/routes/api/products/+server.ts": {
+    "file": "entries/endpoints/api/products/_server.ts.js",
+    "name": "entries/endpoints/api/products/_server.ts",
+    "src": "src/routes/api/products/+server.ts",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_index4.js"
+    ]
+  },
+  "src/routes/recipes/+page.svelte": {
+    "file": "entries/pages/recipes/_page.svelte.js",
+    "name": "entries/pages/recipes/_page.svelte",
+    "src": "src/routes/recipes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index3.js",
+      "_card-title.js",
+      "_card-footer.js",
+      "_users.js",
+      "_index5.js",
+      "_clock.js",
+      "_html.js"
+    ]
+  },
+  "src/routes/recipes/+page.ts": {
+    "file": "entries/pages/recipes/_page.ts.js",
+    "name": "entries/pages/recipes/_page.ts",
+    "src": "src/routes/recipes/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "_thai-green-curry.js",
+      "_index4.js"
+    ]
+  },
+  "src/routes/recipes/[slug]/+page.server.ts": {
+    "file": "entries/pages/recipes/_slug_/_page.server.ts.js",
+    "name": "entries/pages/recipes/_slug_/_page.server.ts",
+    "src": "src/routes/recipes/[slug]/+page.server.ts",
+    "isEntry": true,
+    "imports": [
+      "_thai-green-curry.js",
+      "_index.js"
+    ],
+    "dynamicImports": [
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "src/content/recipes/coconut-milk-rice-pudding.md?raw",
+      "src/content/recipes/crispy-panko-chicken-bites.md?raw",
+      "src/content/recipes/fluffy-buttermilk-pancakes.md?raw",
+      "src/content/recipes/miso-glazed-roasted-vegetables.md?raw",
+      "src/content/recipes/poppadom-snack-platter.md?raw",
+      "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
+      "src/content/recipes/silky-milk-chocolate-mousse.md?raw",
+      "src/content/recipes/thai-green-curry.md?raw"
+    ]
+  },
+  "src/routes/recipes/[slug]/+page.svelte": {
+    "file": "entries/pages/recipes/_slug_/_page.svelte.js",
+    "name": "entries/pages/recipes/_slug_/_page.svelte",
+    "src": "src/routes/recipes/[slug]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index3.js",
+      "_client.js",
+      "_clock.js",
+      "_card-footer.js",
+      "_card-title.js",
+      "_users.js",
+      "_RecipeLayout.js",
+      "_html.js"
+    ]
+  },
+  "src/routes/recipes/[slug]/+page.ts": {
+    "file": "entries/pages/recipes/_slug_/_page.ts.js",
+    "name": "entries/pages/recipes/_slug_/_page.ts",
+    "src": "src/routes/recipes/[slug]/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "_thai-green-curry.js",
+      "_index.js",
+      "_index4.js"
+    ],
+    "dynamicImports": [
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "_thai-green-curry.js",
+      "src/content/recipes/coconut-milk-rice-pudding.md?raw",
+      "src/content/recipes/crispy-panko-chicken-bites.md?raw",
+      "src/content/recipes/fluffy-buttermilk-pancakes.md?raw",
+      "src/content/recipes/miso-glazed-roasted-vegetables.md?raw",
+      "src/content/recipes/poppadom-snack-platter.md?raw",
+      "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
+      "src/content/recipes/silky-milk-chocolate-mousse.md?raw",
+      "src/content/recipes/thai-green-curry.md?raw"
+    ]
+  },
+  "src/routes/shop/+page.svelte": {
+    "file": "entries/pages/shop/_page.svelte.js",
+    "name": "entries/pages/shop/_page.svelte",
+    "src": "src/routes/shop/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index3.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.amJJEYbV.css"
+    ]
+  },
+  "src/routes/sitemap.xml/+server.ts": {
+    "file": "entries/endpoints/sitemap.xml/_server.ts.js",
+    "name": "entries/endpoints/sitemap.xml/_server.ts",
+    "src": "src/routes/sitemap.xml/+server.ts",
+    "isEntry": true,
+    "imports": [
+      "_thai-green-curry.js"
+    ]
+  }
+}

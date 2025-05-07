@@ -1,0 +1,104 @@
+import { _ as __vite_glob_2_7, h as __vite_glob_2_6, i as __vite_glob_2_5, j as __vite_glob_2_4, k as __vite_glob_2_3, l as __vite_glob_2_2, n as __vite_glob_2_1, o as __vite_glob_2_0 } from "../../../../chunks/thai-green-curry.js";
+import { e as error } from "../../../../chunks/index.js";
+const __variableDynamicImportRuntimeHelper = (glob, path, segs) => {
+  const v = glob[path];
+  if (v) {
+    return typeof v === "function" ? v() : Promise.resolve(v);
+  }
+  return new Promise((_, reject) => {
+    (typeof queueMicrotask === "function" ? queueMicrotask : setTimeout)(
+      reject.bind(
+        null,
+        new Error(
+          "Unknown variable dynamic import: " + path + (path.split("/").length !== segs ? ". Note that variables only represent file names one level deep." : "")
+        )
+      )
+    );
+  });
+};
+const load = async ({ params }) => {
+  const { slug } = params;
+  try {
+    const recipeModule = await __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "../../../content/recipes/coconut-milk-rice-pudding.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.o), "../../../content/recipes/crispy-panko-chicken-bites.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.n), "../../../content/recipes/fluffy-buttermilk-pancakes.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.l), "../../../content/recipes/miso-glazed-roasted-vegetables.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.k), "../../../content/recipes/poppadom-snack-platter.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.j), "../../../content/recipes/salted-caramel-chocolate-tart.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.i), "../../../content/recipes/silky-milk-chocolate-mousse.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.h), "../../../content/recipes/thai-green-curry.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n._) }), `../../../content/recipes/${slug}.md`, 6);
+    const { metadata } = recipeModule;
+    const rawContent = await __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "../../../content/recipes/coconut-milk-rice-pudding.md": () => import("../../../../chunks/coconut-milk-rice-pudding.js"), "../../../content/recipes/crispy-panko-chicken-bites.md": () => import("../../../../chunks/crispy-panko-chicken-bites.js"), "../../../content/recipes/fluffy-buttermilk-pancakes.md": () => import("../../../../chunks/fluffy-buttermilk-pancakes.js"), "../../../content/recipes/miso-glazed-roasted-vegetables.md": () => import("../../../../chunks/miso-glazed-roasted-vegetables.js"), "../../../content/recipes/poppadom-snack-platter.md": () => import("../../../../chunks/poppadom-snack-platter.js"), "../../../content/recipes/salted-caramel-chocolate-tart.md": () => import("../../../../chunks/salted-caramel-chocolate-tart.js"), "../../../content/recipes/silky-milk-chocolate-mousse.md": () => import("../../../../chunks/silky-milk-chocolate-mousse.js"), "../../../content/recipes/thai-green-curry.md": () => import("../../../../chunks/thai-green-curry2.js") }), `../../../content/recipes/${slug}.md`, 6);
+    const content = rawContent.default;
+    const productLinks = extractProductLinks(content);
+    const relatedProducts = metadata.relatedProducts || [];
+    const relatedRecipes = await findRelatedRecipes(metadata, slug);
+    const ingredients = parseIngredients(content);
+    const instructions = parseInstructions(content);
+    return {
+      metadata,
+      productLinks,
+      relatedProducts,
+      relatedRecipes,
+      ingredients,
+      instructions
+    };
+  } catch (err) {
+    console.error(`Error loading recipe ${slug}:`, err);
+    throw error(404, `Recipe "${slug}" not found`);
+  }
+};
+function extractProductLinks(content) {
+  const productLinks = [];
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let match;
+  while ((match = linkRegex.exec(content)) !== null) {
+    const [, text, url] = match;
+    if (url.includes("thechefstoreuk.com/products/")) {
+      const urlParts = url.split("/");
+      const productId = urlParts[urlParts.length - 1];
+      productLinks.push({
+        id: productId,
+        url,
+        productName: text
+      });
+    }
+  }
+  return productLinks;
+}
+async function findRelatedRecipes(metadata, currentSlug, limit = 4) {
+  const allRecipes = /* @__PURE__ */ Object.assign({ "../../../content/recipes/coconut-milk-rice-pudding.md": __vite_glob_2_0, "../../../content/recipes/crispy-panko-chicken-bites.md": __vite_glob_2_1, "../../../content/recipes/fluffy-buttermilk-pancakes.md": __vite_glob_2_2, "../../../content/recipes/miso-glazed-roasted-vegetables.md": __vite_glob_2_3, "../../../content/recipes/poppadom-snack-platter.md": __vite_glob_2_4, "../../../content/recipes/salted-caramel-chocolate-tart.md": __vite_glob_2_5, "../../../content/recipes/silky-milk-chocolate-mousse.md": __vite_glob_2_6, "../../../content/recipes/thai-green-curry.md": __vite_glob_2_7 });
+  const recipes = Object.entries(allRecipes).filter(([path, _]) => !path.includes(currentSlug)).map(([path, module]) => {
+    const slug = path.split("/").pop()?.replace(".md", "");
+    return { slug, ...module.metadata };
+  }).filter((recipe) => recipe.metadata);
+  const relatedRecipes = recipes.map((recipe) => {
+    const commonTagsCount = countCommonItems(metadata.tags || [], recipe.tags || []);
+    const commonCategoriesCount = countCommonItems(metadata.categories || [], recipe.categories || []);
+    return { ...recipe, relevance: commonTagsCount + commonCategoriesCount };
+  }).filter((recipe) => recipe.relevance > 0).sort((a, b) => b.relevance - a.relevance).slice(0, limit);
+  if (relatedRecipes.length < limit) {
+    const recentRecipes = recipes.filter((recipe) => !relatedRecipes.some((r) => r.slug === recipe.slug)).sort((a, b) => {
+      const dateA = a.date ? new Date(a.date).getTime() : 0;
+      const dateB = b.date ? new Date(b.date).getTime() : 0;
+      return dateB - dateA;
+    }).slice(0, limit - relatedRecipes.length);
+    relatedRecipes.push(...recentRecipes);
+  }
+  return relatedRecipes;
+}
+function countCommonItems(array1, array2) {
+  return array1.filter((item) => array2.includes(item)).length;
+}
+function parseIngredients(content) {
+  const ingredientsRegex = /## Ingredients\s+([\s\S]*?)(?=##|$)/;
+  const match = content.match(ingredientsRegex);
+  if (!match || !match[1]) return [];
+  return match[1].split(/\n-\s*/).map((line) => line.trim()).filter(Boolean).filter((line) => !line.startsWith("**") && !line.startsWith("Optional"));
+}
+function parseInstructions(content) {
+  const instructionsRegex = /## Instructions\s+([\s\S]*?)(?=##|$)/;
+  const match = content.match(instructionsRegex);
+  if (!match || !match[1]) return [];
+  const steps = match[1].split(/\n\d+\.\s*/).map((line) => line.trim()).filter(Boolean);
+  return steps.map((step) => ({
+    "@type": "HowToStep",
+    text: step
+  }));
+}
+export {
+  load
+};

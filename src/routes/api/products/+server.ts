@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
 import { getProducts, getProduct } from '$lib/auth/shopify/shopify';
+import { dev } from '$app/environment';
 
 /**
  * GET handler for fetching products
@@ -30,8 +31,10 @@ export const GET: RequestHandler = async ({ url }) => {
       console.log(`Fetched ${products.length} products`);
       return json(products, {
         headers: {
-          // Don't cache during development
-          'cache-control': 'no-store, max-age=0'
+          // Cache for 5 minutes in production, no cache in dev
+          'cache-control': dev
+            ? 'no-store, max-age=0'
+            : 'public, max-age=300'
         }
       });
     }

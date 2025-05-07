@@ -1,0 +1,2 @@
+# Redirect API calls to Netlify Functions
+/api/*  /.netlify/functions/server/api/:splat  200

@@ -1,129 +1,41 @@
-import { SHOPIFY_API_KEY, SHOPIFY_API_SECRET, SHOPIFY_STORE_URL, SHOPIFY_ACCESS_TOKEN } from '$env/static/private';
-
-// Format the store domain properly (remove https:// if present)
-const formattedShopifyDomain = SHOPIFY_STORE_URL?.replace('https://', '');
-
-// Type for Shopify Product
-export interface ShopifyProduct {
-  id: string;
-  title: string;
-  description?: string;
-  body_html?: string;
-  vendor: string;
-  product_type: string;
-  created_at?: string;
-  handle: string;
-  updated_at?: string;
-  published_at?: string;
-  tags?: string;
-  variants: ShopifyProductVariant[];
-  images: ShopifyProductImage[];
-  options: ShopifyProductOption[];
-}
-
-export interface ShopifyProductVariant {
-  id: string;
-  product_id?: string;
-  title: string;
-  price: string;
-  sku?: string;
-  position?: number;
-  inventory_policy?: string;
-  compare_at_price?: string | null;
-  fulfillment_service?: string;
-  inventory_management?: string | null;
-  option1?: string | null;
-  option2?: string | null;
-  option3?: string | null;
-  created_at?: string;
-  updated_at?: string;
-  taxable?: boolean;
-  barcode?: string | null;
-  grams?: number;
-  weight?: number;
-  weight_unit?: string;
-  requires_shipping?: boolean;
-}
-
-export interface ShopifyProductImage {
-  id?: string;
-  product_id?: string;
-  position?: number;
-  created_at?: string;
-  updated_at?: string;
-  alt: string | null;
-  width?: number;
-  height?: number;
-  src: string;
-  variant_ids?: string[];
-}
-
-export interface ShopifyProductOption {
-  id?: string;
-  product_id?: string;
-  name: string;
-  position?: number;
-  values: string[];
-}
-
-/**
- * Executes a GraphQL query against the Shopify Storefront API
- */
-async function executeStorefrontQuery<T>(query: string, variables: Record<string, any> = {}): Promise<T> {
-  if (!SHOPIFY_STORE_URL || !SHOPIFY_ACCESS_TOKEN) {
-    console.error("Missing Shopify credentials", {
-      hasStoreUrl: !!SHOPIFY_STORE_URL,
-      hasAccessToken: !!SHOPIFY_ACCESS_TOKEN
-    });
-    throw new Error("Shopify API credentials missing");
-  }
-
+import { j as json } from "../../../../chunks/index.js";
+import { d as dev } from "../../../../chunks/index4.js";
+const SHOPIFY_STORE_URL = "https://parkersfoodservice.myshopify.com";
+const SHOPIFY_ACCESS_TOKEN = "ebc526adda09ce79223fb3b707d95a7e";
+const formattedShopifyDomain = SHOPIFY_STORE_URL?.replace("https://", "");
+async function executeStorefrontQuery(query, variables = {}) {
   try {
-    // Construct the URL for the Storefront API GraphQL endpoint
     const url = `https://${formattedShopifyDomain}/api/2024-01/graphql.json`;
-
     console.log(`Making request to Shopify API: ${url}`);
-
-    // Make the request
     const response = await fetch(url, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
-        'X-Shopify-Storefront-Access-Token': SHOPIFY_ACCESS_TOKEN,
+        "Content-Type": "application/json",
+        "X-Shopify-Storefront-Access-Token": SHOPIFY_ACCESS_TOKEN
       },
       body: JSON.stringify({
         query,
         variables
       })
     });
-
     if (!response.ok) {
       const errorText = await response.text();
       console.error(`Shopify API responded with status ${response.status}:`, errorText);
       throw new Error(`Shopify API error: ${response.status} ${response.statusText}`);
     }
-
     const result = await response.json();
-
     if (result.errors) {
-      console.error('GraphQL errors:', result.errors);
+      console.error("GraphQL errors:", result.errors);
       throw new Error(`GraphQL Error: ${result.errors[0].message}`);
     }
-
-    return result.data as T;
+    return result.data;
   } catch (error) {
-    console.error('Error fetching from Shopify:', error);
+    console.error("Error fetching from Shopify:", error);
     throw error;
   }
 }
-
-/**
- * Fetch products from Shopify using Storefront API with GraphQL
- * @returns {Promise<ShopifyProduct[]>} List of products
- */
-export async function getProducts(): Promise<ShopifyProduct[]> {
+async function getProducts() {
   try {
-    // Define the GraphQL query
     const query = `
       query GetProducts($first: Int!) {
         products(first: $first) {
@@ -177,47 +89,31 @@ export async function getProducts(): Promise<ShopifyProduct[]> {
         }
       }
     `;
-
-    // Execute the query
-    const data = await executeStorefrontQuery<{
-      products: {
-        edges: Array<{
-          node: any;
-        }>;
-      };
-    }>(query, { first: 20 });
-
-    // Process the response data
+    const data = await executeStorefrontQuery(query, { first: 20 });
     if (!data?.products?.edges) {
       return [];
     }
-
-    // Transform the GraphQL response to match our expected ShopifyProduct interface
     const products = data.products.edges.map((edge) => {
       const node = edge.node;
-
-      const images = node.images.edges.map((imgEdge: any) => ({
+      const images = node.images.edges.map((imgEdge) => ({
         id: imgEdge.node.id,
         src: imgEdge.node.src,
         alt: imgEdge.node.altText,
         width: imgEdge.node.width,
         height: imgEdge.node.height
       }));
-
-      const variants = node.variants.edges.map((varEdge: any) => ({
+      const variants = node.variants.edges.map((varEdge) => ({
         id: varEdge.node.id,
         title: varEdge.node.title,
         sku: varEdge.node.sku,
         price: varEdge.node.priceV2.amount,
         compare_at_price: varEdge.node.compareAtPriceV2?.amount || null
       }));
-
-      const options = node.options.map((option: any) => ({
+      const options = node.options.map((option) => ({
         id: option.id,
         name: option.name,
         values: option.values
       }));
-
       return {
         id: node.id,
         title: node.title,
@@ -225,8 +121,8 @@ export async function getProducts(): Promise<ShopifyProduct[]> {
         description: node.description,
         vendor: node.vendor,
         handle: node.handle,
-        product_type: node.productType || '',
-        tags: node.tags?.join(', ') || '',
+        product_type: node.productType || "",
+        tags: node.tags?.join(", ") || "",
         created_at: node.createdAt,
         updated_at: node.updatedAt,
         published_at: node.publishedAt,
@@ -235,12 +131,9 @@ export async function getProducts(): Promise<ShopifyProduct[]> {
         options
       };
     });
-
     return products;
   } catch (error) {
-    console.error('Error fetching products from Shopify:', error);
-
-    // Return sample data for demonstration if API fails
+    console.error("Error fetching products from Shopify:", error);
     return [
       {
         id: "1",
@@ -289,13 +182,7 @@ export async function getProducts(): Promise<ShopifyProduct[]> {
     ];
   }
 }
-
-/**
- * Fetch a single product by handle using Storefront API
- * @param handle - The product handle (slug)
- * @returns {Promise<ShopifyProduct>} The product data
- */
-export async function getProduct(handle: string): Promise<ShopifyProduct> {
+async function getProduct(handle) {
   try {
     const query = `
       query GetProduct($handle: String!) {
@@ -346,39 +233,30 @@ export async function getProduct(handle: string): Promise<ShopifyProduct> {
         }
       }
     `;
-
-    const data = await executeStorefrontQuery<{
-      product: any;
-    }>(query, { handle });
-
+    const data = await executeStorefrontQuery(query, { handle });
     if (!data?.product) {
       throw new Error(`Product with handle "${handle}" not found`);
     }
-
     const product = data.product;
-
-    const images = product.images.edges.map((imgEdge: any) => ({
+    const images = product.images.edges.map((imgEdge) => ({
       id: imgEdge.node.id,
       src: imgEdge.node.src,
       alt: imgEdge.node.altText,
       width: imgEdge.node.width,
       height: imgEdge.node.height
     }));
-
-    const variants = product.variants.edges.map((varEdge: any) => ({
+    const variants = product.variants.edges.map((varEdge) => ({
       id: varEdge.node.id,
       title: varEdge.node.title,
       sku: varEdge.node.sku,
       price: varEdge.node.priceV2.amount,
       compare_at_price: varEdge.node.compareAtPriceV2?.amount || null
     }));
-
-    const options = product.options.map((option: any) => ({
+    const options = product.options.map((option) => ({
       id: option.id,
       name: option.name,
       values: option.values
     }));
-
     return {
       id: product.id,
       title: product.title,
@@ -386,8 +264,8 @@ export async function getProduct(handle: string): Promise<ShopifyProduct> {
       description: product.description,
       vendor: product.vendor,
       handle: product.handle,
-      product_type: product.productType || '',
-      tags: product.tags?.join(', ') || '',
+      product_type: product.productType || "",
+      tags: product.tags?.join(", ") || "",
       created_at: product.createdAt,
       updated_at: product.updatedAt,
       published_at: product.publishedAt,
@@ -397,8 +275,6 @@ export async function getProduct(handle: string): Promise<ShopifyProduct> {
     };
   } catch (error) {
     console.error(`Error fetching product ${handle} from Shopify:`, error);
-
-    // Return mock data for the requested product
     const products = [
       {
         id: "1",
@@ -423,12 +299,48 @@ export async function getProduct(handle: string): Promise<ShopifyProduct> {
         options: []
       }
     ];
-
-    const product = products.find(p => p.handle === handle);
+    const product = products.find((p) => p.handle === handle);
     if (!product) {
       throw new Error(`Product with handle "${handle}" not found`);
     }
-
     return product;
   }
 }
+const GET = async ({ url }) => {
+  try {
+    const handle = url.searchParams.get("handle");
+    console.log(`API request received. Handle parameter: "${handle}"`);
+    if (handle) {
+      try {
+        console.log(`Attempting to fetch product with handle: ${handle}`);
+        const product = await getProduct(handle);
+        console.log(`Successfully retrieved product:`, product.title);
+        return json(product);
+      } catch (error) {
+        console.error(`Failed to fetch product with handle: ${handle}`, error);
+        return json({
+          error: error instanceof Error ? error.message : "Unknown error fetching product"
+        }, { status: 404 });
+      }
+    } else {
+      const products = await getProducts();
+      console.log(`Fetched ${products.length} products`);
+      return json(products, {
+        headers: {
+          // Cache for 5 minutes in production, no cache in dev
+          "cache-control": dev ? "no-store, max-age=0" : "public, max-age=300"
+        }
+      });
+    }
+  } catch (error) {
+    console.error("Error in products API:", error);
+    return json({
+      error: error instanceof Error ? error.message : "Unknown error occurred"
+    }, {
+      status: 500
+    });
+  }
+};
+export {
+  GET
+};
