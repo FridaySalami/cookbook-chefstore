@@ -6,7 +6,7 @@
 	import { Clock, Users, ChevronLeft, ChevronRight } from 'lucide-svelte';
 
 	export let data: PageData;
-	
+
 	// Set default values for pagination and filtering
 	$: currentPage = 1;
 	$: totalPages = 1;
@@ -18,9 +18,9 @@
 	$: difficultyTags = data.tags?.filter((tag) => tag.startsWith('difficulty-')) || [];
 	const dietaryKeywords = ['chicken', 'plant-based', 'vegan', 'vegetarian', 'thai', 'curry'];
 	$: dietaryTags = data.tags?.filter((tag) => dietaryKeywords.includes(tag)) || [];
-	$: otherTags = data.tags?.filter(
-		(tag) => !tag.startsWith('difficulty-') && !dietaryKeywords.includes(tag)
-	) || [];
+	$: otherTags =
+		data.tags?.filter((tag) => !tag.startsWith('difficulty-') && !dietaryKeywords.includes(tag)) ||
+		[];
 
 	// --- Make ItemList Schema Reactive ---
 	const siteBaseUrl = 'https://chefstorecookbook.netlify.app';
@@ -93,8 +93,8 @@
 
 <svelte:head>
 	<title
-		>{selectedTag ? `Recipes tagged "${formatTag(selectedTag)}"` : 'All Recipes'} | Chefstore
-		Recipe Hub</title
+		>{selectedTag ? `Recipes tagged "${formatTag(selectedTag)}"` : 'All Recipes'} | Chefstore Recipe
+		Hub</title
 	>
 	<meta
 		name="description"
@@ -259,9 +259,8 @@
 			</div>
 		{:else}
 			<p class="text-muted-foreground col-span-full text-center">
-				No recipes found{selectedTag
-					? ` matching the tag "${formatTag(selectedTag)}"`
-					: ''}. Try removing the filter.
+				No recipes found{selectedTag ? ` matching the tag "${formatTag(selectedTag)}"` : ''}. Try
+				removing the filter.
 			</p>
 		{/if}
 

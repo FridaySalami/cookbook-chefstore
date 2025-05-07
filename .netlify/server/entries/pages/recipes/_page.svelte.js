@@ -85,8 +85,8 @@ function _page($$payload, $$props) {
     }))
   };
   head($$payload, ($$payload2) => {
-    $$payload2.title = `<title>${escape_html(selectedTag ? `Recipes tagged "${formatTag(selectedTag)}"` : "All Recipes")} | Chefstore
-		Recipe Hub</title>`;
+    $$payload2.title = `<title>${escape_html(selectedTag ? `Recipes tagged "${formatTag(selectedTag)}"` : "All Recipes")} | Chefstore Recipe
+		Hub</title>`;
     $$payload2.out += `<meta name="description"${attr("content", selectedTag ? `Browse recipes tagged with "${formatTag(selectedTag)}".` : "Discover our collection of delicious recipes for every occasion.")}> `;
     if (currentPage > 1) {
       $$payload2.out += "<!--[-->";
@@ -300,7 +300,8 @@ function _page($$payload, $$props) {
     $$payload.out += `<!--]--></div>`;
   } else {
     $$payload.out += "<!--[!-->";
-    $$payload.out += `<p class="text-muted-foreground col-span-full text-center">No recipes found${escape_html(selectedTag ? ` matching the tag "${formatTag(selectedTag)}"` : "")}. Try removing the filter.</p>`;
+    $$payload.out += `<p class="text-muted-foreground col-span-full text-center">No recipes found${escape_html(selectedTag ? ` matching the tag "${formatTag(selectedTag)}"` : "")}. Try
+				removing the filter.</p>`;
   }
   $$payload.out += `<!--]--> `;
   if (totalPages > 1) {
