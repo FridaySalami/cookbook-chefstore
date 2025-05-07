@@ -3,7 +3,7 @@ import { dev } from '$app/environment';
 /**
  * Get the correct API URL based on environment
  * In development: /api/path
- * In production: /.netlify/functions/path (without the server/api prefix)
+ * In production: Maps to the proper Netlify function paths
  */
 export function getApiUrl(path: string): string {
   // Remove leading slash if present
@@ -14,7 +14,17 @@ export function getApiUrl(path: string): string {
     return `/api/${cleanPath}`;
   }
 
-  // In production, use the direct Netlify Function path 
-  // This matches how Netlify automatically names the functions
-  return `/.netlify/functions/${cleanPath}`;
+  // In production with Netlify adapter, the API routes become serverless functions
+  // that follow this pattern for dynamic routes
+  const paramIndex = cleanPath.indexOf('?');
+
+  if (paramIndex !== -1) {
+    // For paths with query parameters (e.g., products?handle=xyz)
+    const basePath = cleanPath.substring(0, paramIndex);
+    const params = cleanPath.substring(paramIndex);
+    return `/.netlify/functions/${basePath}${params}`;
+  } else {
+    // For paths without query parameters
+    return `/.netlify/functions/${cleanPath}`;
+  }
 }

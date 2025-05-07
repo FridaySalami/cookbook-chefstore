@@ -13,9 +13,33 @@
 	let products = $state<ShopifyProduct[]>([]);
 	let loading = $state(true);
 	let error = $state<string | null>(null);
+	let usePlaceholderData = $state(false);
 
 	// Base URL for external product links
 	const externalStoreUrl = 'https://www.thechefstoreuk.com/products/';
+
+	// Generate placeholder products when API fails
+	function generatePlaceholderProducts() {
+		return productHandles.map(({ handle, featured }: { handle: string; featured?: boolean }) => {
+			// Convert handle to a more readable title
+			const title = handle
+				.split('-')
+				.map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+				.join(' ');
+
+			return {
+				id: handle,
+				title,
+				description: '',
+				handle,
+				vendor: 'Parkers Food Service',
+				product_type: '',
+				variants: [{ id: '1', title: 'Default', price: '0.00' }],
+				images: [{ src: '/placeholder.png', alt: null }],
+				options: []
+			};
+		});
+	}
 
 	onMount(async () => {
 		if (productHandles.length === 0) {
@@ -27,23 +51,44 @@
 			// Fetch each product individually
 			const productPromises = productHandles.map(
 				async ({ handle }: { handle: string; featured?: boolean }) => {
-					// Use the utility function to get the correct API URL
-					const apiUrl = getApiUrl(`products?handle=${handle}`);
-					console.log(`Fetching product from: ${apiUrl}`);
-					const res = await fetch(apiUrl);
+					try {
+						// Use the utility function to get the correct API URL
+						const apiUrl = getApiUrl(`products?handle=${handle}`);
+						console.log(`Fetching product from: ${apiUrl}`);
+						const res = await fetch(apiUrl, {
+							// Short timeout to prevent long waits
+							signal: AbortSignal.timeout(5000)
+						});
 
-					if (!res.ok) {
-						throw new Error(`Failed to fetch product: ${handle}`);
+						if (!res.ok) {
+							throw new Error(`Failed to fetch product: ${handle}`);
+						}
+
+						return res.json();
+					} catch (err) {
+						console.error(`Error fetching ${handle}:`, err);
+						// Return null to indicate this product failed to load
+						return null;
 					}
-
-					return res.json();
 				}
 			);
 
-			products = await Promise.all(productPromises);
+			const results = await Promise.all(productPromises);
+
+			// If all results are null, use placeholder data
+			if (results.every((result) => result === null)) {
+				usePlaceholderData = true;
+				products = generatePlaceholderProducts();
+			} else {
+				// Filter out failed requests and include successful ones
+				products = results.filter((p) => p !== null);
+			}
+
 			loading = false;
 		} catch (err) {
-			error = err instanceof Error ? err.message : 'An unknown error occurred';
+			console.error('Failed to load products:', err);
+			usePlaceholderData = true;
+			products = generatePlaceholderProducts();
 			loading = false;
 		}
 	});
@@ -62,10 +107,6 @@
 		{#if loading}
 			<div class="flex items-center justify-center py-4">
 				<div class="h-6 w-6 animate-spin rounded-full border-t-2 border-b-2 border-amber-600"></div>
-			</div>
-		{:else if error}
-			<div class="mb-4 rounded border border-red-400 bg-red-100 px-4 py-2 text-red-700">
-				<p>Error loading products: {error}</p>
 			</div>
 		{:else if products.length === 0}
 			<p class="py-2 text-gray-500">No products found</p>
@@ -113,10 +154,12 @@
 									</div>
 
 									<div class="mt-1 flex items-center justify-between">
-										{#if product.variants && product.variants.length > 0}
+										{#if product.variants && product.variants.length > 0 && !usePlaceholderData}
 											<span class="block text-sm font-bold text-amber-600">
 												£{parseFloat(product.variants[0].price).toFixed(2)}
 											</span>
+										{:else}
+											<span class="block text-sm font-bold text-amber-600"> View Price </span>
 										{/if}
 										<span class="text-muted-foreground text-xs">Buy →</span>
 									</div>
