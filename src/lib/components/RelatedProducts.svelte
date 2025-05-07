@@ -49,52 +49,61 @@
 		}
 
 		try {
-			 // In development, use the API; in production, use placeholder data
-			if (dev) {
-				// Development - use API
-				const productPromises = productHandles.map(
-					async ({ handle }: { handle: string; featured?: boolean }) => {
-						try {
-							const apiUrl = getApiUrl(`products?handle=${handle}`);
-							console.log(`Fetching product from: ${apiUrl}`);
-							const res = await fetch(apiUrl, { signal: AbortSignal.timeout(5000) });
+			// Attempt to fetch from API in both dev and production
+			const productPromises = productHandles.map(
+				async ({ handle }: { handle: string; featured?: boolean }) => {
+					try {
+						const apiUrl = getApiUrl(`products?handle=${handle}`);
+						console.log(`[RelatedProducts] Fetching product from: ${apiUrl}`);
+						const res = await fetch(apiUrl, { signal: AbortSignal.timeout(5000) });
 
-							if (!res.ok) {
-								throw new Error(`Failed to fetch product: ${handle}`);
-							}
-
-							const product = await res.json();
-							if (product && product.title) {
-								return product;
-							}
-							throw new Error("Invalid product data");
-						} catch (err) {
-							console.error(`Error fetching ${handle}:`, err);
-							return null;
+						if (!res.ok) {
+							const errorText = await res.text();
+							console.error(
+								`[RelatedProducts] Failed to fetch product: ${handle}, Status: ${res.status}, Response: ${errorText}`
+							);
+							throw new Error(`Failed to fetch product: ${handle}, Status: ${res.status}`);
 						}
-					}
-				);
 
-				const results = await Promise.all(productPromises);
-				
-				// If all results are null, use placeholder data
-				if (results.every((result) => result === null)) {
-					usePlaceholderData = true;
-					products = generatePlaceholderProducts();
-				} else {
-					usePlaceholderData = false;
-					products = results.filter((p) => p !== null);
+						const product = await res.json();
+						if (product && product.title && !product.error) {
+							// Check for product.error from our API
+							return product;
+						}
+						if (product && product.error) {
+							console.error(`[RelatedProducts] API error for ${handle}: ${product.error}`);
+							throw new Error(`API error for ${handle}: ${product.error}`);
+						}
+						console.warn(`[RelatedProducts] Invalid or empty product data for ${handle}:`, product);
+						throw new Error(`Invalid product data for ${handle}`);
+					} catch (err) {
+						console.error(`[RelatedProducts] Error fetching individual product ${handle}:`, err);
+						return null; // Return null if a specific product fetch fails
+					}
 				}
+			);
+
+			const results = await Promise.all(productPromises);
+
+			const fetchedProducts = results.filter((p) => p !== null) as ShopifyProduct[];
+
+			if (fetchedProducts.length > 0) {
+				console.log('[RelatedProducts] Successfully fetched products from API:', fetchedProducts);
+				usePlaceholderData = false;
+				products = fetchedProducts;
 			} else {
-				// Production - use placeholder data with nice product names
+				console.warn(
+					'[RelatedProducts] All product fetches failed or returned no valid data. Using placeholder data.'
+				);
 				usePlaceholderData = true;
 				products = generatePlaceholderProducts();
 			}
-			
+
 			loading = false;
 		} catch (err) {
-			console.error('Failed to load products:', err);
-			usePlaceholderData = true;
+			// Catch errors from Promise.all or other general errors
+			console.error('[RelatedProducts] General error loading products:', err);
+			usePlaceholderData = true; // Fallback to placeholder data on any general error
 			products = generatePlaceholderProducts();
 			loading = false;
 		}

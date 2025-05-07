@@ -1,2 +1,6 @@
 # Redirect API calls to Netlify Functions
+/api/products  /.netlify/functions/products  200
 /api/*  /.netlify/functions/:splat  200
+
+# SPA fallback
+/*  /index.html  200

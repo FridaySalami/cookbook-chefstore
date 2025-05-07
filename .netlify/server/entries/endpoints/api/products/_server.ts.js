@@ -134,52 +134,7 @@ async function getProducts() {
     return products;
   } catch (error) {
     console.error("Error fetching products from Shopify:", error);
-    return [
-      {
-        id: "1",
-        title: "Sample Product 1",
-        body_html: "This is a sample product",
-        vendor: "Parkers Food Service",
-        product_type: "Sample",
-        handle: "sample-product-1",
-        variants: [
-          {
-            id: "v1",
-            title: "Default",
-            price: "19.99"
-          }
-        ],
-        images: [
-          {
-            src: "https://placehold.co/400",
-            alt: null
-          }
-        ],
-        options: []
-      },
-      {
-        id: "2",
-        title: "Sample Product 2",
-        body_html: "Another sample product",
-        vendor: "Parkers Food Service",
-        product_type: "Sample",
-        handle: "sample-product-2",
-        variants: [
-          {
-            id: "v2",
-            title: "Default",
-            price: "29.99"
-          }
-        ],
-        images: [
-          {
-            src: "https://placehold.co/400",
-            alt: null
-          }
-        ],
-        options: []
-      }
-    ];
+    throw error;
   }
 }
 async function getProduct(handle) {
@@ -275,35 +230,7 @@ async function getProduct(handle) {
     };
   } catch (error) {
     console.error(`Error fetching product ${handle} from Shopify:`, error);
-    const products = [
-      {
-        id: "1",
-        title: "Sample Product 1",
-        body_html: "This is a sample product",
-        vendor: "Parkers Food Service",
-        product_type: "Sample",
-        handle: "sample-product-1",
-        variants: [{ id: "v1", title: "Default", price: "19.99" }],
-        images: [{ src: "https://placehold.co/400", alt: null }],
-        options: []
-      },
-      {
-        id: "2",
-        title: "Sample Product 2",
-        body_html: "Another sample product",
-        vendor: "Parkers Food Service",
-        product_type: "Sample",
-        handle: "sample-product-2",
-        variants: [{ id: "v2", title: "Default", price: "29.99" }],
-        images: [{ src: "https://placehold.co/400", alt: null }],
-        options: []
-      }
-    ];
-    const product = products.find((p) => p.handle === handle);
-    if (!product) {
-      throw new Error(`Product with handle "${handle}" not found`);
-    }
-    return product;
+    throw error;
   }
 }
 const GET = async ({ url }) => {
