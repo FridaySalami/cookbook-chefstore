@@ -181,15 +181,15 @@
 										</Badge>
 									{/if}
 
-									<div>
+									<div class="mb-2 flex-1">
 										<h3
-											class="line-clamp-2 pr-16 text-sm font-medium transition-colors group-hover:text-amber-600"
+											class="line-clamp-3 pr-8 text-sm font-medium transition-colors group-hover:text-amber-600"
 										>
 											{product.title}
 										</h3>
 									</div>
 
-									<div class="mt-1 flex items-center justify-between">
+									<div class="flex items-center justify-between">
 										<span class="block text-sm font-bold text-amber-600">
 											{#if !usePlaceholderData && product.variants && product.variants.length > 0 && product.variants[0].price !== '0.00'}
 												£{parseFloat(product.variants[0].price).toFixed(2)}
