@@ -1,5 +1,6 @@
 import { H as HYDRATION_ERROR, g as get_next_sibling, d as define_property, s as set_active_reaction, a as set_active_effect, i as is_array, b as active_effect, c as active_reaction, e as init_operations, f as get_first_child, h as HYDRATION_START, j as HYDRATION_END, k as hydration_failed, l as clear_text_content, m as array_from, n as component_root, o as is_passive_event, p as create_text, q as branch, r as push, t as component_context, u as pop, v as set, L as LEGACY_PROPS, w as get, x as flushSync, y as mutable_source, z as render, A as push$1, B as setContext, C as pop$1 } from "./index3.js";
 import "clsx";
+import "./environment.js";
 let base = "";
 let assets = base;
 const app_dir = "_app";
@@ -408,12 +409,6 @@ function asClassComponent(component) {
   component_constructor.render = _render;
   return component_constructor;
 }
-let prerendering = false;
-function set_building() {
-}
-function set_prerendering() {
-  prerendering = true;
-}
 function Root($$payload, $$props) {
   push$1();
   let {
@@ -548,7 +543,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "tnh78"
+  version_hash: "myuuja"
 };
 async function get_hooks() {
   let handle;
@@ -574,16 +569,13 @@ export {
   options as e,
   set_private_env as f,
   get_hooks as g,
-  prerendering as h,
-  set_public_env as i,
-  set_safe_public_env as j,
-  set_read_implementation as k,
-  set_assets as l,
-  set_building as m,
-  set_manifest as n,
+  set_public_env as h,
+  set_safe_public_env as i,
+  set_read_implementation as j,
+  set_assets as k,
+  set_manifest as l,
   override as o,
   public_env as p,
-  set_prerendering as q,
   reset as r,
   safe_public_env as s
 };

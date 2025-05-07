@@ -1,4 +1,5 @@
 import { j as json } from "../../../../chunks/index.js";
+import { b as building } from "../../../../chunks/environment.js";
 import { d as dev } from "../../../../chunks/index4.js";
 const SHOPIFY_STORE_URL = "https://parkersfoodservice.myshopify.com";
 const SHOPIFY_ACCESS_TOKEN = "ebc526adda09ce79223fb3b707d95a7e";
@@ -134,6 +135,10 @@ async function getProducts() {
     return products;
   } catch (error) {
     console.error("Error fetching products from Shopify:", error);
+    if (building) {
+      console.warn("[BUILD_WARN] Error fetching products during build. Returning empty array. Error:", error);
+      return [];
+    }
     throw error;
   }
 }
@@ -190,6 +195,21 @@ async function getProduct(handle) {
     `;
     const data = await executeStorefrontQuery(query, { handle });
     if (!data?.product) {
+      if (building) {
+        console.warn(`[BUILD_WARN] Product with handle "${handle}" not found during build. Returning mock.`);
+        return {
+          id: `mock-${handle}`,
+          title: "Mock Product",
+          handle,
+          variants: [],
+          images: [],
+          options: [],
+          vendor: "Mock Vendor",
+          product_type: "Mock Type",
+          description: "Mock description",
+          body_html: "<p>Mock</p>"
+        };
+      }
       throw new Error(`Product with handle "${handle}" not found`);
     }
     const product = data.product;
@@ -230,6 +250,21 @@ async function getProduct(handle) {
     };
   } catch (error) {
     console.error(`Error fetching product ${handle} from Shopify:`, error);
+    if (building) {
+      console.warn(`[BUILD_WARN] Error fetching ${handle} during build. Returning mock. Error:`, error);
+      return {
+        id: `mock-error-${handle}`,
+        title: "Mock Product (Error)",
+        handle,
+        variants: [],
+        images: [],
+        options: [],
+        vendor: "Mock Vendor",
+        product_type: "Mock Type",
+        description: "Mock description on error",
+        body_html: "<p>Mock on error</p>"
+      };
+    }
     throw error;
   }
 }

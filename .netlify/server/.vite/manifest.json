@@ -5,7 +5,8 @@
     "src": ".svelte-kit/generated/server/internal.js",
     "isEntry": true,
     "imports": [
-      "_internal.js"
+      "_internal.js",
+      "_environment.js"
     ]
   },
   "_RecipeLayout.Rlg9CDWI.css": {
@@ -80,6 +81,10 @@
     "file": "chunks/dynamic-import-helper.js",
     "name": "dynamic-import-helper"
   },
+  "_environment.js": {
+    "file": "chunks/environment.js",
+    "name": "environment"
+  },
   "_exports.js": {
     "file": "chunks/exports.js",
     "name": "exports"
@@ -138,7 +143,8 @@
     "file": "chunks/internal.js",
     "name": "internal",
     "imports": [
-      "_index3.js"
+      "_index3.js",
+      "_environment.js"
     ]
   },
   "_miso-glazed-roasted-vegetables.js": {
@@ -218,7 +224,8 @@
       "_internal.js",
       "_index.js",
       "_exports.js",
-      "_index2.js"
+      "_index2.js",
+      "_environment.js"
     ]
   },
   "src/content/recipes/coconut-milk-rice-pudding.md?raw": {
@@ -311,6 +318,7 @@
     "isEntry": true,
     "imports": [
       "_index.js",
+      "_environment.js",
       "_index4.js"
     ]
   },

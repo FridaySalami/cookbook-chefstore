@@ -1,30 +1,20 @@
 import { dev } from '$app/environment';
 
 /**
- * Get the correct API URL based on environment
- * In development: /api/path
- * In production: Maps to the proper Netlify function paths
+ * Get the correct API URL.
+ * In both development and production, we use the standard SvelteKit path.
+ * Netlify redirects, managed by @sveltejs/adapter-netlify, will route
+ * requests to the appropriate functions in production.
  */
 export function getApiUrl(path: string): string {
-  // Remove leading slash if present
-  const cleanPath = path.startsWith('/api/') ? path.substring(4) : path;
-
-  // In development, use the regular path
-  if (dev) {
-    return `/api/${cleanPath}`;
+  // Ensure the path starts with /api/
+  // Example input: "products?handle=xyz" or "products"
+  // Example output: "/api/products?handle=xyz" or "/api/products"
+  if (path.startsWith('/api/')) {
+    return path;
   }
-
-  // In production with Netlify adapter, the API routes become serverless functions
-  // that follow this pattern for dynamic routes
-  const paramIndex = cleanPath.indexOf('?');
-
-  if (paramIndex !== -1) {
-    // For paths with query parameters (e.g., products?handle=xyz)
-    const basePath = cleanPath.substring(0, paramIndex);
-    const params = cleanPath.substring(paramIndex);
-    return `/.netlify/functions/${basePath}${params}`;
-  } else {
-    // For paths without query parameters
-    return `/.netlify/functions/${cleanPath}`;
+  if (path.startsWith('api/')) {
+    return `/${path}`;
   }
+  return `/api/${path}`;
 }
