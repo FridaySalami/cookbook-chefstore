@@ -1,4 +1,11 @@
-import { m as metadata, a as metadata$1, b as metadata$2, c as metadata$3, d as metadata$4, e as metadata$5, f as metadata$6, g as metadata$7 } from "../../../chunks/thai-green-curry.js";
+import { m as metadata$7 } from "../../../chunks/coconut-milk-rice-pudding.js";
+import { m as metadata$6 } from "../../../chunks/crispy-panko-chicken-bites.js";
+import { m as metadata$5 } from "../../../chunks/fluffy-buttermilk-pancakes.js";
+import { m as metadata$4 } from "../../../chunks/miso-glazed-roasted-vegetables.js";
+import { m as metadata$3 } from "../../../chunks/poppadom-snack-platter.js";
+import { m as metadata$2 } from "../../../chunks/salted-caramel-chocolate-tart.js";
+import { m as metadata$1 } from "../../../chunks/silky-milk-chocolate-mousse.js";
+import { m as metadata } from "../../../chunks/thai-green-curry.js";
 const site = "chefstorecookbook.netlify.app";
 const GET = async () => {
   const recipeModules = /* @__PURE__ */ Object.assign({

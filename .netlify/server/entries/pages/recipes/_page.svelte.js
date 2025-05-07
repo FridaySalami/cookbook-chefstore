@@ -24,7 +24,7 @@ function Chevron_left($$payload, $$props) {
 }
 function _page($$payload, $$props) {
   push();
-  let difficultyTags, dietaryTags, otherTags, itemListSchema;
+  let currentPage, totalPages, selectedTag, totalRecipes, displayedRecipes, difficultyTags, dietaryTags, otherTags, itemListSchema;
   let data = $$props["data"];
   const dietaryKeywords = [
     "chicken",
@@ -42,14 +42,14 @@ function _page($$payload, $$props) {
   }
   function getPageUrl(pageNumber) {
     const params = new URLSearchParams();
-    if (data.selectedTag) {
-      params.set("tag", data.selectedTag);
+    if (selectedTag) {
+      params.set("tag", selectedTag);
     }
     params.set("page", pageNumber.toString());
     return `/recipes?${params.toString()}`;
   }
   function getTagUrl(tag) {
-    if (tag && tag === data.selectedTag) {
+    if (tag && tag === selectedTag) {
       return "/recipes";
     }
     if (!tag) {
@@ -67,38 +67,42 @@ function _page($$payload, $$props) {
     }
     return tag.split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
   }
-  difficultyTags = data.allTags.filter((tag) => tag.startsWith("difficulty-"));
-  dietaryTags = data.allTags.filter((tag) => dietaryKeywords.includes(tag));
-  otherTags = data.allTags.filter((tag) => !tag.startsWith("difficulty-") && !dietaryKeywords.includes(tag));
+  currentPage = 1;
+  totalPages = 1;
+  selectedTag = null;
+  totalRecipes = data.recipes?.length || 0;
+  displayedRecipes = data.recipes || [];
+  difficultyTags = data.tags?.filter((tag) => tag.startsWith("difficulty-")) || [];
+  dietaryTags = data.tags?.filter((tag) => dietaryKeywords.includes(tag)) || [];
+  otherTags = data.tags?.filter((tag) => !tag.startsWith("difficulty-") && !dietaryKeywords.includes(tag)) || [];
   itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    // Use data.recipes and data.currentPage directly
-    itemListElement: data.recipes.map((recipe, index) => ({
+    itemListElement: displayedRecipes.map((recipe, index) => ({
       "@type": "ListItem",
-      position: (data.currentPage - 1) * 12 + index + 1,
+      position: (currentPage - 1) * 12 + index + 1,
       url: `${siteBaseUrl}/recipes/${recipe.slug}`
     }))
   };
   head($$payload, ($$payload2) => {
-    $$payload2.title = `<title>${escape_html(data.selectedTag ? `Recipes tagged "${formatTag(data.selectedTag)}"` : "All Recipes")} | Chefstore
+    $$payload2.title = `<title>${escape_html(selectedTag ? `Recipes tagged "${formatTag(selectedTag)}"` : "All Recipes")} | Chefstore
 		Recipe Hub</title>`;
-    $$payload2.out += `<meta name="description"${attr("content", data.selectedTag ? `Browse recipes tagged with "${formatTag(data.selectedTag)}".` : "Discover our collection of delicious recipes for every occasion.")}> `;
-    if (data.currentPage > 1) {
+    $$payload2.out += `<meta name="description"${attr("content", selectedTag ? `Browse recipes tagged with "${formatTag(selectedTag)}".` : "Discover our collection of delicious recipes for every occasion.")}> `;
+    if (currentPage > 1) {
       $$payload2.out += "<!--[-->";
-      $$payload2.out += `<link rel="prev"${attr("href", getPageUrl(data.currentPage - 1))}>`;
+      $$payload2.out += `<link rel="prev"${attr("href", getPageUrl(currentPage - 1))}>`;
     } else {
       $$payload2.out += "<!--[!-->";
     }
     $$payload2.out += `<!--]--> `;
-    if (data.currentPage < data.totalPages) {
+    if (currentPage < totalPages) {
       $$payload2.out += "<!--[-->";
-      $$payload2.out += `<link rel="next"${attr("href", getPageUrl(data.currentPage + 1))}>`;
+      $$payload2.out += `<link rel="next"${attr("href", getPageUrl(currentPage + 1))}>`;
     } else {
       $$payload2.out += "<!--[!-->";
     }
     $$payload2.out += `<!--]--> `;
-    if (data.recipes.length > 0) {
+    if (displayedRecipes.length > 0) {
       $$payload2.out += "<!--[-->";
       $$payload2.out += `${html((() => {
         const safeJsonString = JSON.stringify(itemListSchema, null, 2).replace(/</g, "\\u003c");
@@ -112,9 +116,9 @@ function _page($$payload, $$props) {
   $$payload.out += `<section class="bg-background text-foreground px-6 pt-10 pb-20 sm:px-10 md:px-16 lg:px-20"><div class="container mx-auto max-w-7xl"><header class="mb-16 text-center"><h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">All Recipes</h1> <p class="mx-auto mt-4 max-w-2xl text-xl text-[hsl(var(--muted-foreground))]">Browse our collection of chef-tested recipes for every meal and occasion.</p> <div class="mt-8 flex flex-col items-center gap-4"><div class="mb-2">`;
   Button($$payload, {
     href: getTagUrl(null),
-    variant: data.selectedTag === null ? "default" : "outline",
+    variant: selectedTag === null ? "default" : "outline",
     size: "sm",
-    "aria-current": data.selectedTag === null ? "page" : void 0,
+    "aria-current": selectedTag === null ? "page" : void 0,
     children: ($$payload2) => {
       $$payload2.out += `<!---->All Recipes`;
     },
@@ -129,10 +133,10 @@ function _page($$payload, $$props) {
       let tag = each_array[$$index];
       Button($$payload, {
         href: getTagUrl(tag),
-        variant: data.selectedTag === tag ? "default" : "outline",
+        variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
         class: "capitalize",
-        "aria-current": data.selectedTag === tag ? "page" : void 0,
+        "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
         },
@@ -152,9 +156,9 @@ function _page($$payload, $$props) {
       let tag = each_array_1[$$index_1];
       Button($$payload, {
         href: getTagUrl(tag),
-        variant: data.selectedTag === tag ? "default" : "outline",
+        variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
-        "aria-current": data.selectedTag === tag ? "page" : void 0,
+        "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
         },
@@ -174,9 +178,9 @@ function _page($$payload, $$props) {
       let tag = each_array_2[$$index_2];
       Button($$payload, {
         href: getTagUrl(tag),
-        variant: data.selectedTag === tag ? "default" : "outline",
+        variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
-        "aria-current": data.selectedTag === tag ? "page" : void 0,
+        "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
         },
@@ -188,23 +192,16 @@ function _page($$payload, $$props) {
     $$payload.out += "<!--[!-->";
   }
   $$payload.out += `<!--]--></div></header> <div class="mb-6 text-center">`;
-  if (data.selectedTag) {
+  if (selectedTag) {
     $$payload.out += "<!--[-->";
-    $$payload.out += `<h2 class="mb-1 text-2xl font-semibold tracking-tight">Filtered by: <span class="capitalize">${escape_html(formatTag(data.selectedTag))}</span></h2>`;
+    $$payload.out += `<h2 class="mb-1 text-2xl font-semibold tracking-tight">Filtered by: <span class="capitalize">${escape_html(formatTag(selectedTag))}</span></h2>`;
   } else {
     $$payload.out += "<!--[!-->";
   }
-  $$payload.out += `<!--]--> `;
-  if (data.totalRecipes !== void 0) {
+  $$payload.out += `<!--]--> <p class="text-muted-foreground text-sm">Showing ${escape_html(displayedRecipes.length)} of ${escape_html(totalRecipes)} recipes.</p></div> `;
+  if (displayedRecipes.length > 0) {
     $$payload.out += "<!--[-->";
-    $$payload.out += `<p class="text-muted-foreground text-sm">Showing ${escape_html(data.recipes.length)} of ${escape_html(data.totalRecipes)} recipes.</p>`;
-  } else {
-    $$payload.out += "<!--[!-->";
-  }
-  $$payload.out += `<!--]--></div> `;
-  if (data.recipes.length > 0) {
-    $$payload.out += "<!--[-->";
-    const each_array_3 = ensure_array_like(data.recipes);
+    const each_array_3 = ensure_array_like(displayedRecipes);
     $$payload.out += `<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"><!--[-->`;
     for (let $$index_4 = 0, $$length = each_array_3.length; $$index_4 < $$length; $$index_4++) {
       let recipe = each_array_3[$$index_4];
@@ -255,7 +252,7 @@ function _page($$payload, $$props) {
               $$payload3.out += `<!--]--> `;
               if (recipe.tags && recipe.tags.length > 0) {
                 $$payload3.out += "<!--[-->";
-                const each_array_4 = ensure_array_like(recipe.tags);
+                const each_array_4 = ensure_array_like(recipe.tags.slice(0, 3));
                 $$payload3.out += `<div class="mt-2 flex flex-wrap gap-1"><!--[-->`;
                 for (let $$index_3 = 0, $$length2 = each_array_4.length; $$index_3 < $$length2; $$index_3++) {
                   let tag = each_array_4[$$index_3];
@@ -303,16 +300,16 @@ function _page($$payload, $$props) {
     $$payload.out += `<!--]--></div>`;
   } else {
     $$payload.out += "<!--[!-->";
-    $$payload.out += `<p class="text-muted-foreground col-span-full text-center">No recipes found${escape_html(data.selectedTag ? ` matching the tag "${formatTag(data.selectedTag)}"` : "")}. Try removing the filter.</p>`;
+    $$payload.out += `<p class="text-muted-foreground col-span-full text-center">No recipes found${escape_html(selectedTag ? ` matching the tag "${formatTag(selectedTag)}"` : "")}. Try removing the filter.</p>`;
   }
   $$payload.out += `<!--]--> `;
-  if (data.totalPages > 1) {
+  if (totalPages > 1) {
     $$payload.out += "<!--[-->";
     $$payload.out += `<nav aria-label="Recipe pagination" class="mt-12 flex items-center justify-center gap-4">`;
-    if (data.currentPage > 1) {
+    if (currentPage > 1) {
       $$payload.out += "<!--[-->";
       Button($$payload, {
-        href: getPageUrl(data.currentPage - 1),
+        href: getPageUrl(currentPage - 1),
         variant: "outline",
         size: "sm",
         children: ($$payload2) => {
@@ -334,11 +331,11 @@ function _page($$payload, $$props) {
         $$slots: { default: true }
       });
     }
-    $$payload.out += `<!--]--> <span class="text-muted-foreground text-sm">Page ${escape_html(data.currentPage)} of ${escape_html(data.totalPages)}</span> `;
-    if (data.currentPage < data.totalPages) {
+    $$payload.out += `<!--]--> <span class="text-muted-foreground text-sm">Page ${escape_html(currentPage)} of ${escape_html(totalPages)}</span> `;
+    if (currentPage < totalPages) {
       $$payload.out += "<!--[-->";
       Button($$payload, {
-        href: getPageUrl(data.currentPage + 1),
+        href: getPageUrl(currentPage + 1),
         variant: "outline",
         size: "sm",
         children: ($$payload2) => {

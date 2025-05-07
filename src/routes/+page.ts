@@ -21,33 +21,31 @@ interface RecipeMetadata {
 
 export const load: PageLoad = async () => {
   try {
-    // Load only metadata eagerly - Corrected type annotation
-    const recipeModules = import.meta.glob<RecipeMetadata>('/src/content/recipes/*.md', {
-      import: 'metadata',
+    // Import the metadata files directly instead of trying to extract from md files
+    const recipeMetadataImports = import.meta.glob<{ metadata: RecipeMetadata }>('/src/content/recipes/*.metadata.js', {
       eager: true
     });
 
     // Process the metadata into recipe data
-    const recipes = Object.entries(recipeModules)
-      // Simplified filter: just check if module exists
-      .filter(([, module]) => module)
-      .map(([path, module]) => { // module here IS RecipeMetadata because of `import: 'metadata'`
+    const recipes = Object.entries(recipeMetadataImports)
+      .filter(([, module]) => module?.metadata)
+      .map(([path, module]) => {
         // Extract filename from path for fallback slug
-        const filename = path.split('/').pop()?.replace('.md', '') || '';
+        const filename = path.split('/').pop()?.replace('.metadata.js', '') || '';
 
-        // module IS the metadata object directly
+        const metadata = module.metadata;
         return {
-          ...module, // Spread the metadata object directly
-          slug: module.slug || filename // Use slug from the metadata object
+          ...metadata,
+          slug: metadata.slug || filename
         };
       })
       // Filter out drafts in production
-      .filter(recipe => dev ? true : !recipe.draft) // Access draft directly
+      .filter(recipe => dev ? true : !recipe.draft)
       // Sort by date (newest first)
-      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // Access date directly
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     const featuredRecipes = recipes
-      .filter(recipe => recipe.featured) // Access featured directly
+      .filter(recipe => recipe.featured)
       .slice(0, 3);
 
     return {
@@ -58,8 +56,6 @@ export const load: PageLoad = async () => {
     // Check if the error is an instance of Error before logging
     if (error instanceof Error) {
       console.error("Error loading recipes:", error.message);
-      // Optionally log the full error object for more details
-      // console.error(error);
     } else {
       console.error("An unexpected error occurred:", error);
     }

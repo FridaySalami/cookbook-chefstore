@@ -15,18 +15,20 @@ const config = {
     mdsvex({
       extensions: ['.md'],
       layout: {
-        // Use the full absolute path instead of the alias
         _: path.resolve(__dirname, './src/lib/layouts/RecipeLayout.svelte')
       }
     })
   ],
   kit: {
-    adapter: adapter(),
+    adapter: adapter({
+      edge: false,
+      split: true,
+      external: ['@shopify/shopify-api']
+    }),
     paths: {
       base: ''
     },
     alias: {
-      // Make sure the $lib alias is explicitly defined
       '$lib': path.resolve(__dirname, './src/lib')
     }
   }

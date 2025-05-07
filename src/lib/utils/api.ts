@@ -3,7 +3,7 @@ import { dev } from '$app/environment';
 /**
  * Get the correct API URL based on environment
  * In development: /api/path
- * In production: /.netlify/functions/path
+ * In production: /.netlify/functions/server/api/path
  */
 export function getApiUrl(path: string): string {
   // Remove leading slash if present
@@ -14,6 +14,6 @@ export function getApiUrl(path: string): string {
     return `/api/${cleanPath}`;
   }
 
-  // In production, use the Netlify Function path
-  return `/.netlify/functions/${cleanPath}`;
+  // In production, use the Netlify Function path with the server prefix
+  return `/.netlify/functions/server/api/${cleanPath}`;
 }

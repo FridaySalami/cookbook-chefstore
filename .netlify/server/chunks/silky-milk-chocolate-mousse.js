@@ -1,4 +1,65 @@
-const silkyMilkChocolateMousse = "---\ntitle: Silky Milk Chocolate Mousse\nslug: silky-milk-chocolate-mousse\ndescription: Light, airy mousse made with premium Callebaut milk chocolate callets—perfect for an effortless yet luxurious dessert.\ndate: 2025-04-24\nfeatured: true\nimage: /images/recipes/category-name/recipe-name/silky-milk-chocolate-mousse.png\nprepTime: 15\ncookTime: 0\ntotalTime: 2 hours (chilling)\nservings: 4\ncategories: [dessert]\ntags: [quick, indulgent, crowd-pleaser, chocolate, difficulty-easy]\nrelatedProducts:\n  - handle: callebaut-milk-dark-white-chocolate-callets-4-x-400g-bundle\n    featured: true\n---\n\n## Why You'll Love This\n\nSome desserts shout.  \nThis one **whispers**... and folks lean in closer.  \nThis mousse is *light as a cloud*, *rich as a dream*, and comes together faster than you can set the table.  \nMade with real **Callebaut milk chocolate**, it’s got a deep cocoa flavor without being too heavy — just float-away good.\n\n## Ingredients\n\n- 200g Callebaut Milk Chocolate Calletes\n- 300ml double cream (plus extra for topping)  \n- 2 large eggs, separated  \n- 2 tablespoons sugar  \n- A pinch of salt  \n\n**Optional Garnishes:**  \n- Shaved chocolate  \n- Fresh raspberries  \n- Crushed biscuits (like amaretti or digestive)\n\n## Instructions\n\n1. Melt the Callebaut chocolate gently over a bain-marie (or in short microwave bursts), stirring until smooth. Let it cool slightly.\n2. Whisk the egg yolks into the cooled chocolate one at a time until glossy.\n3. In another bowl, whip the double cream until soft peaks form.\n4. In a third bowl, whisk egg whites with the sugar and pinch of salt until stiff peaks form.\n5. Gently fold the whipped cream into the chocolate mixture.\n6. Carefully fold in the egg whites, trying not to knock out too much air.\n7. Spoon into small glasses or ramekins.  \n8. Chill for at least 2 hours before serving. Top with extra cream, chocolate shavings, or berries if you’re feeling fancy.\n\n## Tips\n\n- Don’t rush the folding—slow and gentle wins the race.\n- Want a deeper flavor? Stir a splash of espresso or coffee liqueur into the melted chocolate.\n- Make ahead: mousse keeps beautifully for 24–48 hours in the fridge.\n\n## Goes Great With\n\n- After a rich curry or roast dinner  \n- Paired with a crisp glass of sparkling wine  \n- Quiet evenings when the house finally goes still";
+import { I as sanitize_props, J as spread_props } from "./index3.js";
+import { R as RecipeLayout } from "./RecipeLayout.js";
+const metadata = {
+  "title": "Silky Milk Chocolate Mousse",
+  "slug": "silky-milk-chocolate-mousse",
+  "description": "Light, airy mousse made with premium Callebaut milk chocolate callets—perfect for an effortless yet luxurious dessert.",
+  "date": "2025-04-24T00:00:00.000Z",
+  "featured": true,
+  "image": "/images/recipes/category-name/recipe-name/silky-milk-chocolate-mousse.png",
+  "prepTime": 15,
+  "cookTime": 0,
+  "totalTime": "2 hours (chilling)",
+  "servings": 4,
+  "categories": ["dessert"],
+  "tags": [
+    "quick",
+    "indulgent",
+    "crowd-pleaser",
+    "chocolate",
+    "difficulty-easy"
+  ],
+  "relatedProducts": [
+    {
+      "handle": "callebaut-milk-dark-white-chocolate-callets-4-x-400g-bundle",
+      "featured": true
+    }
+  ]
+};
+const {
+  title,
+  slug,
+  description,
+  date,
+  featured,
+  image,
+  prepTime,
+  cookTime,
+  totalTime,
+  servings,
+  categories,
+  tags,
+  relatedProducts
+} = metadata;
+function Silky_milk_chocolate_mousse_md($$payload, $$props) {
+  const $$sanitized_props = sanitize_props($$props);
+  RecipeLayout($$payload, spread_props([
+    $$sanitized_props,
+    metadata,
+    {
+      children: ($$payload2) => {
+        $$payload2.out += `<h2>Why You’ll Love This</h2> <p>Some desserts shout.<br> This one <strong>whispers</strong>… and folks lean in closer.<br> This mousse is <em>light as a cloud</em>, <em>rich as a dream</em>, and comes together faster than you can set the table.<br> Made with real <strong>Callebaut milk chocolate</strong>, it’s got a deep cocoa flavor without being too heavy — just float-away good.</p> <h2>Ingredients</h2> <ul><li>200g Callebaut Milk Chocolate Calletes</li> <li>300ml double cream (plus extra for topping)</li> <li>2 large eggs, separated</li> <li>2 tablespoons sugar</li> <li>A pinch of salt</li></ul> <p><strong>Optional Garnishes:</strong></p> <ul><li>Shaved chocolate</li> <li>Fresh raspberries</li> <li>Crushed biscuits (like amaretti or digestive)</li></ul> <h2>Instructions</h2> <ol><li>Melt the Callebaut chocolate gently over a bain-marie (or in short microwave bursts), stirring until smooth. Let it cool slightly.</li> <li>Whisk the egg yolks into the cooled chocolate one at a time until glossy.</li> <li>In another bowl, whip the double cream until soft peaks form.</li> <li>In a third bowl, whisk egg whites with the sugar and pinch of salt until stiff peaks form.</li> <li>Gently fold the whipped cream into the chocolate mixture.</li> <li>Carefully fold in the egg whites, trying not to knock out too much air.</li> <li>Spoon into small glasses or ramekins.</li> <li>Chill for at least 2 hours before serving. Top with extra cream, chocolate shavings, or berries if you’re feeling fancy.</li></ol> <h2>Tips</h2> <ul><li>Don’t rush the folding—slow and gentle wins the race.</li> <li>Want a deeper flavor? Stir a splash of espresso or coffee liqueur into the melted chocolate.</li> <li>Make ahead: mousse keeps beautifully for 24–48 hours in the fridge.</li></ul> <h2>Goes Great With</h2> <ul><li>After a rich curry or roast dinner</li> <li>Paired with a crisp glass of sparkling wine</li> <li>Quiet evenings when the house finally goes still</li></ul>`;
+      },
+      $$slots: { default: true }
+    }
+  ]));
+}
+const __vite_glob_2_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: Silky_milk_chocolate_mousse_md,
+  metadata
+}, Symbol.toStringTag, { value: "Module" }));
 export {
-  silkyMilkChocolateMousse as default
+  __vite_glob_2_6 as _,
+  metadata as m
 };

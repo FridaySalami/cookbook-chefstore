@@ -1,27 +1,19 @@
-import { _ as __vite_glob_2_7, h as __vite_glob_2_6, i as __vite_glob_2_5, j as __vite_glob_2_4, k as __vite_glob_2_3, l as __vite_glob_2_2, n as __vite_glob_2_1, o as __vite_glob_2_0 } from "../../../../chunks/thai-green-curry.js";
+import { _ as __vite_glob_2_0 } from "../../../../chunks/coconut-milk-rice-pudding.js";
+import { _ as __vite_glob_2_1 } from "../../../../chunks/crispy-panko-chicken-bites.js";
+import { _ as __vite_glob_2_2 } from "../../../../chunks/fluffy-buttermilk-pancakes.js";
+import { _ as __vite_glob_2_3 } from "../../../../chunks/miso-glazed-roasted-vegetables.js";
+import { _ as __vite_glob_2_4 } from "../../../../chunks/poppadom-snack-platter.js";
+import { _ as __vite_glob_2_5 } from "../../../../chunks/salted-caramel-chocolate-tart.js";
+import { _ as __vite_glob_2_6 } from "../../../../chunks/silky-milk-chocolate-mousse.js";
+import { _ as __vite_glob_2_7 } from "../../../../chunks/thai-green-curry.js";
+import { _ as __variableDynamicImportRuntimeHelper } from "../../../../chunks/dynamic-import-helper.js";
 import { e as error } from "../../../../chunks/index.js";
-const __variableDynamicImportRuntimeHelper = (glob, path, segs) => {
-  const v = glob[path];
-  if (v) {
-    return typeof v === "function" ? v() : Promise.resolve(v);
-  }
-  return new Promise((_, reject) => {
-    (typeof queueMicrotask === "function" ? queueMicrotask : setTimeout)(
-      reject.bind(
-        null,
-        new Error(
-          "Unknown variable dynamic import: " + path + (path.split("/").length !== segs ? ". Note that variables only represent file names one level deep." : "")
-        )
-      )
-    );
-  });
-};
 const load = async ({ params }) => {
   const { slug } = params;
   try {
-    const recipeModule = await __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "../../../content/recipes/coconut-milk-rice-pudding.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.o), "../../../content/recipes/crispy-panko-chicken-bites.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.n), "../../../content/recipes/fluffy-buttermilk-pancakes.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.l), "../../../content/recipes/miso-glazed-roasted-vegetables.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.k), "../../../content/recipes/poppadom-snack-platter.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.j), "../../../content/recipes/salted-caramel-chocolate-tart.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.i), "../../../content/recipes/silky-milk-chocolate-mousse.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.h), "../../../content/recipes/thai-green-curry.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n._) }), `../../../content/recipes/${slug}.md`, 6);
+    const recipeModule = await __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "../../../content/recipes/coconut-milk-rice-pudding.md": () => import("../../../../chunks/coconut-milk-rice-pudding.js").then((n) => n._), "../../../content/recipes/crispy-panko-chicken-bites.md": () => import("../../../../chunks/crispy-panko-chicken-bites.js").then((n) => n._), "../../../content/recipes/fluffy-buttermilk-pancakes.md": () => import("../../../../chunks/fluffy-buttermilk-pancakes.js").then((n) => n._), "../../../content/recipes/miso-glazed-roasted-vegetables.md": () => import("../../../../chunks/miso-glazed-roasted-vegetables.js").then((n) => n._), "../../../content/recipes/poppadom-snack-platter.md": () => import("../../../../chunks/poppadom-snack-platter.js").then((n) => n._), "../../../content/recipes/salted-caramel-chocolate-tart.md": () => import("../../../../chunks/salted-caramel-chocolate-tart.js").then((n) => n._), "../../../content/recipes/silky-milk-chocolate-mousse.md": () => import("../../../../chunks/silky-milk-chocolate-mousse.js").then((n) => n._), "../../../content/recipes/thai-green-curry.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n._) }), `../../../content/recipes/${slug}.md`, 6);
     const { metadata } = recipeModule;
-    const rawContent = await __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "../../../content/recipes/coconut-milk-rice-pudding.md": () => import("../../../../chunks/coconut-milk-rice-pudding.js"), "../../../content/recipes/crispy-panko-chicken-bites.md": () => import("../../../../chunks/crispy-panko-chicken-bites.js"), "../../../content/recipes/fluffy-buttermilk-pancakes.md": () => import("../../../../chunks/fluffy-buttermilk-pancakes.js"), "../../../content/recipes/miso-glazed-roasted-vegetables.md": () => import("../../../../chunks/miso-glazed-roasted-vegetables.js"), "../../../content/recipes/poppadom-snack-platter.md": () => import("../../../../chunks/poppadom-snack-platter.js"), "../../../content/recipes/salted-caramel-chocolate-tart.md": () => import("../../../../chunks/salted-caramel-chocolate-tart.js"), "../../../content/recipes/silky-milk-chocolate-mousse.md": () => import("../../../../chunks/silky-milk-chocolate-mousse.js"), "../../../content/recipes/thai-green-curry.md": () => import("../../../../chunks/thai-green-curry2.js") }), `../../../content/recipes/${slug}.md`, 6);
+    const rawContent = await __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "../../../content/recipes/coconut-milk-rice-pudding.md": () => import("../../../../chunks/coconut-milk-rice-pudding2.js"), "../../../content/recipes/crispy-panko-chicken-bites.md": () => import("../../../../chunks/crispy-panko-chicken-bites2.js"), "../../../content/recipes/fluffy-buttermilk-pancakes.md": () => import("../../../../chunks/fluffy-buttermilk-pancakes2.js"), "../../../content/recipes/miso-glazed-roasted-vegetables.md": () => import("../../../../chunks/miso-glazed-roasted-vegetables2.js"), "../../../content/recipes/poppadom-snack-platter.md": () => import("../../../../chunks/poppadom-snack-platter2.js"), "../../../content/recipes/salted-caramel-chocolate-tart.md": () => import("../../../../chunks/salted-caramel-chocolate-tart2.js"), "../../../content/recipes/silky-milk-chocolate-mousse.md": () => import("../../../../chunks/silky-milk-chocolate-mousse2.js"), "../../../content/recipes/thai-green-curry.md": () => import("../../../../chunks/thai-green-curry2.js") }), `../../../content/recipes/${slug}.md`, 6);
     const content = rawContent.default;
     const productLinks = extractProductLinks(content);
     const relatedProducts = metadata.relatedProducts || [];

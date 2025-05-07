@@ -58,6 +58,28 @@
       "_index3.js"
     ]
   },
+  "_coconut-milk-rice-pudding.js": {
+    "file": "chunks/coconut-milk-rice-pudding.js",
+    "name": "coconut-milk-rice-pudding",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
+  "_crispy-panko-chicken-bites.js": {
+    "file": "chunks/crispy-panko-chicken-bites.js",
+    "name": "crispy-panko-chicken-bites",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
+  "_dynamic-import-helper.js": {
+    "file": "chunks/dynamic-import-helper.js",
+    "name": "dynamic-import-helper"
+  },
   "_exports.js": {
     "file": "chunks/exports.js",
     "name": "exports"
@@ -65,6 +87,15 @@
   "_false.js": {
     "file": "chunks/false.js",
     "name": "false"
+  },
+  "_fluffy-buttermilk-pancakes.js": {
+    "file": "chunks/fluffy-buttermilk-pancakes.js",
+    "name": "fluffy-buttermilk-pancakes",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
   },
   "_html.js": {
     "file": "chunks/html.js",
@@ -110,6 +141,42 @@
       "_index3.js"
     ]
   },
+  "_miso-glazed-roasted-vegetables.js": {
+    "file": "chunks/miso-glazed-roasted-vegetables.js",
+    "name": "miso-glazed-roasted-vegetables",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
+  "_poppadom-snack-platter.js": {
+    "file": "chunks/poppadom-snack-platter.js",
+    "name": "poppadom-snack-platter",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
+  "_salted-caramel-chocolate-tart.js": {
+    "file": "chunks/salted-caramel-chocolate-tart.js",
+    "name": "salted-caramel-chocolate-tart",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
+  "_silky-milk-chocolate-mousse.js": {
+    "file": "chunks/silky-milk-chocolate-mousse.js",
+    "name": "silky-milk-chocolate-mousse",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_thai-green-curry.js": {
     "file": "chunks/thai-green-curry.js",
     "name": "thai-green-curry",
@@ -118,6 +185,10 @@
       "_index3.js",
       "_RecipeLayout.js"
     ]
+  },
+  "_thai-green-curry.metadata.js": {
+    "file": "chunks/thai-green-curry.metadata.js",
+    "name": "thai-green-curry.metadata"
   },
   "_users.js": {
     "file": "chunks/users.js",
@@ -151,43 +222,43 @@
     ]
   },
   "src/content/recipes/coconut-milk-rice-pudding.md?raw": {
-    "file": "chunks/coconut-milk-rice-pudding.js",
+    "file": "chunks/coconut-milk-rice-pudding2.js",
     "name": "coconut-milk-rice-pudding",
     "src": "src/content/recipes/coconut-milk-rice-pudding.md?raw",
     "isDynamicEntry": true
   },
   "src/content/recipes/crispy-panko-chicken-bites.md?raw": {
-    "file": "chunks/crispy-panko-chicken-bites.js",
+    "file": "chunks/crispy-panko-chicken-bites2.js",
     "name": "crispy-panko-chicken-bites",
     "src": "src/content/recipes/crispy-panko-chicken-bites.md?raw",
     "isDynamicEntry": true
   },
   "src/content/recipes/fluffy-buttermilk-pancakes.md?raw": {
-    "file": "chunks/fluffy-buttermilk-pancakes.js",
+    "file": "chunks/fluffy-buttermilk-pancakes2.js",
     "name": "fluffy-buttermilk-pancakes",
     "src": "src/content/recipes/fluffy-buttermilk-pancakes.md?raw",
     "isDynamicEntry": true
   },
   "src/content/recipes/miso-glazed-roasted-vegetables.md?raw": {
-    "file": "chunks/miso-glazed-roasted-vegetables.js",
+    "file": "chunks/miso-glazed-roasted-vegetables2.js",
     "name": "miso-glazed-roasted-vegetables",
     "src": "src/content/recipes/miso-glazed-roasted-vegetables.md?raw",
     "isDynamicEntry": true
   },
   "src/content/recipes/poppadom-snack-platter.md?raw": {
-    "file": "chunks/poppadom-snack-platter.js",
+    "file": "chunks/poppadom-snack-platter2.js",
     "name": "poppadom-snack-platter",
     "src": "src/content/recipes/poppadom-snack-platter.md?raw",
     "isDynamicEntry": true
   },
   "src/content/recipes/salted-caramel-chocolate-tart.md?raw": {
-    "file": "chunks/salted-caramel-chocolate-tart.js",
+    "file": "chunks/salted-caramel-chocolate-tart2.js",
     "name": "salted-caramel-chocolate-tart",
     "src": "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
     "isDynamicEntry": true
   },
   "src/content/recipes/silky-milk-chocolate-mousse.md?raw": {
-    "file": "chunks/silky-milk-chocolate-mousse.js",
+    "file": "chunks/silky-milk-chocolate-mousse2.js",
     "name": "silky-milk-chocolate-mousse",
     "src": "src/content/recipes/silky-milk-chocolate-mousse.md?raw",
     "isDynamicEntry": true
@@ -208,7 +279,7 @@
       "_html.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.BI9sf8Mu.css"
+      "_app/immutable/assets/_layout.C7ky83SQ.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -229,7 +300,7 @@
     "src": "src/routes/+page.ts",
     "isEntry": true,
     "imports": [
-      "_thai-green-curry.js",
+      "_thai-green-curry.metadata.js",
       "_index4.js"
     ]
   },
@@ -264,7 +335,7 @@
     "src": "src/routes/recipes/+page.ts",
     "isEntry": true,
     "imports": [
-      "_thai-green-curry.js",
+      "_thai-green-curry.metadata.js",
       "_index4.js"
     ]
   },
@@ -274,17 +345,25 @@
     "src": "src/routes/recipes/[slug]/+page.server.ts",
     "isEntry": true,
     "imports": [
+      "_coconut-milk-rice-pudding.js",
+      "_crispy-panko-chicken-bites.js",
+      "_fluffy-buttermilk-pancakes.js",
+      "_miso-glazed-roasted-vegetables.js",
+      "_poppadom-snack-platter.js",
+      "_salted-caramel-chocolate-tart.js",
+      "_silky-milk-chocolate-mousse.js",
       "_thai-green-curry.js",
+      "_dynamic-import-helper.js",
       "_index.js"
     ],
     "dynamicImports": [
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
+      "_coconut-milk-rice-pudding.js",
+      "_crispy-panko-chicken-bites.js",
+      "_fluffy-buttermilk-pancakes.js",
+      "_miso-glazed-roasted-vegetables.js",
+      "_poppadom-snack-platter.js",
+      "_salted-caramel-chocolate-tart.js",
+      "_silky-milk-chocolate-mousse.js",
       "_thai-green-curry.js",
       "src/content/recipes/coconut-milk-rice-pudding.md?raw",
       "src/content/recipes/crispy-panko-chicken-bites.md?raw",
@@ -318,26 +397,19 @@
     "src": "src/routes/recipes/[slug]/+page.ts",
     "isEntry": true,
     "imports": [
-      "_thai-green-curry.js",
+      "_thai-green-curry.metadata.js",
+      "_dynamic-import-helper.js",
       "_index.js",
       "_index4.js"
     ],
     "dynamicImports": [
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
-      "_thai-green-curry.js",
+      "_coconut-milk-rice-pudding.js",
+      "_crispy-panko-chicken-bites.js",
+      "_fluffy-buttermilk-pancakes.js",
+      "_miso-glazed-roasted-vegetables.js",
+      "_poppadom-snack-platter.js",
+      "_salted-caramel-chocolate-tart.js",
+      "_silky-milk-chocolate-mousse.js",
       "_thai-green-curry.js",
       "src/content/recipes/coconut-milk-rice-pudding.md?raw",
       "src/content/recipes/crispy-panko-chicken-bites.md?raw",
@@ -367,6 +439,13 @@
     "src": "src/routes/sitemap.xml/+server.ts",
     "isEntry": true,
     "imports": [
+      "_coconut-milk-rice-pudding.js",
+      "_crispy-panko-chicken-bites.js",
+      "_fluffy-buttermilk-pancakes.js",
+      "_miso-glazed-roasted-vegetables.js",
+      "_poppadom-snack-platter.js",
+      "_salted-caramel-chocolate-tart.js",
+      "_silky-milk-chocolate-mousse.js",
       "_thai-green-curry.js"
     ]
   }

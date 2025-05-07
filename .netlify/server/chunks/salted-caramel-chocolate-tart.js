@@ -1,4 +1,64 @@
-const saltedCaramelChocolateTart = "---\ntitle: Salted Caramel Chocolate Tart\nslug: salted-caramel-chocolate-tart\ndescription: A decadent tart with a buttery base, luscious Callebaut caramel filling, and rich dark chocolate topping—finished with a sprinkle of sea salt.\ndate: 2025-04-24\nfeatured: true\nimage: /images/recipes/category-name/recipe-name/salted-caramel-chocolate-tart.png\nprepTime: 20\ncookTime: 10\ntotalTime: 30\nservings: 8\ncategories: [dessert]\ntags: [indulgent, crowd-pleaser, difficulty-medium]\nrelatedProducts:\n  - handle: callebaut-caramel-filling-5kg\n    featured: true\n  - handle: callebaut-extra-bitter-callets-5kg\n---\n\n## Why You'll Love This\n\nImagine sinking your fork into a crisp, buttery base...  \nThen hitting that *golden river* of caramel...  \nAnd finally breaking through the dark, glossy chocolate top, with just a whisper of sea salt to keep it honest.\n\nYeah.  \nThis tart isn’t just dessert—it’s a **moment.**\n\n## Ingredients\n\n- 200g digestive biscuits, crushed  \n- 100g unsalted butter, melted  \n- 300g [Callebaut Caramel Filling](https://www.thechefstoreuk.com/products/callebaut-caramel-filling-5kg)  \n- 150g dark chocolate (70% cocoa), chopped  \n- 100ml double cream  \n- Flaky sea salt, for sprinkling  \n\n## Instructions\n\n1. Mix crushed biscuits with melted butter and press into the base of a 9-inch tart tin. Chill for 10 minutes.\n2. Warm the Callebaut caramel gently in a saucepan or microwave until just pourable.\n3. Pour caramel over the biscuit base. Chill for 20 minutes until slightly set.\n4. Heat the double cream until just simmering. Remove from heat and stir in the chopped chocolate until smooth.\n5. Pour the chocolate ganache over the caramel layer and smooth the top.\n6. Chill the tart for at least 2 hours, or until fully set.\n7. Sprinkle with flaky sea salt before serving.\n\n## Tips\n\n- No tart tin? Use a springform cake tin and just slice carefully.\n- Add a pinch of sea salt straight into the caramel if you love that sweet-salty punch.\n- Want it boozy? Stir a splash of whiskey into the chocolate ganache.\n\n## Goes Great With\n\n- Strong coffee or espresso  \n- A dollop of whipped cream  \n- Quiet late nights when you need a little extra sweetness";
+import { I as sanitize_props, J as spread_props } from "./index3.js";
+import { R as RecipeLayout } from "./RecipeLayout.js";
+const metadata = {
+  "title": "Salted Caramel Chocolate Tart",
+  "slug": "salted-caramel-chocolate-tart",
+  "description": "A decadent tart with a buttery base, luscious Callebaut caramel filling, and rich dark chocolate topping—finished with a sprinkle of sea salt.",
+  "date": "2025-04-24T00:00:00.000Z",
+  "featured": true,
+  "image": "/images/recipes/category-name/recipe-name/salted-caramel-chocolate-tart.png",
+  "prepTime": 20,
+  "cookTime": 10,
+  "totalTime": 30,
+  "servings": 8,
+  "categories": ["dessert"],
+  "tags": [
+    "indulgent",
+    "crowd-pleaser",
+    "difficulty-medium"
+  ],
+  "relatedProducts": [
+    {
+      "handle": "callebaut-caramel-filling-5kg",
+      "featured": true
+    },
+    { "handle": "callebaut-extra-bitter-callets-5kg" }
+  ]
+};
+const {
+  title,
+  slug,
+  description,
+  date,
+  featured,
+  image,
+  prepTime,
+  cookTime,
+  totalTime,
+  servings,
+  categories,
+  tags,
+  relatedProducts
+} = metadata;
+function Salted_caramel_chocolate_tart_md($$payload, $$props) {
+  const $$sanitized_props = sanitize_props($$props);
+  RecipeLayout($$payload, spread_props([
+    $$sanitized_props,
+    metadata,
+    {
+      children: ($$payload2) => {
+        $$payload2.out += `<h2>Why You’ll Love This</h2> <p>Imagine sinking your fork into a crisp, buttery base…<br> Then hitting that <em>golden river</em> of caramel…<br> And finally breaking through the dark, glossy chocolate top, with just a whisper of sea salt to keep it honest.</p> <p>Yeah.<br> This tart isn’t just dessert—it’s a <strong>moment.</strong></p> <h2>Ingredients</h2> <ul><li>200g digestive biscuits, crushed</li> <li>100g unsalted butter, melted</li> <li>300g <a href="https://www.thechefstoreuk.com/products/callebaut-caramel-filling-5kg" rel="nofollow">Callebaut Caramel Filling</a></li> <li>150g dark chocolate (70% cocoa), chopped</li> <li>100ml double cream</li> <li>Flaky sea salt, for sprinkling</li></ul> <h2>Instructions</h2> <ol><li>Mix crushed biscuits with melted butter and press into the base of a 9-inch tart tin. Chill for 10 minutes.</li> <li>Warm the Callebaut caramel gently in a saucepan or microwave until just pourable.</li> <li>Pour caramel over the biscuit base. Chill for 20 minutes until slightly set.</li> <li>Heat the double cream until just simmering. Remove from heat and stir in the chopped chocolate until smooth.</li> <li>Pour the chocolate ganache over the caramel layer and smooth the top.</li> <li>Chill the tart for at least 2 hours, or until fully set.</li> <li>Sprinkle with flaky sea salt before serving.</li></ol> <h2>Tips</h2> <ul><li>No tart tin? Use a springform cake tin and just slice carefully.</li> <li>Add a pinch of sea salt straight into the caramel if you love that sweet-salty punch.</li> <li>Want it boozy? Stir a splash of whiskey into the chocolate ganache.</li></ul> <h2>Goes Great With</h2> <ul><li>Strong coffee or espresso</li> <li>A dollop of whipped cream</li> <li>Quiet late nights when you need a little extra sweetness</li></ul>`;
+      },
+      $$slots: { default: true }
+    }
+  ]));
+}
+const __vite_glob_2_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: Salted_caramel_chocolate_tart_md,
+  metadata
+}, Symbol.toStringTag, { value: "Module" }));
 export {
-  saltedCaramelChocolateTart as default
+  __vite_glob_2_5 as _,
+  metadata as m
 };

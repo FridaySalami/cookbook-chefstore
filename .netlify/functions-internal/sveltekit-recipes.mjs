@@ -1,4 +1,6 @@
-export const manifest = (() => {
+import { init } from '../serverless.js';
+
+export const handler = init((() => {
 function __memo(fn) {
 	let value;
 	return () => value ??= (value = fn());
@@ -12,58 +14,20 @@ return {
 	_: {
 		client: {start:"_app/immutable/entry/start.BQD9Xntb.js",app:"_app/immutable/entry/app.Bwwnlkjf.js",imports:["_app/immutable/entry/start.BQD9Xntb.js","_app/immutable/chunks/JIpk1tbn.js","_app/immutable/chunks/Dh5oHfRH.js","_app/immutable/chunks/e5L6D3mJ.js","_app/immutable/chunks/BT3t4PSN.js","_app/immutable/entry/app.Bwwnlkjf.js","_app/immutable/chunks/B0QAeMhy.js","_app/immutable/chunks/Dh5oHfRH.js","_app/immutable/chunks/vW00Cco6.js","_app/immutable/chunks/DNTpGgBc.js","_app/immutable/chunks/BUKNPLMJ.js","_app/immutable/chunks/BbsuJMov.js","_app/immutable/chunks/e5L6D3mJ.js","_app/immutable/chunks/BT3t4PSN.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
 		nodes: [
-			__memo(() => import('./nodes/0.js')),
-			__memo(() => import('./nodes/1.js')),
-			__memo(() => import('./nodes/2.js')),
-			__memo(() => import('./nodes/3.js')),
-			__memo(() => import('./nodes/4.js')),
-			__memo(() => import('./nodes/5.js'))
+			__memo(() => import('../server/nodes/0.js')),
+			__memo(() => import('../server/nodes/1.js')),
+			__memo(() => import('../server/nodes/3.js'))
 		],
 		routes: [
-			{
-				id: "/",
-				pattern: /^\/$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 2 },
-				endpoint: null
-			},
-			{
-				id: "/api/products",
-				pattern: /^\/api\/products\/?$/,
-				params: [],
-				page: null,
-				endpoint: __memo(() => import('./entries/endpoints/api/products/_server.ts.js'))
-			},
 			{
 				id: "/recipes",
 				pattern: /^\/recipes\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 3 },
+				page: { layouts: [0,], errors: [1,], leaf: 2 },
 				endpoint: null
-			},
-			{
-				id: "/recipes/[slug]",
-				pattern: /^\/recipes\/([^/]+?)\/?$/,
-				params: [{"name":"slug","optional":false,"rest":false,"chained":false}],
-				page: { layouts: [0,], errors: [1,], leaf: 4 },
-				endpoint: null
-			},
-			{
-				id: "/shop",
-				pattern: /^\/shop\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 5 },
-				endpoint: null
-			},
-			{
-				id: "/sitemap.xml",
-				pattern: /^\/sitemap\.xml\/?$/,
-				params: [],
-				page: null,
-				endpoint: __memo(() => import('./entries/endpoints/sitemap.xml/_server.ts.js'))
 			}
 		],
-		prerendered_routes: new Set([]),
+		prerendered_routes: new Set(["/recipes/coconut-milk-rice-pudding","/recipes/coconut-milk-rice-pudding/__data.json","/recipes/crispy-panko-chicken-bites","/recipes/crispy-panko-chicken-bites/__data.json","/recipes/fluffy-buttermilk-pancakes","/recipes/fluffy-buttermilk-pancakes/__data.json","/recipes/miso-glazed-roasted-vegetables","/recipes/miso-glazed-roasted-vegetables/__data.json","/recipes/poppadom-snack-platter","/recipes/poppadom-snack-platter/__data.json","/recipes/salted-caramel-chocolate-tart","/recipes/salted-caramel-chocolate-tart/__data.json","/recipes/silky-milk-chocolate-mousse","/recipes/silky-milk-chocolate-mousse/__data.json","/recipes/thai-green-curry","/recipes/thai-green-curry/__data.json"]),
 		matchers: async () => {
 			
 			return {  };
@@ -71,4 +35,4 @@ return {
 		server_assets: {}
 	}
 }
-})();
+})());

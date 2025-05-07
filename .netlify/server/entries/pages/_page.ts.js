@@ -1,24 +1,23 @@
-import { m as metadata, a as metadata$1, b as metadata$2, c as metadata$3, d as metadata$4, e as metadata$5, f as metadata$6, g as metadata$7 } from "../../chunks/thai-green-curry.js";
+import { _ as __vite_glob_4_7, a as __vite_glob_4_6, b as __vite_glob_4_5, c as __vite_glob_4_4, d as __vite_glob_4_3, e as __vite_glob_4_2, f as __vite_glob_4_1, g as __vite_glob_4_0 } from "../../chunks/thai-green-curry.metadata.js";
 import { d as dev } from "../../chunks/index4.js";
 const load = async () => {
   try {
-    const recipeModules = /* @__PURE__ */ Object.assign({
-      "/src/content/recipes/coconut-milk-rice-pudding.md": metadata$7,
-      "/src/content/recipes/crispy-panko-chicken-bites.md": metadata$6,
-      "/src/content/recipes/fluffy-buttermilk-pancakes.md": metadata$5,
-      "/src/content/recipes/miso-glazed-roasted-vegetables.md": metadata$4,
-      "/src/content/recipes/poppadom-snack-platter.md": metadata$3,
-      "/src/content/recipes/salted-caramel-chocolate-tart.md": metadata$2,
-      "/src/content/recipes/silky-milk-chocolate-mousse.md": metadata$1,
-      "/src/content/recipes/thai-green-curry.md": metadata
+    const recipeMetadataImports = /* @__PURE__ */ Object.assign({
+      "/src/content/recipes/coconut-milk-rice-pudding.metadata.js": __vite_glob_4_0,
+      "/src/content/recipes/crispy-panko-chicken-bites.metadata.js": __vite_glob_4_1,
+      "/src/content/recipes/fluffy-buttermilk-pancakes.metadata.js": __vite_glob_4_2,
+      "/src/content/recipes/miso-glazed-roasted-vegetables.metadata.js": __vite_glob_4_3,
+      "/src/content/recipes/poppadom-snack-platter.metadata.js": __vite_glob_4_4,
+      "/src/content/recipes/salted-caramel-chocolate-tart.metadata.js": __vite_glob_4_5,
+      "/src/content/recipes/silky-milk-chocolate-mousse.metadata.js": __vite_glob_4_6,
+      "/src/content/recipes/thai-green-curry.metadata.js": __vite_glob_4_7
     });
-    const recipes = Object.entries(recipeModules).filter(([, module]) => module).map(([path, module]) => {
-      const filename = path.split("/").pop()?.replace(".md", "") || "";
+    const recipes = Object.entries(recipeMetadataImports).filter(([, module]) => module?.metadata).map(([path, module]) => {
+      const filename = path.split("/").pop()?.replace(".metadata.js", "") || "";
+      const metadata = module.metadata;
       return {
-        ...module,
-        // Spread the metadata object directly
-        slug: module.slug || filename
-        // Use slug from the metadata object
+        ...metadata,
+        slug: metadata.slug || filename
       };
     }).filter((recipe) => dev ? true : !recipe.draft).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
     const featuredRecipes = recipes.filter((recipe) => recipe.featured).slice(0, 3);

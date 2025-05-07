@@ -1,15 +1,22 @@
-import { m as metadata, a as metadata$1, b as metadata$2, c as metadata$3, d as metadata$4, e as metadata$5, f as metadata$6, g as metadata$7 } from "../../../../chunks/thai-green-curry.js";
+import { _ as __vite_glob_4_7, a as __vite_glob_4_6, b as __vite_glob_4_5, c as __vite_glob_4_4, d as __vite_glob_4_3, e as __vite_glob_4_2, f as __vite_glob_4_1, g as __vite_glob_4_0 } from "../../../../chunks/thai-green-curry.metadata.js";
+import { _ as __variableDynamicImportRuntimeHelper } from "../../../../chunks/dynamic-import-helper.js";
 import { e as error } from "../../../../chunks/index.js";
 import { d as dev } from "../../../../chunks/index4.js";
 const entries = async () => {
-  const modules = /* @__PURE__ */ Object.assign({ "/src/content/recipes/coconut-milk-rice-pudding.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.o), "/src/content/recipes/crispy-panko-chicken-bites.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.n), "/src/content/recipes/fluffy-buttermilk-pancakes.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.l), "/src/content/recipes/miso-glazed-roasted-vegetables.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.k), "/src/content/recipes/poppadom-snack-platter.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.j), "/src/content/recipes/salted-caramel-chocolate-tart.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.i), "/src/content/recipes/silky-milk-chocolate-mousse.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.h), "/src/content/recipes/thai-green-curry.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n._) });
-  const slugs = [];
-  for (const path in modules) {
-    const slug = path.split("/").pop()?.replace(".md", "");
-    if (slug) {
-      slugs.push({ slug });
-    }
-  }
+  const modules = /* @__PURE__ */ Object.assign({
+    "/src/content/recipes/coconut-milk-rice-pudding.metadata.js": __vite_glob_4_0,
+    "/src/content/recipes/crispy-panko-chicken-bites.metadata.js": __vite_glob_4_1,
+    "/src/content/recipes/fluffy-buttermilk-pancakes.metadata.js": __vite_glob_4_2,
+    "/src/content/recipes/miso-glazed-roasted-vegetables.metadata.js": __vite_glob_4_3,
+    "/src/content/recipes/poppadom-snack-platter.metadata.js": __vite_glob_4_4,
+    "/src/content/recipes/salted-caramel-chocolate-tart.metadata.js": __vite_glob_4_5,
+    "/src/content/recipes/silky-milk-chocolate-mousse.metadata.js": __vite_glob_4_6,
+    "/src/content/recipes/thai-green-curry.metadata.js": __vite_glob_4_7
+  });
+  const slugs = Object.entries(modules).filter(([, module]) => module?.metadata).map(([path]) => {
+    const slug = path.split("/").pop()?.replace(".metadata.js", "");
+    return slug;
+  }).filter((slug) => slug !== void 0).map((slug) => ({ slug }));
   return slugs;
 };
 const prerender = true;
@@ -17,24 +24,26 @@ const load = async ({ params, parent }) => {
   const parentData = await parent();
   const { slug } = params;
   try {
-    const modules = /* @__PURE__ */ Object.assign({ "/src/content/recipes/coconut-milk-rice-pudding.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.o), "/src/content/recipes/crispy-panko-chicken-bites.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.n), "/src/content/recipes/fluffy-buttermilk-pancakes.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.l), "/src/content/recipes/miso-glazed-roasted-vegetables.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.k), "/src/content/recipes/poppadom-snack-platter.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.j), "/src/content/recipes/salted-caramel-chocolate-tart.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.i), "/src/content/recipes/silky-milk-chocolate-mousse.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n.h), "/src/content/recipes/thai-green-curry.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n._) });
-    const rawModules = /* @__PURE__ */ Object.assign({
-      "/src/content/recipes/coconut-milk-rice-pudding.md": () => import("../../../../chunks/coconut-milk-rice-pudding.js").then((m) => m["default"]),
-      "/src/content/recipes/crispy-panko-chicken-bites.md": () => import("../../../../chunks/crispy-panko-chicken-bites.js").then((m) => m["default"]),
-      "/src/content/recipes/fluffy-buttermilk-pancakes.md": () => import("../../../../chunks/fluffy-buttermilk-pancakes.js").then((m) => m["default"]),
-      "/src/content/recipes/miso-glazed-roasted-vegetables.md": () => import("../../../../chunks/miso-glazed-roasted-vegetables.js").then((m) => m["default"]),
-      "/src/content/recipes/poppadom-snack-platter.md": () => import("../../../../chunks/poppadom-snack-platter.js").then((m) => m["default"]),
-      "/src/content/recipes/salted-caramel-chocolate-tart.md": () => import("../../../../chunks/salted-caramel-chocolate-tart.js").then((m) => m["default"]),
-      "/src/content/recipes/silky-milk-chocolate-mousse.md": () => import("../../../../chunks/silky-milk-chocolate-mousse.js").then((m) => m["default"]),
-      "/src/content/recipes/thai-green-curry.md": () => import("../../../../chunks/thai-green-curry2.js").then((m) => m["default"])
+    const metadataImports = /* @__PURE__ */ Object.assign({
+      "/src/content/recipes/coconut-milk-rice-pudding.metadata.js": __vite_glob_4_0,
+      "/src/content/recipes/crispy-panko-chicken-bites.metadata.js": __vite_glob_4_1,
+      "/src/content/recipes/fluffy-buttermilk-pancakes.metadata.js": __vite_glob_4_2,
+      "/src/content/recipes/miso-glazed-roasted-vegetables.metadata.js": __vite_glob_4_3,
+      "/src/content/recipes/poppadom-snack-platter.metadata.js": __vite_glob_4_4,
+      "/src/content/recipes/salted-caramel-chocolate-tart.metadata.js": __vite_glob_4_5,
+      "/src/content/recipes/silky-milk-chocolate-mousse.metadata.js": __vite_glob_4_6,
+      "/src/content/recipes/thai-green-curry.metadata.js": __vite_glob_4_7
     });
-    const modulePath = `/src/content/recipes/${slug}.md`;
-    const moduleImporter = modules[modulePath];
-    const rawImporter = rawModules[modulePath];
-    if (!moduleImporter || !rawImporter) {
+    const metadataPath = `/src/content/recipes/${slug}.metadata.js`;
+    const metadataModule = metadataImports[metadataPath];
+    if (!metadataModule || !metadataModule.metadata) {
       throw error(404, `Recipe "${slug}" not found`);
     }
-    const [post, rawContent] = await Promise.all([moduleImporter(), rawImporter()]);
+    const moduleImporter = await __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "../../../content/recipes/coconut-milk-rice-pudding.md": () => import("../../../../chunks/coconut-milk-rice-pudding.js").then((n) => n._), "../../../content/recipes/crispy-panko-chicken-bites.md": () => import("../../../../chunks/crispy-panko-chicken-bites.js").then((n) => n._), "../../../content/recipes/fluffy-buttermilk-pancakes.md": () => import("../../../../chunks/fluffy-buttermilk-pancakes.js").then((n) => n._), "../../../content/recipes/miso-glazed-roasted-vegetables.md": () => import("../../../../chunks/miso-glazed-roasted-vegetables.js").then((n) => n._), "../../../content/recipes/poppadom-snack-platter.md": () => import("../../../../chunks/poppadom-snack-platter.js").then((n) => n._), "../../../content/recipes/salted-caramel-chocolate-tart.md": () => import("../../../../chunks/salted-caramel-chocolate-tart.js").then((n) => n._), "../../../content/recipes/silky-milk-chocolate-mousse.md": () => import("../../../../chunks/silky-milk-chocolate-mousse.js").then((n) => n._), "../../../content/recipes/thai-green-curry.md": () => import("../../../../chunks/thai-green-curry.js").then((n) => n._) }), `../../../content/recipes/${slug}.md`, 6);
+    const rawContent = await __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "../../../content/recipes/coconut-milk-rice-pudding.md": () => import("../../../../chunks/coconut-milk-rice-pudding2.js"), "../../../content/recipes/crispy-panko-chicken-bites.md": () => import("../../../../chunks/crispy-panko-chicken-bites2.js"), "../../../content/recipes/fluffy-buttermilk-pancakes.md": () => import("../../../../chunks/fluffy-buttermilk-pancakes2.js"), "../../../content/recipes/miso-glazed-roasted-vegetables.md": () => import("../../../../chunks/miso-glazed-roasted-vegetables2.js"), "../../../content/recipes/poppadom-snack-platter.md": () => import("../../../../chunks/poppadom-snack-platter2.js"), "../../../content/recipes/salted-caramel-chocolate-tart.md": () => import("../../../../chunks/salted-caramel-chocolate-tart2.js"), "../../../content/recipes/silky-milk-chocolate-mousse.md": () => import("../../../../chunks/silky-milk-chocolate-mousse2.js"), "../../../content/recipes/thai-green-curry.md": () => import("../../../../chunks/thai-green-curry2.js") }), `../../../content/recipes/${slug}.md`, 6).then((m) => m.default);
+    if (!rawContent) {
+      throw error(404, `Recipe content not found`);
+    }
     const ingredients = [];
     const instructions = [];
     let currentSection = null;
@@ -68,45 +77,42 @@ const load = async ({ params, parent }) => {
       } else if (currentSection === "instructions" && /^\d+\.\s/.test(trimmedLine)) {
         instructions.push({
           "@type": "HowToStep",
-          // This will now correctly match the type
           text: trimmedLine.replace(/^\d+\.\s/, "").trim()
         });
       }
     }
-    const allRecipeModules = /* @__PURE__ */ Object.assign({
-      "/src/content/recipes/coconut-milk-rice-pudding.md": metadata$7,
-      "/src/content/recipes/crispy-panko-chicken-bites.md": metadata$6,
-      "/src/content/recipes/fluffy-buttermilk-pancakes.md": metadata$5,
-      "/src/content/recipes/miso-glazed-roasted-vegetables.md": metadata$4,
-      "/src/content/recipes/poppadom-snack-platter.md": metadata$3,
-      "/src/content/recipes/salted-caramel-chocolate-tart.md": metadata$2,
-      "/src/content/recipes/silky-milk-chocolate-mousse.md": metadata$1,
-      "/src/content/recipes/thai-green-curry.md": metadata
+    const allMetadataImports = /* @__PURE__ */ Object.assign({
+      "/src/content/recipes/coconut-milk-rice-pudding.metadata.js": __vite_glob_4_0,
+      "/src/content/recipes/crispy-panko-chicken-bites.metadata.js": __vite_glob_4_1,
+      "/src/content/recipes/fluffy-buttermilk-pancakes.metadata.js": __vite_glob_4_2,
+      "/src/content/recipes/miso-glazed-roasted-vegetables.metadata.js": __vite_glob_4_3,
+      "/src/content/recipes/poppadom-snack-platter.metadata.js": __vite_glob_4_4,
+      "/src/content/recipes/salted-caramel-chocolate-tart.metadata.js": __vite_glob_4_5,
+      "/src/content/recipes/silky-milk-chocolate-mousse.metadata.js": __vite_glob_4_6,
+      "/src/content/recipes/thai-green-curry.metadata.js": __vite_glob_4_7
     });
-    const allRecipes = Object.entries(allRecipeModules).filter(([, module]) => module).map(([path, module]) => {
-      const filename = path.split("/").pop()?.replace(".md", "") || "";
+    const allRecipes = Object.entries(allMetadataImports).filter(([, module]) => module?.metadata).map(([path, module]) => {
+      const filename = path.split("/").pop()?.replace(".metadata.js", "") || "";
       return {
-        ...module,
-        slug: module.slug || filename
+        ...module.metadata,
+        slug: module.metadata.slug || filename
       };
     }).filter((recipe) => dev ? true : !recipe.draft).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-    const currentTags = post.metadata.tags || [];
+    const currentTags = metadataModule.metadata.tags || [];
     const relatedRecipes = allRecipes.filter((recipe) => {
       if (recipe.slug === slug) return false;
       return currentTags.some((tag) => recipe.tags?.includes(tag));
     }).slice(0, 3);
-    const relatedProducts = parentData.relatedProducts || post.metadata.relatedProducts || [];
+    const relatedProducts = parentData.relatedProducts || metadataModule.metadata.relatedProducts || [];
     console.log("Page.ts relatedProducts:", JSON.stringify(relatedProducts));
     return {
-      metadata: post.metadata,
+      metadata: metadataModule.metadata,
       ingredients,
       instructions,
       relatedRecipes,
       productLinks,
       rawContent,
-      // Add the raw markdown content to the returned data
       relatedProducts
-      // Use server data if available, fall back to local data
     };
   } catch (e) {
     console.error(`Error loading recipe: ${e}`);
