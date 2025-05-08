@@ -4,7 +4,7 @@ import { c as cn, f as formatDuration, C as Clock } from "../../../../chunks/clo
 import { a as Chevron_right, C as Card_footer } from "../../../../chunks/chevron-right.js";
 import { C as Card, a as Card_header, d as Card_content, b as Card_title, c as Card_description } from "../../../../chunks/card-title.js";
 import { B as Badge, U as Users } from "../../../../chunks/users.js";
-import "marked";
+import { marked } from "marked";
 import "clsx";
 import { h as html } from "../../../../chunks/html.js";
 function Breadcrumb($$payload, $$props) {
@@ -141,6 +141,46 @@ function _page($$payload, $$props) {
   push();
   var $$store_subs;
   let data = $$props["data"];
+  let parsedContent = "";
+  let whyYouLlLoveThis = "";
+  let ingredients = "";
+  let instructions = "";
+  let tips = "";
+  let goesGreatWith = "";
+  const processMdContent = async () => {
+    parsedContent = "";
+    whyYouLlLoveThis = "";
+    ingredients = "";
+    instructions = "";
+    tips = "";
+    goesGreatWith = "";
+    if (!data.rawContent) {
+      return;
+    }
+    try {
+      parsedContent = await marked(data.rawContent);
+      const sections = data.rawContent.split(/^##\s+/m).filter(Boolean);
+      for (const section of sections) {
+        const sectionLines = section.trim().split("\n");
+        const title = sectionLines[0].trim();
+        const content = sectionLines.slice(1).join("\n").trim();
+        const renderedContent = await marked(content);
+        if (title === "Why You'll Love This") {
+          whyYouLlLoveThis = renderedContent;
+        } else if (title === "Ingredients") {
+          ingredients = renderedContent;
+        } else if (title === "Instructions") {
+          instructions = renderedContent;
+        } else if (title === "Tips") {
+          tips = renderedContent;
+        } else if (title === "Goes Great With") {
+          goesGreatWith = renderedContent;
+        }
+      }
+    } catch (error) {
+      console.error("Error parsing markdown:", error);
+    }
+  };
   const recipeTitle = data.metadata?.title ?? "Recipe";
   const siteBaseUrl = "https://chefstorecookbook.netlify.app";
   const schema = {
@@ -189,6 +229,16 @@ function _page($$payload, $$props) {
   const prepTimeNum = convertToNumber(data.metadata.prepTime);
   const cookTimeNum = convertToNumber(data.metadata.cookTime);
   const totalTimeNum = convertToNumber(data.metadata.totalTime);
+  if (data?.rawContent) {
+    processMdContent();
+  } else {
+    parsedContent = "";
+    whyYouLlLoveThis = "";
+    ingredients = "";
+    instructions = "";
+    tips = "";
+    goesGreatWith = "";
+  }
   head($$payload, ($$payload2) => {
     $$payload2.title = `<title>${escape_html(recipeTitle)} | Chefstore Cookbook</title>`;
     if (data.metadata?.description) {
@@ -266,11 +316,17 @@ function _page($$payload, $$props) {
   $$payload.out += `<!----> `;
   {
     let content = function($$payload2) {
-      {
+      if (whyYouLlLoveThis) {
+        $$payload2.out += "<!--[-->";
+        $$payload2.out += `<div class="mb-8"><h2 class="border-border mb-4 border-b pb-2 text-xl font-semibold">Why You'll Love This</h2> ${html(whyYouLlLoveThis)}</div>`;
+      } else {
         $$payload2.out += "<!--[!-->";
       }
       $$payload2.out += `<!--]--> `;
-      {
+      if (ingredients) {
+        $$payload2.out += "<!--[-->";
+        $$payload2.out += `<div class="mb-8"><h2 class="border-border mb-4 border-b pb-2 text-xl font-semibold">Ingredients</h2> ${html(ingredients)}</div>`;
+      } else {
         $$payload2.out += "<!--[!-->";
       }
       $$payload2.out += `<!--]--> `;
@@ -283,15 +339,24 @@ function _page($$payload, $$props) {
         $$payload2.out += "<!--[!-->";
       }
       $$payload2.out += `<!--]--> `;
-      {
+      if (instructions) {
+        $$payload2.out += "<!--[-->";
+        $$payload2.out += `<div class="mb-8"><h2 class="border-border mb-4 border-b pb-2 text-xl font-semibold">Instructions</h2> ${html(instructions)}</div>`;
+      } else {
         $$payload2.out += "<!--[!-->";
       }
       $$payload2.out += `<!--]--> `;
-      {
+      if (tips) {
+        $$payload2.out += "<!--[-->";
+        $$payload2.out += `<div class="mb-8"><h2 id="tips" class="border-border mb-4 border-b pb-2 text-xl font-semibold">Tips</h2> ${html(tips)}</div>`;
+      } else {
         $$payload2.out += "<!--[!-->";
       }
       $$payload2.out += `<!--]--> `;
-      {
+      if (goesGreatWith) {
+        $$payload2.out += "<!--[-->";
+        $$payload2.out += `<div class="mb-8"><h2 id="goes-great-with" class="border-border mb-4 border-b pb-2 text-xl font-semibold">Goes Great With</h2> ${html(goesGreatWith)}</div>`;
+      } else {
         $$payload2.out += "<!--[!-->";
       }
       $$payload2.out += `<!--]-->`;

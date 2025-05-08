@@ -31,7 +31,18 @@
 
 	// Process the markdown content to extract sections
 	const processMdContent = async () => {
-		if (!data.rawContent) return;
+		// Clear previous content to ensure no stale data
+		parsedContent = '';
+		whyYouLlLoveThis = '';
+		ingredients = '';
+		instructions = '';
+		tips = '';
+		goesGreatWith = '';
+
+		if (!data.rawContent) {
+			// If there's no raw content, ensure everything is cleared and exit
+			return;
+		}
 
 		try {
 			// Parse the markdown content to HTML using marked
@@ -69,10 +80,24 @@
 		}
 	};
 
-	// Process markdown on mount
+	// Process markdown on mount for initial load
 	onMount(() => {
 		processMdContent();
 	});
+
+	// Reactively call processMdContent when data.rawContent changes
+	// This handles updates when navigating between recipes
+	$: if (data?.rawContent) {
+		processMdContent();
+	} else {
+		// Explicitly clear content if data or rawContent becomes unavailable after initial load
+		parsedContent = '';
+		whyYouLlLoveThis = '';
+		ingredients = '';
+		instructions = '';
+		tips = '';
+		goesGreatWith = '';
+	}
 
 	// Assuming recipe title is available like this, adjust if needed
 	const recipeTitle = data.metadata?.title ?? 'Recipe';
