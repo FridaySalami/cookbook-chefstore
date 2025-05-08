@@ -126,47 +126,6 @@
 	// Define your site's base URL
 	const siteBaseUrl = 'https://chefstorecookbook.netlify.app';
 
-	// Construct the JSON-LD schema object
-	const schema: RecipeSchema = {
-		'@context': 'https://schema.org',
-		'@type': 'Recipe',
-		name: data.metadata?.title,
-		image: data.metadata?.image
-			? [siteBaseUrl + (data.metadata.image.startsWith('/') ? '' : '/') + data.metadata.image]
-			: undefined,
-		author: {
-			'@type': 'Organization',
-			name: 'Chefstore Cookbook'
-		},
-		description: data.metadata?.description,
-		datePublished: data.metadata?.date
-			? new Date(data.metadata.date).toISOString().split('T')[0]
-			: undefined,
-		prepTime: formatDuration(data.metadata?.prepTime),
-		cookTime: formatDuration(data.metadata?.cookTime),
-		totalTime: formatDuration(data.metadata?.totalTime),
-		recipeYield: data.metadata?.servings ? `${data.metadata.servings} servings` : undefined,
-		recipeCategory: data.metadata?.categories?.join(', '),
-		keywords: data.metadata?.tags?.join(', '),
-		recipeIngredient:
-			data.ingredients && data.ingredients.length > 0 ? data.ingredients : undefined,
-		recipeInstructions:
-			data.instructions && data.instructions.length > 0 ? data.instructions : undefined,
-		recipeCuisine: data.metadata?.recipeCuisine?.join(', ')
-	};
-
-	// Remove undefined or null properties from schema for cleaner output
-	Object.keys(schema).forEach((key) => {
-		if (schema[key] === undefined || schema[key] === null) {
-			delete schema[key];
-		}
-	});
-
-	// Remove image array if it ended up empty or with an invalid URL
-	if (schema.image && (!schema.image[0] || !data.metadata?.image)) {
-		delete schema.image;
-	}
-
 	// Helper function to get difficulty from tags
 	function getDifficultyFromTags(tags: string[] | undefined): string {
 		if (!tags) return 'N/A';
@@ -191,6 +150,47 @@
 	const prepTimeNum = convertToNumber(data.metadata.prepTime);
 	const cookTimeNum = convertToNumber(data.metadata.cookTime);
 	const totalTimeNum = convertToNumber(data.metadata.totalTime);
+
+	// Construct the JSON-LD schema object
+	const schema: RecipeSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'Recipe',
+		name: data.metadata?.title,
+		image: data.metadata?.image
+			? [siteBaseUrl + (data.metadata.image.startsWith('/') ? '' : '/') + data.metadata.image]
+			: undefined,
+		author: {
+			'@type': 'Organization',
+			name: 'Chefstore Cookbook'
+		},
+		description: data.metadata?.description,
+		datePublished: data.metadata?.date
+			? new Date(data.metadata.date).toISOString().split('T')[0]
+			: undefined,
+		prepTime: prepTimeNum ? `PT${prepTimeNum}M` : undefined,
+		cookTime: cookTimeNum ? `PT${cookTimeNum}M` : undefined,
+		totalTime: totalTimeNum ? `PT${totalTimeNum}M` : undefined,
+		recipeYield: data.metadata?.servings ? `${data.metadata.servings} servings` : undefined,
+		recipeCategory: data.metadata?.categories?.join(', '),
+		keywords: data.metadata?.tags?.join(', '),
+		recipeIngredient:
+			data.ingredients && data.ingredients.length > 0 ? data.ingredients : undefined,
+		recipeInstructions:
+			data.instructions && data.instructions.length > 0 ? data.instructions : undefined,
+		recipeCuisine: data.metadata?.recipeCuisine?.join(', ')
+	};
+
+	// Remove undefined or null properties from schema for cleaner output
+	Object.keys(schema).forEach((key) => {
+		if (schema[key] === undefined || schema[key] === null) {
+			delete schema[key];
+		}
+	});
+
+	// Remove image array if it ended up empty or with an invalid URL
+	if (schema.image && (!schema.image[0] || !data.metadata?.image)) {
+		delete schema.image;
+	}
 </script>
 
 <svelte:head>

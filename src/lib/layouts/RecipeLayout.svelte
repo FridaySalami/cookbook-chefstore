@@ -95,44 +95,6 @@
 
 	<!-- Canonical URL -->
 	<link rel="canonical" href={canonicalUrl} />
-
-	<!-- Schema.org Recipe structured data for Google rich snippets -->
-	{@html (() => {
-		const schema: {
-			'@context': string;
-			'@type': string;
-			name: any;
-			description: any;
-			image: any[];
-			datePublished?: string;
-			recipeCategory: string;
-			recipeCuisine: string;
-			author: { '@type': string; name: any };
-			recipeYield?: string;
-			prepTime?: string;
-			cookTime?: string;
-			totalTime?: string;
-			keywords: any;
-			[key: string]: any; // Add index signature to allow string indexing
-		} = {
-			'@context': 'https://schema.org',
-			'@type': 'Recipe',
-			name: title,
-			description,
-			image: [fullImageUrl],
-			datePublished: date ? new Date(date).toISOString() : undefined,
-			recipeCategory: 'Recipe',
-			recipeCuisine: 'Universal',
-			author: { '@type': 'Organization', name: author },
-			recipeYield: servings ? `${servings} servings` : undefined,
-			prepTime: prepTime ? `PT${prepTime}M` : undefined,
-			cookTime: cookTime ? `PT${cookTime}M` : undefined,
-			totalTime: totalTime ? `PT${totalTime}M` : undefined,
-			keywords: tags?.join(', ')
-		};
-		Object.keys(schema).forEach((k) => schema[k] === undefined && delete schema[k]);
-		return `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>`;
-	})()}
 </svelte:head>
 
 <article class="recipe-article mx-auto max-w-3xl">

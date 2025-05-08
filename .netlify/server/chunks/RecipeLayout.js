@@ -3,7 +3,6 @@ import "./client.js";
 import "clsx";
 import { U as Users, B as Badge } from "./users.js";
 import { C as Clock } from "./clock.js";
-import { h as html } from "./html.js";
 const getStores = () => {
   const stores$1 = getContext("__svelte__");
   return {
@@ -65,26 +64,7 @@ function RecipeLayout($$payload, $$props) {
     } else {
       $$payload2.out += "<!--[!-->";
     }
-    $$payload2.out += `<!--]--> <link rel="canonical"${attr("href", canonicalUrl)}> ${html((() => {
-      const schema = {
-        "@context": "https://schema.org",
-        "@type": "Recipe",
-        name: title,
-        description,
-        image: [fullImageUrl],
-        datePublished: date ? new Date(date).toISOString() : void 0,
-        recipeCategory: "Recipe",
-        recipeCuisine: "Universal",
-        author: { "@type": "Organization", name: author },
-        recipeYield: servings ? `${servings} servings` : void 0,
-        prepTime: prepTime ? `PT${prepTime}M` : void 0,
-        cookTime: cookTime ? `PT${cookTime}M` : void 0,
-        totalTime: totalTime ? `PT${totalTime}M` : void 0,
-        keywords: tags?.join(", ")
-      };
-      Object.keys(schema).forEach((k) => schema[k] === void 0 && delete schema[k]);
-      return `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}<\/script>`;
-    })())}`;
+    $$payload2.out += `<!--]--> <link rel="canonical"${attr("href", canonicalUrl)}>`;
   });
   $$payload.out += `<article class="recipe-article mx-auto max-w-3xl">`;
   if (image) {

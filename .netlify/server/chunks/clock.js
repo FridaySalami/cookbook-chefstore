@@ -4,49 +4,6 @@ import { I as sanitize_props, P as rest_props, Q as fallback, M as ensure_array_
 function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
-function formatDuration(duration) {
-  if (duration === void 0 || duration === null) {
-    return null;
-  }
-  let minutes;
-  if (typeof duration === "string") {
-    duration = duration.trim().toLowerCase();
-    let totalMinutes = 0;
-    const hourMatch = duration.match(/(\d+(\.\d+)?)\s*hour/);
-    const minMatch = duration.match(/(\d+(\.\d+)?)\s*min/);
-    if (hourMatch) {
-      totalMinutes += parseFloat(hourMatch[1]) * 60;
-    }
-    if (minMatch) {
-      totalMinutes += parseFloat(minMatch[1]);
-    }
-    if (!hourMatch && !minMatch) {
-      const numberMatch = duration.match(/\d+(\.\d+)?/);
-      if (numberMatch) {
-        totalMinutes = parseFloat(numberMatch[0]);
-      } else {
-        return null;
-      }
-    }
-    minutes = totalMinutes;
-  } else {
-    minutes = duration;
-  }
-  if (isNaN(minutes) || minutes <= 0) {
-    return null;
-  }
-  minutes = Math.round(minutes);
-  const hours = Math.floor(minutes / 60);
-  const remainingMinutes = minutes % 60;
-  let formatted = "PT";
-  if (hours > 0) {
-    formatted += `${hours}H`;
-  }
-  if (remainingMinutes > 0) {
-    formatted += `${remainingMinutes}M`;
-  }
-  return formatted === "PT" ? null : formatted;
-}
 /**
  * @license lucide-svelte v0.503.0 - ISC
  *
@@ -159,6 +116,5 @@ function Clock($$payload, $$props) {
 export {
   Clock as C,
   Icon as I,
-  cn as c,
-  formatDuration as f
+  cn as c
 };

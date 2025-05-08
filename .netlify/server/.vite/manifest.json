@@ -20,8 +20,7 @@
       "_index3.js",
       "_client.js",
       "_users.js",
-      "_clock.js",
-      "_html.js"
+      "_clock.js"
     ],
     "css": [
       "_app/immutable/assets/RecipeLayout.B3wuGmy0.css"

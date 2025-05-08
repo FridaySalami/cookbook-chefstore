@@ -1,11 +1,11 @@
 import { I as sanitize_props, P as rest_props, Q as fallback, S as spread_attributes, T as clsx, K as slot, O as bind_props, A as push, U as attr_class, C as pop, E as head, M as ensure_array_like, D as attr, F as escape_html, V as store_get, W as unsubscribe_stores } from "../../../../chunks/index3.js";
 import { R as RecipeLayout, p as page } from "../../../../chunks/RecipeLayout.js";
-import { c as cn, f as formatDuration, C as Clock } from "../../../../chunks/clock.js";
+import "clsx";
+import { c as cn, C as Clock } from "../../../../chunks/clock.js";
 import { a as Chevron_right, C as Card_footer } from "../../../../chunks/chevron-right.js";
 import { C as Card, a as Card_header, d as Card_content, b as Card_title, c as Card_description } from "../../../../chunks/card-title.js";
 import { B as Badge, U as Users } from "../../../../chunks/users.js";
 import { marked } from "marked";
-import "clsx";
 import { h as html } from "../../../../chunks/html.js";
 function Breadcrumb($$payload, $$props) {
   const $$sanitized_props = sanitize_props($$props);
@@ -183,37 +183,6 @@ function _page($$payload, $$props) {
   };
   const recipeTitle = data.metadata?.title ?? "Recipe";
   const siteBaseUrl = "https://chefstorecookbook.netlify.app";
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Recipe",
-    name: data.metadata?.title,
-    image: data.metadata?.image ? [
-      siteBaseUrl + (data.metadata.image.startsWith("/") ? "" : "/") + data.metadata.image
-    ] : void 0,
-    author: {
-      "@type": "Organization",
-      name: "Chefstore Cookbook"
-    },
-    description: data.metadata?.description,
-    datePublished: data.metadata?.date ? new Date(data.metadata.date).toISOString().split("T")[0] : void 0,
-    prepTime: formatDuration(data.metadata?.prepTime),
-    cookTime: formatDuration(data.metadata?.cookTime),
-    totalTime: formatDuration(data.metadata?.totalTime),
-    recipeYield: data.metadata?.servings ? `${data.metadata.servings} servings` : void 0,
-    recipeCategory: data.metadata?.categories?.join(", "),
-    keywords: data.metadata?.tags?.join(", "),
-    recipeIngredient: data.ingredients && data.ingredients.length > 0 ? data.ingredients : void 0,
-    recipeInstructions: data.instructions && data.instructions.length > 0 ? data.instructions : void 0,
-    recipeCuisine: data.metadata?.recipeCuisine?.join(", ")
-  };
-  Object.keys(schema).forEach((key) => {
-    if (schema[key] === void 0 || schema[key] === null) {
-      delete schema[key];
-    }
-  });
-  if (schema.image && (!schema.image[0] || !data.metadata?.image)) {
-    delete schema.image;
-  }
   function getDifficultyFromTags(tags) {
     if (!tags) return "N/A";
     const difficultyTag = tags.find((tag) => tag.startsWith("difficulty-"));
@@ -229,6 +198,37 @@ function _page($$payload, $$props) {
   const prepTimeNum = convertToNumber(data.metadata.prepTime);
   const cookTimeNum = convertToNumber(data.metadata.cookTime);
   const totalTimeNum = convertToNumber(data.metadata.totalTime);
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Recipe",
+    name: data.metadata?.title,
+    image: data.metadata?.image ? [
+      siteBaseUrl + (data.metadata.image.startsWith("/") ? "" : "/") + data.metadata.image
+    ] : void 0,
+    author: {
+      "@type": "Organization",
+      name: "Chefstore Cookbook"
+    },
+    description: data.metadata?.description,
+    datePublished: data.metadata?.date ? new Date(data.metadata.date).toISOString().split("T")[0] : void 0,
+    prepTime: prepTimeNum ? `PT${prepTimeNum}M` : void 0,
+    cookTime: cookTimeNum ? `PT${cookTimeNum}M` : void 0,
+    totalTime: totalTimeNum ? `PT${totalTimeNum}M` : void 0,
+    recipeYield: data.metadata?.servings ? `${data.metadata.servings} servings` : void 0,
+    recipeCategory: data.metadata?.categories?.join(", "),
+    keywords: data.metadata?.tags?.join(", "),
+    recipeIngredient: data.ingredients && data.ingredients.length > 0 ? data.ingredients : void 0,
+    recipeInstructions: data.instructions && data.instructions.length > 0 ? data.instructions : void 0,
+    recipeCuisine: data.metadata?.recipeCuisine?.join(", ")
+  };
+  Object.keys(schema).forEach((key) => {
+    if (schema[key] === void 0 || schema[key] === null) {
+      delete schema[key];
+    }
+  });
+  if (schema.image && (!schema.image[0] || !data.metadata?.image)) {
+    delete schema.image;
+  }
   if (data?.rawContent) {
     processMdContent();
   } else {
