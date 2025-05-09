@@ -137,22 +137,28 @@
 				<picture>
 					<source srcset={responsiveImage.srcset} sizes={responsiveImage.sizes} type="image/webp" />
 					<img
-						src={responsiveImage.fallback}
+						src={`/images/recipes/recipe-name/resized/${slug}-800w.webp`}
 						alt={title}
 						class="aspect-video w-full object-cover"
 						use:fallbackImage
 						width="800"
 						height="450"
+						loading="lazy"
 					/>
 				</picture>
 			{:else}
 				<img
 					src={image || '/placeholder.png'}
+					srcset={image && image.startsWith('/images/recipes/')
+						? `/images/recipes/${slug}/resized/${slug}-400w.webp 400w, /images/recipes/${slug}/resized/${slug}-800w.webp 800w, /images/recipes/${slug}/resized/${slug}-1200w.webp 1200w`
+						: undefined}
+					sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
 					alt={title}
 					class="aspect-video w-full object-cover"
 					use:fallbackImage
 					width="800"
 					height="450"
+					loading="lazy"
 				/>
 			{/if}
 		</div>
