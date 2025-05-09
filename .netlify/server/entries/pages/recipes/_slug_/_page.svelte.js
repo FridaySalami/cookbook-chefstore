@@ -1,9 +1,10 @@
-import { I as sanitize_props, R as rest_props, S as fallback, U as spread_attributes, V as clsx, K as slot, Q as bind_props, A as push, W as attr_class, C as pop, E as head, M as ensure_array_like, D as attr, F as escape_html, O as store_get, P as unsubscribe_stores } from "../../../../chunks/index3.js";
-import { p as page, B as Badge, U as Users } from "../../../../chunks/users.js";
+import { I as sanitize_props, R as rest_props, S as fallback, U as spread_attributes, V as clsx, K as slot, Q as bind_props, A as push, W as attr_class, C as pop, E as head, M as ensure_array_like, D as attr, F as escape_html } from "../../../../chunks/index3.js";
+import "../../../../chunks/client.js";
 import "clsx";
 import { c as cn, C as Clock } from "../../../../chunks/clock.js";
 import { a as Chevron_right, C as Card_footer } from "../../../../chunks/chevron-right.js";
 import { C as Card, a as Card_header, d as Card_content, b as Card_title, c as Card_description } from "../../../../chunks/card-title.js";
+import { B as Badge, U as Users } from "../../../../chunks/users.js";
 import { R as RecipeLayout } from "../../../../chunks/RecipeLayout.js";
 import { marked } from "marked";
 import { h as html } from "../../../../chunks/html.js";
@@ -139,7 +140,6 @@ function RelatedProducts($$payload, $$props) {
 }
 function _page($$payload, $$props) {
   push();
-  var $$store_subs;
   let data = $$props["data"];
   let parsedContent = "";
   let whyYouLlLoveThis = "";
@@ -247,7 +247,7 @@ function _page($$payload, $$props) {
     } else {
       $$payload2.out += "<!--[!-->";
     }
-    $$payload2.out += `<!--]--> <link rel="canonical"${attr("href", `https://www.chefstorecookbook.netlify.app/recipes/${store_get($$store_subs ??= {}, "$page", page).params.slug}`)}> `;
+    $$payload2.out += `<!--]--> `;
     if (Object.keys(schema).length > 2) {
       $$payload2.out += "<!--[-->";
       $$payload2.out += `${html((() => {
@@ -461,7 +461,6 @@ function _page($$payload, $$props) {
     $$payload.out += "<!--[!-->";
   }
   $$payload.out += `<!--]--></div>`;
-  if ($$store_subs) unsubscribe_stores($$store_subs);
   bind_props($$props, { data });
   pop();
 }
