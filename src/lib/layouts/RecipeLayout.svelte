@@ -143,7 +143,6 @@
 						use:fallbackImage
 						width="800"
 						height="450"
-						loading="lazy"
 					/>
 				</picture>
 			{:else}
