@@ -66,10 +66,10 @@ function RecipeLayout($$payload, $$props) {
     $$payload.out += `<div class="mb-6 overflow-hidden rounded-lg">`;
     if (responsiveImage) {
       $$payload.out += "<!--[-->";
-      $$payload.out += `<picture><source${attr("srcset", responsiveImage.srcset)}${attr("sizes", responsiveImage.sizes)} type="image/webp"> <img${attr("src", responsiveImage.fallback)}${attr("alt", title)} class="aspect-video w-full object-cover" loading="lazy" width="800" height="450"></picture>`;
+      $$payload.out += `<picture><source${attr("srcset", responsiveImage.srcset)}${attr("sizes", responsiveImage.sizes)} type="image/webp"> <img${attr("src", responsiveImage.fallback)}${attr("alt", title)} class="aspect-video w-full object-cover" width="800" height="450"></picture>`;
     } else {
       $$payload.out += "<!--[!-->";
-      $$payload.out += `<img${attr("src", image)}${attr("alt", title)} class="aspect-video w-full object-cover" loading="lazy">`;
+      $$payload.out += `<img${attr("src", image)}${attr("alt", title)} class="aspect-video w-full object-cover" width="800" height="450">`;
     }
     $$payload.out += `<!--]--></div>`;
   } else {

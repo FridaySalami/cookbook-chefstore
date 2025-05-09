@@ -127,13 +127,18 @@
 						src={responsiveImage.fallback}
 						alt={title}
 						class="aspect-video w-full object-cover"
-						loading="lazy"
 						width="800"
 						height="450"
 					/>
 				</picture>
 			{:else}
-				<img src={image} alt={title} class="aspect-video w-full object-cover" loading="lazy" />
+				<img
+					src={image}
+					alt={title}
+					class="aspect-video w-full object-cover"
+					width="800"
+					height="450"
+				/>
 			{/if}
 		</div>
 	{/if}
