@@ -14,10 +14,8 @@ export const metadata = {
     "vegetarian"
   ],
   "tags": [
-    "umami",
     "easy",
     "vegetables",
-    "make-ahead",
     "difficulty-easy"
   ],
   "relatedProducts": [

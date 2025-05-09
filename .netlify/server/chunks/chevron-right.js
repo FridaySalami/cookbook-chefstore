@@ -1,4 +1,4 @@
-import { I as sanitize_props, P as rest_props, A as push, Q as fallback, S as spread_attributes, T as clsx, K as slot, O as bind_props, C as pop, J as spread_props } from "./index3.js";
+import { I as sanitize_props, R as rest_props, A as push, S as fallback, U as spread_attributes, V as clsx, K as slot, Q as bind_props, C as pop, J as spread_props } from "./index3.js";
 import { c as cn, I as Icon } from "./clock.js";
 function Card_footer($$payload, $$props) {
   const $$sanitized_props = sanitize_props($$props);

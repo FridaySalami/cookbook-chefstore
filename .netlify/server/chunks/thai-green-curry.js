@@ -12,13 +12,7 @@ const metadata = {
   "totalTime": 45,
   "servings": 4,
   "categories": ["mains", "asian"],
-  "tags": [
-    "curry",
-    "spicy",
-    "weeknight",
-    "chicken",
-    "difficulty-medium"
-  ],
+  "tags": ["curry", "chicken", "difficulty-medium"],
   "relatedProducts": [
     {
       "handle": "thai-taste-gang-keow-wan-green-curry-paste-400gm",

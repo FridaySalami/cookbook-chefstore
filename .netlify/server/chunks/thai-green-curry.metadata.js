@@ -14,8 +14,7 @@ const metadata$7 = {
   ],
   "tags": [
     "comfort-food",
-    "tropical",
-    "make-ahead",
+    "dessert",
     "difficulty-easy"
   ],
   "relatedProducts": [
@@ -114,10 +113,8 @@ const metadata$4 = {
     "vegetarian"
   ],
   "tags": [
-    "umami",
     "easy",
     "vegetables",
-    "make-ahead",
     "difficulty-easy"
   ],
   "relatedProducts": [
@@ -157,7 +154,6 @@ const metadata$3 = {
   ],
   "tags": [
     "quick",
-    "crowd-pleaser",
     "budget-friendly",
     "difficulty-easy"
   ],
@@ -222,7 +218,6 @@ const metadata$1 = {
   "tags": [
     "quick",
     "indulgent",
-    "crowd-pleaser",
     "chocolate",
     "difficulty-easy"
   ],
@@ -254,8 +249,6 @@ const metadata = {
   ],
   "tags": [
     "curry",
-    "spicy",
-    "weeknight",
     "chicken",
     "difficulty-medium"
   ],

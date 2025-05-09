@@ -1,6 +1,6 @@
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { I as sanitize_props, P as rest_props, Q as fallback, M as ensure_array_like, S as spread_attributes, T as clsx$1, R as element, K as slot, O as bind_props, C as pop, A as push, J as spread_props } from "./index3.js";
+import { I as sanitize_props, R as rest_props, S as fallback, M as ensure_array_like, U as spread_attributes, V as clsx$1, T as element, K as slot, Q as bind_props, C as pop, A as push, J as spread_props } from "./index3.js";
 function cn(...inputs) {
   return twMerge(clsx(inputs));
 }

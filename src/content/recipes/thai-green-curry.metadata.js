@@ -15,8 +15,6 @@ export const metadata = {
   ],
   "tags": [
     "curry",
-    "spicy",
-    "weeknight",
     "chicken",
     "difficulty-medium"
   ],

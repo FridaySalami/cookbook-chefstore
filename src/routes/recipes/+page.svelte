@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { page } from '$app/stores'; // Import page store
 	import * as Card from '$lib/components/ui/card';
 	import { Badge } from '$lib/components/ui/badge';
 	import * as Button from '$lib/components/ui/button';
@@ -7,12 +8,26 @@
 
 	export let data: PageData;
 
-	// Set default values for pagination and filtering
-	$: currentPage = 1;
-	$: totalPages = 1;
-	$: selectedTag = null;
-	$: totalRecipes = data.recipes?.length || 0;
-	$: displayedRecipes = data.recipes || [];
+	const itemsPerPage = 12; // Define how many recipes per page
+
+	// Derive selectedTag and currentPage from URL
+	$: selectedTag = $page.url.searchParams.get('tag');
+	$: currentPage = parseInt($page.url.searchParams.get('page') || '1');
+
+	// Filter recipes based on selectedTag
+	$: filteredRecipes = selectedTag
+		? (data.recipes || []).filter((recipe) => recipe.tags?.includes(selectedTag!))
+		: (data.recipes || []);
+
+	// Update totalRecipes and totalPages based on filtered recipes
+	$: totalRecipes = filteredRecipes.length;
+	$: totalPages = Math.ceil(totalRecipes / itemsPerPage);
+
+	// Paginate the filtered recipes
+	$: displayedRecipes = filteredRecipes.slice(
+		(currentPage - 1) * itemsPerPage,
+		currentPage * itemsPerPage
+	);
 
 	// Use data.tags instead of allTags
 	$: difficultyTags = data.tags?.filter((tag) => tag.startsWith('difficulty-')) || [];
@@ -29,7 +44,7 @@
 		'@type': 'ItemList',
 		itemListElement: displayedRecipes.map((recipe, index) => ({
 			'@type': 'ListItem',
-			position: (currentPage - 1) * 12 + index + 1,
+			position: (currentPage - 1) * itemsPerPage + index + 1, // Use itemsPerPage
 			url: `${siteBaseUrl}/recipes/${recipe.slug}`
 		}))
 	};
@@ -105,7 +120,7 @@
 	{#if currentPage > 1}
 		<link rel="prev" href={getPageUrl(currentPage - 1)} />
 	{/if}
-	{#if currentPage < totalPages}
+	{#if currentPage < totalPages && totalPages > 1}
 		<link rel="next" href={getPageUrl(currentPage + 1)} />
 	{/if}
 

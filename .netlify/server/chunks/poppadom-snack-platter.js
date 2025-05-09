@@ -14,7 +14,6 @@ const metadata = {
   "categories": ["snack", "starter"],
   "tags": [
     "quick",
-    "crowd-pleaser",
     "budget-friendly",
     "difficulty-easy"
   ],

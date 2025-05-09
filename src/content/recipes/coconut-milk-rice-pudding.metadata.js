@@ -14,8 +14,7 @@ export const metadata = {
   ],
   "tags": [
     "comfort-food",
-    "tropical",
-    "make-ahead",
+    "dessert",
     "difficulty-easy"
   ],
   "relatedProducts": [

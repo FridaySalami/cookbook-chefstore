@@ -1,29 +1,7 @@
-import { G as getContext, V as store_get, E as head, D as attr, F as escape_html, M as ensure_array_like, W as unsubscribe_stores, C as pop, A as push } from "./index3.js";
-import "./client.js";
+import { O as store_get, E as head, D as attr, F as escape_html, M as ensure_array_like, P as unsubscribe_stores, C as pop, A as push } from "./index3.js";
+import { U as Users, B as Badge, p as page } from "./users.js";
 import "clsx";
-import { U as Users, B as Badge } from "./users.js";
 import { C as Clock } from "./clock.js";
-const getStores = () => {
-  const stores$1 = getContext("__svelte__");
-  return {
-    /** @type {typeof page} */
-    page: {
-      subscribe: stores$1.page.subscribe
-    },
-    /** @type {typeof navigating} */
-    navigating: {
-      subscribe: stores$1.navigating.subscribe
-    },
-    /** @type {typeof updated} */
-    updated: stores$1.updated
-  };
-};
-const page = {
-  subscribe(fn) {
-    const store = getStores().page;
-    return store.subscribe(fn);
-  }
-};
 function RecipeLayout($$payload, $$props) {
   push();
   var $$store_subs;
@@ -173,6 +151,5 @@ function RecipeLayout($$payload, $$props) {
   pop();
 }
 export {
-  RecipeLayout as R,
-  page as p
+  RecipeLayout as R
 };

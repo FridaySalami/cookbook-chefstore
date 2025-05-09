@@ -10,7 +10,7 @@ cookTime: 5
 totalTime: 10
 servings: 4
 categories: [snack, starter]
-tags: [quick, crowd-pleaser, budget-friendly, difficulty-easy]
+tags: [quick, budget-friendly, difficulty-easy]
 relatedProducts:
   - handle: triple-lion-plain-uncooked-poppadoms1kg
     featured: true

@@ -15,7 +15,6 @@ export const metadata = {
   "tags": [
     "quick",
     "indulgent",
-    "crowd-pleaser",
     "chocolate",
     "difficulty-easy"
   ],

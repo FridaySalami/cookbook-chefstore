@@ -1,7 +1,7 @@
-import { I as sanitize_props, J as spread_props, K as slot, E as head, M as ensure_array_like, F as escape_html, D as attr, O as bind_props, C as pop, A as push } from "../../../chunks/index3.js";
+import { I as sanitize_props, J as spread_props, K as slot, O as store_get, E as head, M as ensure_array_like, F as escape_html, D as attr, P as unsubscribe_stores, Q as bind_props, C as pop, A as push } from "../../../chunks/index3.js";
+import { B as Badge, U as Users, p as page } from "../../../chunks/users.js";
 import { C as Card, a as Card_header, d as Card_content, b as Card_title, c as Card_description } from "../../../chunks/card-title.js";
 import { C as Card_footer, a as Chevron_right } from "../../../chunks/chevron-right.js";
-import { B as Badge, U as Users } from "../../../chunks/users.js";
 import { B as Button } from "../../../chunks/index5.js";
 import { I as Icon, C as Clock } from "../../../chunks/clock.js";
 import { h as html } from "../../../chunks/html.js";
@@ -24,8 +24,10 @@ function Chevron_left($$payload, $$props) {
 }
 function _page($$payload, $$props) {
   push();
-  let currentPage, totalPages, selectedTag, totalRecipes, displayedRecipes, difficultyTags, dietaryTags, otherTags, itemListSchema;
+  var $$store_subs;
+  let selectedTag, currentPage, filteredRecipes, totalRecipes, totalPages, displayedRecipes, difficultyTags, dietaryTags, otherTags, itemListSchema;
   let data = $$props["data"];
+  const itemsPerPage = 12;
   const dietaryKeywords = [
     "chicken",
     "plant-based",
@@ -67,11 +69,12 @@ function _page($$payload, $$props) {
     }
     return tag.split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
   }
-  currentPage = 1;
-  totalPages = 1;
-  selectedTag = null;
-  totalRecipes = data.recipes?.length || 0;
-  displayedRecipes = data.recipes || [];
+  selectedTag = store_get($$store_subs ??= {}, "$page", page).url.searchParams.get("tag");
+  currentPage = parseInt(store_get($$store_subs ??= {}, "$page", page).url.searchParams.get("page") || "1");
+  filteredRecipes = selectedTag ? (data.recipes || []).filter((recipe) => recipe.tags?.includes(selectedTag)) : data.recipes || [];
+  totalRecipes = filteredRecipes.length;
+  totalPages = Math.ceil(totalRecipes / itemsPerPage);
+  displayedRecipes = filteredRecipes.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
   difficultyTags = data.tags?.filter((tag) => tag.startsWith("difficulty-")) || [];
   dietaryTags = data.tags?.filter((tag) => dietaryKeywords.includes(tag)) || [];
   otherTags = data.tags?.filter((tag) => !tag.startsWith("difficulty-") && !dietaryKeywords.includes(tag)) || [];
@@ -80,7 +83,8 @@ function _page($$payload, $$props) {
     "@type": "ItemList",
     itemListElement: displayedRecipes.map((recipe, index) => ({
       "@type": "ListItem",
-      position: (currentPage - 1) * 12 + index + 1,
+      position: (currentPage - 1) * itemsPerPage + index + 1,
+      // Use itemsPerPage
       url: `${siteBaseUrl}/recipes/${recipe.slug}`
     }))
   };
@@ -95,7 +99,7 @@ function _page($$payload, $$props) {
       $$payload2.out += "<!--[!-->";
     }
     $$payload2.out += `<!--]--> `;
-    if (currentPage < totalPages) {
+    if (currentPage < totalPages && totalPages > 1) {
       $$payload2.out += "<!--[-->";
       $$payload2.out += `<link rel="next"${attr("href", getPageUrl(currentPage + 1))}>`;
     } else {
@@ -365,6 +369,7 @@ function _page($$payload, $$props) {
     $$payload.out += "<!--[!-->";
   }
   $$payload.out += `<!--]--></div></section>`;
+  if ($$store_subs) unsubscribe_stores($$store_subs);
   bind_props($$props, { data });
   pop();
 }

@@ -1,7 +1,29 @@
-import { I as sanitize_props, P as rest_props, Q as fallback, R as element, O as bind_props, C as pop, A as push, K as slot, S as spread_attributes, T as clsx, J as spread_props } from "./index3.js";
+import { G as getContext, I as sanitize_props, R as rest_props, S as fallback, T as element, Q as bind_props, C as pop, A as push, K as slot, U as spread_attributes, V as clsx, J as spread_props } from "./index3.js";
+import "./client.js";
 import { c as cn, I as Icon } from "./clock.js";
 import { tv } from "tailwind-variants";
 import "clsx";
+const getStores = () => {
+  const stores$1 = getContext("__svelte__");
+  return {
+    /** @type {typeof page} */
+    page: {
+      subscribe: stores$1.page.subscribe
+    },
+    /** @type {typeof navigating} */
+    navigating: {
+      subscribe: stores$1.navigating.subscribe
+    },
+    /** @type {typeof updated} */
+    updated: stores$1.updated
+  };
+};
+const page = {
+  subscribe(fn) {
+    const store = getStores().page;
+    return store.subscribe(fn);
+  }
+};
 function Badge($$payload, $$props) {
   const $$sanitized_props = sanitize_props($$props);
   const $$restProps = rest_props($$sanitized_props, ["class", "href", "variant"]);
@@ -73,5 +95,6 @@ function Users($$payload, $$props) {
 }
 export {
   Badge as B,
-  Users as U
+  Users as U,
+  page as p
 };

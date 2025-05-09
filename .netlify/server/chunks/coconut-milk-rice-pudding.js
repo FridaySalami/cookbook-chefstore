@@ -12,12 +12,7 @@ const metadata = {
   "totalTime": 35,
   "servings": 4,
   "categories": ["dessert"],
-  "tags": [
-    "comfort-food",
-    "tropical",
-    "make-ahead",
-    "difficulty-easy"
-  ],
+  "tags": ["comfort-food", "dessert", "difficulty-easy"],
   "relatedProducts": [
     {
       "handle": "ospiro-pudding-rice-3kg",

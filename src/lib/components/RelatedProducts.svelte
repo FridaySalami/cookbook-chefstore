@@ -175,7 +175,7 @@
 									{#if isFeatured}
 										<Badge
 											variant="outline"
-											class="absolute top-2 right-2 h-5 w-fit bg-amber-50 py-0 text-[10px]"
+											class="absolute bottom-2 left-1/2 h-5 w-fit -translate-x-1/2 bg-amber-50 py-0 text-[10px]"
 										>
 											Featured
 										</Badge>

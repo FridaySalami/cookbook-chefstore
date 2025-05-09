@@ -1,4 +1,4 @@
-import { I as sanitize_props, P as rest_props, Q as fallback, R as element, O as bind_props, C as pop, A as push, K as slot, S as spread_attributes, J as spread_props } from "./index3.js";
+import { I as sanitize_props, R as rest_props, S as fallback, T as element, Q as bind_props, C as pop, A as push, K as slot, U as spread_attributes, J as spread_props } from "./index3.js";
 import "dequal";
 import "clsx";
 import { c as cn } from "./clock.js";
