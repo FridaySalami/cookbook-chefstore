@@ -229,6 +229,10 @@
 		color: #000000 !important;
 	}
 
+	:global(.text-amber-600) {
+		color: #b45309 !important; /* Tailwind amber-700, contrast ratio ~6.5:1 */
+	}
+
 	:global(.recipe-content ul) {
 		list-style-type: disc !important;
 		padding-left: 1.5rem !important;

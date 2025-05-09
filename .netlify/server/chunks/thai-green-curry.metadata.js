@@ -113,7 +113,6 @@ const metadata$4 = {
     "vegetarian"
   ],
   "tags": [
-    "easy",
     "vegetables",
     "difficulty-easy"
   ],

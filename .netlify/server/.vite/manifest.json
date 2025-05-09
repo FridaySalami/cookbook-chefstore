@@ -9,10 +9,6 @@
       "_environment.js"
     ]
   },
-  "_RecipeLayout.B3wuGmy0.css": {
-    "file": "_app/immutable/assets/RecipeLayout.B3wuGmy0.css",
-    "src": "_RecipeLayout.B3wuGmy0.css"
-  },
   "_RecipeLayout.js": {
     "file": "chunks/RecipeLayout.js",
     "name": "RecipeLayout",
@@ -22,8 +18,12 @@
       "_clock.js"
     ],
     "css": [
-      "_app/immutable/assets/RecipeLayout.B3wuGmy0.css"
+      "_app/immutable/assets/RecipeLayout.kA-N3Vhw.css"
     ]
+  },
+  "_RecipeLayout.kA-N3Vhw.css": {
+    "file": "_app/immutable/assets/RecipeLayout.kA-N3Vhw.css",
+    "src": "_RecipeLayout.kA-N3Vhw.css"
   },
   "_card-title.js": {
     "file": "chunks/card-title.js",

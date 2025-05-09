@@ -12,7 +12,7 @@ const metadata = {
   "totalTime": 45,
   "servings": 4,
   "categories": ["sides", "vegetarian"],
-  "tags": ["easy", "vegetables", "difficulty-easy"],
+  "tags": ["vegetables", "difficulty-easy"],
   "relatedProducts": [
     {
       "handle": "hikari-shinshu-awase-brown-miso-paste-1kg",
