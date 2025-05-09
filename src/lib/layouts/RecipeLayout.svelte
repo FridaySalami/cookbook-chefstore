@@ -27,10 +27,10 @@
 		content?: Snippet;
 	}
 
-	// Get all props in one object - fixed to remove type argument that was causing an error
-	let props = $props();
+	// Get all props in one object
+	let props: Props = $props();
 
-	// Define the props for the RecipeLayout component with proper defaults
+	// Use $derived for reactivity
 	let title = $derived(props.title ?? '');
 	let description = $derived(props.description ?? '');
 	let image = $derived(props.image ?? '');
@@ -63,6 +63,25 @@
 		if (minutes === null) return 'N/A';
 		return `${minutes} min`;
 	}
+
+	// Helper to generate responsive image srcset and path
+	function getResponsiveImageData(image: string) {
+		if (!image || !image.startsWith('/images/recipes/')) return null;
+		const parts = image.split('/');
+		const fileName = parts.pop();
+		const folder = parts.join('/');
+		const baseName = fileName?.replace(/\.[^.]+$/, '') ?? '';
+		const resizedFolder = `${folder}/resized`;
+		const widths = [400, 800, 1200];
+		const srcset = widths.map((w) => `${resizedFolder}/${baseName}-${w}w.webp ${w}w`).join(', ');
+		return {
+			srcset,
+			sizes: '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px',
+			fallback: image
+		};
+	}
+
+	let responsiveImage = $derived.by(() => getResponsiveImageData(image));
 </script>
 
 <svelte:head>
@@ -101,7 +120,21 @@
 	<!-- Hero image at the top -->
 	{#if image}
 		<div class="mb-6 overflow-hidden rounded-lg">
-			<img src={image} alt={title} class="aspect-video w-full object-cover" />
+			{#if responsiveImage}
+				<picture>
+					<source srcset={responsiveImage.srcset} sizes={responsiveImage.sizes} type="image/webp" />
+					<img
+						src={responsiveImage.fallback}
+						alt={title}
+						class="aspect-video w-full object-cover"
+						loading="lazy"
+						width="800"
+						height="450"
+					/>
+				</picture>
+			{:else}
+				<img src={image} alt={title} class="aspect-video w-full object-cover" loading="lazy" />
+			{/if}
 		</div>
 	{/if}
 

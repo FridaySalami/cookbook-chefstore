@@ -26,6 +26,22 @@ function RecipeLayout($$payload, $$props) {
     if (minutes === null) return "N/A";
     return `${minutes} min`;
   }
+  function getResponsiveImageData(image2) {
+    if (!image2 || !image2.startsWith("/images/recipes/")) return null;
+    const parts = image2.split("/");
+    const fileName = parts.pop();
+    const folder = parts.join("/");
+    const baseName = fileName?.replace(/\.[^.]+$/, "") ?? "";
+    const resizedFolder = `${folder}/resized`;
+    const widths = [400, 800, 1200];
+    const srcset = widths.map((w) => `${resizedFolder}/${baseName}-${w}w.webp ${w}w`).join(", ");
+    return {
+      srcset,
+      sizes: "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px",
+      fallback: image2
+    };
+  }
+  let responsiveImage = (() => getResponsiveImageData(image))();
   head($$payload, ($$payload2) => {
     $$payload2.title = `<title>${escape_html(title)} | Chefstore Cookbook</title>`;
     $$payload2.out += `<meta name="description"${attr("content", description)}> <meta name="author"${attr("content", author)}> <meta property="og:title"${attr("content", title)}> <meta property="og:description"${attr("content", description)}> <meta property="og:image"${attr("content", fullImageUrl)}> <meta property="og:url"${attr("content", canonicalUrl)}> <meta property="og:type" content="article"> <meta property="og:site_name" content="Chefstore Cookbook"> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:title"${attr("content", title)}> <meta name="twitter:description"${attr("content", description)}> <meta name="twitter:image"${attr("content", fullImageUrl)}> `;
@@ -47,7 +63,15 @@ function RecipeLayout($$payload, $$props) {
   $$payload.out += `<article class="recipe-article mx-auto max-w-3xl">`;
   if (image) {
     $$payload.out += "<!--[-->";
-    $$payload.out += `<div class="mb-6 overflow-hidden rounded-lg"><img${attr("src", image)}${attr("alt", title)} class="aspect-video w-full object-cover"></div>`;
+    $$payload.out += `<div class="mb-6 overflow-hidden rounded-lg">`;
+    if (responsiveImage) {
+      $$payload.out += "<!--[-->";
+      $$payload.out += `<picture><source${attr("srcset", responsiveImage.srcset)}${attr("sizes", responsiveImage.sizes)} type="image/webp"> <img${attr("src", responsiveImage.fallback)}${attr("alt", title)} class="aspect-video w-full object-cover" loading="lazy" width="800" height="450"></picture>`;
+    } else {
+      $$payload.out += "<!--[!-->";
+      $$payload.out += `<img${attr("src", image)}${attr("alt", title)} class="aspect-video w-full object-cover" loading="lazy">`;
+    }
+    $$payload.out += `<!--]--></div>`;
   } else {
     $$payload.out += "<!--[!-->";
   }
