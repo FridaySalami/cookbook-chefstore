@@ -4,7 +4,7 @@ export const metadata = {
   "description": "A fragrant, coconut-based curry with tender chunks of chicken, vibrant vegetables, and the perfect balance of heat and sweetness.",
   "date": "2025-04-23T00:00:00.000Z",
   "featured": true,
-  "image": "/placeholder.png",
+  "image": "/placeholder.webp",
   "prepTime": 20,
   "cookTime": 25,
   "totalTime": 45,

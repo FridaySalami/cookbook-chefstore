@@ -4,7 +4,7 @@ slug: fluffy-buttermilk-pancakes
 description: Light, golden pancakes with a tender crumb and just enough fluff to soak up all that syrupy joy.
 date: 2025-04-24
 featured: true
-image: /images/recipes/category-name/recipe-name/fluffy-buttermilk-pancakes.png
+image: /images/recipes/category-name/recipe-name/fluffy-buttermilk-pancakes.webp
 prepTime: 10
 cookTime: 15
 totalTime: 25

@@ -6,7 +6,7 @@ const metadata = {
   "description": "A silky, tropical twist on comforting rice pudding—made with rich coconut milk and infused with warming cardamom and vanilla.",
   "date": "2025-04-22T00:00:00.000Z",
   "featured": false,
-  "image": "/images/recipes/category-name/recipe-name/coconut-milk-rice-pudding.png",
+  "image": "/images/recipes/category-name/recipe-name/coconut-milk-rice-pudding.webp",
   "prepTime": 5,
   "cookTime": 30,
   "totalTime": 35,

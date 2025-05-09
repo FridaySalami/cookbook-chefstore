@@ -6,7 +6,7 @@ const metadata = {
   "description": "Golden, crunchy chicken bites coated in light panko breadcrumbs—perfect for dipping, snacking, or tossing into wraps and salads.",
   "date": "2025-04-24T00:00:00.000Z",
   "featured": true,
-  "image": "/images/recipes/category-name/recipe-name/crispy-panko-chicken-bites.png",
+  "image": "/images/recipes/category-name/recipe-name/crispy-panko-chicken-bites.webp",
   "prepTime": 15,
   "cookTime": 10,
   "totalTime": 25,
