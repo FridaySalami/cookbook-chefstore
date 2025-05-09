@@ -69,6 +69,9 @@ function _page($$payload, $$props) {
     }
     return tag.split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
   }
+  function getResizedImagePath(slug, width) {
+    return `/images/recipes/category-name/recipe-name/resized/${slug}-${width}w.webp`;
+  }
   selectedTag = store_get($$store_subs ??= {}, "$page", page).url.searchParams.get("tag");
   currentPage = parseInt(store_get($$store_subs ??= {}, "$page", page).url.searchParams.get("page") || "1");
   filteredRecipes = selectedTag ? (data.recipes || []).filter((recipe) => recipe.tags?.includes(selectedTag)) : data.recipes || [];
@@ -216,7 +219,18 @@ function _page($$payload, $$props) {
           Card_header($$payload2, {
             class: "relative p-0",
             children: ($$payload3) => {
-              $$payload3.out += `<img${attr("src", recipe.image || "/placeholder.png")}${attr("alt", recipe.title)} class="aspect-video w-full object-cover" loading="lazy" onload="this.__e=event" onerror="this.__e=event"> `;
+              if (recipe.slug) {
+                $$payload3.out += "<!--[-->";
+                $$payload3.out += `<picture><source${attr("srcset", `
+													${getResizedImagePath(recipe.slug, 400)} 400w,
+													${getResizedImagePath(recipe.slug, 800)} 800w,
+													${getResizedImagePath(recipe.slug, 1200)} 1200w
+												`)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" type="image/webp"> <img${attr("src", getResizedImagePath(recipe.slug, 800))}${attr("alt", recipe.title)} class="aspect-video w-full object-cover" loading="lazy" width="400" height="225" onload="this.__e=event" onerror="this.__e=event"></picture>`;
+              } else {
+                $$payload3.out += "<!--[!-->";
+                $$payload3.out += `<img${attr("src", recipe.image || "/placeholder.png")}${attr("alt", recipe.title)} class="aspect-video w-full object-cover" loading="lazy" width="400" height="225" onload="this.__e=event" onerror="this.__e=event">`;
+              }
+              $$payload3.out += `<!--]--> `;
               Badge($$payload3, {
                 variant: "secondary",
                 class: "absolute top-3 right-3 border border-white/20 bg-black/60 text-white capitalize backdrop-blur-sm",

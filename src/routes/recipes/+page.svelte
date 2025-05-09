@@ -17,7 +17,7 @@
 	// Filter recipes based on selectedTag
 	$: filteredRecipes = selectedTag
 		? (data.recipes || []).filter((recipe) => recipe.tags?.includes(selectedTag!))
-		: (data.recipes || []);
+		: data.recipes || [];
 
 	// Update totalRecipes and totalPages based on filtered recipes
 	$: totalRecipes = filteredRecipes.length;
@@ -103,6 +103,13 @@
 			.split('-')
 			.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
 			.join(' ');
+	}
+
+	// Helper to get resized image path from a static folder structure
+	function getResizedImagePath(slug: string, width: number) {
+		// All images are in static/images/recipes/category-name/recipe-name/resized/
+		// and named as [slug]-[width]w.webp
+		return `/images/recipes/category-name/recipe-name/resized/${slug}-${width}w.webp`;
 	}
 </script>
 
@@ -223,13 +230,38 @@
 								class="flex h-full flex-col overflow-hidden transition-all group-hover:-translate-y-1 group-hover:shadow-lg"
 							>
 								<Card.Header class="relative p-0">
-									<img
-										src={recipe.image || '/placeholder.png'}
-										alt={recipe.title}
-										class="aspect-video w-full object-cover"
-										use:fallbackImage
-										loading="lazy"
-									/>
+									{#if recipe.slug}
+										<picture>
+											<source
+												srcset={`
+													${getResizedImagePath(recipe.slug, 400)} 400w,
+													${getResizedImagePath(recipe.slug, 800)} 800w,
+													${getResizedImagePath(recipe.slug, 1200)} 1200w
+												`}
+												sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+												type="image/webp"
+											/>
+											<img
+												src={getResizedImagePath(recipe.slug, 800)}
+												alt={recipe.title}
+												class="aspect-video w-full object-cover"
+												use:fallbackImage
+												loading="lazy"
+												width="400"
+												height="225"
+											/>
+										</picture>
+									{:else}
+										<img
+											src={recipe.image || '/placeholder.png'}
+											alt={recipe.title}
+											class="aspect-video w-full object-cover"
+											use:fallbackImage
+											loading="lazy"
+											width="400"
+											height="225"
+										/>
+									{/if}
 									<Badge
 										variant="secondary"
 										class="absolute top-3 right-3 border border-white/20 bg-black/60 text-white capitalize backdrop-blur-sm"

@@ -25,6 +25,7 @@
 		author?: string;
 		relatedProducts?: ProductHandle[];
 		content?: Snippet;
+		slug?: string;
 	}
 
 	// Get all props in one object
@@ -44,6 +45,7 @@
 	let author = $derived(props.author ?? 'Chefstore Cookbook');
 	let relatedProducts = $derived(props.relatedProducts ?? []);
 	let content = $derived(props.content);
+	let slug = $derived(props.slug ?? '');
 
 	// Fix image path if needed
 	const siteBaseUrl = 'https://chefstorecookbook.netlify.app';
@@ -65,15 +67,12 @@
 	}
 
 	// Helper to generate responsive image srcset and path
-	function getResponsiveImageData(image: string) {
+	function getResponsiveImageData(image: string, slug: string) {
 		if (!image || !image.startsWith('/images/recipes/')) return null;
-		const parts = image.split('/');
-		const fileName = parts.pop();
-		const folder = parts.join('/');
-		const baseName = fileName?.replace(/\.[^.]+$/, '') ?? '';
+		const folder = image.substring(0, image.lastIndexOf('/'));
 		const resizedFolder = `${folder}/resized`;
 		const widths = [400, 800, 1200];
-		const srcset = widths.map((w) => `${resizedFolder}/${baseName}-${w}w.webp ${w}w`).join(', ');
+		const srcset = widths.map((w) => `${resizedFolder}/${slug}-${w}w.webp ${w}w`).join(', ');
 		return {
 			srcset,
 			sizes: '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px',
@@ -81,7 +80,21 @@
 		};
 	}
 
-	let responsiveImage = $derived.by(() => getResponsiveImageData(image));
+	let responsiveImage = $derived.by(() => getResponsiveImageData(image, slug));
+
+	// Add fallbackImage action for image error handling
+	/** @type {import('svelte/action').Action<HTMLImageElement>} */
+	function fallbackImage(node: HTMLImageElement) {
+		const handleError = () => {
+			node.src = '/placeholder.png';
+		};
+		node.addEventListener('error', handleError);
+		return {
+			destroy() {
+				node.removeEventListener('error', handleError);
+			}
+		};
+	}
 </script>
 
 <svelte:head>
@@ -127,15 +140,17 @@
 						src={responsiveImage.fallback}
 						alt={title}
 						class="aspect-video w-full object-cover"
+						use:fallbackImage
 						width="800"
 						height="450"
 					/>
 				</picture>
 			{:else}
 				<img
-					src={image}
+					src={image || '/placeholder.png'}
 					alt={title}
 					class="aspect-video w-full object-cover"
+					use:fallbackImage
 					width="800"
 					height="450"
 				/>

@@ -231,6 +231,7 @@
 		title={data.metadata.title}
 		description={data.metadata.description}
 		image={data.metadata.image}
+		slug={data.metadata.slug}
 		prepTime={prepTimeNum}
 		cookTime={cookTimeNum}
 		totalTime={totalTimeNum}
