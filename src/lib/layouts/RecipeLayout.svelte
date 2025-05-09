@@ -137,7 +137,7 @@
 				<picture>
 					<source srcset={responsiveImage.srcset} sizes={responsiveImage.sizes} type="image/webp" />
 					<img
-						src={`/images/recipes/recipe-name/resized/${slug}-800w.webp`}
+						src={`/images/recipes/category-name/recipe-name/resized/${slug}-800w.webp`}
 						alt={title}
 						class="aspect-video w-full object-cover"
 						use:fallbackImage
