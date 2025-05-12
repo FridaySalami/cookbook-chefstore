@@ -1,7 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 const config = {
 	darkMode: ["class"],
-	content: ["./src/**/*.{html,js,svelte,ts}"],
+	content: [
+		"./src/**/*.{html,js,svelte,ts}", // Adjust this to match your project structure
+		"./src/lib/**/*.{html,js,svelte,ts}",
+		"./src/routes/**/*.{html,js,svelte,ts}"
+	],
 	theme: {
 		container: {
 			center: true,

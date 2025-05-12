@@ -145,7 +145,6 @@
 </svelte:head>
 
 <article class="recipe-article mx-auto max-w-3xl">
-	<!-- Hero image at the top -->
 	{#if image}
 		<div class="mb-6 overflow-hidden rounded-lg">
 			{#if responsiveImage}
@@ -172,17 +171,14 @@
 					use:fallbackImage
 					width="800"
 					height="450"
-					loading="lazy"
 				/>
 			{/if}
 		</div>
 	{/if}
 
 	<header class="mb-8">
-		<!-- Title follows the hero image -->
 		<h1 class="mb-4 text-3xl leading-tight font-bold lg:text-4xl">{title}</h1>
 
-		<!-- Description follows the title -->
 		{#if description}
 			<p class="text-muted-foreground mb-6 text-lg">{description}</p>
 		{/if}

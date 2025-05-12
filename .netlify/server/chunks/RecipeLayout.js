@@ -76,7 +76,7 @@ function RecipeLayout($$payload, $$props) {
       $$payload.out += `<picture><source${attr("srcset", responsiveImage.srcset)}${attr("sizes", responsiveImage.sizes)} type="image/webp"> <img${attr("src", responsiveImage.fallback)}${attr("alt", title)} class="aspect-video w-full object-cover" width="800" height="450" onload="this.__e=event" onerror="this.__e=event"></picture>`;
     } else {
       $$payload.out += "<!--[!-->";
-      $$payload.out += `<img${attr("src", image || "/placeholder.png")}${attr("srcset", image && image.startsWith("/images/recipes/") ? `/images/recipes/${slug}/resized/${slug}-400w.webp 400w, /images/recipes/${slug}/resized/${slug}-800w.webp 800w, /images/recipes/${slug}/resized/${slug}-1200w.webp 1200w` : void 0)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"${attr("alt", title)} class="aspect-video w-full object-cover" width="800" height="450" loading="lazy" onload="this.__e=event" onerror="this.__e=event">`;
+      $$payload.out += `<img${attr("src", image || "/placeholder.png")}${attr("srcset", image && image.startsWith("/images/recipes/") ? `/images/recipes/${slug}/resized/${slug}-400w.webp 400w, /images/recipes/${slug}/resized/${slug}-800w.webp 800w, /images/recipes/${slug}/resized/${slug}-1200w.webp 1200w` : void 0)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"${attr("alt", title)} class="aspect-video w-full object-cover" width="800" height="450" onload="this.__e=event" onerror="this.__e=event">`;
     }
     $$payload.out += `<!--]--></div>`;
   } else {
