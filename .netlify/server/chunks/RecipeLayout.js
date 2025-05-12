@@ -55,7 +55,17 @@ function RecipeLayout($$payload, $$props) {
     } else {
       $$payload2.out += "<!--[!-->";
     }
-    $$payload2.out += `<!--]--> <link rel="canonical"${attr("href", canonicalUrl)}>`;
+    $$payload2.out += `<!--]--> <link rel="canonical"${attr("href", canonicalUrl)}> `;
+    if (responsiveImage) {
+      $$payload2.out += "<!--[-->";
+      $$payload2.out += `<link rel="preload" as="image"${attr("href", responsiveImage.fallback)}${attr("imagesrcset", responsiveImage.srcset)}${attr("imagesizes", responsiveImage.sizes)} type="image/webp">`;
+    } else if (image) {
+      $$payload2.out += "<!--[1-->";
+      $$payload2.out += `<link rel="preload" as="image"${attr("href", image)} type="image/webp">`;
+    } else {
+      $$payload2.out += "<!--[!-->";
+    }
+    $$payload2.out += `<!--]-->`;
   });
   $$payload.out += `<article class="recipe-article mx-auto max-w-3xl">`;
   if (image) {
@@ -63,7 +73,7 @@ function RecipeLayout($$payload, $$props) {
     $$payload.out += `<div class="mb-6 overflow-hidden rounded-lg">`;
     if (responsiveImage) {
       $$payload.out += "<!--[-->";
-      $$payload.out += `<picture><source${attr("srcset", responsiveImage.srcset)}${attr("sizes", responsiveImage.sizes)} type="image/webp"> <img${attr("src", responsiveImage.fallback)}${attr("alt", title)} class="aspect-video w-full object-cover" width="800" height="450" loading="lazy" onload="this.__e=event" onerror="this.__e=event"></picture>`;
+      $$payload.out += `<picture><source${attr("srcset", responsiveImage.srcset)}${attr("sizes", responsiveImage.sizes)} type="image/webp"> <img${attr("src", responsiveImage.fallback)}${attr("alt", title)} class="aspect-video w-full object-cover" width="800" height="450" onload="this.__e=event" onerror="this.__e=event"></picture>`;
     } else {
       $$payload.out += "<!--[!-->";
       $$payload.out += `<img${attr("src", image || "/placeholder.png")}${attr("srcset", image && image.startsWith("/images/recipes/") ? `/images/recipes/${slug}/resized/${slug}-400w.webp 400w, /images/recipes/${slug}/resized/${slug}-800w.webp 800w, /images/recipes/${slug}/resized/${slug}-1200w.webp 1200w` : void 0)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"${attr("alt", title)} class="aspect-video w-full object-cover" width="800" height="450" loading="lazy" onload="this.__e=event" onerror="this.__e=event">`;

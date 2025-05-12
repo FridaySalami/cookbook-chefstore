@@ -129,6 +129,19 @@
 
 	<!-- Canonical URL -->
 	<link rel="canonical" href={canonicalUrl} />
+
+	{#if responsiveImage}
+		<link
+			rel="preload"
+			as="image"
+			href={responsiveImage.fallback}
+			imagesrcset={responsiveImage.srcset}
+			imagesizes={responsiveImage.sizes}
+			type="image/webp"
+		/>
+	{:else if image}
+		<link rel="preload" as="image" href={image} type="image/webp" />
+	{/if}
 </svelte:head>
 
 <article class="recipe-article mx-auto max-w-3xl">
@@ -145,7 +158,6 @@
 						use:fallbackImage
 						width="800"
 						height="450"
-						loading="lazy"
 					/>
 				</picture>
 			{:else}
