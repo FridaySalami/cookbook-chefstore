@@ -4,6 +4,8 @@
 	import { Badge } from '$lib/components/ui/badge';
 	import { Clock, Users } from 'lucide-svelte';
 	import type { Snippet } from 'svelte';
+	import { onMount } from 'svelte'; // Import onMount
+	import RelatedProducts from '$lib/components/RelatedProducts.svelte'; // Import RelatedProducts
 
 	// Import necessary types
 	type ProductHandle = {
@@ -46,6 +48,8 @@
 	let relatedProducts = $derived(props.relatedProducts ?? []);
 	let content = $derived(props.content);
 	let slug = $derived(props.slug ?? '');
+
+	let showRelatedProducts = $state(false); // State for dynamic loading
 
 	// Fix image path if needed
 	const siteBaseUrl = 'https://chefstorecookbook.netlify.app';
@@ -97,6 +101,15 @@
 			}
 		};
 	}
+
+	onMount(() => {
+		// Delay loading of related products to improve initial page load
+		const timer = setTimeout(() => {
+			showRelatedProducts = true;
+		}, 100); // Small delay, can be adjusted
+
+		return () => clearTimeout(timer); // Cleanup timer on component destroy
+	});
 </script>
 
 <svelte:head>
@@ -213,14 +226,6 @@
 				<Badge variant="outline" class="text-sm capitalize">{difficulty}</Badge>
 			{/if}
 		</div>
-
-		{#if tags && tags.length > 0}
-			<div class="mt-4 flex flex-wrap gap-2">
-				{#each tags.filter((tag: string) => !tag.startsWith('difficulty-')) as tag}
-					<Badge variant="secondary" class="text-xs">{tag}</Badge>
-				{/each}
-			</div>
-		{/if}
 	</header>
 
 	<div class="prose prose-amber recipe-content max-w-none">
@@ -228,6 +233,20 @@
 			{@render content()}
 		{/if}
 	</div>
+
+	{#if tags && tags.length > 0}
+		<div class="mt-8 flex flex-wrap gap-2 border-t pt-6">
+			{#each tags.filter((tag: string) => !tag.startsWith('difficulty-')) as tag}
+				<Badge variant="secondary" class="text-xs">{tag}</Badge>
+			{/each}
+		</div>
+	{/if}
+
+	{#if showRelatedProducts && relatedProducts && relatedProducts.length > 0}
+		<section class="mt-12 border-t pt-8">
+			<RelatedProducts productHandles={relatedProducts} />
+		</section>
+	{/if}
 </article>
 
 <style>
@@ -358,7 +377,5 @@
 		line-height: 1.25rem;
 	}
 
-	.rounded-lg {
-		border-radius: 0.75rem;
-	}
+	/* Removed duplicate .rounded-lg as it was already defined above */
 </style>

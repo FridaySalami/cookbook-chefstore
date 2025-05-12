@@ -1,4 +1,4 @@
-import { I as sanitize_props, R as rest_props, S as fallback, U as spread_attributes, V as clsx, K as slot, Q as bind_props, A as push, W as attr_class, C as pop, E as head, M as ensure_array_like, D as attr, F as escape_html } from "../../../../chunks/index3.js";
+import { A as push, C as pop, I as sanitize_props, R as rest_props, S as fallback, U as spread_attributes, V as clsx, K as slot, Q as bind_props, W as attr_class, E as head, M as ensure_array_like, D as attr, F as escape_html } from "../../../../chunks/index3.js";
 import "../../../../chunks/client.js";
 import "clsx";
 import { c as cn, C as Clock } from "../../../../chunks/clock.js";
@@ -8,6 +8,23 @@ import { B as Badge, U as Users } from "../../../../chunks/users.js";
 import { R as RecipeLayout } from "../../../../chunks/RecipeLayout.js";
 import { marked } from "marked";
 import { h as html } from "../../../../chunks/html.js";
+function RelatedProducts($$payload, $$props) {
+  push();
+  let { productHandles = [] } = $$props;
+  if (productHandles.length > 0) {
+    $$payload.out += "<!--[-->";
+    $$payload.out += `<div class="mb-8"><h2 class="mb-4 border-b pb-2 text-xl font-semibold">Shop These Ingredients</h2> `;
+    {
+      $$payload.out += "<!--[-->";
+      $$payload.out += `<div class="flex items-center justify-center py-4"><div class="h-6 w-6 animate-spin rounded-full border-t-2 border-b-2 border-amber-600"></div></div>`;
+    }
+    $$payload.out += `<!--]--></div>`;
+  } else {
+    $$payload.out += "<!--[!-->";
+  }
+  $$payload.out += `<!--]-->`;
+  pop();
+}
 function Breadcrumb($$payload, $$props) {
   const $$sanitized_props = sanitize_props($$props);
   const $$restProps = rest_props($$sanitized_props, ["el", "class"]);
@@ -119,23 +136,6 @@ function Breadcrumb_page($$payload, $$props) {
   slot($$payload, $$props, "default", {}, null);
   $$payload.out += `<!----></span>`;
   bind_props($$props, { el, class: className });
-  pop();
-}
-function RelatedProducts($$payload, $$props) {
-  push();
-  let { productHandles = [] } = $$props;
-  if (productHandles.length > 0) {
-    $$payload.out += "<!--[-->";
-    $$payload.out += `<div class="mb-8"><h2 class="mb-4 border-b pb-2 text-xl font-semibold">Shop These Ingredients</h2> `;
-    {
-      $$payload.out += "<!--[-->";
-      $$payload.out += `<div class="flex items-center justify-center py-4"><div class="h-6 w-6 animate-spin rounded-full border-t-2 border-b-2 border-amber-600"></div></div>`;
-    }
-    $$payload.out += `<!--]--></div>`;
-  } else {
-    $$payload.out += "<!--[!-->";
-  }
-  $$payload.out += `<!--]-->`;
   pop();
 }
 function _page($$payload, $$props) {
