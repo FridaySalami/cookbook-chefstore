@@ -272,4 +272,93 @@
 	:global(.recipe-content .ingredients li::marker) {
 		color: #000000 !important;
 	}
+
+	/* Critical CSS for hero image and layout */
+	.recipe-article {
+		max-width: 48rem;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 1rem;
+		background: #fffdf8;
+	}
+
+	.mb-6 {
+		margin-bottom: 1.5rem;
+	}
+
+	.overflow-hidden {
+		overflow: hidden;
+	}
+
+	.rounded-lg {
+		border-radius: 0.75rem;
+	}
+
+	.aspect-video {
+		aspect-ratio: 16 / 9;
+	}
+
+	.w-full {
+		width: 100%;
+	}
+
+	.object-cover {
+		object-fit: cover;
+	}
+
+	.mb-8 {
+		margin-bottom: 2rem;
+	}
+
+	.text-3xl {
+		font-size: 1.875rem;
+		line-height: 2.25rem;
+	}
+
+	.font-bold {
+		font-weight: 700;
+	}
+
+	.lg\:text-4xl {
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+	}
+
+	.text-lg {
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+	}
+
+	.text-muted-foreground {
+		color: #6b7280;
+	}
+
+	.flex {
+		display: flex;
+	}
+
+	.flex-wrap {
+		flex-wrap: wrap;
+	}
+
+	.items-center {
+		align-items: center;
+	}
+
+	.gap-x-6 {
+		column-gap: 1.5rem;
+	}
+
+	.gap-y-2 {
+		row-gap: 0.5rem;
+	}
+
+	.text-sm {
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+	}
+
+	.rounded-lg {
+		border-radius: 0.75rem;
+	}
 </style>
