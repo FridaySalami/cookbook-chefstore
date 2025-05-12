@@ -27,19 +27,18 @@ function RecipeLayout($$payload, $$props) {
     if (minutes === null) return "N/A";
     return `${minutes} min`;
   }
-  function getResponsiveImageData(image2, slug2) {
+  function getResponsiveImageData(image2) {
     if (!image2 || !image2.startsWith("/images/recipes/")) return null;
-    const folder = image2.substring(0, image2.lastIndexOf("/"));
-    const resizedFolder = `${folder}/resized`;
-    const widths = [400, 800, 1200];
-    const srcset = widths.map((w) => `${resizedFolder}/${slug2}-${w}w.webp ${w}w`).join(", ");
+    const pathParts = image2.split("/");
+    const filename = pathParts.pop()?.replace(".webp", "") ?? "";
+    const resizedFolder = `${pathParts.join("/")}/resized`;
     return {
-      srcset,
+      srcset: [400, 800, 1200].map((w) => `${resizedFolder}/${filename}-${w}w.webp ${w}w`).join(", "),
       sizes: "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px",
-      fallback: image2
+      fallback: `${resizedFolder}/${filename}-800w.webp`
     };
   }
-  let responsiveImage = (() => getResponsiveImageData(image, slug))();
+  let responsiveImage = (() => getResponsiveImageData(image))();
   head($$payload, ($$payload2) => {
     $$payload2.title = `<title>${escape_html(title)} | Chefstore Cookbook</title>`;
     $$payload2.out += `<meta name="description"${attr("content", description)}> <meta name="author"${attr("content", author)}> <meta property="og:title"${attr("content", title)}> <meta property="og:description"${attr("content", description)}> <meta property="og:image"${attr("content", fullImageUrl)}> <meta property="og:url"${attr("content", canonicalUrl)}> <meta property="og:type" content="article"> <meta property="og:site_name" content="Chefstore Cookbook"> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:title"${attr("content", title)}> <meta name="twitter:description"${attr("content", description)}> <meta name="twitter:image"${attr("content", fullImageUrl)}> `;
@@ -64,7 +63,7 @@ function RecipeLayout($$payload, $$props) {
     $$payload.out += `<div class="mb-6 overflow-hidden rounded-lg">`;
     if (responsiveImage) {
       $$payload.out += "<!--[-->";
-      $$payload.out += `<picture><source${attr("srcset", responsiveImage.srcset)}${attr("sizes", responsiveImage.sizes)} type="image/webp"> <img${attr("src", `/images/recipes/category-name/recipe-name/resized/${slug}-800w.webp`)}${attr("alt", title)} class="aspect-video w-full object-cover" width="800" height="450" onload="this.__e=event" onerror="this.__e=event"></picture>`;
+      $$payload.out += `<picture><source${attr("srcset", responsiveImage.srcset)}${attr("sizes", responsiveImage.sizes)} type="image/webp"> <img${attr("src", responsiveImage.fallback)}${attr("alt", title)} class="aspect-video w-full object-cover" width="800" height="450" loading="lazy" onload="this.__e=event" onerror="this.__e=event"></picture>`;
     } else {
       $$payload.out += "<!--[!-->";
       $$payload.out += `<img${attr("src", image || "/placeholder.png")}${attr("srcset", image && image.startsWith("/images/recipes/") ? `/images/recipes/${slug}/resized/${slug}-400w.webp 400w, /images/recipes/${slug}/resized/${slug}-800w.webp 800w, /images/recipes/${slug}/resized/${slug}-1200w.webp 1200w` : void 0)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"${attr("alt", title)} class="aspect-video w-full object-cover" width="800" height="450" loading="lazy" onload="this.__e=event" onerror="this.__e=event">`;

@@ -66,21 +66,23 @@
 		return `${minutes} min`;
 	}
 
-	// Helper to generate responsive image srcset and path
-	function getResponsiveImageData(image: string, slug: string) {
+	function getResponsiveImageData(image: string) {
 		if (!image || !image.startsWith('/images/recipes/')) return null;
-		const folder = image.substring(0, image.lastIndexOf('/'));
-		const resizedFolder = `${folder}/resized`;
-		const widths = [400, 800, 1200];
-		const srcset = widths.map((w) => `${resizedFolder}/${slug}-${w}w.webp ${w}w`).join(', ');
+
+		const pathParts = image.split('/');
+		const filename = pathParts.pop()?.replace('.webp', '') ?? '';
+		const resizedFolder = `${pathParts.join('/')}/resized`;
+
 		return {
-			srcset,
+			srcset: [400, 800, 1200]
+				.map((w) => `${resizedFolder}/${filename}-${w}w.webp ${w}w`)
+				.join(', '),
 			sizes: '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px',
-			fallback: image
+			fallback: `${resizedFolder}/${filename}-800w.webp`
 		};
 	}
 
-	let responsiveImage = $derived.by(() => getResponsiveImageData(image, slug));
+	let responsiveImage = $derived.by(() => getResponsiveImageData(image));
 
 	// Add fallbackImage action for image error handling
 	/** @type {import('svelte/action').Action<HTMLImageElement>} */
@@ -137,12 +139,13 @@
 				<picture>
 					<source srcset={responsiveImage.srcset} sizes={responsiveImage.sizes} type="image/webp" />
 					<img
-						src={`/images/recipes/category-name/recipe-name/resized/${slug}-800w.webp`}
+						src={responsiveImage.fallback}
 						alt={title}
 						class="aspect-video w-full object-cover"
 						use:fallbackImage
 						width="800"
 						height="450"
+						loading="lazy"
 					/>
 				</picture>
 			{:else}
