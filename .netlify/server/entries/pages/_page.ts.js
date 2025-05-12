@@ -1,4 +1,4 @@
-import { _ as __vite_glob_4_16, a as __vite_glob_4_15, b as __vite_glob_4_14, c as __vite_glob_4_13, d as __vite_glob_4_12, e as __vite_glob_4_11, f as __vite_glob_4_10, g as __vite_glob_4_9, h as __vite_glob_4_8, i as __vite_glob_4_7, j as __vite_glob_4_6, k as __vite_glob_4_5, l as __vite_glob_4_4, m as __vite_glob_4_3, n as __vite_glob_4_2, o as __vite_glob_4_1, p as __vite_glob_4_0 } from "../../chunks/thai-green-curry.metadata.js";
+import { _ as __vite_glob_4_17, a as __vite_glob_4_16, b as __vite_glob_4_15, c as __vite_glob_4_14, d as __vite_glob_4_13, e as __vite_glob_4_12, f as __vite_glob_4_11, g as __vite_glob_4_10, h as __vite_glob_4_9, i as __vite_glob_4_8, j as __vite_glob_4_7, k as __vite_glob_4_6, l as __vite_glob_4_5, m as __vite_glob_4_4, n as __vite_glob_4_3, o as __vite_glob_4_2, p as __vite_glob_4_1, q as __vite_glob_4_0 } from "../../chunks/thai-green-curry.metadata.js";
 import { d as dev } from "../../chunks/index4.js";
 const prerender = true;
 const load = async () => {
@@ -18,9 +18,10 @@ const load = async () => {
       "/src/content/recipes/salted-caramel-chocolate-tart.metadata.js": __vite_glob_4_11,
       "/src/content/recipes/silky-milk-chocolate-mousse.metadata.js": __vite_glob_4_12,
       "/src/content/recipes/spiced-lamb-mint-sausage-rolls.metadata.js": __vite_glob_4_13,
-      "/src/content/recipes/sticky-soy-braised-pork-ribs.metadata.js": __vite_glob_4_14,
-      "/src/content/recipes/sticky-soy-garlic-noodles.metadata.js": __vite_glob_4_15,
-      "/src/content/recipes/thai-green-curry.metadata.js": __vite_glob_4_16
+      "/src/content/recipes/sticky-banana-bread-chocolate-walnuts.metadata.js": __vite_glob_4_14,
+      "/src/content/recipes/sticky-soy-braised-pork-ribs.metadata.js": __vite_glob_4_15,
+      "/src/content/recipes/sticky-soy-garlic-noodles.metadata.js": __vite_glob_4_16,
+      "/src/content/recipes/thai-green-curry.metadata.js": __vite_glob_4_17
     });
     const recipes = Object.entries(recipeMetadataImports).filter(([, module]) => module?.metadata).map(([path, module]) => {
       const filename = path.split("/").pop()?.replace(".metadata.js", "") || "";

@@ -245,6 +245,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_sticky-banana-bread-chocolate-walnuts.js": {
+    "file": "chunks/sticky-banana-bread-chocolate-walnuts.js",
+    "name": "sticky-banana-bread-chocolate-walnuts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_sticky-soy-braised-pork-ribs.js": {
     "file": "chunks/sticky-soy-braised-pork-ribs.js",
     "name": "sticky-soy-braised-pork-ribs",
@@ -393,6 +402,12 @@
     "src": "src/content/recipes/spiced-lamb-mint-sausage-rolls.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/sticky-banana-bread-chocolate-walnuts.md?raw": {
+    "file": "chunks/sticky-banana-bread-chocolate-walnuts2.js",
+    "name": "sticky-banana-bread-chocolate-walnuts",
+    "src": "src/content/recipes/sticky-banana-bread-chocolate-walnuts.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/sticky-soy-braised-pork-ribs.md?raw": {
     "file": "chunks/sticky-soy-braised-pork-ribs2.js",
     "name": "sticky-soy-braised-pork-ribs",
@@ -502,6 +517,7 @@
       "_salted-caramel-chocolate-tart.js",
       "_silky-milk-chocolate-mousse.js",
       "_spiced-lamb-mint-sausage-rolls.js",
+      "_sticky-banana-bread-chocolate-walnuts.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
       "_thai-green-curry.js",
@@ -523,6 +539,7 @@
       "_salted-caramel-chocolate-tart.js",
       "_silky-milk-chocolate-mousse.js",
       "_spiced-lamb-mint-sausage-rolls.js",
+      "_sticky-banana-bread-chocolate-walnuts.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
       "_thai-green-curry.js",
@@ -540,6 +557,7 @@
       "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
       "src/content/recipes/silky-milk-chocolate-mousse.md?raw",
       "src/content/recipes/spiced-lamb-mint-sausage-rolls.md?raw",
+      "src/content/recipes/sticky-banana-bread-chocolate-walnuts.md?raw",
       "src/content/recipes/sticky-soy-braised-pork-ribs.md?raw",
       "src/content/recipes/sticky-soy-garlic-noodles.md?raw",
       "src/content/recipes/thai-green-curry.md?raw"
@@ -587,6 +605,7 @@
       "_salted-caramel-chocolate-tart.js",
       "_silky-milk-chocolate-mousse.js",
       "_spiced-lamb-mint-sausage-rolls.js",
+      "_sticky-banana-bread-chocolate-walnuts.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
       "_thai-green-curry.js",
@@ -604,6 +623,7 @@
       "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
       "src/content/recipes/silky-milk-chocolate-mousse.md?raw",
       "src/content/recipes/spiced-lamb-mint-sausage-rolls.md?raw",
+      "src/content/recipes/sticky-banana-bread-chocolate-walnuts.md?raw",
       "src/content/recipes/sticky-soy-braised-pork-ribs.md?raw",
       "src/content/recipes/sticky-soy-garlic-noodles.md?raw",
       "src/content/recipes/thai-green-curry.md?raw"
@@ -641,6 +661,7 @@
       "_salted-caramel-chocolate-tart.js",
       "_silky-milk-chocolate-mousse.js",
       "_spiced-lamb-mint-sausage-rolls.js",
+      "_sticky-banana-bread-chocolate-walnuts.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
       "_thai-green-curry.js"
