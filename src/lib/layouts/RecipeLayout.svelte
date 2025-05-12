@@ -151,9 +151,10 @@
 			imagesrcset={responsiveImage.srcset}
 			imagesizes={responsiveImage.sizes}
 			type="image/webp"
+			fetchpriority="high"
 		/>
 	{:else if image}
-		<link rel="preload" as="image" href={image} type="image/webp" />
+		<link rel="preload" as="image" href={image} type="image/webp" fetchpriority="high" />
 	{/if}
 </svelte:head>
 
@@ -170,6 +171,7 @@
 						use:fallbackImage
 						width="800"
 						height="450"
+						fetchpriority="high"
 					/>
 				</picture>
 			{:else}
@@ -184,6 +186,7 @@
 					use:fallbackImage
 					width="800"
 					height="450"
+					fetchpriority="high"
 				/>
 			{/if}
 		</div>
