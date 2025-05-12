@@ -10,7 +10,7 @@ cookTime: 30
 totalTime: 35
 servings: 4
 categories: [dessert]
-tags: [comfort-food, dessert, difficulty-easy]
+tags: [comfort food, dessert, difficulty-easy]
 relatedProducts:
   - handle: ospiro-pudding-rice-3kg
     featured: true

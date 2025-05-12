@@ -67,34 +67,34 @@ function RecipeLayout($$payload, $$props) {
     }
     $$payload2.out += `<!--]-->`;
   });
-  $$payload.out += `<article class="recipe-article mx-auto max-w-3xl svelte-15vvm21">`;
+  $$payload.out += `<article class="recipe-article mx-auto max-w-3xl svelte-176qzac">`;
   if (image) {
     $$payload.out += "<!--[-->";
-    $$payload.out += `<div class="mb-6 overflow-hidden rounded-lg svelte-15vvm21">`;
+    $$payload.out += `<div class="mb-6 overflow-hidden rounded-lg svelte-176qzac">`;
     if (responsiveImage) {
       $$payload.out += "<!--[-->";
-      $$payload.out += `<picture><source${attr("srcset", responsiveImage.srcset)}${attr("sizes", responsiveImage.sizes)} type="image/webp"> <img${attr("src", responsiveImage.fallback)}${attr("alt", title)} class="aspect-video w-full object-cover svelte-15vvm21" width="800" height="450" fetchpriority="high" onload="this.__e=event" onerror="this.__e=event"></picture>`;
+      $$payload.out += `<picture><source${attr("srcset", responsiveImage.srcset)}${attr("sizes", responsiveImage.sizes)} type="image/webp"> <img${attr("src", responsiveImage.fallback)}${attr("alt", title)} class="aspect-video w-full object-cover svelte-176qzac" width="800" height="450" fetchpriority="high" onload="this.__e=event" onerror="this.__e=event"></picture>`;
     } else {
       $$payload.out += "<!--[!-->";
-      $$payload.out += `<img${attr("src", image || "/placeholder.png")}${attr("srcset", image && image.startsWith("/images/recipes/") ? `/images/recipes/${slug}/resized/${slug}-400w.webp 400w, /images/recipes/${slug}/resized/${slug}-800w.webp 800w, /images/recipes/${slug}/resized/${slug}-1200w.webp 1200w` : void 0)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"${attr("alt", title)} class="aspect-video w-full object-cover svelte-15vvm21" width="800" height="450" fetchpriority="high" onload="this.__e=event" onerror="this.__e=event">`;
+      $$payload.out += `<img${attr("src", image || "/placeholder.png")}${attr("srcset", image && image.startsWith("/images/recipes/") ? `/images/recipes/${slug}/resized/${slug}-400w.webp 400w, /images/recipes/${slug}/resized/${slug}-800w.webp 800w, /images/recipes/${slug}/resized/${slug}-1200w.webp 1200w` : void 0)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"${attr("alt", title)} class="aspect-video w-full object-cover svelte-176qzac" width="800" height="450" fetchpriority="high" onload="this.__e=event" onerror="this.__e=event">`;
     }
     $$payload.out += `<!--]--></div>`;
   } else {
     $$payload.out += "<!--[!-->";
   }
-  $$payload.out += `<!--]--> <header class="mb-8 svelte-15vvm21"><h1 class="mb-4 text-3xl leading-tight font-bold lg:text-4xl svelte-15vvm21">${escape_html(title)}</h1> `;
+  $$payload.out += `<!--]--> <header class="mb-8 svelte-176qzac"><h1 class="mb-4 text-3xl leading-tight font-bold lg:text-4xl svelte-176qzac">${escape_html(title)}</h1> `;
   if (description) {
     $$payload.out += "<!--[-->";
-    $$payload.out += `<p class="text-muted-foreground mb-6 text-lg svelte-15vvm21">${escape_html(description)}</p>`;
+    $$payload.out += `<p class="text-muted-foreground mb-6 text-lg svelte-176qzac">${escape_html(description)}</p>`;
   } else {
     $$payload.out += "<!--[!-->";
   }
-  $$payload.out += `<!--]--> <div class="flex flex-wrap items-center gap-x-6 gap-y-2 svelte-15vvm21">`;
+  $$payload.out += `<!--]--> <div class="flex flex-wrap items-center gap-x-6 gap-y-2 svelte-176qzac">`;
   if (prepTime !== null || cookTime !== null || totalTime !== null) {
     $$payload.out += "<!--[-->";
-    $$payload.out += `<div class="flex items-center gap-2 svelte-15vvm21">`;
+    $$payload.out += `<div class="flex items-center gap-2 svelte-176qzac">`;
     Clock($$payload, { class: "h-5 w-5 text-amber-600" });
-    $$payload.out += `<!----> <div class="text-sm svelte-15vvm21">`;
+    $$payload.out += `<!----> <div class="text-sm svelte-176qzac">`;
     if (totalTime !== null) {
       $$payload.out += "<!--[-->";
       $$payload.out += `<strong>Total:</strong> ${escape_html(formatTime(totalTime))}`;
@@ -129,9 +129,9 @@ function RecipeLayout($$payload, $$props) {
   $$payload.out += `<!--]--> `;
   if (servings !== null) {
     $$payload.out += "<!--[-->";
-    $$payload.out += `<div class="flex items-center gap-2 svelte-15vvm21">`;
+    $$payload.out += `<div class="flex items-center gap-2 svelte-176qzac">`;
     Users($$payload, { class: "h-5 w-5 text-amber-600" });
-    $$payload.out += `<!----> <div class="text-sm svelte-15vvm21"><strong>Serves:</strong> ${escape_html(servings)}</div></div>`;
+    $$payload.out += `<!----> <div class="text-sm svelte-176qzac"><strong>Serves:</strong> ${escape_html(servings)}</div></div>`;
   } else {
     $$payload.out += "<!--[!-->";
   }
@@ -161,7 +161,7 @@ function RecipeLayout($$payload, $$props) {
   if (tags && tags.length > 0) {
     $$payload.out += "<!--[-->";
     const each_array = ensure_array_like(tags.filter((tag) => !tag.startsWith("difficulty-")));
-    $$payload.out += `<div class="mt-8 flex flex-wrap gap-2 border-t pt-6 svelte-15vvm21"><!--[-->`;
+    $$payload.out += `<div class="mt-8 flex flex-wrap gap-2 border-t pt-6 svelte-176qzac"><!--[-->`;
     for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
       let tag = each_array[$$index];
       Badge($$payload, {

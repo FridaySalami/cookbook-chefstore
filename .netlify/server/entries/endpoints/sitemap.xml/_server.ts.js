@@ -1,21 +1,35 @@
-import { m as metadata$7 } from "../../../chunks/coconut-milk-rice-pudding.js";
-import { m as metadata$6 } from "../../../chunks/crispy-panko-chicken-bites.js";
-import { m as metadata$5 } from "../../../chunks/fluffy-buttermilk-pancakes.js";
-import { m as metadata$4 } from "../../../chunks/miso-glazed-roasted-vegetables.js";
-import { m as metadata$3 } from "../../../chunks/poppadom-snack-platter.js";
-import { m as metadata$2 } from "../../../chunks/salted-caramel-chocolate-tart.js";
-import { m as metadata$1 } from "../../../chunks/silky-milk-chocolate-mousse.js";
+import { m as metadata$e } from "../../../chunks/buttermilk-chicken-tenders.js";
+import { m as metadata$d } from "../../../chunks/coconut-milk-rice-pudding.js";
+import { m as metadata$c } from "../../../chunks/creamy-chicken-korma.js";
+import { m as metadata$b } from "../../../chunks/crispy-panko-chicken-bites.js";
+import { m as metadata$a } from "../../../chunks/crunchy-asian-slaw.js";
+import { m as metadata$9 } from "../../../chunks/fluffy-buttermilk-pancakes.js";
+import { m as metadata$8 } from "../../../chunks/kimchi-fried-rice.js";
+import { m as metadata$7 } from "../../../chunks/miso-glazed-roasted-vegetables.js";
+import { m as metadata$6 } from "../../../chunks/one-pan-harissa-chickpeas-eggs.js";
+import { m as metadata$5 } from "../../../chunks/poppadom-snack-platter.js";
+import { m as metadata$4 } from "../../../chunks/salted-caramel-chocolate-tart.js";
+import { m as metadata$3 } from "../../../chunks/silky-milk-chocolate-mousse.js";
+import { m as metadata$2 } from "../../../chunks/sticky-soy-braised-pork-ribs.js";
+import { m as metadata$1 } from "../../../chunks/sticky-soy-garlic-noodles.js";
 import { m as metadata } from "../../../chunks/thai-green-curry.js";
 const site = "chefstorecookbook.netlify.app";
 const GET = async () => {
   const recipeModules = /* @__PURE__ */ Object.assign({
-    "/src/content/recipes/coconut-milk-rice-pudding.md": metadata$7,
-    "/src/content/recipes/crispy-panko-chicken-bites.md": metadata$6,
-    "/src/content/recipes/fluffy-buttermilk-pancakes.md": metadata$5,
-    "/src/content/recipes/miso-glazed-roasted-vegetables.md": metadata$4,
-    "/src/content/recipes/poppadom-snack-platter.md": metadata$3,
-    "/src/content/recipes/salted-caramel-chocolate-tart.md": metadata$2,
-    "/src/content/recipes/silky-milk-chocolate-mousse.md": metadata$1,
+    "/src/content/recipes/buttermilk-chicken-tenders.md": metadata$e,
+    "/src/content/recipes/coconut-milk-rice-pudding.md": metadata$d,
+    "/src/content/recipes/creamy-chicken-korma.md": metadata$c,
+    "/src/content/recipes/crispy-panko-chicken-bites.md": metadata$b,
+    "/src/content/recipes/crunchy-asian-slaw.md": metadata$a,
+    "/src/content/recipes/fluffy-buttermilk-pancakes.md": metadata$9,
+    "/src/content/recipes/kimchi-fried-rice.md": metadata$8,
+    "/src/content/recipes/miso-glazed-roasted-vegetables.md": metadata$7,
+    "/src/content/recipes/one-pan-harissa-chickpeas-eggs.md": metadata$6,
+    "/src/content/recipes/poppadom-snack-platter.md": metadata$5,
+    "/src/content/recipes/salted-caramel-chocolate-tart.md": metadata$4,
+    "/src/content/recipes/silky-milk-chocolate-mousse.md": metadata$3,
+    "/src/content/recipes/sticky-soy-braised-pork-ribs.md": metadata$2,
+    "/src/content/recipes/sticky-soy-garlic-noodles.md": metadata$1,
     "/src/content/recipes/thai-green-curry.md": metadata
   });
   const recipes = Object.entries(recipeModules).filter(([, module]) => module).map(([path, module]) => {

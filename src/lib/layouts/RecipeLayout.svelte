@@ -295,6 +295,32 @@
 		color: #000000 !important;
 	}
 
+	:global(.recipe-content h2) {
+		font-size: 1.75rem !important;
+		margin-top: 2rem !important;
+		margin-bottom: 1rem !important;
+		font-weight: 600 !important;
+		color: #000000 !important;
+	}
+
+	/* Styling for H3 subheaders in instructions */
+	:global(.recipe-content h3) {
+		font-size: 1.175rem !important; /* Between text-xl and text-2xl */
+		font-weight: 600 !important;
+		color: #1f2937 !important; /* Tailwind gray-800 */
+		margin-top: 1.75rem !important;
+		margin-bottom: 0.75rem !important;
+	}
+
+	/* Styling for H4 sub-subheaders in instructions */
+	:global(.recipe-content h4) {
+		font-size: 1rem !important; /* Tailwind text-lg */
+		font-weight: 600 !important;
+		color: #374151 !important; /* Tailwind gray-700 */
+		margin-top: 1.25rem !important;
+		margin-bottom: 0.5rem !important;
+	}
+
 	/* Critical CSS for hero image and layout */
 	.recipe-article {
 		max-width: 48rem;
