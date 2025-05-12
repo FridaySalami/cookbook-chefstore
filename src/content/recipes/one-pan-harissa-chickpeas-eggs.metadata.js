@@ -15,7 +15,6 @@ export const metadata = {
   ],
   "tags": [
     "vegetarian",
-    "one-pan",
     "spicy",
     "comfort food",
     "difficulty-easy"

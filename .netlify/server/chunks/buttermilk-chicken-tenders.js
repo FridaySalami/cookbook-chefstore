@@ -12,12 +12,7 @@ const metadata = {
   "totalTime": 35,
   "servings": 4,
   "categories": ["dinner", "kids", "snack"],
-  "tags": [
-    "crispy",
-    "crowd-pleaser",
-    "make-ahead",
-    "difficulty-easy"
-  ],
+  "tags": ["crispy", "crowd-pleaser", "difficulty-easy"],
   "relatedProducts": [
     {
       "handle": "centaur-dijon-mustard-1kg",

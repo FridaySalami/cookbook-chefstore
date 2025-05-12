@@ -10,7 +10,7 @@ cookTime: 30
 totalTime: 45
 servings: 4
 categories: [sides, vegetarian]
-tags: [vegetables, difficulty-easy]
+tags: [vegetarian, difficulty-easy]
 relatedProducts: 
  - handle: hikari-shinshu-awase-brown-miso-paste-1kg
    featured: true

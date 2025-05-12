@@ -17,7 +17,6 @@ export const metadata = {
   "tags": [
     "crispy",
     "crowd-pleaser",
-    "make-ahead",
     "difficulty-easy"
   ],
   "relatedProducts": [

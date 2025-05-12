@@ -14,7 +14,7 @@ export const metadata = {
     "vegetarian"
   ],
   "tags": [
-    "vegetables",
+    "vegetarian",
     "difficulty-easy"
   ],
   "relatedProducts": [

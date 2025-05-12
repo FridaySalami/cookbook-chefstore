@@ -127,6 +127,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_garlic-herb-tear-and-share-bread.js": {
+    "file": "chunks/garlic-herb-tear-and-share-bread.js",
+    "name": "garlic-herb-tear-and-share-bread",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_html.js": {
     "file": "chunks/html.js",
     "name": "html"
@@ -221,6 +230,15 @@
   "_silky-milk-chocolate-mousse.js": {
     "file": "chunks/silky-milk-chocolate-mousse.js",
     "name": "silky-milk-chocolate-mousse",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
+  "_spiced-lamb-mint-sausage-rolls.js": {
+    "file": "chunks/spiced-lamb-mint-sausage-rolls.js",
+    "name": "spiced-lamb-mint-sausage-rolls",
     "isDynamicEntry": true,
     "imports": [
       "_index3.js",
@@ -327,6 +345,12 @@
     "src": "src/content/recipes/fluffy-buttermilk-pancakes.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/garlic-herb-tear-and-share-bread.md?raw": {
+    "file": "chunks/garlic-herb-tear-and-share-bread2.js",
+    "name": "garlic-herb-tear-and-share-bread",
+    "src": "src/content/recipes/garlic-herb-tear-and-share-bread.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/kimchi-fried-rice.md?raw": {
     "file": "chunks/kimchi-fried-rice2.js",
     "name": "kimchi-fried-rice",
@@ -361,6 +385,12 @@
     "file": "chunks/silky-milk-chocolate-mousse2.js",
     "name": "silky-milk-chocolate-mousse",
     "src": "src/content/recipes/silky-milk-chocolate-mousse.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/spiced-lamb-mint-sausage-rolls.md?raw": {
+    "file": "chunks/spiced-lamb-mint-sausage-rolls2.js",
+    "name": "spiced-lamb-mint-sausage-rolls",
+    "src": "src/content/recipes/spiced-lamb-mint-sausage-rolls.md?raw",
     "isDynamicEntry": true
   },
   "src/content/recipes/sticky-soy-braised-pork-ribs.md?raw": {
@@ -464,12 +494,14 @@
       "_crispy-panko-chicken-bites.js",
       "_crunchy-asian-slaw.js",
       "_fluffy-buttermilk-pancakes.js",
+      "_garlic-herb-tear-and-share-bread.js",
       "_kimchi-fried-rice.js",
       "_miso-glazed-roasted-vegetables.js",
       "_one-pan-harissa-chickpeas-eggs.js",
       "_poppadom-snack-platter.js",
       "_salted-caramel-chocolate-tart.js",
       "_silky-milk-chocolate-mousse.js",
+      "_spiced-lamb-mint-sausage-rolls.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
       "_thai-green-curry.js",
@@ -483,12 +515,14 @@
       "_crispy-panko-chicken-bites.js",
       "_crunchy-asian-slaw.js",
       "_fluffy-buttermilk-pancakes.js",
+      "_garlic-herb-tear-and-share-bread.js",
       "_kimchi-fried-rice.js",
       "_miso-glazed-roasted-vegetables.js",
       "_one-pan-harissa-chickpeas-eggs.js",
       "_poppadom-snack-platter.js",
       "_salted-caramel-chocolate-tart.js",
       "_silky-milk-chocolate-mousse.js",
+      "_spiced-lamb-mint-sausage-rolls.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
       "_thai-green-curry.js",
@@ -498,12 +532,14 @@
       "src/content/recipes/crispy-panko-chicken-bites.md?raw",
       "src/content/recipes/crunchy-asian-slaw.md?raw",
       "src/content/recipes/fluffy-buttermilk-pancakes.md?raw",
+      "src/content/recipes/garlic-herb-tear-and-share-bread.md?raw",
       "src/content/recipes/kimchi-fried-rice.md?raw",
       "src/content/recipes/miso-glazed-roasted-vegetables.md?raw",
       "src/content/recipes/one-pan-harissa-chickpeas-eggs.md?raw",
       "src/content/recipes/poppadom-snack-platter.md?raw",
       "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
       "src/content/recipes/silky-milk-chocolate-mousse.md?raw",
+      "src/content/recipes/spiced-lamb-mint-sausage-rolls.md?raw",
       "src/content/recipes/sticky-soy-braised-pork-ribs.md?raw",
       "src/content/recipes/sticky-soy-garlic-noodles.md?raw",
       "src/content/recipes/thai-green-curry.md?raw"
@@ -543,12 +579,14 @@
       "_crispy-panko-chicken-bites.js",
       "_crunchy-asian-slaw.js",
       "_fluffy-buttermilk-pancakes.js",
+      "_garlic-herb-tear-and-share-bread.js",
       "_kimchi-fried-rice.js",
       "_miso-glazed-roasted-vegetables.js",
       "_one-pan-harissa-chickpeas-eggs.js",
       "_poppadom-snack-platter.js",
       "_salted-caramel-chocolate-tart.js",
       "_silky-milk-chocolate-mousse.js",
+      "_spiced-lamb-mint-sausage-rolls.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
       "_thai-green-curry.js",
@@ -558,12 +596,14 @@
       "src/content/recipes/crispy-panko-chicken-bites.md?raw",
       "src/content/recipes/crunchy-asian-slaw.md?raw",
       "src/content/recipes/fluffy-buttermilk-pancakes.md?raw",
+      "src/content/recipes/garlic-herb-tear-and-share-bread.md?raw",
       "src/content/recipes/kimchi-fried-rice.md?raw",
       "src/content/recipes/miso-glazed-roasted-vegetables.md?raw",
       "src/content/recipes/one-pan-harissa-chickpeas-eggs.md?raw",
       "src/content/recipes/poppadom-snack-platter.md?raw",
       "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
       "src/content/recipes/silky-milk-chocolate-mousse.md?raw",
+      "src/content/recipes/spiced-lamb-mint-sausage-rolls.md?raw",
       "src/content/recipes/sticky-soy-braised-pork-ribs.md?raw",
       "src/content/recipes/sticky-soy-garlic-noodles.md?raw",
       "src/content/recipes/thai-green-curry.md?raw"
@@ -593,12 +633,14 @@
       "_crispy-panko-chicken-bites.js",
       "_crunchy-asian-slaw.js",
       "_fluffy-buttermilk-pancakes.js",
+      "_garlic-herb-tear-and-share-bread.js",
       "_kimchi-fried-rice.js",
       "_miso-glazed-roasted-vegetables.js",
       "_one-pan-harissa-chickpeas-eggs.js",
       "_poppadom-snack-platter.js",
       "_salted-caramel-chocolate-tart.js",
       "_silky-milk-chocolate-mousse.js",
+      "_spiced-lamb-mint-sausage-rolls.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
       "_thai-green-curry.js"
