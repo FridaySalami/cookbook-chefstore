@@ -6,6 +6,7 @@
 	import * as Button from '$lib/components/ui/button';
 	import { Clock, Users, ChevronLeft, ChevronRight } from 'lucide-svelte';
 	import RecipeSearch from '$lib/components/RecipeSearch.svelte';
+	import { goto } from '$app/navigation';
 
 	export let data: PageData;
 
@@ -158,18 +159,109 @@
 			<RecipeSearch
 				recipes={data.recipes ? data.recipes.map((r) => ({ title: r.title, slug: r.slug })) : []}
 				on:select={(e) => {
-					window.location.href = `/recipes/${e.detail.recipe.slug}`;
+					if (e.detail.tag) {
+						const params = new URLSearchParams();
+						params.set('tag', e.detail.tag);
+						params.set('page', '1');
+						goto(`/recipes?${params.toString()}`);
+					} else if (e.detail.recipe) {
+						goto(`/recipes/${e.detail.recipe.slug}`);
+					}
 				}}
 				placeholder="Search recipes..."
 			/>
 
 			<!-- Categorized Tag Filters -->
-			<div class="mt-8 flex flex-col items-center gap-4">
+			<details class="mb-6 w-full text-center sm:hidden">
+				<summary class="cursor-pointer py-2 font-medium">Filter Tags</summary>
+				<nav aria-label="Recipe tags" class="mt-4 flex flex-col items-center gap-4">
+					<div class="mb-2">
+						<Button.Root
+							on:click={(e) => {
+								e.preventDefault();
+								goto(getTagUrl(null), { keepFocus: true, noScroll: true });
+							}}
+							href={getTagUrl(null)}
+							variant={selectedTag === null ? 'default' : 'outline'}
+							size="sm"
+							class={selectedTag === null ? 'selected' : ''}
+							aria-current={selectedTag === null ? 'page' : undefined}
+						>
+							All Recipes
+						</Button.Root>
+					</div>
+					{#if difficultyTags.length > 0}
+						<div class="flex flex-wrap justify-center gap-2 sm:gap-3">
+							{#each difficultyTags as tag}
+								<Button.Root
+									on:click={(e) => {
+										e.preventDefault();
+										goto(getTagUrl(tag), { keepFocus: true, noScroll: true });
+									}}
+									href={getTagUrl(tag)}
+									variant={selectedTag === tag ? 'default' : 'outline'}
+									size="sm"
+									class={`capitalize${selectedTag === tag ? ' selected' : ''}`}
+									aria-current={selectedTag === tag ? 'page' : undefined}
+								>
+									{formatTag(tag)}
+								</Button.Root>
+							{/each}
+						</div>
+					{/if}
+					{#if dietaryTags.length > 0}
+						<div class="flex flex-wrap justify-center gap-2 sm:gap-3">
+							{#each dietaryTags as tag}
+								<Button.Root
+									on:click={(e) => {
+										e.preventDefault();
+										goto(getTagUrl(tag), { keepFocus: true, noScroll: true });
+									}}
+									href={getTagUrl(tag)}
+									variant={selectedTag === tag ? 'default' : 'outline'}
+									size="sm"
+									class={`capitalize${selectedTag === tag ? ' selected' : ''}`}
+									aria-current={selectedTag === tag ? 'page' : undefined}
+								>
+									{formatTag(tag)}
+								</Button.Root>
+							{/each}
+						</div>
+					{/if}
+					{#if otherTags.length > 0}
+						<div class="flex flex-wrap justify-center gap-2 sm:gap-3">
+							{#each otherTags as tag}
+								<Button.Root
+									on:click={(e) => {
+										e.preventDefault();
+										goto(getTagUrl(tag), { keepFocus: true, noScroll: true });
+									}}
+									href={getTagUrl(tag)}
+									variant={selectedTag === tag ? 'default' : 'outline'}
+									size="sm"
+									class={`capitalize${selectedTag === tag ? ' selected' : ''}`}
+									aria-current={selectedTag === tag ? 'page' : undefined}
+								>
+									{formatTag(tag)}
+								</Button.Root>
+							{/each}
+						</div>
+					{/if}
+				</nav>
+			</details>
+
+			<!-- Desktop tag filters -->
+			<nav aria-label="Recipe tags" class="mt-8 hidden flex-col items-center gap-4 sm:flex">
 				<div class="mb-2">
 					<Button.Root
+						on:click={(e) => {
+							e.preventDefault();
+							goto(getTagUrl(null), { keepFocus: true, noScroll: true });
+						}}
 						href={getTagUrl(null)}
 						variant={selectedTag === null ? 'default' : 'outline'}
 						size="sm"
+						class={selectedTag === null ? 'selected' : ''}
 						aria-current={selectedTag === null ? 'page' : undefined}
 					>
 						All Recipes
@@ -179,10 +271,14 @@
 					<div class="flex flex-wrap justify-center gap-2 sm:gap-3">
 						{#each difficultyTags as tag}
 							<Button.Root
+								on:click={(e) => {
+									e.preventDefault();
+									goto(getTagUrl(tag), { keepFocus: true, noScroll: true });
+								}}
 								href={getTagUrl(tag)}
 								variant={selectedTag === tag ? 'default' : 'outline'}
 								size="sm"
-								class="capitalize"
+								class={`capitalize${selectedTag === tag ? ' selected' : ''}`}
 								aria-current={selectedTag === tag ? 'page' : undefined}
 							>
 								{formatTag(tag)}
@@ -194,9 +290,14 @@
 					<div class="flex flex-wrap justify-center gap-2 sm:gap-3">
 						{#each dietaryTags as tag}
 							<Button.Root
+								on:click={(e) => {
+									e.preventDefault();
+									goto(getTagUrl(tag), { keepFocus: true, noScroll: true });
+								}}
 								href={getTagUrl(tag)}
 								variant={selectedTag === tag ? 'default' : 'outline'}
 								size="sm"
+								class={`capitalize${selectedTag === tag ? ' selected' : ''}`}
 								aria-current={selectedTag === tag ? 'page' : undefined}
 							>
 								{formatTag(tag)}
@@ -208,9 +309,14 @@
 					<div class="flex flex-wrap justify-center gap-2 sm:gap-3">
 						{#each otherTags as tag}
 							<Button.Root
+								on:click={(e) => {
+									e.preventDefault();
+									goto(getTagUrl(tag), { keepFocus: true, noScroll: true });
+								}}
 								href={getTagUrl(tag)}
 								variant={selectedTag === tag ? 'default' : 'outline'}
 								size="sm"
+								class={`capitalize${selectedTag === tag ? ' selected' : ''}`}
 								aria-current={selectedTag === tag ? 'page' : undefined}
 							>
 								{formatTag(tag)}
@@ -218,7 +324,7 @@
 						{/each}
 					</div>
 				{/if}
-			</div>
+			</nav>
 		</header>
 
 		<!-- Add container for filter heading and count -->
@@ -273,14 +379,25 @@
 		{#if displayedRecipes.length > 0}
 			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 				{#each displayedRecipes as recipe (recipe.slug)}
-					<a href={`/recipes/${recipe.slug}`} class="group block">
+					<a
+						href={`/recipes/${recipe.slug}`}
+						class="group block"
+						onmouseenter={() => {
+							const img = new window.Image();
+							img.src = getResizedImagePath(recipe.slug, 800);
+						}}
+					>
 						<article>
 							<Card.Root
 								class="flex h-full flex-col overflow-hidden transition-all group-hover:-translate-y-1 group-hover:shadow-lg"
 							>
 								<Card.Header class="relative p-0">
 									{#if recipe.slug}
-										<picture>
+										<div
+											class="bg-muted relative aspect-video w-full animate-pulse"
+											style="z-index:1; position:absolute;"
+										></div>
+										<picture style="position:relative; z-index:2;">
 											<source
 												srcset={`
 													${getResizedImagePath(recipe.slug, 400)} 400w,
@@ -298,9 +415,14 @@
 												loading="lazy"
 												width="400"
 												height="225"
+												style="position:relative; z-index:2;"
 											/>
 										</picture>
 									{:else}
+										<div
+											class="bg-muted relative aspect-video w-full animate-pulse"
+											style="z-index:1; position:absolute;"
+										></div>
 										<img
 											src={recipe.image || '/placeholder.png'}
 											alt={recipe.title}
@@ -309,6 +431,7 @@
 											loading="lazy"
 											width="400"
 											height="225"
+											style="position:relative; z-index:2;"
 										/>
 									{/if}
 									<Badge

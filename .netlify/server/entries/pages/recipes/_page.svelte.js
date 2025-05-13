@@ -3,6 +3,7 @@ import { B as Badge, U as Users, p as page } from "../../../chunks/users.js";
 import { C as Card, a as Card_header, d as Card_content, b as Card_title, c as Card_description } from "../../../chunks/card-title.js";
 import { C as Card_footer, a as Chevron_right } from "../../../chunks/chevron-right.js";
 import { B as Button } from "../../../chunks/index5.js";
+import "../../../chunks/client.js";
 import { I as Icon, C as Clock } from "../../../chunks/clock.js";
 import { h as html } from "../../../chunks/html.js";
 function Chevron_left($$payload, $$props) {
@@ -142,11 +143,12 @@ function _page($$payload, $$props) {
     recipes: data.recipes ? data.recipes.map((r) => ({ title: r.title, slug: r.slug })) : [],
     placeholder: "Search recipes..."
   });
-  $$payload.out += `<!----> <div class="mt-8 flex flex-col items-center gap-4"><div class="mb-2">`;
+  $$payload.out += `<!----> <details class="mb-6 w-full text-center sm:hidden"><summary class="cursor-pointer py-2 font-medium">Filter Tags</summary> <nav aria-label="Recipe tags" class="mt-4 flex flex-col items-center gap-4"><div class="mb-2">`;
   Button($$payload, {
     href: getTagUrl(null),
     variant: selectedTag === null ? "default" : "outline",
     size: "sm",
+    class: selectedTag === null ? "selected" : "",
     "aria-current": selectedTag === null ? "page" : void 0,
     children: ($$payload2) => {
       $$payload2.out += `<!---->All Recipes`;
@@ -164,7 +166,7 @@ function _page($$payload, $$props) {
         href: getTagUrl(tag),
         variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
-        class: "capitalize",
+        class: `capitalize${selectedTag === tag ? " selected" : ""}`,
         "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
@@ -187,6 +189,7 @@ function _page($$payload, $$props) {
         href: getTagUrl(tag),
         variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
+        class: `capitalize${selectedTag === tag ? " selected" : ""}`,
         "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
@@ -209,6 +212,7 @@ function _page($$payload, $$props) {
         href: getTagUrl(tag),
         variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
+        class: `capitalize${selectedTag === tag ? " selected" : ""}`,
         "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
@@ -220,7 +224,88 @@ function _page($$payload, $$props) {
   } else {
     $$payload.out += "<!--[!-->";
   }
-  $$payload.out += `<!--]--></div></header> <div class="mb-6 text-center">`;
+  $$payload.out += `<!--]--></nav></details> <nav aria-label="Recipe tags" class="mt-8 hidden flex-col items-center gap-4 sm:flex"><div class="mb-2">`;
+  Button($$payload, {
+    href: getTagUrl(null),
+    variant: selectedTag === null ? "default" : "outline",
+    size: "sm",
+    class: selectedTag === null ? "selected" : "",
+    "aria-current": selectedTag === null ? "page" : void 0,
+    children: ($$payload2) => {
+      $$payload2.out += `<!---->All Recipes`;
+    },
+    $$slots: { default: true }
+  });
+  $$payload.out += `<!----></div> `;
+  if (difficultyTags.length > 0) {
+    $$payload.out += "<!--[-->";
+    const each_array_3 = ensure_array_like(difficultyTags);
+    $$payload.out += `<div class="flex flex-wrap justify-center gap-2 sm:gap-3"><!--[-->`;
+    for (let $$index_3 = 0, $$length = each_array_3.length; $$index_3 < $$length; $$index_3++) {
+      let tag = each_array_3[$$index_3];
+      Button($$payload, {
+        href: getTagUrl(tag),
+        variant: selectedTag === tag ? "default" : "outline",
+        size: "sm",
+        class: `capitalize${selectedTag === tag ? " selected" : ""}`,
+        "aria-current": selectedTag === tag ? "page" : void 0,
+        children: ($$payload2) => {
+          $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
+        },
+        $$slots: { default: true }
+      });
+    }
+    $$payload.out += `<!--]--></div>`;
+  } else {
+    $$payload.out += "<!--[!-->";
+  }
+  $$payload.out += `<!--]--> `;
+  if (dietaryTags.length > 0) {
+    $$payload.out += "<!--[-->";
+    const each_array_4 = ensure_array_like(dietaryTags);
+    $$payload.out += `<div class="flex flex-wrap justify-center gap-2 sm:gap-3"><!--[-->`;
+    for (let $$index_4 = 0, $$length = each_array_4.length; $$index_4 < $$length; $$index_4++) {
+      let tag = each_array_4[$$index_4];
+      Button($$payload, {
+        href: getTagUrl(tag),
+        variant: selectedTag === tag ? "default" : "outline",
+        size: "sm",
+        class: `capitalize${selectedTag === tag ? " selected" : ""}`,
+        "aria-current": selectedTag === tag ? "page" : void 0,
+        children: ($$payload2) => {
+          $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
+        },
+        $$slots: { default: true }
+      });
+    }
+    $$payload.out += `<!--]--></div>`;
+  } else {
+    $$payload.out += "<!--[!-->";
+  }
+  $$payload.out += `<!--]--> `;
+  if (otherTags.length > 0) {
+    $$payload.out += "<!--[-->";
+    const each_array_5 = ensure_array_like(otherTags);
+    $$payload.out += `<div class="flex flex-wrap justify-center gap-2 sm:gap-3"><!--[-->`;
+    for (let $$index_5 = 0, $$length = each_array_5.length; $$index_5 < $$length; $$index_5++) {
+      let tag = each_array_5[$$index_5];
+      Button($$payload, {
+        href: getTagUrl(tag),
+        variant: selectedTag === tag ? "default" : "outline",
+        size: "sm",
+        class: `capitalize${selectedTag === tag ? " selected" : ""}`,
+        "aria-current": selectedTag === tag ? "page" : void 0,
+        children: ($$payload2) => {
+          $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
+        },
+        $$slots: { default: true }
+      });
+    }
+    $$payload.out += `<!--]--></div>`;
+  } else {
+    $$payload.out += "<!--[!-->";
+  }
+  $$payload.out += `<!--]--></nav></header> <div class="mb-6 text-center">`;
   if (selectedTag) {
     $$payload.out += "<!--[-->";
     $$payload.out += `<h2 class="mb-1 text-2xl font-semibold tracking-tight">Filtered by: <span class="capitalize">${escape_html(formatTag(selectedTag))}</span></h2>`;
@@ -291,10 +376,10 @@ function _page($$payload, $$props) {
   $$payload.out += `<!--]--> `;
   if (displayedRecipes.length > 0) {
     $$payload.out += "<!--[-->";
-    const each_array_3 = ensure_array_like(displayedRecipes);
+    const each_array_6 = ensure_array_like(displayedRecipes);
     $$payload.out += `<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"><!--[-->`;
-    for (let $$index_4 = 0, $$length = each_array_3.length; $$index_4 < $$length; $$index_4++) {
-      let recipe = each_array_3[$$index_4];
+    for (let $$index_7 = 0, $$length = each_array_6.length; $$index_7 < $$length; $$index_7++) {
+      let recipe = each_array_6[$$index_7];
       $$payload.out += `<a${attr("href", `/recipes/${recipe.slug}`)} class="group block"><article>`;
       Card($$payload, {
         class: "flex h-full flex-col overflow-hidden transition-all group-hover:-translate-y-1 group-hover:shadow-lg",
@@ -304,14 +389,14 @@ function _page($$payload, $$props) {
             children: ($$payload3) => {
               if (recipe.slug) {
                 $$payload3.out += "<!--[-->";
-                $$payload3.out += `<picture><source${attr("srcset", `
+                $$payload3.out += `<div class="bg-muted relative aspect-video w-full animate-pulse" style="z-index:1; position:absolute;"></div> <picture style="position:relative; z-index:2;"><source${attr("srcset", `
 													${getResizedImagePath(recipe.slug, 400)} 400w,
 													${getResizedImagePath(recipe.slug, 800)} 800w,
 													${getResizedImagePath(recipe.slug, 1200)} 1200w
-												`)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" type="image/webp"> <img${attr("src", getResizedImagePath(recipe.slug, 800))}${attr("alt", recipe.title)} class="aspect-video w-full object-cover" loading="lazy" width="400" height="225" onload="this.__e=event" onerror="this.__e=event"></picture>`;
+												`)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" type="image/webp"> <img${attr("src", getResizedImagePath(recipe.slug, 800))}${attr("alt", recipe.title)} class="aspect-video w-full object-cover" loading="lazy" width="400" height="225" style="position:relative; z-index:2;" onload="this.__e=event" onerror="this.__e=event"></picture>`;
               } else {
                 $$payload3.out += "<!--[!-->";
-                $$payload3.out += `<img${attr("src", recipe.image || "/placeholder.png")}${attr("alt", recipe.title)} class="aspect-video w-full object-cover" loading="lazy" width="400" height="225" onload="this.__e=event" onerror="this.__e=event">`;
+                $$payload3.out += `<div class="bg-muted relative aspect-video w-full animate-pulse" style="z-index:1; position:absolute;"></div> <img${attr("src", recipe.image || "/placeholder.png")}${attr("alt", recipe.title)} class="aspect-video w-full object-cover" loading="lazy" width="400" height="225" style="position:relative; z-index:2;" onload="this.__e=event" onerror="this.__e=event">`;
               }
               $$payload3.out += `<!--]--> `;
               Badge($$payload3, {
@@ -353,10 +438,10 @@ function _page($$payload, $$props) {
               $$payload3.out += `<!--]--> `;
               if (recipe.tags && recipe.tags.length > 0) {
                 $$payload3.out += "<!--[-->";
-                const each_array_4 = ensure_array_like(recipe.tags.slice(0, 3));
+                const each_array_7 = ensure_array_like(recipe.tags.slice(0, 3));
                 $$payload3.out += `<div class="mt-2 flex flex-wrap gap-1"><!--[-->`;
-                for (let $$index_3 = 0, $$length2 = each_array_4.length; $$index_3 < $$length2; $$index_3++) {
-                  let tag = each_array_4[$$index_3];
+                for (let $$index_6 = 0, $$length2 = each_array_7.length; $$index_6 < $$length2; $$index_6++) {
+                  let tag = each_array_7[$$index_6];
                   Badge($$payload3, {
                     variant: "secondary",
                     children: ($$payload4) => {

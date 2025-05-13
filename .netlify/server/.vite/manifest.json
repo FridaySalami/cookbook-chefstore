@@ -616,7 +616,7 @@
       "_html.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.CerWzQoh.css"
+      "_app/immutable/assets/_layout.CllMaWmK.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -663,6 +663,7 @@
       "_card-title.js",
       "_chevron-right.js",
       "_index5.js",
+      "_client.js",
       "_clock.js",
       "_html.js"
     ]

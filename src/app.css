@@ -99,4 +99,9 @@
     /* Use CSS variable for font family */
     font-family: var(--font-serif);
   }
+
+  .selected {
+    border-color: hsl(var(--primary));
+    font-weight: 600;
+  }
 }
