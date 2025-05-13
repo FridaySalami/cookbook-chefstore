@@ -206,6 +206,67 @@ function _page($$payload, $$props) {
     $$payload.out += "<!--[!-->";
   }
   $$payload.out += `<!--]--> <p class="text-muted-foreground text-sm">Showing ${escape_html(displayedRecipes.length)} of ${escape_html(totalRecipes)} recipes.</p></div> `;
+  if (totalPages > 1) {
+    $$payload.out += "<!--[-->";
+    $$payload.out += `<nav aria-label="Recipe pagination" class="mb-8 flex items-center justify-center gap-4">`;
+    if (currentPage > 1) {
+      $$payload.out += "<!--[-->";
+      Button($$payload, {
+        href: getPageUrl(currentPage - 1),
+        variant: "outline",
+        size: "sm",
+        children: ($$payload2) => {
+          Chevron_left($$payload2, { class: "mr-2 h-4 w-4" });
+          $$payload2.out += `<!----> Previous`;
+        },
+        $$slots: { default: true }
+      });
+    } else {
+      $$payload.out += "<!--[!-->";
+      Button($$payload, {
+        variant: "outline",
+        size: "sm",
+        disabled: true,
+        children: ($$payload2) => {
+          Chevron_left($$payload2, { class: "mr-2 h-4 w-4" });
+          $$payload2.out += `<!----> Previous`;
+        },
+        $$slots: { default: true }
+      });
+    }
+    $$payload.out += `<!--]--> <span class="text-muted-foreground text-sm">Page ${escape_html(currentPage)} of ${escape_html(totalPages)}</span> `;
+    if (currentPage < totalPages) {
+      $$payload.out += "<!--[-->";
+      Button($$payload, {
+        href: getPageUrl(currentPage + 1),
+        variant: "outline",
+        size: "sm",
+        children: ($$payload2) => {
+          $$payload2.out += `<!---->Next `;
+          Chevron_right($$payload2, { class: "ml-2 h-4 w-4" });
+          $$payload2.out += `<!---->`;
+        },
+        $$slots: { default: true }
+      });
+    } else {
+      $$payload.out += "<!--[!-->";
+      Button($$payload, {
+        variant: "outline",
+        size: "sm",
+        disabled: true,
+        children: ($$payload2) => {
+          $$payload2.out += `<!---->Next `;
+          Chevron_right($$payload2, { class: "ml-2 h-4 w-4" });
+          $$payload2.out += `<!---->`;
+        },
+        $$slots: { default: true }
+      });
+    }
+    $$payload.out += `<!--]--></nav>`;
+  } else {
+    $$payload.out += "<!--[!-->";
+  }
+  $$payload.out += `<!--]--> `;
   if (displayedRecipes.length > 0) {
     $$payload.out += "<!--[-->";
     const each_array_3 = ensure_array_like(displayedRecipes);

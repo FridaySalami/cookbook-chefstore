@@ -25,6 +25,15 @@
       "_app/immutable/assets/RecipeLayout.TG1l-nGk.css"
     ]
   },
+  "_baked-camembert-cheeseboard-chutney.js": {
+    "file": "chunks/baked-camembert-cheeseboard-chutney.js",
+    "name": "baked-camembert-cheeseboard-chutney",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_buttermilk-chicken-tenders.js": {
     "file": "chunks/buttermilk-chicken-tenders.js",
     "name": "buttermilk-chicken-tenders",
@@ -145,6 +154,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_goats-cheese-onion-vol-au-vents.js": {
+    "file": "chunks/goats-cheese-onion-vol-au-vents.js",
+    "name": "goats-cheese-onion-vol-au-vents",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_html.js": {
     "file": "chunks/html.js",
     "name": "html"
@@ -200,6 +218,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_lemon-posset-shortbread.js": {
+    "file": "chunks/lemon-posset-shortbread.js",
+    "name": "lemon-posset-shortbread",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_miso-glazed-roasted-vegetables.js": {
     "file": "chunks/miso-glazed-roasted-vegetables.js",
     "name": "miso-glazed-roasted-vegetables",
@@ -248,6 +275,15 @@
   "_spiced-lamb-mint-sausage-rolls.js": {
     "file": "chunks/spiced-lamb-mint-sausage-rolls.js",
     "name": "spiced-lamb-mint-sausage-rolls",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
+  "_spicy-chickpea-spinach-stew.js": {
+    "file": "chunks/spicy-chickpea-spinach-stew.js",
+    "name": "spicy-chickpea-spinach-stew",
     "isDynamicEntry": true,
     "imports": [
       "_index3.js",
@@ -336,6 +372,12 @@
       "_environment.js"
     ]
   },
+  "src/content/recipes/baked-camembert-cheeseboard-chutney.md?raw": {
+    "file": "chunks/baked-camembert-cheeseboard-chutney2.js",
+    "name": "baked-camembert-cheeseboard-chutney",
+    "src": "src/content/recipes/baked-camembert-cheeseboard-chutney.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/buttermilk-chicken-tenders.md?raw": {
     "file": "chunks/buttermilk-chicken-tenders2.js",
     "name": "buttermilk-chicken-tenders",
@@ -384,10 +426,22 @@
     "src": "src/content/recipes/garlic-herb-tear-and-share-bread.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/goats-cheese-onion-vol-au-vents.md?raw": {
+    "file": "chunks/goats-cheese-onion-vol-au-vents2.js",
+    "name": "goats-cheese-onion-vol-au-vents",
+    "src": "src/content/recipes/goats-cheese-onion-vol-au-vents.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/kimchi-fried-rice.md?raw": {
     "file": "chunks/kimchi-fried-rice2.js",
     "name": "kimchi-fried-rice",
     "src": "src/content/recipes/kimchi-fried-rice.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/lemon-posset-shortbread.md?raw": {
+    "file": "chunks/lemon-posset-shortbread2.js",
+    "name": "lemon-posset-shortbread",
+    "src": "src/content/recipes/lemon-posset-shortbread.md?raw",
     "isDynamicEntry": true
   },
   "src/content/recipes/miso-glazed-roasted-vegetables.md?raw": {
@@ -424,6 +478,12 @@
     "file": "chunks/spiced-lamb-mint-sausage-rolls2.js",
     "name": "spiced-lamb-mint-sausage-rolls",
     "src": "src/content/recipes/spiced-lamb-mint-sausage-rolls.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/spicy-chickpea-spinach-stew.md?raw": {
+    "file": "chunks/spicy-chickpea-spinach-stew2.js",
+    "name": "spicy-chickpea-spinach-stew",
+    "src": "src/content/recipes/spicy-chickpea-spinach-stew.md?raw",
     "isDynamicEntry": true
   },
   "src/content/recipes/sticky-banana-bread-chocolate-walnuts.md?raw": {
@@ -533,6 +593,7 @@
     "src": "src/routes/recipes/[slug]/+page.server.ts",
     "isEntry": true,
     "imports": [
+      "_baked-camembert-cheeseboard-chutney.js",
       "_buttermilk-chicken-tenders.js",
       "_cheesy-leek-potato-gratin.js",
       "_coconut-milk-rice-pudding.js",
@@ -541,13 +602,16 @@
       "_crunchy-asian-slaw.js",
       "_fluffy-buttermilk-pancakes.js",
       "_garlic-herb-tear-and-share-bread.js",
+      "_goats-cheese-onion-vol-au-vents.js",
       "_kimchi-fried-rice.js",
+      "_lemon-posset-shortbread.js",
       "_miso-glazed-roasted-vegetables.js",
       "_one-pan-harissa-chickpeas-eggs.js",
       "_poppadom-snack-platter.js",
       "_salted-caramel-chocolate-tart.js",
       "_silky-milk-chocolate-mousse.js",
       "_spiced-lamb-mint-sausage-rolls.js",
+      "_spicy-chickpea-spinach-stew.js",
       "_sticky-banana-bread-chocolate-walnuts.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
@@ -557,6 +621,7 @@
       "_index.js"
     ],
     "dynamicImports": [
+      "_baked-camembert-cheeseboard-chutney.js",
       "_buttermilk-chicken-tenders.js",
       "_cheesy-leek-potato-gratin.js",
       "_coconut-milk-rice-pudding.js",
@@ -565,18 +630,22 @@
       "_crunchy-asian-slaw.js",
       "_fluffy-buttermilk-pancakes.js",
       "_garlic-herb-tear-and-share-bread.js",
+      "_goats-cheese-onion-vol-au-vents.js",
       "_kimchi-fried-rice.js",
+      "_lemon-posset-shortbread.js",
       "_miso-glazed-roasted-vegetables.js",
       "_one-pan-harissa-chickpeas-eggs.js",
       "_poppadom-snack-platter.js",
       "_salted-caramel-chocolate-tart.js",
       "_silky-milk-chocolate-mousse.js",
       "_spiced-lamb-mint-sausage-rolls.js",
+      "_spicy-chickpea-spinach-stew.js",
       "_sticky-banana-bread-chocolate-walnuts.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
       "_tagliatelle-bolognese-traditional.js",
       "_thai-green-curry.js",
+      "src/content/recipes/baked-camembert-cheeseboard-chutney.md?raw",
       "src/content/recipes/buttermilk-chicken-tenders.md?raw",
       "src/content/recipes/cheesy-leek-potato-gratin.md?raw",
       "src/content/recipes/coconut-milk-rice-pudding.md?raw",
@@ -585,13 +654,16 @@
       "src/content/recipes/crunchy-asian-slaw.md?raw",
       "src/content/recipes/fluffy-buttermilk-pancakes.md?raw",
       "src/content/recipes/garlic-herb-tear-and-share-bread.md?raw",
+      "src/content/recipes/goats-cheese-onion-vol-au-vents.md?raw",
       "src/content/recipes/kimchi-fried-rice.md?raw",
+      "src/content/recipes/lemon-posset-shortbread.md?raw",
       "src/content/recipes/miso-glazed-roasted-vegetables.md?raw",
       "src/content/recipes/one-pan-harissa-chickpeas-eggs.md?raw",
       "src/content/recipes/poppadom-snack-platter.md?raw",
       "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
       "src/content/recipes/silky-milk-chocolate-mousse.md?raw",
       "src/content/recipes/spiced-lamb-mint-sausage-rolls.md?raw",
+      "src/content/recipes/spicy-chickpea-spinach-stew.md?raw",
       "src/content/recipes/sticky-banana-bread-chocolate-walnuts.md?raw",
       "src/content/recipes/sticky-soy-braised-pork-ribs.md?raw",
       "src/content/recipes/sticky-soy-garlic-noodles.md?raw",
@@ -627,6 +699,7 @@
       "_index4.js"
     ],
     "dynamicImports": [
+      "_baked-camembert-cheeseboard-chutney.js",
       "_buttermilk-chicken-tenders.js",
       "_cheesy-leek-potato-gratin.js",
       "_coconut-milk-rice-pudding.js",
@@ -635,18 +708,22 @@
       "_crunchy-asian-slaw.js",
       "_fluffy-buttermilk-pancakes.js",
       "_garlic-herb-tear-and-share-bread.js",
+      "_goats-cheese-onion-vol-au-vents.js",
       "_kimchi-fried-rice.js",
+      "_lemon-posset-shortbread.js",
       "_miso-glazed-roasted-vegetables.js",
       "_one-pan-harissa-chickpeas-eggs.js",
       "_poppadom-snack-platter.js",
       "_salted-caramel-chocolate-tart.js",
       "_silky-milk-chocolate-mousse.js",
       "_spiced-lamb-mint-sausage-rolls.js",
+      "_spicy-chickpea-spinach-stew.js",
       "_sticky-banana-bread-chocolate-walnuts.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
       "_tagliatelle-bolognese-traditional.js",
       "_thai-green-curry.js",
+      "src/content/recipes/baked-camembert-cheeseboard-chutney.md?raw",
       "src/content/recipes/buttermilk-chicken-tenders.md?raw",
       "src/content/recipes/cheesy-leek-potato-gratin.md?raw",
       "src/content/recipes/coconut-milk-rice-pudding.md?raw",
@@ -655,13 +732,16 @@
       "src/content/recipes/crunchy-asian-slaw.md?raw",
       "src/content/recipes/fluffy-buttermilk-pancakes.md?raw",
       "src/content/recipes/garlic-herb-tear-and-share-bread.md?raw",
+      "src/content/recipes/goats-cheese-onion-vol-au-vents.md?raw",
       "src/content/recipes/kimchi-fried-rice.md?raw",
+      "src/content/recipes/lemon-posset-shortbread.md?raw",
       "src/content/recipes/miso-glazed-roasted-vegetables.md?raw",
       "src/content/recipes/one-pan-harissa-chickpeas-eggs.md?raw",
       "src/content/recipes/poppadom-snack-platter.md?raw",
       "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
       "src/content/recipes/silky-milk-chocolate-mousse.md?raw",
       "src/content/recipes/spiced-lamb-mint-sausage-rolls.md?raw",
+      "src/content/recipes/spicy-chickpea-spinach-stew.md?raw",
       "src/content/recipes/sticky-banana-bread-chocolate-walnuts.md?raw",
       "src/content/recipes/sticky-soy-braised-pork-ribs.md?raw",
       "src/content/recipes/sticky-soy-garlic-noodles.md?raw",
@@ -687,6 +767,7 @@
     "src": "src/routes/sitemap.xml/+server.ts",
     "isEntry": true,
     "imports": [
+      "_baked-camembert-cheeseboard-chutney.js",
       "_buttermilk-chicken-tenders.js",
       "_cheesy-leek-potato-gratin.js",
       "_coconut-milk-rice-pudding.js",
@@ -695,13 +776,16 @@
       "_crunchy-asian-slaw.js",
       "_fluffy-buttermilk-pancakes.js",
       "_garlic-herb-tear-and-share-bread.js",
+      "_goats-cheese-onion-vol-au-vents.js",
       "_kimchi-fried-rice.js",
+      "_lemon-posset-shortbread.js",
       "_miso-glazed-roasted-vegetables.js",
       "_one-pan-harissa-chickpeas-eggs.js",
       "_poppadom-snack-platter.js",
       "_salted-caramel-chocolate-tart.js",
       "_silky-milk-chocolate-mousse.js",
       "_spiced-lamb-mint-sausage-rolls.js",
+      "_spicy-chickpea-spinach-stew.js",
       "_sticky-banana-bread-chocolate-walnuts.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",

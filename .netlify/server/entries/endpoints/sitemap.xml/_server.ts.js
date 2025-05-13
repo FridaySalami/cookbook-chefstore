@@ -1,18 +1,22 @@
-import { m as metadata$j } from "../../../chunks/buttermilk-chicken-tenders.js";
-import { m as metadata$i } from "../../../chunks/cheesy-leek-potato-gratin.js";
-import { m as metadata$h } from "../../../chunks/coconut-milk-rice-pudding.js";
-import { m as metadata$g } from "../../../chunks/creamy-chicken-korma.js";
-import { m as metadata$f } from "../../../chunks/crispy-panko-chicken-bites.js";
-import { m as metadata$e } from "../../../chunks/crunchy-asian-slaw.js";
-import { m as metadata$d } from "../../../chunks/fluffy-buttermilk-pancakes.js";
-import { m as metadata$c } from "../../../chunks/garlic-herb-tear-and-share-bread.js";
-import { m as metadata$b } from "../../../chunks/kimchi-fried-rice.js";
-import { m as metadata$a } from "../../../chunks/miso-glazed-roasted-vegetables.js";
-import { m as metadata$9 } from "../../../chunks/one-pan-harissa-chickpeas-eggs.js";
-import { m as metadata$8 } from "../../../chunks/poppadom-snack-platter.js";
-import { m as metadata$7 } from "../../../chunks/salted-caramel-chocolate-tart.js";
-import { m as metadata$6 } from "../../../chunks/silky-milk-chocolate-mousse.js";
-import { m as metadata$5 } from "../../../chunks/spiced-lamb-mint-sausage-rolls.js";
+import { m as metadata$n } from "../../../chunks/baked-camembert-cheeseboard-chutney.js";
+import { m as metadata$m } from "../../../chunks/buttermilk-chicken-tenders.js";
+import { m as metadata$l } from "../../../chunks/cheesy-leek-potato-gratin.js";
+import { m as metadata$k } from "../../../chunks/coconut-milk-rice-pudding.js";
+import { m as metadata$j } from "../../../chunks/creamy-chicken-korma.js";
+import { m as metadata$i } from "../../../chunks/crispy-panko-chicken-bites.js";
+import { m as metadata$h } from "../../../chunks/crunchy-asian-slaw.js";
+import { m as metadata$g } from "../../../chunks/fluffy-buttermilk-pancakes.js";
+import { m as metadata$f } from "../../../chunks/garlic-herb-tear-and-share-bread.js";
+import { m as metadata$e } from "../../../chunks/goats-cheese-onion-vol-au-vents.js";
+import { m as metadata$d } from "../../../chunks/kimchi-fried-rice.js";
+import { m as metadata$c } from "../../../chunks/lemon-posset-shortbread.js";
+import { m as metadata$b } from "../../../chunks/miso-glazed-roasted-vegetables.js";
+import { m as metadata$a } from "../../../chunks/one-pan-harissa-chickpeas-eggs.js";
+import { m as metadata$9 } from "../../../chunks/poppadom-snack-platter.js";
+import { m as metadata$8 } from "../../../chunks/salted-caramel-chocolate-tart.js";
+import { m as metadata$7 } from "../../../chunks/silky-milk-chocolate-mousse.js";
+import { m as metadata$6 } from "../../../chunks/spiced-lamb-mint-sausage-rolls.js";
+import { m as metadata$5 } from "../../../chunks/spicy-chickpea-spinach-stew.js";
 import { m as metadata$4 } from "../../../chunks/sticky-banana-bread-chocolate-walnuts.js";
 import { m as metadata$3 } from "../../../chunks/sticky-soy-braised-pork-ribs.js";
 import { m as metadata$2 } from "../../../chunks/sticky-soy-garlic-noodles.js";
@@ -21,21 +25,25 @@ import { m as metadata } from "../../../chunks/thai-green-curry.js";
 const site = "chefstorecookbook.netlify.app";
 const GET = async () => {
   const recipeModules = /* @__PURE__ */ Object.assign({
-    "/src/content/recipes/buttermilk-chicken-tenders.md": metadata$j,
-    "/src/content/recipes/cheesy-leek-potato-gratin.md": metadata$i,
-    "/src/content/recipes/coconut-milk-rice-pudding.md": metadata$h,
-    "/src/content/recipes/creamy-chicken-korma.md": metadata$g,
-    "/src/content/recipes/crispy-panko-chicken-bites.md": metadata$f,
-    "/src/content/recipes/crunchy-asian-slaw.md": metadata$e,
-    "/src/content/recipes/fluffy-buttermilk-pancakes.md": metadata$d,
-    "/src/content/recipes/garlic-herb-tear-and-share-bread.md": metadata$c,
-    "/src/content/recipes/kimchi-fried-rice.md": metadata$b,
-    "/src/content/recipes/miso-glazed-roasted-vegetables.md": metadata$a,
-    "/src/content/recipes/one-pan-harissa-chickpeas-eggs.md": metadata$9,
-    "/src/content/recipes/poppadom-snack-platter.md": metadata$8,
-    "/src/content/recipes/salted-caramel-chocolate-tart.md": metadata$7,
-    "/src/content/recipes/silky-milk-chocolate-mousse.md": metadata$6,
-    "/src/content/recipes/spiced-lamb-mint-sausage-rolls.md": metadata$5,
+    "/src/content/recipes/baked-camembert-cheeseboard-chutney.md": metadata$n,
+    "/src/content/recipes/buttermilk-chicken-tenders.md": metadata$m,
+    "/src/content/recipes/cheesy-leek-potato-gratin.md": metadata$l,
+    "/src/content/recipes/coconut-milk-rice-pudding.md": metadata$k,
+    "/src/content/recipes/creamy-chicken-korma.md": metadata$j,
+    "/src/content/recipes/crispy-panko-chicken-bites.md": metadata$i,
+    "/src/content/recipes/crunchy-asian-slaw.md": metadata$h,
+    "/src/content/recipes/fluffy-buttermilk-pancakes.md": metadata$g,
+    "/src/content/recipes/garlic-herb-tear-and-share-bread.md": metadata$f,
+    "/src/content/recipes/goats-cheese-onion-vol-au-vents.md": metadata$e,
+    "/src/content/recipes/kimchi-fried-rice.md": metadata$d,
+    "/src/content/recipes/lemon-posset-shortbread.md": metadata$c,
+    "/src/content/recipes/miso-glazed-roasted-vegetables.md": metadata$b,
+    "/src/content/recipes/one-pan-harissa-chickpeas-eggs.md": metadata$a,
+    "/src/content/recipes/poppadom-snack-platter.md": metadata$9,
+    "/src/content/recipes/salted-caramel-chocolate-tart.md": metadata$8,
+    "/src/content/recipes/silky-milk-chocolate-mousse.md": metadata$7,
+    "/src/content/recipes/spiced-lamb-mint-sausage-rolls.md": metadata$6,
+    "/src/content/recipes/spicy-chickpea-spinach-stew.md": metadata$5,
     "/src/content/recipes/sticky-banana-bread-chocolate-walnuts.md": metadata$4,
     "/src/content/recipes/sticky-soy-braised-pork-ribs.md": metadata$3,
     "/src/content/recipes/sticky-soy-garlic-noodles.md": metadata$2,

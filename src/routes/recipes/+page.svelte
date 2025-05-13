@@ -220,6 +220,39 @@
 			</p>
 		</div>
 
+		<!-- Pagination Controls - Show only if totalPages > 1 -->
+		{#if totalPages > 1}
+			<nav aria-label="Recipe pagination" class="mb-8 flex items-center justify-center gap-4">
+				{#if currentPage > 1}
+					<Button.Root href={getPageUrl(currentPage - 1)} variant="outline" size="sm">
+						<ChevronLeft class="mr-2 h-4 w-4" />
+						Previous
+					</Button.Root>
+				{:else}
+					<Button.Root variant="outline" size="sm" disabled>
+						<ChevronLeft class="mr-2 h-4 w-4" />
+						Previous
+					</Button.Root>
+				{/if}
+
+				<span class="text-muted-foreground text-sm">
+					Page {currentPage} of {totalPages}
+				</span>
+
+				{#if currentPage < totalPages}
+					<Button.Root href={getPageUrl(currentPage + 1)} variant="outline" size="sm">
+						Next
+						<ChevronRight class="ml-2 h-4 w-4" />
+					</Button.Root>
+				{:else}
+					<Button.Root variant="outline" size="sm" disabled>
+						Next
+						<ChevronRight class="ml-2 h-4 w-4" />
+					</Button.Root>
+				{/if}
+			</nav>
+		{/if}
+
 		<!-- Recipe grid -->
 		{#if displayedRecipes.length > 0}
 			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
