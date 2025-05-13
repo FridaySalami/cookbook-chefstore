@@ -5,6 +5,7 @@
 	import { Badge } from '$lib/components/ui/badge';
 	import * as Button from '$lib/components/ui/button';
 	import { Clock, Users, ChevronLeft, ChevronRight } from 'lucide-svelte';
+	import RecipeSearch from '$lib/components/RecipeSearch.svelte';
 
 	export let data: PageData;
 
@@ -111,6 +112,12 @@
 		// and named as [slug]-[width]w.webp
 		return `/images/recipes/category-name/recipe-name/resized/${slug}-${width}w.webp`;
 	}
+
+	/**
+	 * @typedef {Object} RecipeSearchRecipe
+	 * @property {string} title
+	 * @property {string} slug
+	 */
 </script>
 
 <svelte:head>
@@ -143,9 +150,18 @@
 	<div class="container mx-auto max-w-7xl">
 		<header class="mb-16 text-center">
 			<h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">All Recipes</h1>
-			<p class="mx-auto mt-4 max-w-2xl text-xl text-[hsl(var(--muted-foreground))]">
+			<p class="mx-auto mt-4 max-w-2xl pb-6 text-xl text-[hsl(var(--muted-foreground))]">
 				Browse our collection of chef-tested recipes for every meal and occasion.
 			</p>
+
+			<!-- Recipe Search Bar -->
+			<RecipeSearch
+				recipes={data.recipes ? data.recipes.map((r) => ({ title: r.title, slug: r.slug })) : []}
+				on:select={(e) => {
+					window.location.href = `/recipes/${e.detail.recipe.slug}`;
+				}}
+				placeholder="Search recipes..."
+			/>
 
 			<!-- Categorized Tag Filters -->
 			<div class="mt-8 flex flex-col items-center gap-4">

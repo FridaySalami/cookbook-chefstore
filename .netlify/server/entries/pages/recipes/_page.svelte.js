@@ -1,4 +1,4 @@
-import { I as sanitize_props, J as spread_props, K as slot, O as store_get, E as head, M as ensure_array_like, F as escape_html, D as attr, P as unsubscribe_stores, Q as bind_props, C as pop, A as push } from "../../../chunks/index3.js";
+import { I as sanitize_props, J as spread_props, K as slot, D as attr, C as pop, A as push, O as store_get, E as head, M as ensure_array_like, F as escape_html, P as unsubscribe_stores, Q as bind_props } from "../../../chunks/index3.js";
 import { B as Badge, U as Users, p as page } from "../../../chunks/users.js";
 import { C as Card, a as Card_header, d as Card_content, b as Card_title, c as Card_description } from "../../../chunks/card-title.js";
 import { C as Card_footer, a as Chevron_right } from "../../../chunks/chevron-right.js";
@@ -21,6 +21,23 @@ function Chevron_left($$payload, $$props) {
       $$slots: { default: true }
     }
   ]));
+}
+function RecipeSearch($$payload, $$props) {
+  push();
+  const { $$slots, $$events, ...props } = $$props;
+  const recipes = props.recipes ?? [];
+  const placeholder = props.placeholder ?? "Search recipes...";
+  let search = "";
+  search.length > 0 ? recipes.filter((r) => {
+    const lower = search.toLowerCase();
+    return r.title.toLowerCase().includes(lower) || r.slug.toLowerCase().includes(lower) || r.tags && r.tags.some((tag) => tag.toLowerCase().includes(lower));
+  }) : [];
+  $$payload.out += `<div class="relative mx-auto mb-8 max-w-md"><form><input type="text" class="w-full rounded border px-4 py-2 focus:ring focus:outline-none"${attr("value", search)}${attr("placeholder", placeholder)} autocomplete="off"></form> `;
+  {
+    $$payload.out += "<!--[!-->";
+  }
+  $$payload.out += `<!--]--></div>`;
+  pop();
 }
 function _page($$payload, $$props) {
   push();
@@ -120,7 +137,12 @@ function _page($$payload, $$props) {
     }
     $$payload2.out += `<!--]-->`;
   });
-  $$payload.out += `<section class="bg-background text-foreground px-6 pt-10 pb-20 sm:px-10 md:px-16 lg:px-20"><div class="container mx-auto max-w-7xl"><header class="mb-16 text-center"><h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">All Recipes</h1> <p class="mx-auto mt-4 max-w-2xl text-xl text-[hsl(var(--muted-foreground))]">Browse our collection of chef-tested recipes for every meal and occasion.</p> <div class="mt-8 flex flex-col items-center gap-4"><div class="mb-2">`;
+  $$payload.out += `<section class="bg-background text-foreground px-6 pt-10 pb-20 sm:px-10 md:px-16 lg:px-20"><div class="container mx-auto max-w-7xl"><header class="mb-16 text-center"><h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">All Recipes</h1> <p class="mx-auto mt-4 max-w-2xl pb-6 text-xl text-[hsl(var(--muted-foreground))]">Browse our collection of chef-tested recipes for every meal and occasion.</p> `;
+  RecipeSearch($$payload, {
+    recipes: data.recipes ? data.recipes.map((r) => ({ title: r.title, slug: r.slug })) : [],
+    placeholder: "Search recipes..."
+  });
+  $$payload.out += `<!----> <div class="mt-8 flex flex-col items-center gap-4"><div class="mb-2">`;
   Button($$payload, {
     href: getTagUrl(null),
     variant: selectedTag === null ? "default" : "outline",
