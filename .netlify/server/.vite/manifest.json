@@ -42,6 +42,15 @@
       "_clock.js"
     ]
   },
+  "_cheesy-leek-potato-gratin.js": {
+    "file": "chunks/cheesy-leek-potato-gratin.js",
+    "name": "cheesy-leek-potato-gratin",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_chevron-right.js": {
     "file": "chunks/chevron-right.js",
     "name": "chevron-right",
@@ -272,6 +281,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_tagliatelle-bolognese-traditional.js": {
+    "file": "chunks/tagliatelle-bolognese-traditional.js",
+    "name": "tagliatelle-bolognese-traditional",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_thai-green-curry.js": {
     "file": "chunks/thai-green-curry.js",
     "name": "thai-green-curry",
@@ -322,6 +340,12 @@
     "file": "chunks/buttermilk-chicken-tenders2.js",
     "name": "buttermilk-chicken-tenders",
     "src": "src/content/recipes/buttermilk-chicken-tenders.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/cheesy-leek-potato-gratin.md?raw": {
+    "file": "chunks/cheesy-leek-potato-gratin2.js",
+    "name": "cheesy-leek-potato-gratin",
+    "src": "src/content/recipes/cheesy-leek-potato-gratin.md?raw",
     "isDynamicEntry": true
   },
   "src/content/recipes/coconut-milk-rice-pudding.md?raw": {
@@ -420,6 +444,12 @@
     "src": "src/content/recipes/sticky-soy-garlic-noodles.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/tagliatelle-bolognese-traditional.md?raw": {
+    "file": "chunks/tagliatelle-bolognese-traditional2.js",
+    "name": "tagliatelle-bolognese-traditional",
+    "src": "src/content/recipes/tagliatelle-bolognese-traditional.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/thai-green-curry.md?raw": {
     "file": "chunks/thai-green-curry2.js",
     "name": "thai-green-curry",
@@ -504,6 +534,7 @@
     "isEntry": true,
     "imports": [
       "_buttermilk-chicken-tenders.js",
+      "_cheesy-leek-potato-gratin.js",
       "_coconut-milk-rice-pudding.js",
       "_creamy-chicken-korma.js",
       "_crispy-panko-chicken-bites.js",
@@ -520,12 +551,14 @@
       "_sticky-banana-bread-chocolate-walnuts.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
+      "_tagliatelle-bolognese-traditional.js",
       "_thai-green-curry.js",
       "_dynamic-import-helper.js",
       "_index.js"
     ],
     "dynamicImports": [
       "_buttermilk-chicken-tenders.js",
+      "_cheesy-leek-potato-gratin.js",
       "_coconut-milk-rice-pudding.js",
       "_creamy-chicken-korma.js",
       "_crispy-panko-chicken-bites.js",
@@ -542,8 +575,10 @@
       "_sticky-banana-bread-chocolate-walnuts.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
+      "_tagliatelle-bolognese-traditional.js",
       "_thai-green-curry.js",
       "src/content/recipes/buttermilk-chicken-tenders.md?raw",
+      "src/content/recipes/cheesy-leek-potato-gratin.md?raw",
       "src/content/recipes/coconut-milk-rice-pudding.md?raw",
       "src/content/recipes/creamy-chicken-korma.md?raw",
       "src/content/recipes/crispy-panko-chicken-bites.md?raw",
@@ -560,6 +595,7 @@
       "src/content/recipes/sticky-banana-bread-chocolate-walnuts.md?raw",
       "src/content/recipes/sticky-soy-braised-pork-ribs.md?raw",
       "src/content/recipes/sticky-soy-garlic-noodles.md?raw",
+      "src/content/recipes/tagliatelle-bolognese-traditional.md?raw",
       "src/content/recipes/thai-green-curry.md?raw"
     ]
   },
@@ -592,6 +628,7 @@
     ],
     "dynamicImports": [
       "_buttermilk-chicken-tenders.js",
+      "_cheesy-leek-potato-gratin.js",
       "_coconut-milk-rice-pudding.js",
       "_creamy-chicken-korma.js",
       "_crispy-panko-chicken-bites.js",
@@ -608,8 +645,10 @@
       "_sticky-banana-bread-chocolate-walnuts.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
+      "_tagliatelle-bolognese-traditional.js",
       "_thai-green-curry.js",
       "src/content/recipes/buttermilk-chicken-tenders.md?raw",
+      "src/content/recipes/cheesy-leek-potato-gratin.md?raw",
       "src/content/recipes/coconut-milk-rice-pudding.md?raw",
       "src/content/recipes/creamy-chicken-korma.md?raw",
       "src/content/recipes/crispy-panko-chicken-bites.md?raw",
@@ -626,6 +665,7 @@
       "src/content/recipes/sticky-banana-bread-chocolate-walnuts.md?raw",
       "src/content/recipes/sticky-soy-braised-pork-ribs.md?raw",
       "src/content/recipes/sticky-soy-garlic-noodles.md?raw",
+      "src/content/recipes/tagliatelle-bolognese-traditional.md?raw",
       "src/content/recipes/thai-green-curry.md?raw"
     ]
   },
@@ -648,6 +688,7 @@
     "isEntry": true,
     "imports": [
       "_buttermilk-chicken-tenders.js",
+      "_cheesy-leek-potato-gratin.js",
       "_coconut-milk-rice-pudding.js",
       "_creamy-chicken-korma.js",
       "_crispy-panko-chicken-bites.js",
@@ -664,6 +705,7 @@
       "_sticky-banana-bread-chocolate-walnuts.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
+      "_tagliatelle-bolognese-traditional.js",
       "_thai-green-curry.js"
     ]
   }
