@@ -15,7 +15,7 @@ const metadata$j = {
     "snack"
   ],
   "tags": [
-    "crispy",
+    "comfort-food",
     "crowd-pleaser",
     "difficulty-easy"
   ],
@@ -89,7 +89,8 @@ const metadata$h = {
     "dessert"
   ],
   "tags": [
-    "comfort food",
+    "comfort-food",
+    "vegetarian",
     "difficulty-easy"
   ],
   "relatedProducts": [
@@ -121,9 +122,9 @@ const metadata$g = {
     "dinner"
   ],
   "tags": [
-    "comfort food",
+    "comfort-food",
     "curry",
-    "family favourite",
+    "family-friendly",
     "difficulty-medium"
   ],
   "relatedProducts": [
@@ -198,7 +199,6 @@ const metadata$e = {
     "salad"
   ],
   "tags": [
-    "fresh",
     "vegetarian",
     "quick",
     "difficulty-easy"
@@ -264,9 +264,8 @@ const metadata$c = {
     "party"
   ],
   "tags": [
-    "comfort",
-    "bake",
-    "from-scratch",
+    "comfort-food",
+    "vegetarian",
     "difficulty-medium"
   ],
   "relatedProducts": [
@@ -307,7 +306,6 @@ const metadata$b = {
   "tags": [
     "spicy",
     "vegetarian-option",
-    "leftovers",
     "difficulty-easy"
   ],
   "relatedProducts": [
@@ -380,7 +378,7 @@ const metadata$9 = {
   "tags": [
     "vegetarian",
     "spicy",
-    "comfort food",
+    "comfort-food",
     "difficulty-easy"
   ],
   "relatedProducts": [
@@ -509,9 +507,7 @@ const metadata$5 = {
     "party"
   ],
   "tags": [
-    "baked",
-    "freezer-friendly",
-    "british-twist",
+    "snack",
     "difficulty-medium"
   ],
   "relatedProducts": [
@@ -580,8 +576,7 @@ const metadata$3 = {
     "dinner"
   ],
   "tags": [
-    "comfort food",
-    "ribs",
+    "comfort-food",
     "pork",
     "crowd-pleaser",
     "difficulty-medium"

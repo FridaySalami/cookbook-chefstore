@@ -13,7 +13,8 @@ export const metadata = {
     "dessert"
   ],
   "tags": [
-    "comfort food",
+    "comfort-food",
+    "vegetarian",
     "difficulty-easy"
   ],
   "relatedProducts": [

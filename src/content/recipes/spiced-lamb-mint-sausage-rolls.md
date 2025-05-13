@@ -10,7 +10,7 @@ cookTime: 25
 totalTime: 45
 servings: 4–6
 categories: [snack, lunch, party]
-tags: [baked, freezer-friendly, british-twist, difficulty-medium]
+tags: [snack, difficulty-medium]
 relatedProducts:
   - handle: lefktro-tahini-900gm
     featured: true

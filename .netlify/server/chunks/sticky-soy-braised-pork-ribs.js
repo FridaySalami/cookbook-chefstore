@@ -13,8 +13,7 @@ const metadata = {
   "servings": 4,
   "categories": ["dinner"],
   "tags": [
-    "comfort food",
-    "ribs",
+    "comfort-food",
     "pork",
     "crowd-pleaser",
     "difficulty-medium"

@@ -10,7 +10,7 @@ cookTime: 30
 totalTime: 50
 servings: 4
 categories: [dinner]
-tags: [comfort food, curry, family favourite, difficulty-medium]
+tags: [comfort-food, curry, family-friendly, difficulty-medium]
 relatedProducts:
   - handle: triple-lion-ground-cumin-450g
     featured: true

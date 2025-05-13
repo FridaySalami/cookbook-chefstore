@@ -10,7 +10,7 @@ cookTime: 20
 totalTime: 30
 servings: 3
 categories: [brunch, dinner]
-tags: [vegetarian, spicy, comfort food, difficulty-easy]
+tags: [vegetarian, spicy, comfort-food, difficulty-easy]
 relatedProducts:
   - handle: belazu-retail-rose-harissa-170gm
     featured: true

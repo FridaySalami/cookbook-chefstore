@@ -14,7 +14,6 @@ export const metadata = {
     "salad"
   ],
   "tags": [
-    "fresh",
     "vegetarian",
     "quick",
     "difficulty-easy"

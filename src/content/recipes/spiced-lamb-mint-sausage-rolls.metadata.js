@@ -15,9 +15,7 @@ export const metadata = {
     "party"
   ],
   "tags": [
-    "baked",
-    "freezer-friendly",
-    "british-twist",
+    "snack",
     "difficulty-medium"
   ],
   "relatedProducts": [

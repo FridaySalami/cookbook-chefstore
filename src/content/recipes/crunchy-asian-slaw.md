@@ -10,7 +10,7 @@ cookTime: 0
 totalTime: 15
 servings: 4
 categories: [sides, salad]
-tags: [fresh, vegetarian, quick, difficulty-easy]
+tags: [vegetarian, quick, difficulty-easy]
 relatedProducts:
   - handle: lee-kum-kee-premium-light-soy-sauce-500ml
     featured: true

@@ -13,8 +13,7 @@ export const metadata = {
     "dinner"
   ],
   "tags": [
-    "comfort food",
-    "ribs",
+    "comfort-food",
     "pork",
     "crowd-pleaser",
     "difficulty-medium"

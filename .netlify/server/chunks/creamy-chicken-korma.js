@@ -13,9 +13,9 @@ const metadata = {
   "servings": 4,
   "categories": ["dinner"],
   "tags": [
-    "comfort food",
+    "comfort-food",
     "curry",
-    "family favourite",
+    "family-friendly",
     "difficulty-medium"
   ],
   "relatedProducts": [

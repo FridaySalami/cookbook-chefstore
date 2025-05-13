@@ -10,7 +10,7 @@ cookTime: 15
 totalTime: 25
 servings: 2
 categories: [dinner, quick]
-tags: [spicy, vegetarian-option, leftovers, difficulty-easy]
+tags: [spicy, vegetarian-option, difficulty-easy]
 relatedProducts:
   - handle: biona-organic-kimchi-350gm
   - handle: lee-kum-kee-premium-dark-soy-sauce-500ml

@@ -10,7 +10,7 @@ cookTime: 120
 totalTime: 135
 servings: 4
 categories: [dinner]
-tags: [comfort food, ribs, pork, crowd-pleaser, difficulty-medium]
+tags: [comfort-food, pork, crowd-pleaser, difficulty-medium]
 relatedProducts:
   - handle: lee-kum-kee-premium-dark-soy-sauce-500ml
   - handle: lee-kum-kee-rice-wine-vinegar-500ml

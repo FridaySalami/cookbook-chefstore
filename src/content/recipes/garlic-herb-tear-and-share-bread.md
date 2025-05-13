@@ -10,7 +10,7 @@ cookTime: 25
 totalTime: 45 (plus proving)
 servings: 6
 categories: [sides, bread, party]
-tags: [comfort, bake, from-scratch, difficulty-medium]
+tags: [comfort-food, vegetarian, difficulty-medium]
 relatedProducts:
   - handle: fresh-fast-active-yeast-1kg
     featured: true

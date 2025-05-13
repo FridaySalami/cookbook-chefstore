@@ -13,9 +13,8 @@ const metadata = {
   "servings": 6,
   "categories": ["sides", "bread", "party"],
   "tags": [
-    "comfort",
-    "bake",
-    "from-scratch",
+    "comfort-food",
+    "vegetarian",
     "difficulty-medium"
   ],
   "relatedProducts": [

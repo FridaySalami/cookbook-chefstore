@@ -15,7 +15,6 @@ const metadata = {
   "tags": [
     "spicy",
     "vegetarian-option",
-    "leftovers",
     "difficulty-easy"
   ],
   "relatedProducts": [

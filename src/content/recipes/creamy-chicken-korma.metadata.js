@@ -13,9 +13,9 @@ export const metadata = {
     "dinner"
   ],
   "tags": [
-    "comfort food",
+    "comfort-food",
     "curry",
-    "family favourite",
+    "family-friendly",
     "difficulty-medium"
   ],
   "relatedProducts": [
