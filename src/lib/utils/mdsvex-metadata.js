@@ -24,15 +24,19 @@ function extractFrontmatter(content) {
 }
 
 function processMarkdownFiles() {
-  const files = globSync(`${contentDir}/**/*.md`);
+  const files = globSync(`${contentDir}/recipes/*.md`);
+  const metadataDir = path.resolve(contentDir, 'recipe-metadata');
+  if (!fs.existsSync(metadataDir)) {
+    fs.mkdirSync(metadataDir, { recursive: true });
+  }
 
   files.forEach(file => {
     const content = fs.readFileSync(file, 'utf-8');
     const metadata = extractFrontmatter(content);
 
-    // Create a temporary export file that exports the metadata
+    // Write all metadata files to recipe-metadata folder
     const basename = path.basename(file, '.md');
-    const exportFile = path.join(path.dirname(file), `${basename}.metadata.js`);
+    const exportFile = path.join(metadataDir, `${basename}.metadata.js`);
 
     fs.writeFileSync(
       exportFile,

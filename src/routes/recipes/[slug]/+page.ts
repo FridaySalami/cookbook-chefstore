@@ -42,7 +42,7 @@ export interface LoadReturn {
 // Fix the entries function to ensure all returned slugs are defined strings
 export const entries: EntryGenerator = async () => {
   // Use import.meta.glob to find all metadata.js files
-  const modules = import.meta.glob<{ metadata: RecipeMetadata }>('/src/content/recipes/*.metadata.js', {
+  const modules = import.meta.glob<{ metadata: RecipeMetadata }>('/src/content/recipe-metadata/*.metadata.js', {
     eager: true
   });
 
@@ -70,12 +70,12 @@ export const load: PageLoad<LoadReturn> = async ({ params, parent }) => {
 
   try {
     // Load the metadata from the .metadata.js file
-    const metadataImports = import.meta.glob<{ metadata: RecipeMetadata }>('/src/content/recipes/*.metadata.js', {
+    const metadataImports = import.meta.glob<{ metadata: RecipeMetadata }>('/src/content/recipe-metadata/*.metadata.js', {
       eager: true
     });
 
     // Find the metadata for this slug
-    const metadataPath = `/src/content/recipes/${slug}.metadata.js`;
+    const metadataPath = `/src/content/recipe-metadata/${slug}.metadata.js`;
     const metadataModule = metadataImports[metadataPath];
 
     if (!metadataModule || !metadataModule.metadata) {
@@ -138,7 +138,7 @@ export const load: PageLoad<LoadReturn> = async ({ params, parent }) => {
     }
 
     // --- Find Related Recipes ---
-    const allMetadataImports = import.meta.glob<{ metadata: RecipeMetadata }>('/src/content/recipes/*.metadata.js', {
+    const allMetadataImports = import.meta.glob<{ metadata: RecipeMetadata }>('/src/content/recipe-metadata/*.metadata.js', {
       eager: true
     });
 

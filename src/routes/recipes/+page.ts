@@ -22,7 +22,7 @@ interface RecipeMetadata {
 export const load: PageLoad = async () => {
   try {
     // Import the metadata files directly instead of trying to extract from md files
-    const recipeMetadataImports = import.meta.glob<{ metadata: RecipeMetadata }>('/src/content/recipes/*.metadata.js', {
+    const recipeMetadataImports = import.meta.glob<{ metadata: RecipeMetadata }>('/src/content/recipe-metadata/*.metadata.js', {
       eager: true
     });
 
