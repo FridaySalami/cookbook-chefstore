@@ -7,7 +7,7 @@ interface RecipeMetadata {
   draft?: boolean;
 }
 
-const site = 'chefstorecookbook.netlify.app';
+const site = 'https://www.chefstorecookbook.com';
 
 export const GET: RequestHandler = async () => {
   const recipeModules = import.meta.glob<RecipeMetadata>('/src/content/recipes/*.md', {

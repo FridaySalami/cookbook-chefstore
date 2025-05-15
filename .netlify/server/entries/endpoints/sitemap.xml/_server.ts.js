@@ -43,7 +43,7 @@ import { m as metadata$3 } from "../../../chunks/sweetcorn-fritters-chilli-jam.j
 import { m as metadata$2 } from "../../../chunks/tagliatelle-bolognese-traditional.js";
 import { m as metadata$1 } from "../../../chunks/thai-green-curry.js";
 import { m as metadata } from "../../../chunks/white-bean-rosemary-stew.js";
-const site = "chefstorecookbook.netlify.app";
+const site = "https://www.chefstorecookbook.com";
 const GET = async () => {
   const recipeModules = /* @__PURE__ */ Object.assign({
     "/src/content/recipes/baked-camembert-cheeseboard-chutney.md": metadata$I,

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://chefstorecookbook.netlify.app/sitemap.xml
+Sitemap: https://www.chefstorecookbook.com/sitemap.xml
