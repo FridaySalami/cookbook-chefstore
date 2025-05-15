@@ -10,7 +10,7 @@ cookTime: 0
 totalTime: 2 hours (chilling)
 servings: 4
 categories: [dessert]
-tags: [quick, indulgent, chocolate, difficulty-easy]
+tags: [indulgent, chocolate, difficulty-easy]
 relatedProducts:
   - handle: callebaut-milk-dark-white-chocolate-callets-4-x-400g-bundle
     featured: true

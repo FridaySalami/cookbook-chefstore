@@ -1,4 +1,4 @@
-import { I as sanitize_props, J as spread_props } from "./index3.js";
+import { I as sanitize_props, J as spread_props } from "./index2.js";
 import { R as RecipeLayout } from "./RecipeLayout.js";
 const metadata = {
   "title": "Silky Milk Chocolate Mousse",
@@ -12,12 +12,7 @@ const metadata = {
   "totalTime": "2 hours (chilling)",
   "servings": 4,
   "categories": ["dessert"],
-  "tags": [
-    "quick",
-    "indulgent",
-    "chocolate",
-    "difficulty-easy"
-  ],
+  "tags": ["indulgent", "chocolate", "difficulty-easy"],
   "relatedProducts": [
     {
       "handle": "callebaut-milk-dark-white-chocolate-callets-4-x-400g-bundle",

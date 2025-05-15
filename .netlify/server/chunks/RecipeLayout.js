@@ -1,4 +1,4 @@
-import { O as store_get, E as head, D as attr, F as escape_html, M as ensure_array_like, P as unsubscribe_stores, C as pop, A as push } from "./index3.js";
+import { O as store_get, E as head, D as attr, F as escape_html, M as ensure_array_like, P as unsubscribe_stores, C as pop, A as push } from "./index2.js";
 import { U as Users, B as Badge, p as page } from "./users.js";
 import "clsx";
 import { C as Clock } from "./clock.js";

@@ -17,7 +17,7 @@
     "file": "chunks/RecipeLayout.js",
     "name": "RecipeLayout",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_users.js",
       "_clock.js"
     ],
@@ -30,7 +30,7 @@
     "name": "baked-camembert-cheeseboard-chutney",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -39,7 +39,7 @@
     "name": "balsamic-honey-sausages-grapes",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -48,7 +48,7 @@
     "name": "buttermilk-chicken-tenders",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -56,7 +56,7 @@
     "file": "chunks/card-title.js",
     "name": "card-title",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_clock.js"
     ]
   },
@@ -65,7 +65,7 @@
     "name": "cheesy-leek-potato-gratin",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -73,7 +73,7 @@
     "file": "chunks/chevron-right.js",
     "name": "chevron-right",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_clock.js"
     ]
   },
@@ -82,7 +82,7 @@
     "name": "chicken-pearl-barley-broth",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -91,7 +91,7 @@
     "name": "chickpea-tagine-preserved-lemon-harissa",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -100,7 +100,7 @@
     "name": "classic-tiramisu-no-eggs",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -109,15 +109,14 @@
     "name": "client",
     "imports": [
       "_exports.js",
-      "_index2.js",
-      "_index3.js"
+      "_index2.js"
     ]
   },
   "_clock.js": {
     "file": "chunks/clock.js",
     "name": "clock",
     "imports": [
-      "_index3.js"
+      "_index2.js"
     ]
   },
   "_coconut-milk-rice-pudding.js": {
@@ -125,7 +124,7 @@
     "name": "coconut-milk-rice-pudding",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -134,7 +133,7 @@
     "name": "creamy-chicken-korma",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -143,7 +142,7 @@
     "name": "creamy-polenta-wild-mushrooms-truffle",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -152,7 +151,7 @@
     "name": "crispy-chicken-katsu-curry",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -161,7 +160,7 @@
     "name": "crispy-panko-chicken-bites",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -170,7 +169,7 @@
     "name": "crunchy-asian-slaw",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -179,7 +178,7 @@
     "name": "dark-chocolate-orange-blossom-sea-salt",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -188,7 +187,7 @@
     "name": "duck-fat-roast-potatoes-garlic-rosemary",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -202,7 +201,10 @@
   },
   "_exports.js": {
     "file": "chunks/exports.js",
-    "name": "exports"
+    "name": "exports",
+    "imports": [
+      "_index2.js"
+    ]
   },
   "_false.js": {
     "file": "chunks/false.js",
@@ -213,7 +215,7 @@
     "name": "fluffy-buttermilk-pancakes",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -222,7 +224,7 @@
     "name": "freekeh-pilaf-apricots-almonds",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -231,7 +233,7 @@
     "name": "fruity-flapjacks-cherries-sultanas",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -240,7 +242,7 @@
     "name": "garlic-herb-tear-and-share-bread",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -249,7 +251,7 @@
     "name": "glace-cherry-white-chocolate-blondies",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -258,7 +260,7 @@
     "name": "goats-cheese-onion-vol-au-vents",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -267,7 +269,7 @@
     "name": "homemade-pizza-dough-tomato-sauce",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -283,7 +285,7 @@
     "file": "chunks/index2.js",
     "name": "index",
     "imports": [
-      "_index3.js"
+      "_false.js"
     ]
   },
   "_index3.js": {
@@ -297,23 +299,16 @@
     "file": "chunks/index4.js",
     "name": "index",
     "imports": [
-      "_false.js"
-    ]
-  },
-  "_index5.js": {
-    "file": "chunks/index5.js",
-    "name": "index",
-    "imports": [
-      "_index3.js",
+      "_index2.js",
       "_clock.js",
-      "_index2.js"
+      "_exports.js"
     ]
   },
   "_internal.js": {
     "file": "chunks/internal.js",
     "name": "internal",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_environment.js"
     ]
   },
@@ -322,7 +317,7 @@
     "name": "kimchi-fried-rice",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -331,7 +326,7 @@
     "name": "lemon-posset-shortbread",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -340,7 +335,7 @@
     "name": "miso-glazed-roasted-vegetables",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -349,7 +344,7 @@
     "name": "one-pan-harissa-chickpeas-eggs",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -358,7 +353,7 @@
     "name": "pesto-tagliatelle-belazu",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -367,7 +362,7 @@
     "name": "poppadom-snack-platter",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -376,7 +371,7 @@
     "name": "roasted-beetroot-orange-walnut-salad",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -385,7 +380,7 @@
     "name": "romanian-sarmale-cabbage-rolls",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -394,7 +389,7 @@
     "name": "salted-caramel-chocolate-tart",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -403,7 +398,7 @@
     "name": "salted-caramel-mocha",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -412,7 +407,7 @@
     "name": "sea-bass-lemon-caper-butter",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -421,7 +416,7 @@
     "name": "silky-milk-chocolate-mousse",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -430,7 +425,7 @@
     "name": "spiced-lamb-mint-sausage-rolls",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -439,7 +434,7 @@
     "name": "spicy-chickpea-spinach-stew",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -448,7 +443,7 @@
     "name": "spinach-ricotta-cannelloni",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -457,7 +452,7 @@
     "name": "sticky-banana-bread-chocolate-walnuts",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -466,7 +461,7 @@
     "name": "sticky-soy-braised-pork-ribs",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -475,7 +470,7 @@
     "name": "sticky-soy-garlic-noodles",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -484,7 +479,7 @@
     "name": "sticky-toffee-pudding",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -493,7 +488,7 @@
     "name": "sweetcorn-fritters-chilli-jam",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -502,7 +497,7 @@
     "name": "tagliatelle-bolognese-traditional",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -511,7 +506,7 @@
     "name": "thai-green-curry",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -519,7 +514,7 @@
     "file": "chunks/users.js",
     "name": "users",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_client.js",
       "_clock.js"
     ]
@@ -529,7 +524,7 @@
     "name": "white-bean-rosemary-stew",
     "isDynamicEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_RecipeLayout.js"
     ]
   },
@@ -543,7 +538,7 @@
     "src": "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_client.js"
     ]
   },
@@ -557,7 +552,6 @@
       "_internal.js",
       "_index.js",
       "_exports.js",
-      "_index2.js",
       "_environment.js"
     ]
   },
@@ -837,11 +831,11 @@
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_html.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.BlF-qERq.css"
+      "_app/immutable/assets/_layout.DTUuguvZ.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -850,9 +844,10 @@
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_card-title.js",
-      "_index5.js",
+      "_index4.js",
+      "_client.js",
       "_clock.js"
     ]
   },
@@ -863,7 +858,7 @@
     "isEntry": true,
     "imports": [
       "_white-bean-rosemary-stew.metadata.js",
-      "_index4.js"
+      "_index3.js"
     ]
   },
   "src/routes/api/products/+server.ts": {
@@ -874,7 +869,7 @@
     "imports": [
       "_index.js",
       "_environment.js",
-      "_index4.js"
+      "_index3.js"
     ]
   },
   "src/routes/recipes/+page.svelte": {
@@ -883,11 +878,11 @@
     "src": "src/routes/recipes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_users.js",
       "_card-title.js",
       "_chevron-right.js",
-      "_index5.js",
+      "_index4.js",
       "_client.js",
       "_clock.js",
       "_html.js"
@@ -900,7 +895,7 @@
     "isEntry": true,
     "imports": [
       "_white-bean-rosemary-stew.metadata.js",
-      "_index4.js"
+      "_index3.js"
     ]
   },
   "src/routes/recipes/[slug]/+page.server.ts": {
@@ -1056,7 +1051,7 @@
     "src": "src/routes/recipes/[slug]/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_client.js",
       "_clock.js",
       "_chevron-right.js",
@@ -1075,7 +1070,7 @@
       "_white-bean-rosemary-stew.metadata.js",
       "_dynamic-import-helper.js",
       "_index.js",
-      "_index4.js"
+      "_index3.js"
     ],
     "dynamicImports": [
       "_baked-camembert-cheeseboard-chutney.js",
@@ -1176,7 +1171,7 @@
     "src": "src/routes/shop/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index3.js"
+      "_index2.js"
     ],
     "css": [
       "_app/immutable/assets/_page.amJJEYbV.css"

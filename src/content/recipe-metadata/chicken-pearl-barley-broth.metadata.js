@@ -17,7 +17,7 @@ export const metadata = {
   "tags": [
     "comfort-food",
     "chicken",
-    "slow-cook",
+    "slow-cooked",
     "difficulty-easy"
   ],
   "relatedProducts": [

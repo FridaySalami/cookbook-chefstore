@@ -1,4 +1,4 @@
-import { G as getContext, I as sanitize_props, R as rest_props, S as fallback, T as element, Q as bind_props, C as pop, A as push, K as slot, U as spread_attributes, V as clsx, J as spread_props } from "./index3.js";
+import { G as getContext, I as sanitize_props, R as rest_props, S as fallback, T as element, Q as bind_props, C as pop, A as push, K as slot, U as spread_attributes, V as clsx, J as spread_props } from "./index2.js";
 import "./client.js";
 import { c as cn, I as Icon } from "./clock.js";
 import { tv } from "tailwind-variants";

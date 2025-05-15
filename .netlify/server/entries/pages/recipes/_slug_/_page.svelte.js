@@ -1,4 +1,4 @@
-import { A as push, C as pop, I as sanitize_props, R as rest_props, S as fallback, U as spread_attributes, V as clsx, K as slot, Q as bind_props, W as attr_class, E as head, M as ensure_array_like, D as attr, F as escape_html } from "../../../../chunks/index3.js";
+import { A as push, C as pop, I as sanitize_props, R as rest_props, S as fallback, U as spread_attributes, V as clsx, K as slot, Q as bind_props, W as attr_class, E as head, M as ensure_array_like, D as attr, F as escape_html } from "../../../../chunks/index2.js";
 import "../../../../chunks/client.js";
 import "clsx";
 import { c as cn, C as Clock } from "../../../../chunks/clock.js";

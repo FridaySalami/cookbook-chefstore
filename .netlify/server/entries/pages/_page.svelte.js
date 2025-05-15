@@ -1,7 +1,8 @@
-import { I as sanitize_props, J as spread_props, K as slot, E as head, M as ensure_array_like, C as pop, A as push, D as attr, N as stringify, F as escape_html } from "../../chunks/index3.js";
+import { I as sanitize_props, J as spread_props, K as slot, E as head, M as ensure_array_like, C as pop, A as push, D as attr, N as stringify, F as escape_html } from "../../chunks/index2.js";
 import { C as Card, a as Card_header, b as Card_title, c as Card_description, d as Card_content } from "../../chunks/card-title.js";
 import "clsx";
-import { B as Button } from "../../chunks/index5.js";
+import { B as Button } from "../../chunks/index4.js";
+import { g as goto } from "../../chunks/client.js";
 import { I as Icon, C as Clock } from "../../chunks/clock.js";
 function Utensils_crossed($$payload, $$props) {
   const $$sanitized_props = sanitize_props($$props);
@@ -61,26 +62,29 @@ function _page($$payload, $$props) {
     Button($$payload, {
       variant: "outline",
       size: "sm",
+      onclick: () => goto(),
+      children: ($$payload2) => {
+        $$payload2.out += `<!---->Crowd Pleasers`;
+      },
+      $$slots: { default: true }
+    });
+    $$payload.out += `<!----> `;
+    Button($$payload, {
+      variant: "outline",
+      size: "sm",
+      onclick: () => goto(),
+      children: ($$payload2) => {
+        $$payload2.out += `<!---->Comfort Food`;
+      },
+      $$slots: { default: true }
+    });
+    $$payload.out += `<!----> `;
+    Button($$payload, {
+      variant: "outline",
+      size: "sm",
+      onclick: () => goto(),
       children: ($$payload2) => {
         $$payload2.out += `<!---->Quick Dinners`;
-      },
-      $$slots: { default: true }
-    });
-    $$payload.out += `<!----> `;
-    Button($$payload, {
-      variant: "outline",
-      size: "sm",
-      children: ($$payload2) => {
-        $$payload2.out += `<!---->Plant-Based`;
-      },
-      $$slots: { default: true }
-    });
-    $$payload.out += `<!----> `;
-    Button($$payload, {
-      variant: "outline",
-      size: "sm",
-      children: ($$payload2) => {
-        $$payload2.out += `<!---->Desserts`;
       },
       $$slots: { default: true }
     });
@@ -111,6 +115,19 @@ function _page($$payload, $$props) {
                   },
                   $$slots: { default: true }
                 });
+              } else {
+                $$payload3.out += "<!--[!-->";
+              }
+              $$payload3.out += `<!--]--> `;
+              if (recipe.tags && recipe.tags.length > 0) {
+                $$payload3.out += "<!--[-->";
+                const each_array_1 = ensure_array_like(recipe.tags);
+                $$payload3.out += `<div class="mt-2 flex flex-wrap gap-1"><!--[-->`;
+                for (let $$index = 0, $$length2 = each_array_1.length; $$index < $$length2; $$index++) {
+                  let tag = each_array_1[$$index];
+                  $$payload3.out += `<button type="button" class="bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground border-muted-foreground/10 inline-block cursor-pointer rounded-full border px-2 py-0.5 text-xs font-medium transition-colors"${attr("title", `Show recipes tagged '${tag}'`)}>${escape_html(tag.startsWith("difficulty-") ? tag.replace("difficulty-", "").replace(/\b\w/g, (c) => c.toUpperCase()) : tag.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()))}</button>`;
+                }
+                $$payload3.out += `<!--]--></div>`;
               } else {
                 $$payload3.out += "<!--[!-->";
               }

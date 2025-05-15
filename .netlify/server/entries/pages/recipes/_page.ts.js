@@ -1,5 +1,5 @@
 import { _ as __vite_glob_4_44, a as __vite_glob_4_43, b as __vite_glob_4_42, c as __vite_glob_4_41, d as __vite_glob_4_40, e as __vite_glob_4_39, f as __vite_glob_4_38, g as __vite_glob_4_37, h as __vite_glob_4_36, i as __vite_glob_4_35, j as __vite_glob_4_34, k as __vite_glob_4_33, l as __vite_glob_4_32, m as __vite_glob_4_31, n as __vite_glob_4_30, o as __vite_glob_4_29, p as __vite_glob_4_28, q as __vite_glob_4_27, r as __vite_glob_4_26, s as __vite_glob_4_25, t as __vite_glob_4_24, u as __vite_glob_4_23, v as __vite_glob_4_22, w as __vite_glob_4_21, x as __vite_glob_4_20, y as __vite_glob_4_19, z as __vite_glob_4_18, A as __vite_glob_4_17, B as __vite_glob_4_16, C as __vite_glob_4_15, D as __vite_glob_4_14, E as __vite_glob_4_13, F as __vite_glob_4_12, G as __vite_glob_4_11, H as __vite_glob_4_10, I as __vite_glob_4_9, J as __vite_glob_4_8, K as __vite_glob_4_7, L as __vite_glob_4_6, M as __vite_glob_4_5, N as __vite_glob_4_4, O as __vite_glob_4_3, P as __vite_glob_4_2, Q as __vite_glob_4_1, R as __vite_glob_4_0 } from "../../../chunks/white-bean-rosemary-stew.metadata.js";
-import { d as dev } from "../../../chunks/index4.js";
+import { d as dev } from "../../../chunks/index3.js";
 const load = async () => {
   try {
     const recipeMetadataImports = /* @__PURE__ */ Object.assign({

@@ -10,7 +10,7 @@ cookTime: 60
 totalTime: 70
 servings: 6
 categories: [soup, batch-cook, lunch]
-tags: [comfort-food, chicken, slow-cook, difficulty-easy]
+tags: [comfort-food, chicken, slow-cooked, difficulty-easy]
 relatedProducts:
   - handle: knorr-professional-chicken-bouillon-jelly-800g
     featured: true

@@ -9,6 +9,7 @@
 	} from '$lib/components/ui/card';
 	import { Button } from '$lib/components/ui/button';
 	import { Clock, UtensilsCrossed } from 'lucide-svelte';
+	import { goto } from '$app/navigation';
 
 	let { data }: { data: PageData } = $props();
 
@@ -68,9 +69,15 @@
 
 			<!-- Category Filter Placeholder -->
 			<div class="mb-8 flex justify-center gap-2">
-				<Button variant="outline" size="sm">Quick Dinners</Button>
-				<Button variant="outline" size="sm">Plant-Based</Button>
-				<Button variant="outline" size="sm">Desserts</Button>
+				<Button variant="outline" size="sm" onclick={() => goto('/recipes?tag=crowd-pleaser')}
+					>Crowd Pleasers</Button
+				>
+				<Button variant="outline" size="sm" onclick={() => goto('/recipes?tag=comfort-food')}
+					>Comfort Food</Button
+				>
+				<Button variant="outline" size="sm" onclick={() => goto('/recipes?tag=quick')}
+					>Quick Dinners</Button
+				>
 			</div>
 
 			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -102,6 +109,24 @@
 										>
 											{recipe.description}
 										</CardDescription>
+									{/if}
+									{#if recipe.tags && recipe.tags.length > 0}
+										<div class="mt-2 flex flex-wrap gap-1">
+											{#each recipe.tags as tag}
+												<button
+													type="button"
+													class="bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground border-muted-foreground/10 inline-block cursor-pointer rounded-full border px-2 py-0.5 text-xs font-medium transition-colors"
+													title={`Show recipes tagged '${tag}'`}
+													onclick={() => goto(`/recipes?tag=${encodeURIComponent(tag)}`)}
+												>
+													{tag.startsWith('difficulty-')
+														? tag
+																.replace('difficulty-', '')
+																.replace(/\b\w/g, (c) => c.toUpperCase())
+														: tag.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())}
+												</button>
+											{/each}
+										</div>
 									{/if}
 								</CardHeader>
 								<CardContent class="mt-auto p-0 pt-3">

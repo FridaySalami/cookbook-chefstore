@@ -5,6 +5,6 @@ let component_cache;
 export const component = async () => component_cache ??= (await import('../entries/pages/recipes/_page.svelte.js')).default;
 export { universal };
 export const universal_id = "src/routes/recipes/+page.ts";
-export const imports = ["_app/immutable/nodes/3.DOPMQBGJ.js","_app/immutable/chunks/rXh7rP2_.js","_app/immutable/chunks/CeGAe43q.js","_app/immutable/chunks/mW9Xvd0U.js","_app/immutable/chunks/DjPAE2bA.js","_app/immutable/chunks/2eQvsz4C.js","_app/immutable/chunks/BSpdhOx-.js","_app/immutable/chunks/B1N_D3ZJ.js","_app/immutable/chunks/DZ9IFRMn.js","_app/immutable/chunks/Cxz2lbe-.js","_app/immutable/chunks/DST6Q9N6.js","_app/immutable/chunks/BbHcurRa.js","_app/immutable/chunks/buk8Aog8.js","_app/immutable/chunks/nJNMrujL.js","_app/immutable/chunks/Bpdlwn84.js","_app/immutable/chunks/CeNLNt7x.js"];
+export const imports = ["_app/immutable/nodes/3.D5xXhLfX.js","_app/immutable/chunks/lVuwUMS0.js","_app/immutable/chunks/0gok4b8t.js","_app/immutable/chunks/D5I3jwuB.js","_app/immutable/chunks/Bq_SOUKs.js","_app/immutable/chunks/CDj8gESl.js","_app/immutable/chunks/D9bD1tqV.js","_app/immutable/chunks/ejHIXeQ7.js","_app/immutable/chunks/C-J17NlM.js","_app/immutable/chunks/B2lPZlHj.js","_app/immutable/chunks/CTnDxuD5.js","_app/immutable/chunks/DP1Wcu-A.js","_app/immutable/chunks/DpQr8thX.js","_app/immutable/chunks/CmRkWwDd.js","_app/immutable/chunks/CtZX8aRm.js"];
 export const stylesheets = [];
 export const fonts = [];

@@ -1,6 +1,6 @@
 import { j as json } from "../../../../chunks/index.js";
 import { b as building } from "../../../../chunks/environment.js";
-import { d as dev } from "../../../../chunks/index4.js";
+import { d as dev } from "../../../../chunks/index3.js";
 const SHOPIFY_STORE_URL = "https://parkersfoodservice.myshopify.com";
 const SHOPIFY_ACCESS_TOKEN = "ebc526adda09ce79223fb3b707d95a7e";
 const formattedShopifyDomain = SHOPIFY_STORE_URL?.replace("https://", "");

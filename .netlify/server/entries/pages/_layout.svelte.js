@@ -1,4 +1,4 @@
-import { D as attr, C as pop, A as push, E as head, F as escape_html } from "../../chunks/index3.js";
+import { D as attr, C as pop, A as push, E as head, F as escape_html } from "../../chunks/index2.js";
 import "clsx";
 import "style-to-object";
 import { h as html } from "../../chunks/html.js";

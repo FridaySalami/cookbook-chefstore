@@ -1,4 +1,4 @@
-import { I as sanitize_props, J as spread_props } from "./index3.js";
+import { I as sanitize_props, J as spread_props } from "./index2.js";
 import { R as RecipeLayout } from "./RecipeLayout.js";
 const metadata = {
   "title": "Duck Fat Roast Potatoes with Garlic & Rosemary",

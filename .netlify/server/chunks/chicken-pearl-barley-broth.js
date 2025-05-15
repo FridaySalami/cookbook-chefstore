@@ -1,4 +1,4 @@
-import { I as sanitize_props, J as spread_props } from "./index3.js";
+import { I as sanitize_props, J as spread_props } from "./index2.js";
 import { R as RecipeLayout } from "./RecipeLayout.js";
 const metadata = {
   "title": "Chicken & Pearl Barley Broth",
@@ -15,7 +15,7 @@ const metadata = {
   "tags": [
     "comfort-food",
     "chicken",
-    "slow-cook",
+    "slow-cooked",
     "difficulty-easy"
   ],
   "relatedProducts": [

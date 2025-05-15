@@ -13,7 +13,6 @@ export const metadata = {
     "dessert"
   ],
   "tags": [
-    "quick",
     "indulgent",
     "chocolate",
     "difficulty-easy"

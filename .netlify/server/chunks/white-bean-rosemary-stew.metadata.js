@@ -167,7 +167,7 @@ const metadata$E = {
   "tags": [
     "comfort-food",
     "chicken",
-    "slow-cook",
+    "slow-cooked",
     "difficulty-easy"
   ],
   "relatedProducts": [
@@ -1230,7 +1230,6 @@ const metadata$b = {
     "dessert"
   ],
   "tags": [
-    "quick",
     "indulgent",
     "chocolate",
     "difficulty-easy"
