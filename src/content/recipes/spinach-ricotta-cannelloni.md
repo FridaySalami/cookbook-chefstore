@@ -25,51 +25,70 @@ Pasta shells filled with herby spinach and ricotta, layered in a bright tomato s
 
 ## Ingredients
 
-### For the Filling
-- 250g ricotta cheese  
-- 200g frozen spinach, defrosted and squeezed dry  
-- 1 garlic clove, grated  
-- ½ tsp nutmeg  
-- Salt & pepper to taste  
-- 12 Pasta Reggia Cannelloni tubes  
+### Filling
+- 250g ricotta
+- 200g fresh spinach (or frozen, thawed and squeezed dry)
+- 1 garlic clove, grated
+- Zest of 1 lemon
+- 1 egg yolk
+- 30g Parmesan or Pecorino, finely grated
+- Grated nutmeg
+- Salt & pepper
 
-### For the Sauce
-- 1 tbsp olive oil  
-- 1 onion, finely chopped  
-- 2 garlic cloves, minced  
-- 800g Riverdene Chopped Tomatoes  
-- 1 tsp dried oregano or Italian herbs  
-- Salt & pepper  
-- Pinch of sugar (optional)  
+### Tomato Sauce
+- 1 tbsp olive oil
+- 1 tbsp butter
+- 1 onion, finely chopped
+- 2 garlic cloves, minced
+- 800g chopped tomatoes
+- Splash of white wine or balsamic vinegar
+- 1 tsp dried oregano or a sprig of thyme
+- 1 bay leaf
+- Salt & pepper
+- Pinch of sugar (optional)
+- 1 tbsp butter (to finish)
 
-### For the Topping
-- 50g grated mozzarella or cheddar  
-- 30g grated Parmesan  
+### Assembly
+- 12 cannelloni tubes (or fresh pasta sheets)
+- 50g mozzarella or provolone
+- 30g Parmesan
+- Optional: herby breadcrumbs (breadcrumbs, olive oil, herbs)
 
 ## Instructions
 
 ### 1. Make the Sauce
 
-1. Heat oil in a pan and cook onion until soft.
-2. Add garlic and cook for 1 minute, then add chopped tomatoes, herbs, salt, pepper, and sugar.
-3. Simmer for 15 minutes until thickened.
+1. Heat olive oil and butter in a large saucepan over medium heat. The oil prevents the butter from burning, while the butter adds richness.
+2. Add the onion and cook gently for 8–10 minutes until soft and golden—this step builds natural sweetness and depth.
+3. Stir in the garlic and cook for 1 more minute, just until fragrant.
+4. Deglaze with a splash of wine or balsamic—this lifts caramelised bits and adds complexity.
+5. Add chopped tomatoes, herbs, bay leaf, salt, pepper, and a pinch of sugar if needed.
+6. Simmer uncovered for 30 minutes, stirring occasionally. This reduces the sauce and deepens the flavour.
+7. Finish with 1 tbsp butter to mellow the acidity and create a velvety texture.
 
-### 2. Make the Filling
+### 2. Prepare the Filling
 
-1. In a bowl, mix ricotta, spinach, garlic, nutmeg, salt, and pepper until well combined.
+1. If using fresh spinach, wilt it in a dry pan and squeeze out the water, then chop finely.
+2. Mix all filling ingredients in a bowl. The lemon zest brightens, the yolk binds, and the cheese adds depth. Season to taste.
 
-### 3. Assemble
+### 3. Prep the Pasta
+
+1. If using dry cannelloni tubes, blanch in boiling water for 3–4 minutes—this softens them and ensures even baking.
+2. If using fresh pasta sheets, cut into rectangles and roll the filling inside.
+
+### 4. Assemble
 
 1. Preheat oven to 180°C (fan).
-2. Spread a little sauce on the bottom of a baking dish.
-3. Fill cannelloni tubes with the ricotta mixture (use a piping bag or spoon carefully).
-4. Lay filled tubes in the dish, cover with remaining sauce.
-5. Sprinkle with grated cheeses.
+2. Spread a layer of sauce on the base of a baking dish—this prevents sticking and adds moisture.
+3. Fill tubes with ricotta mix using a piping bag or spoon. Don’t overfill—leave room to expand.
+4. Arrange in the dish and cover with remaining sauce.
+5. Top with grated cheese and optional herby breadcrumbs for texture.
 
-### 4. Bake
+### 5. Bake
 
-1. Cover with foil and bake for 25 minutes.
-2. Uncover and bake for another 10 minutes until golden and bubbling.
+1. Cover with foil and bake for 30 minutes—this gently steams the pasta.
+2. Uncover and bake 10–15 minutes more until golden and bubbling.
+3. Let rest 10 minutes before serving. This helps everything settle and hold together on the plate.
 
 ## Tips
 

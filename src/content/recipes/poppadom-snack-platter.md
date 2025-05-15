@@ -18,41 +18,59 @@ relatedProducts:
 
 ## Why You'll Love This
 
-You ever fry a poppadom and watch it puff up like a golden balloon? It’s magic—kitchen alchemy with a crunch. This platter takes those poppadoms and loads ‘em up with colour, flavour, and personality. Serve it as a starter, a snack, or just somethin’ to nibble while the curry simmers.
+There’s something downright joyful about watching a poppadom puff up in hot oil.  
+One second it’s flat and humble, the next it’s crisp and golden, curling into shape like it’s waking up.
+
+This platter takes that magic and runs with it. It’s not just a side it’s a snack board, a starter, a conversation piece.  
+Crunchy bases topped with chopped bits and bold flavours.  
+A little sweet here, a little tang there. Cool yoghurt next to fiery chutney. It’s playful. It’s messy. It’s everything a good nibble should be.
+
+And the best part? You can build it with whatever’s in the fridge.  
+Leftovers become toppings. Sauces become dips.  
+It’s the kind of recipe that doesn’t just feed you—it gives you permission to improvise.
 
 ## Ingredients
 
-- 6–8 uncooked [Chefstore poppadoms](https://www.thechefstoreuk.com/products/triple-lion-plain-uncooked-poppadoms1kg?_pos=1&_sid=4a1d4b8a3&_ss=r)  
-- Vegetable oil, for frying  
-- 1 small red onion, finely chopped  
-- 1 tomato, deseeded and diced  
-- Fresh coriander, chopped  
-- Lime wedges, to serve  
+- 6 to 8 Uncooked Poppadoms  
+- Vegetable Oil  
+- 1 Red Onion  
+- 1 Tomato  
+- Fresh Coriander  
+- Lime Wedges  
 
-**Optional Toppings:**  
-- Mango chutney  
-- Mint raita  
-- Tamarind sauce  
-- Crumbled paneer or feta  
-- Chopped green chilies  
+### Optional Toppings
+
+- Mango Chutney  
+- Mint Raita  
+- Tamarind Sauce  
+- Crumbled Paneer or Feta  
+- Green Chilies  
 
 ## Instructions
 
-1. Heat 2–3 inches of oil in a deep pan until a tiny piece of poppadom bubbles instantly (about 180°C / 350°F).
-2. One at a time, slide a poppadom into the oil. Fry for 5–10 seconds—it should puff up and turn crisp almost immediately.
-3. Remove with tongs and drain on kitchen paper. Repeat with the rest.
-4. Arrange your poppadoms on a large platter.
-5. Sprinkle with onion, tomato, fresh coriander, and anything else that takes your fancy.
-6. Serve with lime wedges and small bowls of chutney, mint sauce, or whatever you’ve got handy.
+1. **Heat the oil**  
+   Pour 2 to 3 inches of vegetable oil into a deep pan. Heat to around 180°C. Test it by dropping in a tiny piece of poppadom it should puff instantly.
+
+2. **Fry the poppadoms**  
+   One at a time, carefully slide a poppadom into the oil. It will curl and puff within seconds. Use tongs to turn it if needed, then lift it out and drain on kitchen paper. Repeat with the rest.
+
+3. **Chop and prep**  
+   Finely chop the onion and tomato. Pick and roughly chop the coriander. Halve the limes.
+
+4. **Assemble the platter**  
+   Arrange the crisp poppadoms on a large board or platter. Top with chopped onion, tomato, coriander, and any extras you like.
+
+5. **Serve with sides**  
+   Add bowls of chutneys, yoghurt, or tamarind sauce for dipping. Serve lime wedges on the side for squeezing over.
 
 ## Tips
 
-- Use tongs and keep your face back—these babies puff fast.
-- Want to skip frying? Pop 'em in the microwave one at a time for 40–60 seconds on a plate. Still crispy, no oil.
-- Add a little chat masala or cumin powder for a street food twist.
+- Fry quickly and carefully poppadoms take just seconds. Keep your face back from the oil.  
+- For a lighter version, microwave the poppadoms one at a time on a plate for 40 to 60 seconds.  
+- Sprinkle a little chat masala or ground cumin over the top for extra street food flavour.
 
 ## Goes Great With
 
-- Cold beer or sparkling lemonade  
-- Movie night or game day  
-- Leftover curry, just sayin’...
+- Ice cold beer or a sharp lemonade  
+- Movie night, party tables, or unexpected guests  
+- A pot of curry waiting on the hob, just out of frame

@@ -18,38 +18,57 @@ relatedProducts:
 
 ## Why You'll Love This
 
-Ready in minutes but tastes like you spent hours.  
-The crisp pastry, sweet onions, creamy cheese, and hint of thyme? It’s like every pub starter you’ve loved—only quicker, neater, and easier to scale up.
+These little pastries are the kind of thing that make people lean in for the recipe before they've even finished chewing.  
+Golden puff pastry, sweet slow-cooked onion, creamy goat’s cheese, and a flicker of thyme on top.  
+They’re quick, elegant, and feel far more impressive than the effort suggests.
 
 ## Ingredients
 
-- 6 Pidy Medium Vol Au Vents  
-- 1 medium red onion, finely sliced  
-- 1 tbsp olive oil or butter  
-- 1 tsp brown sugar  
-- 1 tsp balsamic vinegar  
-- 100g goat’s cheese  
-- Fresh thyme leaves or a pinch of dried thyme  
-- Salt & pepper to taste  
+
+- 6 Pidy Medium Vol-au-Vents  
+- 1 Medium Red Onion, Finely Sliced  
+- 1 Tablespoon Olive Oil or Butter  
+- 1 Teaspoon Brown Sugar  
+- 1 Teaspoon Balsamic Vinegar  
+- 100g Goat’s Cheese  
+- Fresh Thyme Leaves or a Pinch of Dried Thyme  
+- Salt and Pepper, To Taste
 
 ## Instructions
 
-1. Preheat oven to 180°C (fan).
-2. Heat oil in a small pan. Cook onion gently with a pinch of salt until soft (about 8–10 mins).
-3. Add sugar and balsamic vinegar. Stir and cook for 2–3 minutes until caramelised.
-4. Spoon a little onion mixture into each vol-au-vent case.
-5. Crumble goat’s cheese over the top and sprinkle with thyme.
-6. Place on a baking tray and warm in the oven for 8–10 minutes, or until cheese is soft and tops are golden.
-7. Serve warm or at room temperature.
+1. **Set the stage**  
+   Preheat your oven to 180°C fan. Line a tray with parchment or just give it a wipe of oil. Place the vol-au-vent cases on the tray, spaced and ready like little pastry boats waiting for cargo.
+
+2. **Slow the world down with onions**  
+   In a small pan, warm the olive oil over low heat. Add the sliced red onion and a pinch of salt. Let it soften slowly, stirring now and then. This isn't a rush job—give it 8 to 10 minutes to melt down into something sweet and gentle.
+
+3. **Turn them golden**  
+   Stir in the brown sugar and balsamic. Let everything bubble and glaze for another few minutes. You’ll know it’s ready when it smells like something you'd wear as perfume if you could get away with it.
+
+4. **Build your bites**  
+   Spoon a little of the warm onion mix into each vol-au-vent case. It doesn’t need to be precise—just enough to give each one a rich, jammy heart.
+
+5. **Top and scatter**  
+   Crumble the goat’s cheese lovingly over the onions. Don’t worry about perfection—goat’s cheese likes to melt in interesting ways. Finish with a few thyme leaves or a pinch of dried thyme.
+
+6. **Bake until golden and irresistible**  
+   Slide the tray into the oven and bake for 8 to 10 minutes. The pastry should puff, the cheese should soften, and the smell should make your kitchen feel like a tiny French café.
+
+7. **Serve with charm**  
+   Let them cool for a minute or two before serving, just enough so no one burns their mouth. Then let the tearing and sharing begin.
 
 ## Tips
 
-- Add a pinch of chilli flakes for a subtle kick.  
-- Swap goat’s cheese for brie or blue cheese if you’re feelin’ bold.  
-- Make ahead: prepare and store unbaked, then bake just before serving.
+- Add a pinch of chilli flakes to the onion mix for gentle heat  
+- Swap goat’s cheese for blue cheese or creamy brie for a different depth  
+- Make them ahead and keep chilled. Bake just before serving so they’re crisp and irresistible
 
 ## Goes Great With
 
-- A rocket salad and balsamic drizzle  
-- Sparkling wine or something dry and white  
-- Parties where people ask for the recipe
+- A Rocket Salad Dressed with Lemon and Olive Oil  
+- A Glass of Prosecco, Dry White, or Sparkling Elderflower  
+- The First Hour of a Dinner Party, While People Mingle and Smile
+
+---
+
+> **They’re small, but they speak volumes. One bite and you’re halfway to hosting legend status.**

@@ -57,18 +57,18 @@ function Fruity_flapjacks_cherries_sultanas_md($$payload, $$props) {
     metadata,
     {
       children: ($$payload2) => {
-        $$payload2.out += `<h2>Why You’ll Love This</h2> <p>Sticky. Buttery. Fruity.<br> This is the kind of bake that sticks to your fingers and your memory. A proper teatime traybake with oats, sweet fruit, and a golden syrup glaze that caramelises just right.</p> <h2>Ingredients</h2> <ul><li>250g porridge oats</li> <li>125g unsalted butter</li> <li>125g Tate &amp; Lyle Squeezy Golden Syrup</li> <li>100g Buchanan Sultanas</li> <li>75g Glace Cherries, halved</li> <li>50g light brown sugar</li> <li>Pinch of salt</li></ul> <h2>Instructions</h2> <ol><li>Preheat oven to 160°C (fan). Line a 20cm square baking tin with parchment.</li> <li>In a saucepan over low heat, melt the butter, golden syrup, and sugar until smooth.</li> <li>Stir in the oats, salt, sultanas, and cherries until everything is coated.</li> <li>Press mixture firmly into the tin and smooth the top.</li> <li>Bake for 22–25 minutes until golden at the edges.</li> <li>Cool completely in the tin, then cut into bars or squares.</li></ol> <h2>Tips</h2> <ul><li>Add chopped apricots, mixed peel, or seeds for extra texture.</li> <li>For extra chewy texture, slightly underbake and let firm up as it cools.</li> <li>Store airtight for up to a week—or freeze in slices.</li></ul> <h2>Goes Great With</h2> <ul><li>A strong cup of tea</li> <li>Packed lunches or hiking snacks</li> <li>A drizzle of dark chocolate (optional but excellent)</li></ul>`;
+        $$payload2.out += `<h2>Why You’ll Love This</h2> <p>These are the kind of bakes that feel like home.<br> Sticky and sweet from golden syrup, with bursts of fruit in every bite. They’re chewy where it counts, golden around the edges, and just the right kind of nostalgic.<br> Perfect with a hot cuppa or tucked into a lunchbox for later. And maybe even better the next day—if they last that long.</p> <h2>Ingredients</h2> <ul><li>250g Porridge Oats</li> <li>125g Unsalted Butter</li> <li>125g Tate &amp; Lyle Squeezy Golden Syrup</li> <li>100g Buchanan Sultanas</li> <li>75g Glace Cherries, Halved</li> <li>50g Light Brown Sugar</li> <li>Pinch of Salt</li></ul> <h2>Instructions</h2> <ol><li><p><strong>Preheat and prep</strong><br> Preheat the oven to 160°C fan. Line a 20cm square baking tin with parchment paper.</p></li> <li><p><strong>Melt the base</strong><br> In a saucepan over low heat, melt the butter, golden syrup, and sugar together. Stir gently until smooth and combined.</p></li> <li><p><strong>Mix in the dry ingredients</strong><br> Remove from the heat. Stir in the oats, salt, sultanas, and cherries. Mix until all the oats are glossy and the fruit is evenly distributed.</p></li> <li><p><strong>Fill the tin</strong><br> Spoon the mixture into the lined tin. Press it down firmly with the back of a spoon to level and compact the surface.</p></li> <li><p><strong>Bake</strong><br> Bake for 22 to 25 minutes until golden around the edges and lightly set in the centre.</p></li> <li><p><strong>Cool and slice</strong><br> Let the flapjacks cool completely in the tin. Once firm, lift out and cut into bars or squares.</p></li></ol> <h2>Tips</h2> <ul><li>Add dried apricots, cranberries, or mixed seeds for more texture</li> <li>For chewier flapjacks, bake for the shorter time and cool fully before slicing</li> <li>Store in an airtight container for up to a week, or freeze in portions for grab-and-go snacking</li></ul> <h2>Goes Great With</h2> <ul><li>A Mug of Strong Tea or Fresh Coffee</li> <li>Packed Lunches or Picnic Hampers</li> <li>A Light Drizzle of Melted Dark Chocolate on Top (Highly Recommended)</li></ul> <hr> <blockquote><p><strong>Not fancy. Just right. Sweet, chewy, and ready when you are.</strong></p></blockquote>`;
       },
       $$slots: { default: true }
     }
   ]));
 }
-const __vite_glob_2_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_2_17 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Fruity_flapjacks_cherries_sultanas_md,
   metadata
 }, Symbol.toStringTag, { value: "Module" }));
 export {
-  __vite_glob_2_10 as _,
+  __vite_glob_2_17 as _,
   metadata as m
 };

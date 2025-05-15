@@ -18,38 +18,54 @@ relatedProducts:
 
 ## Why You'll Love These
 
-These pancakes don’t just *fill a plate*, they fill a room—with the smell of browned butter, warm vanilla, and the soft sizzle of batter hittin’ cast iron. They're light but hearty, simple but somehow sacred—like that first cup of coffee on a quiet morning. Best part? They come together in one bowl, and disappear even quicker off the plate.
+These pancakes rise like the morning sun.  
+They’re soft inside, golden outside, and carry just enough tang from the buttermilk to keep you coming back.  
+You make them in one bowl. You flip them with confidence. And when the maple syrup hits the top of that warm stack, you know it was worth getting out of bed.
 
 ## Ingredients
 
-- 2 cups all-purpose flour  
-- 2 tablespoons sugar  
-- 1 teaspoon baking powder  
-- 1/2 teaspoon baking soda  
-- 1/2 teaspoon salt  
-- 2 cups buttermilk (or milk + 1 tbsp vinegar if you're out)  
-- 2 large eggs  
-- 1/4 cup unsalted butter, melted  
-- 1 teaspoon vanilla extract  
+- 2 Cups All-Purpose Flour  
+- 2 Tablespoons Sugar  
+- 1 Teaspoon Baking Powder  
+- ½ Teaspoon Baking Soda  
+- ½ Teaspoon Salt  
+- 2 Cups Buttermilk (Or Milk Plus 1 Tablespoon Vinegar)  
+- 2 Large Eggs  
+- ¼ Cup Unsalted Butter, Melted  
+- 1 Teaspoon Vanilla Extract
 
 ## Instructions
 
-1. In a large bowl, whisk together the flour, sugar, baking powder, baking soda, and salt. Smells like Sunday already.
-2. In another bowl (or a big jug if you're feelin’ rustic), mix the buttermilk, eggs, melted butter, and vanilla.
-3. Gently fold wet into dry. Don't overwork it—just until it's shaggy and mixed. Lumps are fine. Like life.
-4. Heat a griddle or non-stick pan over medium heat. Add a touch of butter and let it whisper.
-5. Pour about 1/4 cup of batter per pancake. Let 'em cook until bubbles form on the top—2 to 3 minutes.
-6. Flip with confidence. Cook the other side till golden and proud, about 1–2 more minutes.
-7. Stack ‘em high, drizzle with maple syrup, and throw a few berries on there if you're feelin’ poetic.
+1. **Combine the dry ingredients**  
+   In a large bowl, whisk together the flour, sugar, baking powder, baking soda, and salt.
+
+2. **Mix the wet ingredients**  
+   In a separate bowl or jug, whisk the buttermilk, eggs, melted butter, and vanilla extract until well blended.
+
+3. **Bring it together**  
+   Pour the wet mixture into the dry ingredients. Stir gently with a spatula or spoon until just combined. The batter should be thick and lumpy. Do not overmix.
+
+4. **Heat the pan**  
+   Place a non-stick skillet or griddle over medium heat. Add a little butter or oil. Let it melt and begin to sizzle softly.
+
+5. **Cook the pancakes**  
+   Pour about ¼ cup of batter per pancake onto the hot surface. Cook for 2 to 3 minutes, until bubbles form on top and the edges begin to look set. Flip and cook for another 1 to 2 minutes until golden brown and cooked through.
+
+6. **Serve hot**  
+   Stack onto warm plates. Serve immediately with your favorite toppings.
 
 ## Tips
 
-- Use real buttermilk if you’ve got it—it makes all the difference.
-- A little cinnamon or lemon zest in the batter? Chef’s kiss.
-- Leftovers (if you ever have 'em) freeze like a dream. Reheat in the toaster, like a secret gift to your future self.
+- Real buttermilk brings the best tang and texture  
+- Add a pinch of cinnamon or lemon zest for extra brightness  
+- Leftovers freeze well. Reheat in the toaster for quick, cozy mornings
 
 ## Goes Great With
 
-- Crispy bacon or veggie sausages  
-- A hot mug of coffee  
-- That feeling when no one's rushin’ ya
+- Crispy Bacon or Veggie Sausages  
+- Berries and a Dollop of Yoghurt  
+- A Cup of Strong Coffee and Nowhere to Be
+
+---
+
+> **Pancakes like these don’t need occasion. They make the occasion.**

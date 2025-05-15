@@ -19,47 +19,61 @@ relatedProducts:
 
 ## Why You'll Love This
 
-This slaw crunches like fresh snow underfoot.  
-It’s cool, it’s bright, it’s got **zing for days**—and just a flicker of heat that lingers like a goodbye hug.  
-Serve it on the side or build your whole meal around it.
+It’s fresh. It’s vibrant. It crunches like walking through autumn leaves.  
+A bowl of bright colours and bold flavours, lifted with lime and laced with sesame.  
+It’ll perk up heavy mains, lighten rich dishes, or be the star in a wrap with a little grilled chicken or tofu.  
+Simple to throw together, but never boring.
 
 ## Ingredients
 
 ### For the Slaw
-- ¼ red cabbage, finely shredded  
-- ¼ white cabbage, finely shredded  
-- 1 large carrot, julienned or grated  
-- ½ red pepper, thinly sliced  
-- 2 spring onions, finely sliced  
-- Handful of fresh coriander leaves  
-- 1 tbsp toasted sesame seeds  
+- ¼ Red Cabbage  
+- ¼ White Cabbage  
+- 1 Large Carrot  
+- ½ Red Pepper  
+- 2 Spring Onions  
+- Handful of Fresh Coriander Leaves  
+- 1 Tablespoon Toasted Sesame Seeds  
 
 ### For the Dressing
-- 2 tbsp Lee Kum Kee Rice Wine Vinegar  
-- 1 tbsp light soy sauce  
-- 1 tbsp toasted sesame oil  
-- 1 tbsp honey or maple syrup  
-- 1 garlic clove, minced  
-- 1 tsp fresh ginger, grated  
-- Juice of ½ lime  
-- Optional: pinch of chilli flakes or a dash of sriracha  
+- 2 Tablespoons Lee Kum Kee Rice Wine Vinegar  
+- 1 Tablespoon Light Soy Sauce  
+- 1 Tablespoon Toasted Sesame Oil  
+- 1 Tablespoon Honey or Maple Syrup  
+- 1 Garlic Clove  
+- 1 Teaspoon Fresh Ginger  
+- Juice of ½ Lime  
+- Optional: Pinch of Chilli Flakes or Dash of Sriracha
 
 ## Instructions
 
-1. In a large bowl, combine all the slaw ingredients.
-2. In a separate jar or bowl, whisk together the dressing until smooth.
-3. Pour dressing over the slaw and toss well to coat.
-4. Let sit for 5–10 minutes to mellow and marry the flavors.
-5. Top with extra sesame seeds or coriander if you’re feelin’ fancy.
+1. **Prepare the vegetables**  
+   Finely shred the red and white cabbage. Julienne or grate the carrot. Slice the red pepper and spring onions. Add everything to a large mixing bowl along with the coriander leaves and sesame seeds.
+
+2. **Make the dressing**  
+   In a small jar or bowl, whisk together the vinegar, soy sauce, sesame oil, honey or maple syrup, garlic, ginger, and lime juice. Add chilli or sriracha if using. Mix until smooth and emulsified.
+
+3. **Toss it all together**  
+   Pour the dressing over the slaw and toss well until every piece is coated and glistening.
+
+4. **Let it rest**  
+   Leave the slaw to sit for 5 to 10 minutes. This softens the vegetables slightly and lets the flavours settle into each other.
+
+5. **Garnish and serve**  
+   Sprinkle over a few extra sesame seeds or coriander leaves if you like. Serve chilled or at room temperature.
 
 ## Tips
 
-- Want protein? Add shredded rotisserie chicken or crispy tofu.
-- This slaw keeps great in the fridge—perfect for next-day wraps or rice bowls.
-- Swap honey for maple syrup to keep it vegan.
+- Add cooked shredded chicken or crispy tofu to turn it into a full meal  
+- This slaw holds up well in the fridge and makes a great topping for sandwiches or rice bowls  
+- To keep it vegan, choose maple syrup over honey
 
 ## Goes Great With
 
-- Sticky Soy Garlic Noodles  
-- BBQ pork buns or satay skewers  
-- Anything heavy that needs liftin’
+- Grilled satay skewers or glazed salmon  
+- Pork belly bao or BBQ jackfruit wraps  
+- A chilled noodle bowl on a warm evening
+
+---
+
+> **Crunchy, zesty, and full of life — this is salad with a little strut in its step.**

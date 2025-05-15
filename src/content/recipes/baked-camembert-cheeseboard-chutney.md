@@ -17,32 +17,52 @@ relatedProducts:
 
 ## Why You'll Love This
 
-It’s gooey. It’s creamy. It’s got sweet tang from the chutney and crunch from the crust.  
-This is the kind of thing that makes people gather round with a slice of bread and not want to leave.
+It’s soft. It’s spoonable. It’s got tang, warmth, and enough gooey charm to turn any table into a gathering.  
+The chutney lifts the richness, the thyme adds a whisper of woodland, and the bread? That’s your shovel to scoop it all up.  
+One bake and you’ll be hooked.
 
 ## Ingredients
 
-- 1 whole Camembert (in a wooden box if possible)  
+- 1 whole Camembert
 - 2–3 tbsp Bay Tree Cheeseboard Chutney  
-- A few sprigs fresh thyme (optional)  
-- Crusty bread, crackers, or toasted baguette, to serve  
+- A few thyme sprigs (optional)  
+- Crusty bread, crackers, or toasted baguette, to serve
 
 ## Instructions
 
-1. Preheat oven to 180°C (fan).
-2. If using a wooden box, remove any plastic and place Camembert back in the box base. Score the top in a criss-cross pattern.
-3. Place on a baking tray and bake for 15–20 minutes until soft in the centre.
-4. Remove from oven and top with Bay Tree Cheeseboard Chutney.
-5. Scatter with thyme if using. Serve immediately with bread for dipping.
+
+1. **Preheat your oven to 180°C (fan).**  
+   This allows the cheese to melt slowly and evenly.
+
+2. **Unwrap the Camembert and place it in the base of its wooden box.**  
+   Discard any plastic wrapping. If there’s no box, wrap the cheese in baking paper and foil to contain the melt.
+
+3. **Score the top of the rind with a sharp knife in a criss cross pattern.**  
+   This helps the heat reach the creamy centre and makes it easier to spoon once baked.
+
+4. **Set the box on a baking tray and bake for 15–20 minutes.**  
+   It’s ready when the middle feels soft and molten to the touch. If it starts to bulge or leak, you’re right on time.
+
+5. **Carefully remove from oven and spoon the chutney over the top.**  
+   Let the heat warm it through it’ll mingle with the cheese like old friends.
+
+6. **Scatter with thyme if using and serve immediately.**  
+   Get the bread in there while it’s hot and drippy.
 
 ## Tips
 
-- Want to get fancy? Stud with garlic slivers or drizzle with honey before baking.  
-- Try it with Bay Tree Spicy Onion Marmalade for a bolder bite.  
-- No Camembert box? Wrap in baking paper and foil to contain the melt.
+- **Tuck in garlic slivers** before baking for a mellow, roasted depth.  
+- **Drizzle with honey** before the oven for that sweet-meets-savoury hit.  
+- **Switch up the chutney** Bay Tree Spicy Onion Marmalade brings a sharper contrast.  
+- **Don’t overbake.** If it’s bubbling like lava and looks greasy, it’s gone too far.
 
 ## Goes Great With
 
-- A crisp glass of white wine or dry cider  
-- Pickles, charcuterie, or roasted grapes  
-- Fireside snacks or Sunday starter spreads
+- A **chilled white wine** (Sauvignon Blanc or Chenin Blanc) or a **dry cider**  
+- **Pickles, charcuterie**, or even **roasted grapes** for a pop of sweetness  
+- A **fireside evening**, or as the **centrepiece of a Sunday spread**
+
+---
+
+> **Gather round, tear the bread, and let it drip.**  
+> Good food don’t always need cutlery just timing, company, and the right kind of mess.

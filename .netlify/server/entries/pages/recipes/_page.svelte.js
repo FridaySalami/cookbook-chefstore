@@ -56,9 +56,11 @@ function _page($$payload, $$props) {
   ];
   const siteBaseUrl = "https://chefstorecookbook.netlify.app";
   function getDifficultyFromTags(tags) {
-    if (!tags) return "N/A";
+    if (!tags) return null;
     const difficultyTag = tags.find((tag) => tag.startsWith("difficulty-"));
-    return difficultyTag ? difficultyTag.replace("difficulty-", "") : "N/A";
+    if (!difficultyTag) return null;
+    const value = difficultyTag.replace("difficulty-", "");
+    return value.charAt(0).toUpperCase() + value.slice(1);
   }
   function getPageUrl(pageNumber) {
     const params = new URLSearchParams();
@@ -399,15 +401,21 @@ function _page($$payload, $$props) {
                 $$payload3.out += `<div class="bg-muted relative aspect-video w-full animate-pulse" style="z-index:1; position:absolute;"></div> <img${attr("src", recipe.image || "/placeholder.png")}${attr("alt", recipe.title)} class="aspect-video w-full object-cover" loading="lazy" width="400" height="225" style="position:relative; z-index:2;" onload="this.__e=event" onerror="this.__e=event">`;
               }
               $$payload3.out += `<!--]--> `;
-              Badge($$payload3, {
-                variant: "secondary",
-                class: "absolute top-3 right-3 border border-white/20 bg-black/60 text-white capitalize backdrop-blur-sm",
-                children: ($$payload4) => {
-                  $$payload4.out += `<!---->${escape_html(getDifficultyFromTags(recipe.tags))}`;
-                },
-                $$slots: { default: true }
-              });
-              $$payload3.out += `<!---->`;
+              if (getDifficultyFromTags(recipe.tags)) {
+                $$payload3.out += "<!--[-->";
+                Badge($$payload3, {
+                  variant: "secondary",
+                  class: "bg-muted/95 absolute top-3 right-3 rounded-lg border border-white/60 px-3 py-1 text-xs font-bold tracking-wide text-white shadow-lg backdrop-blur-sm",
+                  style: "z-index:30; letter-spacing:0.04em;",
+                  children: ($$payload4) => {
+                    $$payload4.out += `<!---->${escape_html(getDifficultyFromTags(recipe.tags))}`;
+                  },
+                  $$slots: { default: true }
+                });
+              } else {
+                $$payload3.out += "<!--[!-->";
+              }
+              $$payload3.out += `<!--]-->`;
             },
             $$slots: { default: true }
           });

@@ -20,44 +20,65 @@ relatedProducts:
 
 ## Why You'll Love This
 
-It’s rich. It’s sticky. It hugs your insides.  
-This banana bread doesn’t whisper “healthy”—it yells *“Have another slice.”*  
-Dark chocolate melts into the crumb, walnuts add crunch, and the bananas do the heavy lifting on flavour and moisture.
+This banana bread doesn’t hold back.  
+It’s sticky in the best way. Rich from brown sugar and melting chocolate. Textured with toasted walnut crunch. The bananas carry their weight, sweet, ripe, and bold. Giving the loaf a natural depth and softness that stays moist for days.
+
+There’s no whisper of restraint here. Just a bake that feels familiar and luxurious all at once.  
+Toast it, eat it warm, wrap it up for later, this loaf is good every time. And if you don’t have time to let it cool completely before slicing, well... no one’s judging.
 
 ## Ingredients
 
-- 3 overripe bananas (the browner the better)  
-- 100g Tate & Lyle Soft Light Brown Sugar  
-- 2 eggs  
-- 75g unsalted butter, melted (or neutral oil)  
-- 1 tsp vanilla extract  
-- 200g plain flour  
-- 1 tsp baking powder  
-- ½ tsp bicarbonate of soda  
-- Pinch of salt  
-- 100g Callebaut 45.4% Dark Chocolate Chunks  
-- 50g Buchanan Walnut Pieces, roughly chopped  
-- Optional: extra banana or sugar for topping
+- 3 Overripe Bananas  
+- 100g Soft Light Brown Sugar  
+- 2 Eggs  
+- 75g Unsalted Butter (Melted) or Neutral Oil  
+- 1 Teaspoon Vanilla Extract  
+- 200g Plain Flour  
+- 1 Teaspoon Baking Powder  
+- 1/2 Teaspoon Bicarbonate of Soda  
+- Pinch of Salt  
+- 100g Dark Chocolate Chunks  
+- 50g Walnut Pieces  
+
+### Optional Topping
+
+- 1 Extra Banana  
+- Brown Sugar  
 
 ## Instructions
 
-1. Preheat oven to 170°C (fan). Grease and line a loaf tin.
-2. In a bowl, mash bananas well. Stir in sugar, eggs, melted butter, and vanilla.
-3. In another bowl, mix flour, baking powder, bicarb, and salt.
-4. Combine wet and dry mixes until just combined—don’t overmix.
-5. Fold in chocolate chunks and walnuts.
-6. Pour into tin. Top with a halved banana or sprinkle of brown sugar if you like.
-7. Bake for 50–60 minutes, until golden and a skewer comes out with only a few sticky crumbs.
-8. Cool slightly before slicing (or don’t—we don’t judge).
+1. **Preheat and prep**  
+   Heat the oven to 170°C. Grease and line a loaf tin with parchment paper.
+
+2. **Mix the wet ingredients**  
+   In a large bowl, mash the bananas until mostly smooth. Stir in the sugar, eggs, melted butter, and vanilla until well blended.
+
+3. **Combine the dry ingredients**  
+   In a separate bowl, whisk together the flour, baking powder, bicarbonate of soda, and salt.
+
+4. **Bring the mix together**  
+   Pour the dry ingredients into the wet mixture and stir gently until just combined. Don’t overmix.
+
+5. **Fold in the extras**  
+   Add the chocolate chunks and walnut pieces, folding them in so they’re evenly distributed.
+
+6. **Fill the tin**  
+   Pour the batter into the prepared loaf tin. Top with a halved banana lengthways or a sprinkle of brown sugar if you like a caramelised finish.
+
+7. **Bake**  
+   Bake for 50 to 60 minutes. The top should be deep golden and a skewer inserted into the middle should come out with only a few sticky crumbs.
+
+8. **Cool and enjoy**  
+   Let the loaf cool in the tin for 10 minutes before lifting out to cool fully. Or slice it warm and enjoy with butter while the chocolate is still molten.
 
 ## Tips
 
-- Store wrapped at room temp for 2–3 days or freeze slices for later.
-- Toast leftovers and spread with butter or cream cheese.
-- Want it dairy-free? Use oil instead of butter and skip the chocolate (or use DF-friendly chunks).
+- Store in an airtight container at room temperature for up to 3 days, or freeze individual slices for quick weekday treats.  
+- Toasted banana bread with salted butter or a smear of cream cheese is next level good.  
+- Want to make it dairy-free? Use oil instead of butter and choose a dairy-free chocolate.
 
 ## Goes Great With
 
-- Coffee or a mug of chai  
-- Late breakfasts or midnight snacks  
-- A slice of peace on a loud day
+- A Mug of Coffee, Chai, or Hot Chocolate  
+- Slow Mornings and Cold Afternoons  
+- That Craving You Didn’t Know You Had Until Now

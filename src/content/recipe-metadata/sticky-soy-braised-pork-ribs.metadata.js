@@ -1,7 +1,7 @@
 export const metadata = {
   "title": "Sticky Soy-Braised Pork Ribs",
   "slug": "sticky-soy-braised-pork-ribs",
-  "description": "Fall-apart tender pork ribs slow-braised in soy, ginger, and garlic until they’re sticky, savoury, and irresistible—whether you cook 'em low and slow or fast and furious.",
+  "description": "Fall-apart tender pork ribs slow-braised in soy, ginger, and garlic until they’re sticky, savoury, and irresistible, whether you cook 'em low and slow or fast and furious.",
   "date": "2025-05-12T00:00:00.000Z",
   "featured": true,
   "image": "/images/recipes/category-name/recipe-name/sticky-soy-braised-pork-ribs.webp",

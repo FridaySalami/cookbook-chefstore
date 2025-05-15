@@ -19,45 +19,61 @@ relatedProducts:
 
 ## Why You'll Love This
 
-You ever bite into somethin' and hear that *crackle*? That “oh dang” sound?  
-That’s panko magic.  
-These chicken bites are light, crispy, and way better than anything in the freezer aisle.  
-Perfect for parties, kids’ dinners, or sneakin’ a few straight from the tray before anyone notices.
+You ever bite into something and just stop for a second?  
+That perfect *crunch* gives way to juicy chicken, light and golden on the outside, tender and seasoned within.  
+These bites are made for dipping, stacking, or straight-up stealing off the tray before anyone notices.  
+Simple, crispy, and addictive in the best way.
 
 ## Ingredients
 
-- 2 chicken breasts, cut into bite-sized chunks  
-- 1 cup Panko Breadcrumbs 
-- 1/2 cup plain flour  
-- 2 large eggs, beaten  
-- 1 tsp garlic powder  
-- 1/2 tsp paprika  
-- Salt and pepper, to taste  
-- Vegetable oil, for frying  
+- 2 Chicken Breasts, Cut Into Bite-Sized Pieces  
+- 1 Cup Panko Breadcrumbs  
+- ½ Cup Plain Flour  
+- 2 Large Eggs  
+- 1 Teaspoon Garlic Powder  
+- ½ Teaspoon Paprika  
+- Salt  
+- Black Pepper  
+- Vegetable Oil, For Frying  
 
-**Optional Dips:**  
-- Sweet chili sauce  
-- Honey mustard  
-- BBQ sauce  
-- Garlic mayo  
+### Optional Dips
+- Sweet Chili Sauce  
+- Honey Mustard  
+- Barbecue Sauce  
+- Garlic Mayonnaise
 
 ## Instructions
 
-1. Set up three bowls: one with flour, one with beaten eggs, one with panko breadcrumbs mixed with garlic powder, paprika, salt, and pepper.
-2. Dip each chicken piece first into flour, then egg, then panko, pressing lightly to coat.
-3. Heat about 2 inches of oil in a deep pan to 180°C / 350°F.
-4. Fry chicken bites in batches for 2–3 minutes per side, until golden brown and cooked through.
-5. Drain on kitchen paper.  
-6. Serve hot with your favourite dipping sauces.
+1. **Set up your coating station**  
+   Place the flour in one shallow bowl. Beat the eggs in a second bowl. In a third, combine the panko breadcrumbs with garlic powder, paprika, a pinch of salt, and black pepper.
+
+2. **Coat the chicken**  
+   Dip each piece of chicken into the flour, then the egg, then the seasoned panko. Press gently to help the coating stick.
+
+3. **Heat the oil**  
+   Pour vegetable oil into a deep pan to a depth of about 2 inches. Heat to 180°C or 350°F. The oil should sizzle gently when a breadcrumb is dropped in.
+
+4. **Fry the chicken**  
+   Fry the chicken pieces in batches for 2 to 3 minutes per side until golden brown and cooked through. Avoid overcrowding the pan.
+
+5. **Rest and drain**  
+   Transfer cooked chicken to a plate lined with kitchen paper. Let rest a few minutes while you prep your dips.
+
+6. **Serve and enjoy**  
+   Pile onto a platter and serve hot with your choice of dipping sauces.
 
 ## Tips
 
-- Want extra crunch? Double-dip: egg, panko, egg again, panko again.
-- Bake instead of frying? Spray with oil and bake at 200°C for about 20 minutes, flipping halfway.
-- Great for meal prep—freeze after breadcrumbing for quick fry-ups later.
+- For even more crunch, double dip: egg, panko, egg again, and another layer of panko  
+- Want to bake instead of fry? Lightly oil the breaded bites and bake at 200°C for 20 minutes, flipping halfway  
+- You can freeze them after breading for a quick fry-up anytime
 
 ## Goes Great With
 
-- Crispy fries or a side salad  
-- Stuffed into wraps with slaw  
-- Piled high for game night feasting
+- Crispy fries or oven-roasted wedges  
+- Tucked into wraps with shredded lettuce and garlic sauce  
+- Game nights, lunchboxes, or impromptu kitchen picnics
+
+---
+
+> **Simple to make, hard to stop eating. These bites don’t just crunch, they sing.**

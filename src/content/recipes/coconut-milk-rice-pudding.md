@@ -19,38 +19,51 @@ relatedProducts:
 
 ## Why You'll Love This
 
-You ever want somethin’ sweet that don’t leave you feelin' heavy?  
-This pudding’s **light**, **creamy**, and **naturally luscious** from coconut milk—no dairy needed.  
-It’s the kind of cozy dish you make once, and end up thinkin' about all week.
+Soft, slow, and just sweet enough—this is rice pudding with sunshine in its bones.  
+Coconut milk wraps the grains in silk. A whisper of vanilla carries through every spoonful.  
+Whether you eat it warm with rain on the window or cold from the fridge in bare feet—this is the kind of pudding that knows how to comfort.
 
-Perfect warm on a rainy evening or chilled straight from the fridge on a hot day.
 
 ## Ingredients
 
-- 150g Ospiro Pudding Rice
-- 400ml coconut milk (full-fat for extra creaminess)
-- 200ml water
-- 3 tablespoons sugar (adjust to taste)
-- 1 teaspoon vanilla extract
-- Pinch of salt
-- Fresh mango, berries, or toasted coconut flakes, for serving (optional)
+- 150g Ospiro Pudding Rice  
+- 400ml Coconut Milk (Full-Fat)  
+- 200ml Water  
+- 3 Tablespoons Sugar  
+- 1 Teaspoon Vanilla Extract  
+- Pinch of Salt  
+- Mango, Berries, or Toasted Coconut Flakes, For Serving (Optional)
 
 ## Instructions
 
-1. In a medium saucepan, combine pudding rice, coconut milk, water, sugar, and salt.
-2. Bring to a gentle simmer over low-medium heat, stirring often.
-3. Cook uncovered for about 25–30 minutes, stirring occasionally to prevent sticking, until the rice is tender and the mixture has thickened.
-4. Stir in the vanilla extract.
-5. Serve warm, or chill and top with fresh fruit or coconut flakes before serving.
+1. **Combine and warm.**  
+   In a medium saucepan, add the pudding rice, coconut milk, water, sugar, and a pinch of salt.  
+   Stir gently and set over low-medium heat.
+
+2. **Simmer gently.**  
+   Bring it to a soft simmer. Let it bubble slowly—no rush—stirring often so the rice doesn’t catch at the bottom.
+
+3. **Cook until creamy.**  
+   After 25–30 minutes, the rice should be tender and the pudding thick enough to coat a spoon. If it looks too thick too soon, stir in a splash more water or coconut milk.
+
+4. **Finish with vanilla.**  
+   Turn off the heat and stir in the vanilla extract. Let it rest for 5 minutes it’ll thicken just a little more while it settles.
+
+5. **Serve warm or chilled.**  
+   Enjoy it warm right away, or cool and refrigerate for a cooler, creamier version. Add fruit or toasted coconut just before serving, if you like.
 
 ## Tips
 
-- Want it extra rich? Swap the 200ml water for more coconut milk.
-- Prefer it sweeter? Add an extra spoonful of sugar or a drizzle of maple syrup after cooking.
-- Flavor twist: Stir in a pinch of ground cardamom or cinnamon while it cooks.
+- Swap the water for more coconut milk if you want it extra luxurious.  
+- For more depth, stir in a pinch of ground cardamom or cinnamon while it simmers.  
+- Leftovers keep well in the fridge add a splash of milk before reheating to loosen
 
 ## Goes Great With
 
-- Fresh mango slices or passionfruit  
-- A sprinkle of toasted almonds or pistachios  
-- Curled up under a blanket on a slow Sunday
+- Slices of ripe mango or passionfruit  
+- A sprinkle of pistachios or toasted almonds  
+- A slow Sunday and a second helping
+
+---
+
+> **Comfort doesn’t have to be heavy. Sometimes it’s soft, sweet, and coconut-scented.**

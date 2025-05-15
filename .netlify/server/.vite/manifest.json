@@ -34,6 +34,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_balsamic-honey-sausages-grapes.js": {
+    "file": "chunks/balsamic-honey-sausages-grapes.js",
+    "name": "balsamic-honey-sausages-grapes",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_buttermilk-chicken-tenders.js": {
     "file": "chunks/buttermilk-chicken-tenders.js",
     "name": "buttermilk-chicken-tenders",
@@ -66,6 +75,24 @@
     "imports": [
       "_index3.js",
       "_clock.js"
+    ]
+  },
+  "_chicken-pearl-barley-broth.js": {
+    "file": "chunks/chicken-pearl-barley-broth.js",
+    "name": "chicken-pearl-barley-broth",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
+  "_chickpea-tagine-preserved-lemon-harissa.js": {
+    "file": "chunks/chickpea-tagine-preserved-lemon-harissa.js",
+    "name": "chickpea-tagine-preserved-lemon-harissa",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
     ]
   },
   "_classic-tiramisu-no-eggs.js": {
@@ -111,6 +138,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_creamy-polenta-wild-mushrooms-truffle.js": {
+    "file": "chunks/creamy-polenta-wild-mushrooms-truffle.js",
+    "name": "creamy-polenta-wild-mushrooms-truffle",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_crispy-chicken-katsu-curry.js": {
     "file": "chunks/crispy-chicken-katsu-curry.js",
     "name": "crispy-chicken-katsu-curry",
@@ -132,6 +168,24 @@
   "_crunchy-asian-slaw.js": {
     "file": "chunks/crunchy-asian-slaw.js",
     "name": "crunchy-asian-slaw",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
+  "_dark-chocolate-orange-blossom-sea-salt.js": {
+    "file": "chunks/dark-chocolate-orange-blossom-sea-salt.js",
+    "name": "dark-chocolate-orange-blossom-sea-salt",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
+  "_duck-fat-roast-potatoes-garlic-rosemary.js": {
+    "file": "chunks/duck-fat-roast-potatoes-garlic-rosemary.js",
+    "name": "duck-fat-roast-potatoes-garlic-rosemary",
     "isDynamicEntry": true,
     "imports": [
       "_index3.js",
@@ -163,6 +217,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_freekeh-pilaf-apricots-almonds.js": {
+    "file": "chunks/freekeh-pilaf-apricots-almonds.js",
+    "name": "freekeh-pilaf-apricots-almonds",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_fruity-flapjacks-cherries-sultanas.js": {
     "file": "chunks/fruity-flapjacks-cherries-sultanas.js",
     "name": "fruity-flapjacks-cherries-sultanas",
@@ -181,9 +244,27 @@
       "_RecipeLayout.js"
     ]
   },
+  "_glace-cherry-white-chocolate-blondies.js": {
+    "file": "chunks/glace-cherry-white-chocolate-blondies.js",
+    "name": "glace-cherry-white-chocolate-blondies",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_goats-cheese-onion-vol-au-vents.js": {
     "file": "chunks/goats-cheese-onion-vol-au-vents.js",
     "name": "goats-cheese-onion-vol-au-vents",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
+  "_homemade-pizza-dough-tomato-sauce.js": {
+    "file": "chunks/homemade-pizza-dough-tomato-sauce.js",
+    "name": "homemade-pizza-dough-tomato-sauce",
     "isDynamicEntry": true,
     "imports": [
       "_index3.js",
@@ -272,6 +353,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_pesto-tagliatelle-belazu.js": {
+    "file": "chunks/pesto-tagliatelle-belazu.js",
+    "name": "pesto-tagliatelle-belazu",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_poppadom-snack-platter.js": {
     "file": "chunks/poppadom-snack-platter.js",
     "name": "poppadom-snack-platter",
@@ -281,9 +371,36 @@
       "_RecipeLayout.js"
     ]
   },
+  "_roasted-beetroot-orange-walnut-salad.js": {
+    "file": "chunks/roasted-beetroot-orange-walnut-salad.js",
+    "name": "roasted-beetroot-orange-walnut-salad",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
+  "_romanian-sarmale-cabbage-rolls.js": {
+    "file": "chunks/romanian-sarmale-cabbage-rolls.js",
+    "name": "romanian-sarmale-cabbage-rolls",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_salted-caramel-chocolate-tart.js": {
     "file": "chunks/salted-caramel-chocolate-tart.js",
     "name": "salted-caramel-chocolate-tart",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
+  "_salted-caramel-mocha.js": {
+    "file": "chunks/salted-caramel-mocha.js",
+    "name": "salted-caramel-mocha",
     "isDynamicEntry": true,
     "imports": [
       "_index3.js",
@@ -362,6 +479,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_sticky-toffee-pudding.js": {
+    "file": "chunks/sticky-toffee-pudding.js",
+    "name": "sticky-toffee-pudding",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_sweetcorn-fritters-chilli-jam.js": {
     "file": "chunks/sweetcorn-fritters-chilli-jam.js",
     "name": "sweetcorn-fritters-chilli-jam",
@@ -389,10 +515,6 @@
       "_RecipeLayout.js"
     ]
   },
-  "_thai-green-curry.metadata.js": {
-    "file": "chunks/thai-green-curry.metadata.js",
-    "name": "thai-green-curry.metadata"
-  },
   "_users.js": {
     "file": "chunks/users.js",
     "name": "users",
@@ -401,6 +523,19 @@
       "_client.js",
       "_clock.js"
     ]
+  },
+  "_white-bean-rosemary-stew.js": {
+    "file": "chunks/white-bean-rosemary-stew.js",
+    "name": "white-bean-rosemary-stew",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index3.js",
+      "_RecipeLayout.js"
+    ]
+  },
+  "_white-bean-rosemary-stew.metadata.js": {
+    "file": "chunks/white-bean-rosemary-stew.metadata.js",
+    "name": "white-bean-rosemary-stew.metadata"
   },
   "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte": {
     "file": "entries/fallbacks/error.svelte.js",
@@ -432,6 +567,12 @@
     "src": "src/content/recipes/baked-camembert-cheeseboard-chutney.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/balsamic-honey-sausages-grapes.md?raw": {
+    "file": "chunks/balsamic-honey-sausages-grapes2.js",
+    "name": "balsamic-honey-sausages-grapes",
+    "src": "src/content/recipes/balsamic-honey-sausages-grapes.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/buttermilk-chicken-tenders.md?raw": {
     "file": "chunks/buttermilk-chicken-tenders2.js",
     "name": "buttermilk-chicken-tenders",
@@ -442,6 +583,18 @@
     "file": "chunks/cheesy-leek-potato-gratin2.js",
     "name": "cheesy-leek-potato-gratin",
     "src": "src/content/recipes/cheesy-leek-potato-gratin.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/chicken-pearl-barley-broth.md?raw": {
+    "file": "chunks/chicken-pearl-barley-broth2.js",
+    "name": "chicken-pearl-barley-broth",
+    "src": "src/content/recipes/chicken-pearl-barley-broth.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/chickpea-tagine-preserved-lemon-harissa.md?raw": {
+    "file": "chunks/chickpea-tagine-preserved-lemon-harissa2.js",
+    "name": "chickpea-tagine-preserved-lemon-harissa",
+    "src": "src/content/recipes/chickpea-tagine-preserved-lemon-harissa.md?raw",
     "isDynamicEntry": true
   },
   "src/content/recipes/classic-tiramisu-no-eggs.md?raw": {
@@ -462,6 +615,12 @@
     "src": "src/content/recipes/creamy-chicken-korma.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw": {
+    "file": "chunks/creamy-polenta-wild-mushrooms-truffle2.js",
+    "name": "creamy-polenta-wild-mushrooms-truffle",
+    "src": "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/crispy-chicken-katsu-curry.md?raw": {
     "file": "chunks/crispy-chicken-katsu-curry2.js",
     "name": "crispy-chicken-katsu-curry",
@@ -480,10 +639,28 @@
     "src": "src/content/recipes/crunchy-asian-slaw.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/dark-chocolate-orange-blossom-sea-salt.md?raw": {
+    "file": "chunks/dark-chocolate-orange-blossom-sea-salt2.js",
+    "name": "dark-chocolate-orange-blossom-sea-salt",
+    "src": "src/content/recipes/dark-chocolate-orange-blossom-sea-salt.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/duck-fat-roast-potatoes-garlic-rosemary.md?raw": {
+    "file": "chunks/duck-fat-roast-potatoes-garlic-rosemary2.js",
+    "name": "duck-fat-roast-potatoes-garlic-rosemary",
+    "src": "src/content/recipes/duck-fat-roast-potatoes-garlic-rosemary.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/fluffy-buttermilk-pancakes.md?raw": {
     "file": "chunks/fluffy-buttermilk-pancakes2.js",
     "name": "fluffy-buttermilk-pancakes",
     "src": "src/content/recipes/fluffy-buttermilk-pancakes.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/freekeh-pilaf-apricots-almonds.md?raw": {
+    "file": "chunks/freekeh-pilaf-apricots-almonds2.js",
+    "name": "freekeh-pilaf-apricots-almonds",
+    "src": "src/content/recipes/freekeh-pilaf-apricots-almonds.md?raw",
     "isDynamicEntry": true
   },
   "src/content/recipes/fruity-flapjacks-cherries-sultanas.md?raw": {
@@ -498,10 +675,22 @@
     "src": "src/content/recipes/garlic-herb-tear-and-share-bread.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/glace-cherry-white-chocolate-blondies.md?raw": {
+    "file": "chunks/glace-cherry-white-chocolate-blondies2.js",
+    "name": "glace-cherry-white-chocolate-blondies",
+    "src": "src/content/recipes/glace-cherry-white-chocolate-blondies.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/goats-cheese-onion-vol-au-vents.md?raw": {
     "file": "chunks/goats-cheese-onion-vol-au-vents2.js",
     "name": "goats-cheese-onion-vol-au-vents",
     "src": "src/content/recipes/goats-cheese-onion-vol-au-vents.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/homemade-pizza-dough-tomato-sauce.md?raw": {
+    "file": "chunks/homemade-pizza-dough-tomato-sauce2.js",
+    "name": "homemade-pizza-dough-tomato-sauce",
+    "src": "src/content/recipes/homemade-pizza-dough-tomato-sauce.md?raw",
     "isDynamicEntry": true
   },
   "src/content/recipes/kimchi-fried-rice.md?raw": {
@@ -528,16 +717,40 @@
     "src": "src/content/recipes/one-pan-harissa-chickpeas-eggs.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/pesto-tagliatelle-belazu.md?raw": {
+    "file": "chunks/pesto-tagliatelle-belazu2.js",
+    "name": "pesto-tagliatelle-belazu",
+    "src": "src/content/recipes/pesto-tagliatelle-belazu.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/poppadom-snack-platter.md?raw": {
     "file": "chunks/poppadom-snack-platter2.js",
     "name": "poppadom-snack-platter",
     "src": "src/content/recipes/poppadom-snack-platter.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/roasted-beetroot-orange-walnut-salad.md?raw": {
+    "file": "chunks/roasted-beetroot-orange-walnut-salad2.js",
+    "name": "roasted-beetroot-orange-walnut-salad",
+    "src": "src/content/recipes/roasted-beetroot-orange-walnut-salad.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/romanian-sarmale-cabbage-rolls.md?raw": {
+    "file": "chunks/romanian-sarmale-cabbage-rolls2.js",
+    "name": "romanian-sarmale-cabbage-rolls",
+    "src": "src/content/recipes/romanian-sarmale-cabbage-rolls.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/salted-caramel-chocolate-tart.md?raw": {
     "file": "chunks/salted-caramel-chocolate-tart2.js",
     "name": "salted-caramel-chocolate-tart",
     "src": "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
+    "isDynamicEntry": true
+  },
+  "src/content/recipes/salted-caramel-mocha.md?raw": {
+    "file": "chunks/salted-caramel-mocha2.js",
+    "name": "salted-caramel-mocha",
+    "src": "src/content/recipes/salted-caramel-mocha.md?raw",
     "isDynamicEntry": true
   },
   "src/content/recipes/sea-bass-lemon-caper-butter.md?raw": {
@@ -588,6 +801,12 @@
     "src": "src/content/recipes/sticky-soy-garlic-noodles.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/sticky-toffee-pudding.md?raw": {
+    "file": "chunks/sticky-toffee-pudding2.js",
+    "name": "sticky-toffee-pudding",
+    "src": "src/content/recipes/sticky-toffee-pudding.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/sweetcorn-fritters-chilli-jam.md?raw": {
     "file": "chunks/sweetcorn-fritters-chilli-jam2.js",
     "name": "sweetcorn-fritters-chilli-jam",
@@ -606,6 +825,12 @@
     "src": "src/content/recipes/thai-green-curry.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/white-bean-rosemary-stew.md?raw": {
+    "file": "chunks/white-bean-rosemary-stew2.js",
+    "name": "white-bean-rosemary-stew",
+    "src": "src/content/recipes/white-bean-rosemary-stew.md?raw",
+    "isDynamicEntry": true
+  },
   "src/routes/+layout.svelte": {
     "file": "entries/pages/_layout.svelte.js",
     "name": "entries/pages/_layout.svelte",
@@ -616,7 +841,7 @@
       "_html.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.CllMaWmK.css"
+      "_app/immutable/assets/_layout.BlF-qERq.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -637,7 +862,7 @@
     "src": "src/routes/+page.ts",
     "isEntry": true,
     "imports": [
-      "_thai-green-curry.metadata.js",
+      "_white-bean-rosemary-stew.metadata.js",
       "_index4.js"
     ]
   },
@@ -674,7 +899,7 @@
     "src": "src/routes/recipes/+page.ts",
     "isEntry": true,
     "imports": [
-      "_thai-green-curry.metadata.js",
+      "_white-bean-rosemary-stew.metadata.js",
       "_index4.js"
     ]
   },
@@ -685,24 +910,37 @@
     "isEntry": true,
     "imports": [
       "_baked-camembert-cheeseboard-chutney.js",
+      "_balsamic-honey-sausages-grapes.js",
       "_buttermilk-chicken-tenders.js",
       "_cheesy-leek-potato-gratin.js",
+      "_chicken-pearl-barley-broth.js",
+      "_chickpea-tagine-preserved-lemon-harissa.js",
       "_classic-tiramisu-no-eggs.js",
       "_coconut-milk-rice-pudding.js",
       "_creamy-chicken-korma.js",
+      "_creamy-polenta-wild-mushrooms-truffle.js",
       "_crispy-chicken-katsu-curry.js",
       "_crispy-panko-chicken-bites.js",
       "_crunchy-asian-slaw.js",
+      "_dark-chocolate-orange-blossom-sea-salt.js",
+      "_duck-fat-roast-potatoes-garlic-rosemary.js",
       "_fluffy-buttermilk-pancakes.js",
+      "_freekeh-pilaf-apricots-almonds.js",
       "_fruity-flapjacks-cherries-sultanas.js",
       "_garlic-herb-tear-and-share-bread.js",
+      "_glace-cherry-white-chocolate-blondies.js",
       "_goats-cheese-onion-vol-au-vents.js",
+      "_homemade-pizza-dough-tomato-sauce.js",
       "_kimchi-fried-rice.js",
       "_lemon-posset-shortbread.js",
       "_miso-glazed-roasted-vegetables.js",
       "_one-pan-harissa-chickpeas-eggs.js",
+      "_pesto-tagliatelle-belazu.js",
       "_poppadom-snack-platter.js",
+      "_roasted-beetroot-orange-walnut-salad.js",
+      "_romanian-sarmale-cabbage-rolls.js",
       "_salted-caramel-chocolate-tart.js",
+      "_salted-caramel-mocha.js",
       "_sea-bass-lemon-caper-butter.js",
       "_silky-milk-chocolate-mousse.js",
       "_spiced-lamb-mint-sausage-rolls.js",
@@ -711,32 +949,47 @@
       "_sticky-banana-bread-chocolate-walnuts.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
+      "_sticky-toffee-pudding.js",
       "_sweetcorn-fritters-chilli-jam.js",
       "_tagliatelle-bolognese-traditional.js",
       "_thai-green-curry.js",
+      "_white-bean-rosemary-stew.js",
       "_dynamic-import-helper.js",
       "_index.js"
     ],
     "dynamicImports": [
       "_baked-camembert-cheeseboard-chutney.js",
+      "_balsamic-honey-sausages-grapes.js",
       "_buttermilk-chicken-tenders.js",
       "_cheesy-leek-potato-gratin.js",
+      "_chicken-pearl-barley-broth.js",
+      "_chickpea-tagine-preserved-lemon-harissa.js",
       "_classic-tiramisu-no-eggs.js",
       "_coconut-milk-rice-pudding.js",
       "_creamy-chicken-korma.js",
+      "_creamy-polenta-wild-mushrooms-truffle.js",
       "_crispy-chicken-katsu-curry.js",
       "_crispy-panko-chicken-bites.js",
       "_crunchy-asian-slaw.js",
+      "_dark-chocolate-orange-blossom-sea-salt.js",
+      "_duck-fat-roast-potatoes-garlic-rosemary.js",
       "_fluffy-buttermilk-pancakes.js",
+      "_freekeh-pilaf-apricots-almonds.js",
       "_fruity-flapjacks-cherries-sultanas.js",
       "_garlic-herb-tear-and-share-bread.js",
+      "_glace-cherry-white-chocolate-blondies.js",
       "_goats-cheese-onion-vol-au-vents.js",
+      "_homemade-pizza-dough-tomato-sauce.js",
       "_kimchi-fried-rice.js",
       "_lemon-posset-shortbread.js",
       "_miso-glazed-roasted-vegetables.js",
       "_one-pan-harissa-chickpeas-eggs.js",
+      "_pesto-tagliatelle-belazu.js",
       "_poppadom-snack-platter.js",
+      "_roasted-beetroot-orange-walnut-salad.js",
+      "_romanian-sarmale-cabbage-rolls.js",
       "_salted-caramel-chocolate-tart.js",
+      "_salted-caramel-mocha.js",
       "_sea-bass-lemon-caper-butter.js",
       "_silky-milk-chocolate-mousse.js",
       "_spiced-lamb-mint-sausage-rolls.js",
@@ -745,28 +998,43 @@
       "_sticky-banana-bread-chocolate-walnuts.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
+      "_sticky-toffee-pudding.js",
       "_sweetcorn-fritters-chilli-jam.js",
       "_tagliatelle-bolognese-traditional.js",
       "_thai-green-curry.js",
+      "_white-bean-rosemary-stew.js",
       "src/content/recipes/baked-camembert-cheeseboard-chutney.md?raw",
+      "src/content/recipes/balsamic-honey-sausages-grapes.md?raw",
       "src/content/recipes/buttermilk-chicken-tenders.md?raw",
       "src/content/recipes/cheesy-leek-potato-gratin.md?raw",
+      "src/content/recipes/chicken-pearl-barley-broth.md?raw",
+      "src/content/recipes/chickpea-tagine-preserved-lemon-harissa.md?raw",
       "src/content/recipes/classic-tiramisu-no-eggs.md?raw",
       "src/content/recipes/coconut-milk-rice-pudding.md?raw",
       "src/content/recipes/creamy-chicken-korma.md?raw",
+      "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw",
       "src/content/recipes/crispy-chicken-katsu-curry.md?raw",
       "src/content/recipes/crispy-panko-chicken-bites.md?raw",
       "src/content/recipes/crunchy-asian-slaw.md?raw",
+      "src/content/recipes/dark-chocolate-orange-blossom-sea-salt.md?raw",
+      "src/content/recipes/duck-fat-roast-potatoes-garlic-rosemary.md?raw",
       "src/content/recipes/fluffy-buttermilk-pancakes.md?raw",
+      "src/content/recipes/freekeh-pilaf-apricots-almonds.md?raw",
       "src/content/recipes/fruity-flapjacks-cherries-sultanas.md?raw",
       "src/content/recipes/garlic-herb-tear-and-share-bread.md?raw",
+      "src/content/recipes/glace-cherry-white-chocolate-blondies.md?raw",
       "src/content/recipes/goats-cheese-onion-vol-au-vents.md?raw",
+      "src/content/recipes/homemade-pizza-dough-tomato-sauce.md?raw",
       "src/content/recipes/kimchi-fried-rice.md?raw",
       "src/content/recipes/lemon-posset-shortbread.md?raw",
       "src/content/recipes/miso-glazed-roasted-vegetables.md?raw",
       "src/content/recipes/one-pan-harissa-chickpeas-eggs.md?raw",
+      "src/content/recipes/pesto-tagliatelle-belazu.md?raw",
       "src/content/recipes/poppadom-snack-platter.md?raw",
+      "src/content/recipes/roasted-beetroot-orange-walnut-salad.md?raw",
+      "src/content/recipes/romanian-sarmale-cabbage-rolls.md?raw",
       "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
+      "src/content/recipes/salted-caramel-mocha.md?raw",
       "src/content/recipes/sea-bass-lemon-caper-butter.md?raw",
       "src/content/recipes/silky-milk-chocolate-mousse.md?raw",
       "src/content/recipes/spiced-lamb-mint-sausage-rolls.md?raw",
@@ -775,9 +1043,11 @@
       "src/content/recipes/sticky-banana-bread-chocolate-walnuts.md?raw",
       "src/content/recipes/sticky-soy-braised-pork-ribs.md?raw",
       "src/content/recipes/sticky-soy-garlic-noodles.md?raw",
+      "src/content/recipes/sticky-toffee-pudding.md?raw",
       "src/content/recipes/sweetcorn-fritters-chilli-jam.md?raw",
       "src/content/recipes/tagliatelle-bolognese-traditional.md?raw",
-      "src/content/recipes/thai-green-curry.md?raw"
+      "src/content/recipes/thai-green-curry.md?raw",
+      "src/content/recipes/white-bean-rosemary-stew.md?raw"
     ]
   },
   "src/routes/recipes/[slug]/+page.svelte": {
@@ -802,31 +1072,44 @@
     "src": "src/routes/recipes/[slug]/+page.ts",
     "isEntry": true,
     "imports": [
-      "_thai-green-curry.metadata.js",
+      "_white-bean-rosemary-stew.metadata.js",
       "_dynamic-import-helper.js",
       "_index.js",
       "_index4.js"
     ],
     "dynamicImports": [
       "_baked-camembert-cheeseboard-chutney.js",
+      "_balsamic-honey-sausages-grapes.js",
       "_buttermilk-chicken-tenders.js",
       "_cheesy-leek-potato-gratin.js",
+      "_chicken-pearl-barley-broth.js",
+      "_chickpea-tagine-preserved-lemon-harissa.js",
       "_classic-tiramisu-no-eggs.js",
       "_coconut-milk-rice-pudding.js",
       "_creamy-chicken-korma.js",
+      "_creamy-polenta-wild-mushrooms-truffle.js",
       "_crispy-chicken-katsu-curry.js",
       "_crispy-panko-chicken-bites.js",
       "_crunchy-asian-slaw.js",
+      "_dark-chocolate-orange-blossom-sea-salt.js",
+      "_duck-fat-roast-potatoes-garlic-rosemary.js",
       "_fluffy-buttermilk-pancakes.js",
+      "_freekeh-pilaf-apricots-almonds.js",
       "_fruity-flapjacks-cherries-sultanas.js",
       "_garlic-herb-tear-and-share-bread.js",
+      "_glace-cherry-white-chocolate-blondies.js",
       "_goats-cheese-onion-vol-au-vents.js",
+      "_homemade-pizza-dough-tomato-sauce.js",
       "_kimchi-fried-rice.js",
       "_lemon-posset-shortbread.js",
       "_miso-glazed-roasted-vegetables.js",
       "_one-pan-harissa-chickpeas-eggs.js",
+      "_pesto-tagliatelle-belazu.js",
       "_poppadom-snack-platter.js",
+      "_roasted-beetroot-orange-walnut-salad.js",
+      "_romanian-sarmale-cabbage-rolls.js",
       "_salted-caramel-chocolate-tart.js",
+      "_salted-caramel-mocha.js",
       "_sea-bass-lemon-caper-butter.js",
       "_silky-milk-chocolate-mousse.js",
       "_spiced-lamb-mint-sausage-rolls.js",
@@ -835,28 +1118,43 @@
       "_sticky-banana-bread-chocolate-walnuts.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
+      "_sticky-toffee-pudding.js",
       "_sweetcorn-fritters-chilli-jam.js",
       "_tagliatelle-bolognese-traditional.js",
       "_thai-green-curry.js",
+      "_white-bean-rosemary-stew.js",
       "src/content/recipes/baked-camembert-cheeseboard-chutney.md?raw",
+      "src/content/recipes/balsamic-honey-sausages-grapes.md?raw",
       "src/content/recipes/buttermilk-chicken-tenders.md?raw",
       "src/content/recipes/cheesy-leek-potato-gratin.md?raw",
+      "src/content/recipes/chicken-pearl-barley-broth.md?raw",
+      "src/content/recipes/chickpea-tagine-preserved-lemon-harissa.md?raw",
       "src/content/recipes/classic-tiramisu-no-eggs.md?raw",
       "src/content/recipes/coconut-milk-rice-pudding.md?raw",
       "src/content/recipes/creamy-chicken-korma.md?raw",
+      "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw",
       "src/content/recipes/crispy-chicken-katsu-curry.md?raw",
       "src/content/recipes/crispy-panko-chicken-bites.md?raw",
       "src/content/recipes/crunchy-asian-slaw.md?raw",
+      "src/content/recipes/dark-chocolate-orange-blossom-sea-salt.md?raw",
+      "src/content/recipes/duck-fat-roast-potatoes-garlic-rosemary.md?raw",
       "src/content/recipes/fluffy-buttermilk-pancakes.md?raw",
+      "src/content/recipes/freekeh-pilaf-apricots-almonds.md?raw",
       "src/content/recipes/fruity-flapjacks-cherries-sultanas.md?raw",
       "src/content/recipes/garlic-herb-tear-and-share-bread.md?raw",
+      "src/content/recipes/glace-cherry-white-chocolate-blondies.md?raw",
       "src/content/recipes/goats-cheese-onion-vol-au-vents.md?raw",
+      "src/content/recipes/homemade-pizza-dough-tomato-sauce.md?raw",
       "src/content/recipes/kimchi-fried-rice.md?raw",
       "src/content/recipes/lemon-posset-shortbread.md?raw",
       "src/content/recipes/miso-glazed-roasted-vegetables.md?raw",
       "src/content/recipes/one-pan-harissa-chickpeas-eggs.md?raw",
+      "src/content/recipes/pesto-tagliatelle-belazu.md?raw",
       "src/content/recipes/poppadom-snack-platter.md?raw",
+      "src/content/recipes/roasted-beetroot-orange-walnut-salad.md?raw",
+      "src/content/recipes/romanian-sarmale-cabbage-rolls.md?raw",
       "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
+      "src/content/recipes/salted-caramel-mocha.md?raw",
       "src/content/recipes/sea-bass-lemon-caper-butter.md?raw",
       "src/content/recipes/silky-milk-chocolate-mousse.md?raw",
       "src/content/recipes/spiced-lamb-mint-sausage-rolls.md?raw",
@@ -865,9 +1163,11 @@
       "src/content/recipes/sticky-banana-bread-chocolate-walnuts.md?raw",
       "src/content/recipes/sticky-soy-braised-pork-ribs.md?raw",
       "src/content/recipes/sticky-soy-garlic-noodles.md?raw",
+      "src/content/recipes/sticky-toffee-pudding.md?raw",
       "src/content/recipes/sweetcorn-fritters-chilli-jam.md?raw",
       "src/content/recipes/tagliatelle-bolognese-traditional.md?raw",
-      "src/content/recipes/thai-green-curry.md?raw"
+      "src/content/recipes/thai-green-curry.md?raw",
+      "src/content/recipes/white-bean-rosemary-stew.md?raw"
     ]
   },
   "src/routes/shop/+page.svelte": {
@@ -889,24 +1189,37 @@
     "isEntry": true,
     "imports": [
       "_baked-camembert-cheeseboard-chutney.js",
+      "_balsamic-honey-sausages-grapes.js",
       "_buttermilk-chicken-tenders.js",
       "_cheesy-leek-potato-gratin.js",
+      "_chicken-pearl-barley-broth.js",
+      "_chickpea-tagine-preserved-lemon-harissa.js",
       "_classic-tiramisu-no-eggs.js",
       "_coconut-milk-rice-pudding.js",
       "_creamy-chicken-korma.js",
+      "_creamy-polenta-wild-mushrooms-truffle.js",
       "_crispy-chicken-katsu-curry.js",
       "_crispy-panko-chicken-bites.js",
       "_crunchy-asian-slaw.js",
+      "_dark-chocolate-orange-blossom-sea-salt.js",
+      "_duck-fat-roast-potatoes-garlic-rosemary.js",
       "_fluffy-buttermilk-pancakes.js",
+      "_freekeh-pilaf-apricots-almonds.js",
       "_fruity-flapjacks-cherries-sultanas.js",
       "_garlic-herb-tear-and-share-bread.js",
+      "_glace-cherry-white-chocolate-blondies.js",
       "_goats-cheese-onion-vol-au-vents.js",
+      "_homemade-pizza-dough-tomato-sauce.js",
       "_kimchi-fried-rice.js",
       "_lemon-posset-shortbread.js",
       "_miso-glazed-roasted-vegetables.js",
       "_one-pan-harissa-chickpeas-eggs.js",
+      "_pesto-tagliatelle-belazu.js",
       "_poppadom-snack-platter.js",
+      "_roasted-beetroot-orange-walnut-salad.js",
+      "_romanian-sarmale-cabbage-rolls.js",
       "_salted-caramel-chocolate-tart.js",
+      "_salted-caramel-mocha.js",
       "_sea-bass-lemon-caper-butter.js",
       "_silky-milk-chocolate-mousse.js",
       "_spiced-lamb-mint-sausage-rolls.js",
@@ -915,9 +1228,11 @@
       "_sticky-banana-bread-chocolate-walnuts.js",
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
+      "_sticky-toffee-pudding.js",
       "_sweetcorn-fritters-chilli-jam.js",
       "_tagliatelle-bolognese-traditional.js",
-      "_thai-green-curry.js"
+      "_thai-green-curry.js",
+      "_white-bean-rosemary-stew.js"
     ]
   }
 }

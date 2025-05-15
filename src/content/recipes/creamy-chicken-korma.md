@@ -22,70 +22,91 @@ relatedProducts:
 
 ## Why You'll Love This
 
-Smooth as a Southern sunset and full of spice like a backroad preacher’s sermon.  
-This korma ain’t shoutin’—it’s **seducin’**.  
-Mild enough for the kids, rich enough to feel fancy, and easy enough for a Tuesday.
+Smooth as silk, gentle on spice, and rich enough to feel like you’ve pulled out all the stops this is the korma that soothes without ever being boring.  
+It’s got warmth without burn, sweetness without sugar rush, and just enough depth to make you pause mid-bite.  
+Great on a Tuesday. Showstoppin’ by Saturday. Always hits the spot.
 
 ## Ingredients
 
 ### Protein & Dairy
-- 500g chicken breast, diced  
-- 100–150g plain yoghurt (room temp)  
-- 100ml double cream  
+- 500g Chicken Breast, Diced  
+- 100–150g Plain Yoghurt (Room Temperature)  
+- 100ml Double Cream  
 
 ### Base
-- 1 large onion, finely chopped  
-- 2 tbsp oil or ghee  
-- 1 tsp garlic paste  
-- 1 tsp ginger paste  
-- 1 tbsp tomato purée  
+- 1 Large Onion  
+- 2 Tablespoons Oil or Ghee  
+- 1 Teaspoon Garlic Paste  
+- 1 Teaspoon Ginger Paste  
+- 1 Tablespoon Tomato Purée  
 
-### Spices (ground)
-- 1 tsp ground cumin  
-- 1 tsp ground coriander  
-- ½ tsp ground turmeric  
-- ½ tsp garam masala  
-- ½ tsp paprika or mild curry powder  
-- Salt to taste  
+### Spices (Ground)
+- 1 Teaspoon Ground Cumin  
+- 1 Teaspoon Ground Coriander  
+- ½ Teaspoon Ground Turmeric  
+- ½ Teaspoon Garam Masala  
+- ½ Teaspoon Paprika or Mild Curry Powder  
+- Salt, To Taste  
 
-### Whole Spices (optional but boss-tier)
-- 1 small cinnamon stick  
-- 2 cardamom pods (lightly crushed)  
-- 1 clove  
+### Whole Spices (Optional)
+- 1 Small Cinnamon Stick  
+- 2 Cardamom Pods, Lightly Crushed  
+- 1 Clove  
 
 ### Sweet/Nut Layer
-- 2 tbsp ground almonds  
-- 1 tsp sugar (adjust to taste)  
-- 25g creamed coconut (about ⅛ block), chopped  
+- 2 Tablespoons Ground Almonds  
+- 1 Teaspoon Sugar  
+- 25g Creamed Coconut (About ⅛ Block), Chopped  
 
 ### Liquids
-- 1 x 400ml can coconut milk  
-- Splash of hot water if too thick  
+- 1 × 400ml Can Coconut Milk  
+- Splash of Hot Water (If Needed)  
 
-### Optional Flourish
-- ¼ tsp rose water or kewra water  
-- Toasted almonds & chopped coriander to serve  
+### Optional Finishing Touches
+- ¼ Teaspoon Rose Water or Kewra Water  
+- Toasted Almonds and Chopped Coriander, To Serve
 
 ## Instructions
 
-1. In a deep pan, heat oil or ghee. Sauté the chopped onion until golden.
-2. Add garlic and ginger paste. Fry for a minute, then stir in tomato purée and dry ground spices. Let it sizzle.
-3. Add whole spices and toast them gently until fragrant—they’ll stay in the dish till the end for full flavor. You can fish them out before serving.
-4. Stir in the chicken. Cook until sealed on all sides.
-5. Pour in coconut milk, ground almonds, sugar, and creamed coconut. Stir well.
-6. Add a splash of hot water if needed. Cover and cook for 20 minutes on low heat, until chicken is tender and sauce is rich.
-7. Now gently stir in the yoghurt and heat through, taking care not to boil.
-8. Finish with the double cream and a dash of rose/kewra water if using.
-9. Remove whole spices if desired, and serve garnished with toasted almonds and chopped coriander.
+1. **Start the base.**  
+   Heat the oil or ghee in a deep pan. Add the onion and cook gently for 10–12 minutes until golden and soft. Stir often this is where the flavour builds.
+
+2. **Bring in the aromatics.**  
+   Add the garlic and ginger pastes. Stir for a minute until fragrant, then mix in the tomato purée and all the ground spices. Cook for another minute or two until everything smells warm and deep.
+
+3. **Whole spices next.**  
+   Drop in the cinnamon, cardamom, and clove if using. Let them toast lightly to release their oils. They stay in the pot, but if you want to fish them out before serving, that’s fine too.
+
+4. **Add the chicken.**  
+   Stir in the diced chicken and cook for 3–4 minutes until sealed on all sides. Don’t worry about cooking it through just yet it’ll finish in the sauce.
+
+5. **Build the sauce.**  
+   Pour in the coconut milk and stir in the ground almonds, sugar, and creamed coconut. Let it all come together into a creamy, lightly sweet base. Add a splash of water if it starts to get too thick.
+
+6. **Simmer gently.**  
+   Cover the pan and cook on low heat for about 20 minutes, until the chicken is tender and the sauce has thickened to a rich, scoopable consistency.
+
+7. **Finish gently.**  
+   Stir in the yoghurt slowly, a bit at a time, to keep it from splitting. Warm through, but don’t let it boil.
+
+8. **Add the cream and flourish.**  
+   Stir in the double cream and rose or kewra water, if using. It’s subtle but lifts the whole dish. Taste and adjust seasoning as needed.
+
+9. **Serve it up.**  
+   Remove the whole spices if you'd like. Serve hot, garnished with toasted almonds and a scatter of fresh coriander.
 
 ## Tips
 
-- For deeper flavor, marinate the chicken in yoghurt and spices for 30 mins first.
-- Go vegetarian by swappin’ the chicken with paneer or chickpeas.
-- Store leftovers—this curry sings even louder the next day.
+- Marinate the chicken in yoghurt and a little spice for 30 minutes beforehand for extra tenderness and flavour.  
+- Want it veggie? Paneer or chickpeas make an easy swap and hold the sauce beautifully.  
+- This curry gets better the next day just reheat gently with a splash of water.
 
 ## Goes Great With
 
-- Basmati rice or warm naan  
-- Mango chutney  
-- Cold yoghurt raita with cucumber  
+- Steamed Basmati Rice or Warm Naan  
+- Sweet Mango Chutney  
+- A Cool Cucumber Raita  
+
+---
+
+> **Rich, mellow, and quietly indulgent this is a curry with calm in its bones and flavour in every fold.**

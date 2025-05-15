@@ -65,10 +65,12 @@
 	}
 
 	// Helper function to get difficulty from tags
-	function getDifficultyFromTags(tags: string[] | undefined): string {
-		if (!tags) return 'N/A';
+	function getDifficultyFromTags(tags: string[] | undefined): string | null {
+		if (!tags) return null;
 		const difficultyTag = tags.find((tag) => tag.startsWith('difficulty-'));
-		return difficultyTag ? difficultyTag.replace('difficulty-', '') : 'N/A'; // Return 'N/A' or a default if no tag found
+		if (!difficultyTag) return null;
+		const value = difficultyTag.replace('difficulty-', '');
+		return value.charAt(0).toUpperCase() + value.slice(1);
 	}
 
 	// Helper to create pagination/filter URLs
@@ -434,12 +436,15 @@
 											style="position:relative; z-index:2;"
 										/>
 									{/if}
-									<Badge
-										variant="secondary"
-										class="absolute top-3 right-3 border border-white/20 bg-black/60 text-white capitalize backdrop-blur-sm"
-									>
-										{getDifficultyFromTags(recipe.tags)}
-									</Badge>
+									{#if getDifficultyFromTags(recipe.tags)}
+										<Badge
+											variant="secondary"
+											class="bg-muted/95 absolute top-3 right-3 rounded-lg border border-white/60 px-3 py-1 text-xs font-bold tracking-wide text-white shadow-lg backdrop-blur-sm"
+											style="z-index:30; letter-spacing:0.04em;"
+										>
+											{getDifficultyFromTags(recipe.tags)}
+										</Badge>
+									{/if}
 								</Card.Header>
 								<Card.Content class="flex-grow p-4">
 									<Card.Title class="mb-1 text-lg leading-tight font-semibold tracking-tight">

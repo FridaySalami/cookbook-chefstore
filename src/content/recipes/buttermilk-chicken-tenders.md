@@ -19,25 +19,30 @@ relatedProducts:
 
 ## Why You'll Love This
 
-Soaked in buttermilk till they’re tender as a slow song, then breaded and cooked to golden perfection—these chicken tenders are the kind you dunk, devour, and go back for more. The honey mustard dip? Sharp, sweet, and makes the whole thing sing.
+These tenders are the golden kind crisp on the outside, juicy in the middle, and made for dunking.  
+The buttermilk makes them tender as anything, while the crumbs deliver the crunch.  
+And that honey mustard dip? Tangy, sweet, and a little bit addictive.
 
 ## Ingredients
 
-### For the Chicken
+### Chicken Tenders
+
 - 500g chicken breast or mini fillets  
 - 250ml buttermilk  
 - 1 tsp garlic powder  
 - 1 tsp smoked paprika  
-- Salt & pepper to taste  
+- salt  
+- pepper  
 - 100g plain flour  
 - 100g breadcrumbs or panko  
-- Oil for shallow frying (if frying) or olive oil spray (if baking)  
+- oil for shallow frying or olive oil spray  
 
-### For the Honey Mustard Dip
+### Honey Mustard Dip
+
 - 3 tbsp Centaur Dijon Mustard  
 - 2 tbsp Hyve Squeezy Honey  
 - 1 tbsp mayonnaise or Greek yoghurt  
-- 1 tsp lemon juice (optional)  
+- 1 tsp lemon juice (optional)
 
 ## Instructions
 
@@ -71,12 +76,16 @@ Soaked in buttermilk till they’re tender as a slow song, then breaded and cook
 
 ## Tips
 
-- Great for batch cooking—freeze uncooked tenders, then bake straight from frozen.
-- Switch Dijon for wholegrain or American mustard for a milder dip.
-- Add cayenne to the coating if you like heat.
+- Freeze breaded but uncooked tenders for a fast dinner later—bake from frozen at 200°C for 25–30 mins.
+- Use wholegrain mustard or yellow mustard for a milder dip.
+- Add cayenne to the crumb mix if you're craving a kick.
 
 ## Goes Great With
 
 - Fries or sweet potato wedges  
-- Crunchy slaw or pickles  
-- A night where nobody wants to wash up
+- Crisp slaw or tangy pickles  
+- A no-fuss movie night or party platter spread
+
+---
+
+> **The kind of food that disappears before you’ve sat down. Just you, the tray, and whoever gets to it first.**

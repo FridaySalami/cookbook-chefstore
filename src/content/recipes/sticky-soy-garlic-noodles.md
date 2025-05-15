@@ -22,40 +22,58 @@ relatedProducts:
 
 ## Why You'll Love This
 
-These noodles are a full-body nod.  
-Quick to make, packed with umami, and just the right kind of messy.  
-Serve ‘em straight or toss in extras—leftover chicken, crispy tofu, or a fried egg on top.
+These noodles hit like a midnight craving and a Friday night reward all at once.  
+They’re slick with soy and sweet with just enough stick to hug every twist and tangle. Garlic whispers its way through each bite. Ginger hums quietly beneath. You can have them done in twenty and eaten in five.  
+
+And the beauty? They play well with others. Got leftover roast veg? Toss it in. Fried egg? Perch it on top. Cold beer? Don’t forget it.  
+Simple, satisfying, and endlessly yours.
 
 ## Ingredients
 
-- 200g wheat noodles or spaghetti  
-- 2 tbsp dark soy sauce  
-- 1 tbsp light soy sauce  
-- 1 tbsp honey or brown sugar  
-- 1 tbsp rice vinegar or lime juice  
-- 1 tsp sesame oil  
-- 2 garlic cloves, minced  
-- 1 tsp ginger, grated  
-- 1 tbsp neutral oil (like sunflower or vegetable)  
-- Optional toppings: spring onions, sesame seeds, chilli flakes  
+- 200g Wheat Noodles or Spaghetti  
+- 2 Tablespoons Dark Soy Sauce  
+- 1 Tablespoon Light Soy Sauce  
+- 1 Tablespoon Honey or Brown Sugar  
+- 1 Tablespoon Rice Vinegar or Lime Juice  
+- 1 Teaspoon Sesame Oil  
+- 2 Garlic Cloves  
+- 1 Teaspoon Ginger  
+- 1 Tablespoon Neutral Oil  
+
+### Optional Toppings
+
+- Spring Onions  
+- Sesame Seeds  
+- Chilli Flakes  
 
 ## Instructions
 
-1. Cook noodles according to packet instructions. Drain and set aside.
-2. In a bowl, mix both soy sauces, honey, vinegar, and sesame oil.
-3. Heat oil in a wok or frying pan over medium heat. Add garlic and ginger. Sizzle gently for 30 seconds.
-4. Pour in the sauce mix. Let it bubble and thicken slightly—about 1 minute.
-5. Add the cooked noodles. Toss and stir until they’re glossy and coated in sticky sauce.
-6. Serve hot, topped with spring onions, sesame seeds, and chilli flakes if you fancy a kick.
+1. **Boil the noodles**  
+   Bring a large pot of water to the boil. Cook your noodles until just tender, then drain and set aside.
+
+2. **Mix your sauce**  
+   In a bowl, stir together the dark soy sauce, light soy sauce, honey or sugar, vinegar, and sesame oil. Set aside.
+
+3. **Cook the aromatics**  
+   Heat the neutral oil in a wok or large frying pan over medium heat. Add the garlic and ginger and cook for 30 seconds until fragrant but not browned.
+
+4. **Build the glaze**  
+   Pour in the sauce mixture. Let it bubble and thicken for a minute until glossy and slightly reduced.
+
+5. **Add the noodles**  
+   Toss in the cooked noodles. Stir well, coating every strand in that sticky sauce. Keep tossing for another minute or so until everything’s shiny and hot.
+
+6. **Finish and serve**  
+   Serve right away. Scatter over spring onions, sesame seeds, and chilli flakes if you like things fiery.
 
 ## Tips
 
-- Want it spicy? Add a spoon of chilli crisp or fresh chopped red chilli.
-- Leftover roast veg or shredded chicken can jump in here with no fuss.
-- Gluten-free? Use tamari and rice noodles.
+- Add chilli crisp or a drizzle of sriracha for heat that lingers in the best way.  
+- Leftover chicken, mushrooms, or greens can make this heartier without much effort.  
+- For a gluten-free option, swap soy sauce for tamari and use rice noodles instead.
 
 ## Goes Great With
 
-- Stir-fried greens or pak choi  
-- Fried egg with a runny yolk  
-- Cold beer or sweet iced tea  
+- Pak Choi or Tenderstem Broccoli Stir-Fried in Garlic  
+- A Fried Egg with a Runny Centre  
+- Sweet Iced Tea, Cold Beer, or Sparkling Water with Lime

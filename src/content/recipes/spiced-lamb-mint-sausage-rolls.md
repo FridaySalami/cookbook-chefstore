@@ -19,63 +19,70 @@ relatedProducts:
 
 ## Why You'll Love This
 
-These rolls walk the line between **proper pub food** and **midweek marvel**.  
-They’re flaky and rich, spiced with cumin and coriander, and cooled off with a tangy tahini-mint yoghurt dip.  
-Serve 'em hot, warm, or smuggled into a lunchbox.
+These sausage rolls aren’t messing about.  
+They come wrapped in golden pastry, sure, but inside is a filling that brings warmth, boldness, and just the right lift of mint.  
+Cumin and coriander give a deep, earthy rhythm. Cinnamon adds a hum of sweetness underneath. And then the tahini mint yoghurt comes in, cool, creamy, and a little tangy to tie it all together.
+
+They’re at home on a party platter, in a packed lunch, or eaten standing at the counter before they’ve even cooled.  
+Comfort food, with a bit of flair. Honest and flaky, with just enough spice to make you pause.
 
 ## Ingredients
 
 ### For the Sausage Rolls
-- 500g lamb mince  
-- 1 small onion, finely grated  
-- 2 garlic cloves, minced  
-- 1 tsp ground cumin  
-- 1 tsp ground coriander  
-- 1 tsp smoked paprika  
-- ½ tsp cinnamon  
-- 1 tbsp Colman's Mint Sauce  
-- 2 tbsp fresh chopped parsley or mint (or 1 tsp dried mint)  
-- Salt & pepper to taste  
-- 1 sheet ready-rolled puff pastry  
-- 1 egg, beaten (for glazing)  
-- Sesame seeds, for topping (optional)
+
+- 500g Lamb Mince  
+- 1 Small Onion  
+- 2 Garlic Cloves  
+- 1 Teaspoon Ground Cumin  
+- 1 Teaspoon Ground Coriander  
+- 1 Teaspoon Smoked Paprika  
+- 1/2 Teaspoon Cinnamon  
+- 1 Tablespoon Mint Sauce  
+- 2 Tablespoons Chopped Fresh Mint or Parsley  
+- Salt  
+- Black Pepper  
+- 1 Sheet Ready-Rolled Puff Pastry  
+- 1 Egg  
+- Sesame Seeds (Optional)  
 
 ### For the Mint Tahini Yoghurt Dip
-- 2 tbsp Lefktro Tahini  
-- 3 tbsp natural yoghurt  
-- 1 tsp Colman’s Mint Sauce  
-- 1 tsp lemon juice  
-- Salt to taste  
+
+- 2 Tablespoons Tahini  
+- 3 Tablespoons Natural Yoghurt  
+- 1 Teaspoon Mint Sauce  
+- 1 Teaspoon Lemon Juice  
+- Salt  
 
 ## Instructions
 
-### 1. Make the Filling
+### Make the Filling
 
-1. In a bowl, mix lamb, onion, garlic, spices, mint sauce, herbs, salt and pepper.
-2. Combine well but don’t overwork it—just enough to bring it together.
+1. Add the lamb mince to a large bowl. Grate the onion and garlic directly into the bowl.  
+2. Sprinkle over the cumin, coriander, paprika, cinnamon, and a generous pinch each of salt and pepper.  
+3. Add the mint sauce and herbs. Mix everything together with your hands or a fork until just combined. Don’t overwork it.
 
-### 2. Roll and Bake
+### Shape and Bake
 
-1. Preheat oven to 200°C (fan).
-2. Unroll puff pastry and cut lengthwise into two long strips.
-3. Divide the lamb mixture in half and form into logs down the centre of each strip.
-4. Fold pastry over and seal edges with water. Place seam-side down.
-5. Cut into rolls, glaze with beaten egg, and sprinkle sesame seeds if using.
-6. Bake on parchment-lined tray for 20–25 minutes until golden and cooked through.
+4. Preheat your oven to 200°C and line a baking tray with parchment.  
+5. Unroll the puff pastry and cut lengthways into two even strips.  
+6. Divide the lamb filling in half and form each half into a long sausage shape down the middle of each pastry strip.  
+7. Brush one long edge of the pastry with water. Fold the other side over the filling and press to seal. Place seam-side down.  
+8. Slice into individual rolls. Brush the tops with beaten egg and sprinkle with sesame seeds if using.  
+9. Arrange on the tray and bake for 20 to 25 minutes or until golden brown and cooked through.
 
-### 3. Make the Dip
+### Make the Dip
 
-1. Whisk together tahini, yoghurt, mint sauce, lemon juice, and a pinch of salt until smooth.
-2. Add a splash of water if needed to loosen.
+10. In a small bowl, whisk together the tahini, yoghurt, mint sauce, lemon juice, and a pinch of salt.  
+11. If the dip is too thick, add a splash of cold water to loosen it to your liking.
 
 ## Tips
 
-- These freeze brilliantly—assemble raw, freeze on trays, then bag and bake from frozen.
-- Fancy it hotter? Add chilli flakes or harissa to the lamb mix.
-- Serve with pickles or a chopped salad to freshen things up.
+- Assemble the rolls ahead and freeze before baking. Bake straight from frozen—just add 5 to 10 extra minutes in the oven.  
+- Add a pinch of chilli flakes or a spoonful of harissa to the lamb for extra heat.  
+- Serve with crisp salad leaves or pickled onions for brightness and crunch.
 
 ## Goes Great With
 
-- Firefly Kiwi, Lime & Mint drink  
-- A big bowl of chips or salad  
-- Quiet kitchen, radio on, rain at the window
+- A Minty Sparkling Drink or Light Lager  
+- Herby Couscous or Spiced Roasted Veg  
+- A rainy afternoon and a kitchen full of spice

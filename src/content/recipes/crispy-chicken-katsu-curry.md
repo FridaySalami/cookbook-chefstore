@@ -20,61 +20,62 @@ relatedProducts:
 
 ## Why You'll Love This
 
-Crispy panko chicken. A smooth, golden curry sauce.  
-Sliced and served with rice like it just came off the pass at your favourite Japanese joint—only this time, it’s your kitchen.
+It’s crispy, saucy, and comforting in all the best ways.  
+The panko chicken brings the crunch, the curry sauce wraps it in warmth, and the rice holds it all steady underneath.  
+Tastes like a Friday night favorite but made with your own hands, right in your own kitchen.
 
 ## Ingredients
 
 ### For the Chicken
-- 2 chicken breasts  
-- Salt & pepper  
-- 2 tbsp plain flour  
-- 1 egg, beaten  
+- 2 Chicken Breasts  
+- Salt  
+- Black Pepper  
+- 2 Tablespoons Plain Flour  
+- 1 Egg  
 - 50g Centaur Panko Breadcrumbs  
-- Oil for shallow frying  
+- Oil, For Shallow Frying  
 
 ### For the Curry Sauce
-- 2–3 tbsp Yutaka Japanese Style Katsu Curry Paste  
-- 250ml water (or chicken stock for richness)  
+- 2 to 3 Tablespoons Yutaka Japanese Style Katsu Curry Paste  
+- 250ml Water or Chicken Stock  
 
 ### To Serve
-- Steamed rice  
-- Pickled veg or shredded cabbage (optional)  
-- Spring onions or sesame seeds for garnish  
+- Steamed Rice  
+- Pickled Vegetables or Shredded Cabbage (Optional)  
+- Spring Onions or Sesame Seeds, To Garnish
 
 ## Instructions
 
-### 1. Prepare the Chicken
+### 1. Prepare the chicken  
+Place the chicken breasts between sheets of cling film and gently flatten with a rolling pin. Season both sides with salt and black pepper.  
+Set up a breading station with three shallow bowls. Place the flour in one, the beaten egg in another, and the panko crumbs in the third.  
+Dredge each piece of chicken in flour, then dip in egg, then coat in panko until fully covered.
 
-1. Flatten chicken breasts slightly with a rolling pin or under cling film.
-2. Season with salt and pepper.
-3. Dredge each piece in flour, then egg, then panko breadcrumbs until well coated.
+### 2. Fry the chicken  
+Heat 1 to 2 centimeters of oil in a wide frying pan over medium heat. When the oil is hot enough to sizzle a breadcrumb, add the chicken.  
+Cook for 3 to 4 minutes per side until golden brown and cooked through.  
+Transfer to kitchen paper to drain and rest before slicing.
 
-### 2. Cook the Chicken
+### 3. Make the sauce  
+In a small saucepan, stir the curry paste into the water or stock.  
+Bring to a simmer and cook for a few minutes until the sauce thickens and becomes smooth. Stir occasionally to prevent sticking.
 
-1. Heat 1–2cm oil in a large pan over medium-high heat.
-2. Fry the chicken for 3–4 minutes per side until golden and cooked through.
-3. Drain on kitchen paper and rest before slicing.
-
-### 3. Make the Sauce
-
-1. In a small pan, mix katsu paste with water or stock.
-2. Bring to a simmer and stir until smooth and slightly thickened.
-
-### 4. Assemble
-
-1. Slice chicken and serve over steamed rice.
-2. Spoon curry sauce over the top.
-3. Garnish with spring onions, sesame seeds, or shredded cabbage.
+### 4. Assemble the dish  
+Slice the rested chicken into strips. Serve over steamed rice, then pour the warm curry sauce generously over the top.  
+Finish with spring onions, sesame seeds, or shredded cabbage for a fresh crunch.
 
 ## Tips
 
-- Swap chicken for tofu or sweet potato for a veggie version.  
-- Serve with Japanese pickles or a side salad for crunch.  
-- Leftover sauce? Freeze it—it keeps beautifully.
+- For a vegetarian version, swap the chicken for firm tofu or roasted sweet potato slices  
+- Add Japanese pickles or a simple slaw on the side to balance the richness  
+- Leftover curry sauce keeps well in the fridge or freezer for a speedy lunch
 
 ## Goes Great With
 
-- Steamed jasmine or sticky rice  
-- Crunchy slaw with sesame dressing  
-- A cold drink and a quiet Friday night
+- Fluffy jasmine or sticky rice  
+- A cold beer or iced green tea  
+- Weeknights that need a bit of gold and crunch
+
+---
+
+> **It’s comfort food with a crisp edge. Simple, golden, and just the right amount of messy.**

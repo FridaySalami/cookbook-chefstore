@@ -20,38 +20,59 @@ relatedProducts:
 
 ## Why You'll Love This
 
-Rich coffee. Soft sponge. Cool, whipped mascarpone.  
-This is tiramisu stripped back to what matters—flavour, texture, and that last spoonful you always wish was bigger. And with no raw egg, it keeps cleaner and lasts longer.
+It’s everything you want from a tiramisu, but simpler.  
+No eggs, no fuss just layers of cool mascarpone cream and coffee soaked sponge, dusted in cocoa like a secret.  
+The kind of dessert that makes you pause between bites. The kind you eat slowly, even if you didn’t plan to.
 
 ## Ingredients
 
-- 250g mascarpone  
-- 300ml double cream  
-- 75g icing sugar  
-- 1 tsp vanilla extract  
-- 250ml strong brewed coffee, cooled  
-- 2 tbsp coffee liqueur (optional)  
+- 250g Mascarpone  
+- 300ml Double Cream  
+- 75g Icing Sugar  
+- 1 Tsp Vanilla Extract  
+- 250ml Strong Brewed Coffee, Cooled  
+- 2 Tbsp Coffee Liqueur (Optional)  
 - 200g Savoiardi Balocco Sponge Fingers  
-- Cocoa powder, for dusting  
+- Cocoa Powder, For Dusting
 
 ## Instructions
 
-1. In a large bowl, whisk mascarpone, cream, icing sugar, and vanilla until thick and smooth.
-2. In a shallow dish, combine coffee and liqueur (if using).
-3. Dip each Savoiardi briefly in the coffee mix—just enough to soak the outside but not go soggy.
-4. Layer soaked fingers into a dish, breaking to fit as needed.
-5. Spread half the mascarpone cream over the top. Repeat with a second layer of dipped fingers and finish with remaining cream.
-6. Chill for at least 4 hours, ideally overnight.
-7. Dust generously with cocoa powder just before serving.
+1. **Make the cream.**  
+   In a large bowl, whisk together the mascarpone, double cream, icing sugar, and vanilla extract.  
+   You’re aiming for soft peaks, thick and smooth enough to spread, but still gentle.
+
+2. **Mix the coffee soak.**  
+   In a shallow dish, combine the cooled coffee with the liqueur if you’re using it.  
+   Keep it close, you’ll need to move quickly when dipping.
+
+3. **Start layering.**  
+   Dip each sponge finger into the coffee mixture just for a second—enough to darken, not to collapse.  
+   Lay them snug in the base of a serving dish, breaking a few if you need to fill the gaps.
+
+4. **Add cream and repeat.**  
+   Spoon over half the mascarpone cream and smooth it out. Add another layer of dipped sponge fingers. Finish with the rest of the cream, spreading gently to the edges.
+
+5. **Chill.**  
+   Cover and refrigerate for at least 4 hours overnight is even better.  
+   This rest allows the layers to meld and the texture to settle into silk.
+
+6. **Dust and serve.**  
+   Just before serving, sift a thick blanket of cocoa powder over the top.  
+   Serve chilled, with spoons and silence.
+
 
 ## Tips
 
-- Add grated dark chocolate between layers for texture.  
-- Make it in individual glasses for easy plating.  
-- Use decaf coffee if serving to kids.
+- Grate dark chocolate between layers for texture and a little bitter contrast.  
+- Make it in individual glasses for clean plating (and easier fridge storage).  
+- Use decaf coffee if little ones are joining in or if it’s a late-night bite.
 
 ## Goes Great With
 
-- A shot of espresso or amaretto  
-- After-dinner silence  
-- That one last spoon when no one’s looking
+- A hot espresso or splash of amaretto  
+- A quiet night in and low lighting  
+- That last bite you eat slower than all the rest
+
+---
+
+> **A dish that’s soft without being shy. The kind you don’t rush. The kind you remember.**

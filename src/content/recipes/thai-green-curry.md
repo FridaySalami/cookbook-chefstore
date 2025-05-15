@@ -16,33 +16,53 @@ relatedProducts:
    featured: true
 ---
 
+## Why You'll Love This
+
+This curry is a fast track to a full heart and a warm kitchen.  
+It’s the weeknight hero you barely have to think about, but still feels like something special. That first hiss of curry paste hitting the pan? That’s the kind of smell that travels to your neighbours, your memories, and somewhere deep behind your eyes where comfort lives.
+
+The sauce is creamy and sharp all at once. Coconut softens the edges. Basil brightens the corners. The veg stays snappy. And the whole thing is ready before you even finish the rice.
+
+Best part? You don’t need to follow it too tight. It’s one of those recipes that forgives. That lets you swap, riff, skip, or jazz it up depending on what’s knocking about in the fridge. You don’t make it once. You make it part of the week.
+
 ## Ingredients
 
-- 2 tablespoons vegetable oil
-- 3 tablespoons Thai green curry paste
-- 500g chicken breast, diced
-- 400ml coconut milk
-- 1 tablespoon fish sauce
-- 1 teaspoon sugar
-- 100g baby corn
-- 100g sugar snap peas
-- Fresh Thai basil or coriander to garnish
-- Steamed jasmine rice to serve
+- 2 Tablespoons Vegetable Oil  
+- 3 Tablespoons Thai Green Curry Paste  
+- 500 Grams Chicken Breast  
+- 400 Millilitres Coconut Milk  
+- 1 Tablespoon Fish Sauce  
+- 1 Teaspoon Sugar  
+- 100 Grams Baby Corn  
+- 100 Grams Sugar Snap Peas  
+- Thai Basil or Coriander, to garnish  
+- Steamed Jasmine Rice, to serve  
 
 ## Instructions
 
-1. Heat a splash of oil in a deep pan or wok. Add the curry paste and let it sizzle for 1–2 minutes until your kitchen smells like a Thai street stall.
-2. Toss in the diced chicken and cook until it starts to brown at the edges.
-3. Pour in the coconut milk, stir gently, then add the fish sauce and sugar. Simmer for 10 minutes.
-4. Add baby corn and sugar snap peas. Simmer for another 5 minutes, just until the veg is tender and bright.
-5. Taste and adjust—maybe a splash more fish sauce, a pinch of sugar, or a squeeze of lime if you're feelin' zesty.
-6. Serve hot over jasmine rice and top with fresh basil or coriander. Close your eyes and listen for tuk-tuks.
+**Start the base.**  
+Heat the vegetable oil in a deep pan or wok over medium heat. Add the green curry paste and let it fry for 1 to 2 minutes. Stir gently but don’t rush you want the paste to bloom, to wake up, to send out that unmistakable Thai aroma. The kitchen should smell bold and bright.
+
+**Cook the chicken.**  
+Dice the chicken breast into bite-sized chunks and add it to the pan. Stir to coat it in the fragrant paste. Let it cook for a few minutes until the outside takes on a little colour and starts to firm up.
+
+**Add the coconut milk.**  
+Pour in the coconut milk and stir until everything is well mixed. Drop in the fish sauce and sugar. Let it simmer gently for about 10 minutes. The chicken should cook through, and the sauce should thicken slightly, taking on a silky texture.
+
+**Toss in the vegetables.**  
+Add the baby corn and sugar snap peas to the sauce. Simmer for another 5 minutes or so. You want the vegetables to stay bright and slightly crisp, not soggy. Keep the heat gentle.
+
+**Balance the flavours.**  
+Taste the sauce. Add a splash more fish sauce if it needs salt, a pinch of sugar for sweetness, or even a squeeze of lime if you’re craving something zesty. The balance is yours to strike.
+
+**Serve it up.**  
+Spoon the curry over warm jasmine rice and finish with a handful of fresh Thai basil or coriander. Serve hot, and if you close your eyes, you might just hear the rattle of a tuk-tuk and the hum of night markets.
 
 ## Tips
 
-- Want it hotter? Add a chopped green chili to the pan with the chicken.
-- Out of chicken? Prawns, tofu, or aubergine work great.
-- Leftover curry paste? Freeze it in an ice cube tray for next time.
+- Want it hotter? Add a chopped green chili to the pan with the chicken.  
+- Out of chicken? Prawns, tofu, or aubergine work beautifully.  
+- Got leftover curry paste? Freeze it in ice cube trays so you’re halfway there next time.
 
 ## Goes Great With
 

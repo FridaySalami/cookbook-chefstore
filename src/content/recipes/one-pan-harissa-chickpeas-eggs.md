@@ -19,44 +19,59 @@ relatedProducts:
 
 ## Why You'll Love This
 
-This is the kinda dish that shows up with no fuss and still steals the show.  
-The sauce? Deep and smoky with that floral heat from the rose harissa.  
-The chickpeas? Creamy but bold.  
-And the eggs? Well, they just float in there like they belong—because they do.
+This is a meal that doesn’t ask for much, but gives you everything.  
+It starts with a simple sizzle onions softening in oil, cumin warming the air, garlic turning sweet on the heat.  
+Then comes the rose harissa. It hits the pan and blooms into something deep and floral and just the right kind of spicy.
+
+The chickpeas soak up that sauce like they were made for it. The tomatoes simmer into something thick and soulful.  
+And the eggs? They sit like quiet passengers until the heat sets their whites and leaves their yolks soft and golden, ready to run through the dish.
+
+It’s comfort without heaviness. Spice without drama.  
+One pan, no stress, just a spoon, some bread, and the kind of food that feels like home even if you’ve never had it before.
 
 ## Ingredients
 
-- 1 tbsp olive oil  
-- 1 small onion, finely chopped  
-- 2 garlic cloves, minced  
-- 1 tsp ground cumin  
-- 2 tbsp Belazu Rose Harissa  
-- 400g tinned chopped tomatoes (or passata)  
-- 400–500g Riverdene tinned chickpeas (drained)  
-- Salt & pepper to taste  
-- 3–4 eggs  
-- Fresh parsley or coriander, for garnish  
-- Crusty bread or flatbreads, to serve  
+- 1 Tablespoon Olive Oil  
+- 1 Small Onion  
+- 2 Garlic Cloves  
+- 1 Teaspoon Ground Cumin  
+- 2 Tablespoons Rose Harissa  
+- 400g Chopped Tomatoes or Passata  
+- 400 to 500g Tinned Chickpeas  
+- Salt  
+- Black Pepper  
+- 3 to 4 Eggs  
+- Fresh Parsley or Coriander  
+- Bread for Serving  
 
 ## Instructions
 
-1. Heat olive oil in a large skillet or pan over medium heat.
-2. Add onion and cook for 5–6 minutes until soft and golden. Stir in garlic and cumin; cook 1 minute.
-3. Stir in the rose harissa and cook for another minute until fragrant.
-4. Pour in the chopped tomatoes, chickpeas, and a splash of water if needed. Season well with salt and pepper.
-5. Simmer for 10 minutes, stirring occasionally, until thickened.
-6. Make small wells in the sauce and crack in the eggs.
-7. Cover the pan with a lid or foil and cook for 5–7 minutes until the egg whites are set but yolks are still soft.
-8. Sprinkle with chopped herbs and serve hot with warm bread.
+1. **Begin the base**  
+   Heat the olive oil in a large skillet over medium heat. Add the onion and cook for 5 to 6 minutes until it’s soft, golden at the edges, and smelling sweet.
+
+2. **Add aromatics**  
+   Stir in the garlic and cumin. Cook for 1 minute, just enough to take the raw edge off the garlic and wake up the spice.
+
+3. **Build the flavour**  
+   Add the rose harissa and cook for another minute, stirring gently. It should darken slightly and smell full and fragrant.
+
+4. **Simmer the stew**  
+   Pour in the tomatoes and chickpeas. If the sauce feels thick, add a small splash of water. Season with salt and pepper. Let everything simmer gently for 10 minutes, stirring every so often, until the sauce thickens and tastes rich.
+
+5. **Add the eggs**  
+   Make little dips in the sauce and crack in the eggs. Cover the pan with a lid or foil and let it cook for 5 to 7 minutes, or until the whites are set but the yolks are still soft. Check gently by touching the whites near the yolk with a spoon.
+
+6. **Finish and serve**  
+   Sprinkle over chopped parsley or coriander. Serve straight from the pan with warm bread for scooping.
 
 ## Tips
 
-- Add spinach or kale for a leafy boost.  
-- Want it creamier? Swirl in a spoon of Greek yoghurt before serving.  
-- Make it vegan by skipping the eggs and topping with crispy tofu or avocado.
+- Add a handful of spinach or kale before the eggs go in for extra greens.  
+- For a creamy finish, swirl in a spoonful of yoghurt right at the end.  
+- Make it vegan by skipping the eggs and topping with avocado slices or pan-fried tofu.
 
 ## Goes Great With
 
-- Toasted sourdough or garlic flatbreads  
-- A dollop of yoghurt or labneh  
-- Cold mornings, warm company
+- Toasted sourdough, garlic flatbread, or naan  
+- A spoon of labneh or plain yoghurt on the side  
+- A slow morning or a quick dinner that needs soul

@@ -21,41 +21,53 @@ relatedProducts:
 
 ## Why You'll Love This
 
-Roasted veg is already good. But slather it with a sweet-salty **miso glaze**?  
-Now you're talkin' about somethin’ that could steal the whole table.  
-Earthy, savory, just a little sweet—this dish brings the kind of flavor that feels deep down *earned*.
+There’s roasted veg, and then there’s *this* crisp-edged, golden, and dressed in a glaze so packed with umami it practically hums.
 
-Perfect next to a roast chicken, a grilled steak, or just a big ol' bowl of rice.
+The miso brings salt and depth, the maple syrup a touch of sweetness, the soy and vinegar balance everything with bite.  
+It’s simple, but feels like something from a little restaurant where the menu’s handwritten and every dish means something.
+
+This recipe is more than a side it’s that dish everyone asks about when the plates come out.  
+Something familiar made just a little better.  
+Savory and sweet, charred in the right places, finished with herbs and sesame seeds that pop in your teeth like little thank-yous.
 
 ## Ingredients
 
-- 500g mixed vegetables (carrots, parsnips, sweet potato, cauliflower)  
-- 2 tablespoons [Hikari Shinshu Awase Brown Miso Paste](https://www.thechefstoreuk.com/products/hikari-shinshu-awase-brown-miso-paste-1kg)  
-- 2 tablespoons olive oil  
-- 1 tablespoon maple syrup (or honey)  
-- 1 tablespoon soy sauce  
-- 1 teaspoon rice vinegar or lemon juice  
-- 1/2 teaspoon sesame oil (optional)  
-- Toasted sesame seeds, for garnish  
-- Fresh coriander or parsley, for garnish  
+- 500g Mixed Vegetables (Carrots, Parsnips, Sweet Potato, Cauliflower)  
+- 2 Tablespoons Miso Paste  
+- 2 Tablespoons Olive Oil  
+- 1 Tablespoon Maple Syrup (or Honey)  
+- 1 Tablespoon Soy Sauce  
+- 1 Teaspoon Rice Vinegar or Lemon Juice  
+- 1/2 Teaspoon Sesame Oil (Optional)  
+- Sesame Seeds  
+- Fresh Coriander or Parsley  
 
 ## Instructions
 
-1. Preheat your oven to 200°C (400°F).
-2. Cut vegetables into bite-sized pieces and spread on a large baking tray.
-3. In a small bowl, whisk together the miso paste, olive oil, maple syrup, soy sauce, rice vinegar, and sesame oil.
-4. Pour the glaze over the veggies and toss well to coat evenly.
-5. Roast for 20–25 minutes, tossing halfway, until tender and caramelized at the edges.
-6. Sprinkle with sesame seeds and fresh herbs before serving.
+1. **Preheat and prepare**  
+   Heat your oven to 200°C. Cut the vegetables into bite sized pieces and scatter them across a large roasting tray. Keep the sizes fairly even so everything cooks at the same pace.
+
+2. **Mix the glaze**  
+   In a small bowl, whisk together the miso paste, olive oil, maple syrup, soy sauce, rice vinegar, and sesame oil if using. It should be thick enough to cling, thin enough to coat.
+
+3. **Dress the veg**  
+   Pour the glaze over the vegetables and toss thoroughly until every piece is coated. Use your hands or a spatula—just make sure the glaze finds every edge.
+
+4. **Roast to perfection**  
+   Place the tray in the oven and roast for 20 to 25 minutes. About halfway through, give the vegetables a good turn with a spatula. You want crisp edges and caramelised bits where the glaze meets heat.
+
+5. **Finish and serve**  
+   Once the veg is tender and golden, remove from the oven. Sprinkle with sesame seeds and chopped herbs just before serving.
 
 ## Tips
 
-- Want deeper flavor? Add a spoonful of chili paste or a splash of mirin to the glaze.
-- Works great with aubergine, broccoli, and mushrooms too.
-- Leftovers make an incredible filling for wraps or grain bowls.
+- Add a teaspoon of chili paste to the glaze if you want heat to balance the sweetness.  
+- Don’t overcrowd the tray if the veg are piled too high, they’ll steam instead of roast.  
+- This glaze works beautifully on aubergine, mushrooms, or halved Brussels sprouts.  
+- Leftovers? Tuck them into wraps, grain bowls, or even fold through cooked noodles.
 
 ## Goes Great With
 
-- Grilled salmon or tofu  
-- Steamed jasmine rice  
-- Cold soba noodle salad
+- Grilled salmon or crispy tofu  
+- Steamed jasmine or brown rice  
+- A soba salad with pickled veg and lime dressing  

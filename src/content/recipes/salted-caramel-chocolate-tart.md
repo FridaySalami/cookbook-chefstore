@@ -19,40 +19,48 @@ relatedProducts:
 
 ## Why You'll Love This
 
-Imagine sinking your fork into a crisp, buttery base...  
-Then hitting that *golden river* of caramel...  
-And finally breaking through the dark, glossy chocolate top, with just a whisper of sea salt to keep it honest.
+This tart is a quiet showstopper.  
+It starts with a base that crumbles just so when your fork presses down, buttery and grounding. Then comes the soft amber caramel smooth, deep, and just sweet enough. On top, a dark chocolate ganache that breaks with a gentle snap before melting on your tongue.
 
-Yeah.  
-This tart isn’t just dessert—it’s a **moment.**
+It’s sweet but not childish. Elegant but easy.  
+The sea salt whispers through it all, making sure each bite is rich without being heavy.
+
+This isn’t just dessert. It’s a pause in the evening. A reason to sit down. A reward, perhaps, for finishing a long week or simply for remembering to keep good chocolate in the cupboard.
 
 ## Ingredients
 
-- 200g digestive biscuits, crushed  
-- 100g unsalted butter, melted  
-- 300g [Callebaut Caramel Filling](https://www.thechefstoreuk.com/products/callebaut-caramel-filling-5kg)  
-- 150g dark chocolate (70% cocoa), chopped  
-- 100ml double cream  
-- Flaky sea salt, for sprinkling  
+- 200g Digestive Biscuits  
+- 100g Unsalted Butter  
+- 300g Caramel Filling  
+- 150g Dark Chocolate (70 Percent Cocoa)  
+- 100ml Double Cream  
+- Flaky Sea Salt  
 
 ## Instructions
 
-1. Mix crushed biscuits with melted butter and press into the base of a 9-inch tart tin. Chill for 10 minutes.
-2. Warm the Callebaut caramel gently in a saucepan or microwave until just pourable.
-3. Pour caramel over the biscuit base. Chill for 20 minutes until slightly set.
-4. Heat the double cream until just simmering. Remove from heat and stir in the chopped chocolate until smooth.
-5. Pour the chocolate ganache over the caramel layer and smooth the top.
-6. Chill the tart for at least 2 hours, or until fully set.
-7. Sprinkle with flaky sea salt before serving.
+1. **Make the base**  
+   Crush the biscuits to a fine crumb. Mix with the melted butter until evenly coated. Press into the base of a 9-inch tart tin, smoothing the surface with the back of a spoon. Chill in the fridge for 10 minutes to firm up.
+
+2. **Prepare the caramel layer**  
+   Gently warm the caramel in a saucepan or microwave until it becomes pourable. Pour over the chilled biscuit base and spread evenly. Return to the fridge and chill for 20 minutes, or until slightly set.
+
+3. **Make the ganache**  
+   Heat the double cream in a small pan until it just begins to simmer. Remove from the heat and add the chopped chocolate. Let it sit for 1 minute, then stir slowly until smooth and glossy.
+
+4. **Assemble the tart**  
+   Pour the ganache over the caramel layer. Tilt the tin gently to spread it into an even layer. Chill the tart in the fridge for at least 2 hours, or until fully set.
+
+5. **Finish and serve**  
+   Just before serving, sprinkle the top with flaky sea salt. Slice with a warm knife for clean edges.
 
 ## Tips
 
-- No tart tin? Use a springform cake tin and just slice carefully.
-- Add a pinch of sea salt straight into the caramel if you love that sweet-salty punch.
-- Want it boozy? Stir a splash of whiskey into the chocolate ganache.
+- Press the biscuit base up the sides of the tin for a crisper crust-to-filling ratio.  
+- Stir a pinch of salt directly into the caramel if you like it more savoury.  
+- Add a splash of whisky or rum to the ganache for a grown up twist.
 
 ## Goes Great With
 
-- Strong coffee or espresso  
-- A dollop of whipped cream  
-- Quiet late nights when you need a little extra sweetness
+- A shot of espresso or strong brewed coffee  
+- A dollop of unsweetened whipped cream  
+- The kind of night that calls for something a little extra

@@ -22,36 +22,52 @@ relatedProducts:
 
 ## Why You'll Love This
 
-Sticky. Buttery. Fruity.  
-This is the kind of bake that sticks to your fingers and your memory. A proper teatime traybake with oats, sweet fruit, and a golden syrup glaze that caramelises just right.
+These are the kind of bakes that feel like home.  
+Sticky and sweet from golden syrup, with bursts of fruit in every bite. They’re chewy where it counts, golden around the edges, and just the right kind of nostalgic.  
+Perfect with a hot cuppa or tucked into a lunchbox for later. And maybe even better the next day—if they last that long.
 
 ## Ingredients
 
-- 250g porridge oats  
-- 125g unsalted butter  
+- 250g Porridge Oats  
+- 125g Unsalted Butter  
 - 125g Tate & Lyle Squeezy Golden Syrup  
 - 100g Buchanan Sultanas  
-- 75g Glace Cherries, halved  
-- 50g light brown sugar  
-- Pinch of salt  
+- 75g Glace Cherries, Halved  
+- 50g Light Brown Sugar  
+- Pinch of Salt
 
 ## Instructions
 
-1. Preheat oven to 160°C (fan). Line a 20cm square baking tin with parchment.
-2. In a saucepan over low heat, melt the butter, golden syrup, and sugar until smooth.
-3. Stir in the oats, salt, sultanas, and cherries until everything is coated.
-4. Press mixture firmly into the tin and smooth the top.
-5. Bake for 22–25 minutes until golden at the edges.
-6. Cool completely in the tin, then cut into bars or squares.
+1. **Preheat and prep**  
+   Preheat the oven to 160°C fan. Line a 20cm square baking tin with parchment paper.
+
+2. **Melt the base**  
+   In a saucepan over low heat, melt the butter, golden syrup, and sugar together. Stir gently until smooth and combined.
+
+3. **Mix in the dry ingredients**  
+   Remove from the heat. Stir in the oats, salt, sultanas, and cherries. Mix until all the oats are glossy and the fruit is evenly distributed.
+
+4. **Fill the tin**  
+   Spoon the mixture into the lined tin. Press it down firmly with the back of a spoon to level and compact the surface.
+
+5. **Bake**  
+   Bake for 22 to 25 minutes until golden around the edges and lightly set in the centre.
+
+6. **Cool and slice**  
+   Let the flapjacks cool completely in the tin. Once firm, lift out and cut into bars or squares.
 
 ## Tips
 
-- Add chopped apricots, mixed peel, or seeds for extra texture.  
-- For extra chewy texture, slightly underbake and let firm up as it cools.  
-- Store airtight for up to a week—or freeze in slices.
+- Add dried apricots, cranberries, or mixed seeds for more texture  
+- For chewier flapjacks, bake for the shorter time and cool fully before slicing  
+- Store in an airtight container for up to a week, or freeze in portions for grab-and-go snacking
 
 ## Goes Great With
 
-- A strong cup of tea  
-- Packed lunches or hiking snacks  
-- A drizzle of dark chocolate (optional but excellent)
+- A Mug of Strong Tea or Fresh Coffee  
+- Packed Lunches or Picnic Hampers  
+- A Light Drizzle of Melted Dark Chocolate on Top (Highly Recommended)
+
+---
+
+> **Not fancy. Just right. Sweet, chewy, and ready when you are.**
