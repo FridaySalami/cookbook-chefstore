@@ -123,10 +123,15 @@ function parseInstructions(content) {
   const match = content.match(instructionsRegex);
   if (!match || !match[1]) return [];
   const steps = match[1].split(/\n\d+\.\s*/).map((line) => line.trim()).filter(Boolean);
-  return steps.map((step) => ({
-    "@type": "HowToStep",
-    text: step
-  }));
+  return steps.map((step, index) => {
+    const boldMatch = step.match(/\*\*(.*?)\*\*/);
+    const name = boldMatch ? boldMatch[1] : `Step ${index + 1}`;
+    return {
+      "@type": "HowToStep",
+      name,
+      text: step
+    };
+  });
 }
 export {
   load

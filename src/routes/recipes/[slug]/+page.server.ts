@@ -149,7 +149,7 @@ function parseIngredients(content: string): string[] {
 /**
  * Parse instructions from markdown content
  */
-function parseInstructions(content: string): { '@type': 'HowToStep', text: string }[] {
+function parseInstructions(content: string): { '@type': 'HowToStep', name: string, text: string }[] {
   // Find content between "## Instructions" and the next heading
   const instructionsRegex = /## Instructions\s+([\s\S]*?)(?=##|$)/;
   const match = content.match(instructionsRegex);
@@ -162,9 +162,14 @@ function parseInstructions(content: string): { '@type': 'HowToStep', text: strin
     .map(line => line.trim())
     .filter(Boolean);
 
-  // Format as HowToStep objects
-  return steps.map(step => ({
-    '@type': 'HowToStep',
-    text: step
-  }));
+  // Format as HowToStep objects with name extracted from bold section
+  return steps.map((step, index) => {
+    const boldMatch = step.match(/\*\*(.*?)\*\*/);
+    const name = boldMatch ? boldMatch[1] : `Step ${index + 1}`;
+    return {
+      '@type': 'HowToStep',
+      name,
+      text: step
+    };
+  });
 }
