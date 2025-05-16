@@ -20,14 +20,12 @@
 	<link rel="icon" type="image/png" href="/favicon.png" sizes="64x64" />
 
 	<script type="application/ld+json">
-		{`
-		  {
-		    "@context": "https://schema.org",
-		    "@type": "WebSite",
-		    "name": "Chefstore Cookbook",
-		    "url": "https://www.chefstorecookbook.com/"
-		  }
-		`}
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "Chefstore Cookbook",
+			"url": "https://www.chefstorecookbook.com/"
+		}
 	</script>
 </svelte:head>
 

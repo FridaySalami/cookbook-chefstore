@@ -574,14 +574,12 @@ function _layout($$payload, $$props) {
   head($$payload, ($$payload2) => {
     $$payload2.title = `<title>Chefstore Cookbook</title>`;
     $$payload2.out += `<meta name="description" content="Delicious recipes from the Chefstore team."> <meta property="og:type" content="website"> <meta property="og:site_name" content="Chefstore Cookbook"> <meta property="og:image" content="/default-og-image.png"> <meta name="twitter:card" content="summary_large_image"> <link rel="icon" type="image/png" href="/favicon.png" sizes="64x64"> <script type="application/ld+json">
-		{\`
-		  {
-		    "@context": "https://schema.org",
-		    "@type": "WebSite",
-		    "name": "Chefstore Cookbook",
-		    "url": "https://www.chefstorecookbook.com/"
-		  }
-		\`}
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "Chefstore Cookbook",
+			"url": "https://www.chefstorecookbook.com/"
+		}
 	<\/script>`;
   });
   Mode_watcher($$payload, {});
