@@ -16,6 +16,19 @@
 	<meta property="og:image" content="/default-og-image.png" />
 	<!-- Ensure this image exists -->
 	<meta name="twitter:card" content="summary_large_image" />
+
+	<link rel="icon" type="image/png" href="/favicon.png" sizes="64x64" />
+
+	<script type="application/ld+json">
+		{`
+		  {
+		    "@context": "https://schema.org",
+		    "@type": "WebSite",
+		    "name": "Chefstore Cookbook",
+		    "url": "https://www.chefstorecookbook.com/"
+		  }
+		`}
+	</script>
 </svelte:head>
 
 <ModeWatcher />
