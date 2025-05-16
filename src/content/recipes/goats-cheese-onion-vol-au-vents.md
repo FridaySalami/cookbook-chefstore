@@ -3,7 +3,7 @@ title: Goat’s Cheese & Caramelised Onion Vol-au-Vents
 slug: goats-cheese-onion-vol-au-vents
 description: Buttery puff pastry cases filled with sweet caramelised onions, creamy goat’s cheese, and a sprinkle of thyme. A perfect starter or elegant party bite.
 date: 2025-05-12
-featured: true
+featured: false
 image: /images/recipes/category-name/recipe-name/goats-cheese-onion-vol-au-vents.webp
 prepTime: 10
 cookTime: 15

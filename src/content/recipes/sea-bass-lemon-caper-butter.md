@@ -3,6 +3,7 @@ title: Pan-Fried Sea Bass with Lemon Caper Butter
 slug: sea-bass-lemon-caper-butter
 description: Crispy-skinned sea bass fillets served with a quick lemon caper butter sauce—bright, buttery, and full of bold flavour.
 date: 2025-05-13
+featured: false
 image: /images/recipes/category-name/recipe-name/sea-bass-lemon-caper-butter.webp
 prepTime: 10
 cookTime: 10

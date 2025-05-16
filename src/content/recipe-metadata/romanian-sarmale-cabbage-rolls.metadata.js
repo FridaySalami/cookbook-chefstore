@@ -3,7 +3,7 @@ export const metadata = {
   "slug": "romanian-sarmale-cabbage-rolls",
   "description": "These traditional Romanian cabbage rolls are slow-cooked in tomato broth, stuffed with pork, rice, and herbs—wrapped in sauerkraut leaves and steeped in comfort.",
   "date": "2025-05-14T00:00:00.000Z",
-  "featured": true,
+  "featured": false,
   "image": "/images/recipes/category-name/recipe-name/romanian-sarmale-cabbage-rolls.webp",
   "prepTime": 45,
   "cookTime": 180,

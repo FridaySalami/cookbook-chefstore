@@ -3,7 +3,7 @@ title: Sticky Toffee Pudding
 slug: sticky-toffee-pudding
 description: A warm, rich, and utterly comforting British classic—made with plump pitted dates and smothered in a buttery toffee sauce. Best served steaming with cream.
 date: 2025-05-14
-featured: true
+featured: false
 image: /images/recipes/category-name/recipe-name/sticky-toffee-pudding.webp
 prepTime: 20
 cookTime: 40

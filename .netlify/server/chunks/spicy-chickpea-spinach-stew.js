@@ -5,7 +5,7 @@ const metadata = {
   "slug": "spicy-chickpea-spinach-stew",
   "description": "A bold, warming stew packed with chickpeas, tomatoes, and spinach. Spiced with chilli and garlic, finished with herbs or a swirl of coconut cream.",
   "date": "2025-05-12T00:00:00.000Z",
-  "featured": true,
+  "featured": false,
   "image": "/images/recipes/category-name/recipe-name/spicy-chickpea-spinach-stew.webp",
   "prepTime": 10,
   "cookTime": 30,

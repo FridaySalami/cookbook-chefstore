@@ -3,7 +3,7 @@ title: Balsamic Honey Glazed Sausages with Roasted Grapes & Shallots
 slug: balsamic-honey-sausages-grapes
 description: Juicy sausages roasted in a sticky balsamic-honey glaze, nestled among jammy grapes and golden shallots. Sweet, savoury, and perfect for tearing bread and dunking into the syrupy tray juices.
 date: 2025-05-14
-featured: true
+featured: false
 image: /images/recipes/category-name/recipe-name/balsamic-honey-sausages-grapes.webp
 prepTime: 10
 cookTime: 35

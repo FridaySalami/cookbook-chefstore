@@ -3,7 +3,7 @@ title: Fruity Flapjacks with Cherries & Sultanas
 slug: fruity-flapjacks-cherries-sultanas
 description: Chewy golden oat bars packed with glace cherries and sultanas. Sticky, sweet, and perfect with a cup of tea or packed in a lunchbox.
 date: 2025-05-13
-featured: true
+featured: false
 image: /images/recipes/category-name/recipe-name/fruity-flapjacks-cherries-sultanas.webp
 prepTime: 10
 cookTime: 25

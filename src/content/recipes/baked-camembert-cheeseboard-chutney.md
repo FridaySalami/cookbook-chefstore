@@ -3,7 +3,7 @@ title: Baked Camembert with Bay Tree Cheeseboard Chutney
 slug: baked-camembert-cheeseboard-chutney
 description: Soft, gooey Camembert baked until molten and spoonable—topped with Bay Tree Cheeseboard Chutney and served with crusty bread for sharing.
 date: 2025-05-12
-featured: true
+featured: false
 image: /images/recipes/category-name/recipe-name/baked-camembert-cheeseboard-chutney.webp
 prepTime: 5
 cookTime: 15

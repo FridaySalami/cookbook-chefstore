@@ -3,7 +3,7 @@ export const metadata = {
   "slug": "poppadom-snack-platter",
   "description": "Turn humble uncooked popadoms into a crowd-pleasing snack board with dips, toppings, and spice. Fast, crispy, and endlessly customizable.",
   "date": "2025-04-24T00:00:00.000Z",
-  "featured": true,
+  "featured": false,
   "image": "/images/recipes/category-name/recipe-name/poppadom-snack-platter.webp",
   "prepTime": 5,
   "cookTime": 5,

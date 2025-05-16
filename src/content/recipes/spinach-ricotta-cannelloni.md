@@ -3,7 +3,7 @@ title: Baked Spinach & Ricotta Cannelloni
 slug: spinach-ricotta-cannelloni
 description: Tender cannelloni tubes filled with creamy spinach and ricotta, smothered in rich tomato sauce, and baked until bubbling and golden.
 date: 2025-05-13
-featured: true
+featured: false
 image: /images/recipes/category-name/recipe-name/spinach-ricotta-cannelloni.webp
 prepTime: 25
 cookTime: 35

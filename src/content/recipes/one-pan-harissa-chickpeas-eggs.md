@@ -3,7 +3,7 @@ title: One-Pan Harissa Chickpeas with Eggs
 slug: one-pan-harissa-chickpeas-eggs
 description: A rich, spiced tomato and harissa chickpea stew finished with soft eggs and fresh herbs. Perfect for brunch, lunch, or mopping up with warm bread.
 date: 2025-05-12
-featured: true
+featured: false
 image: /images/recipes/category-name/recipe-name/one-pan-harissa-chickpeas-eggs.webp
 prepTime: 10
 cookTime: 20

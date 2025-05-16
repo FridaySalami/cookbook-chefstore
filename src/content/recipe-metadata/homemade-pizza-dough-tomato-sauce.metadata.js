@@ -3,6 +3,7 @@ export const metadata = {
   "slug": "homemade-pizza-dough-tomato-sauce",
   "description": "Soft, chewy, golden-edged pizza dough with a rich tomato sauce base—this is your canvas for pizza night perfection.",
   "date": "2025-05-14T00:00:00.000Z",
+  "featured": false,
   "image": "/images/recipes/category-name/recipe-name/homemade-pizza-dough-tomato-sauce.webp",
   "prepTime": 20,
   "cookTime": 20,

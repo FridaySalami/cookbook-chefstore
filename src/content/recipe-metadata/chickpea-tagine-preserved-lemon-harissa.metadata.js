@@ -3,7 +3,7 @@ export const metadata = {
   "slug": "chickpea-tagine-preserved-lemon-harissa",
   "description": "Fragrant with preserved lemon, fiery with harissa, and slow-cooked till rich and comforting—this chickpea tagine is a soulful stew that tastes like it’s been passed down.",
   "date": "2025-05-14T00:00:00.000Z",
-  "featured": true,
+  "featured": false,
   "image": "/images/recipes/category-name/recipe-name/chickpea-tagine-preserved-lemon-harissa.webp",
   "prepTime": 10,
   "cookTime": 40,

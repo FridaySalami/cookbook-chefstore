@@ -3,7 +3,7 @@ title: Miso Glazed Roasted Vegetables
 slug: miso-glazed-roasted-vegetables
 description: A savory-sweet vegetable medley with a rich umami glaze—the perfect side dish that might just steal the show.
 date: 2025-04-25
-featured: true
+featured: false
 image: /images/recipes/category-name/recipe-name/miso-glazed-roasted-vegetables.webp
 prepTime: 15
 cookTime: 30

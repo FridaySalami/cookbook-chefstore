@@ -3,7 +3,7 @@ title: Crispy Sweetcorn Fritters with Chilli Jam
 slug: sweetcorn-fritters-chilli-jam
 description: Light, crispy sweetcorn fritters pan-fried to golden perfection and served with a dollop of Bay Tree Sweet Chilli Jam for dipping.
 date: 2025-05-13
-featured: true
+featured: false
 image: /images/recipes/category-name/recipe-name/sweetcorn-fritters-chilli-jam.webp
 prepTime: 10
 cookTime: 15

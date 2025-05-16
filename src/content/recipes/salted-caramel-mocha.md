@@ -3,7 +3,7 @@ title: Salted Caramel Mocha
 slug: salted-caramel-mocha
 description: A silky, café-style mocha made with rich chocolate, a kiss of salted caramel, and topped with cream for the ultimate indulgent treat—no barista required.
 date: 2025-05-14
-featured: true
+featured: false
 image: /images/recipes/category-name/recipe-name/salted-caramel-mocha.webp
 prepTime: 5
 cookTime: 5

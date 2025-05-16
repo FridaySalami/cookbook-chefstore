@@ -3,7 +3,7 @@ export const metadata = {
   "slug": "thai-green-curry",
   "description": "A fragrant, coconut-based curry with tender chunks of chicken, vibrant vegetables, and the perfect balance of heat and sweetness.",
   "date": "2025-04-23T00:00:00.000Z",
-  "featured": true,
+  "featured": false,
   "image": "/placeholder.webp",
   "prepTime": 20,
   "cookTime": 25,

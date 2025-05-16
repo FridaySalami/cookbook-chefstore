@@ -3,7 +3,7 @@ title: Sticky Banana Bread with Dark Chocolate & Walnuts
 slug: sticky-banana-bread-chocolate-walnuts
 description: A soft, sticky banana loaf studded with chunks of dark chocolate and toasted walnuts. Deep, rich flavour, perfect for slicing, toasting, or devouring straight out the tin.
 date: 2025-05-12
-featured: true
+featured: false
 image: /images/recipes/category-name/recipe-name/sticky-banana-bread-chocolate-walnuts.webp
 prepTime: 10
 cookTime: 55

@@ -3,7 +3,7 @@ export const metadata = {
   "slug": "silky-milk-chocolate-mousse",
   "description": "Light, airy mousse made with premium Callebaut milk chocolate callets—perfect for an effortless yet luxurious dessert.",
   "date": "2025-04-24T00:00:00.000Z",
-  "featured": true,
+  "featured": false,
   "image": "/images/recipes/category-name/recipe-name/silky-milk-chocolate-mousse.webp",
   "prepTime": 15,
   "cookTime": 0,

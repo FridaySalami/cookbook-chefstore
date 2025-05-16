@@ -3,7 +3,7 @@ title: Classic Tiramisu (No Eggs)
 slug: classic-tiramisu-no-eggs
 description: A layered dessert of coffee-soaked Savoiardi sponge fingers and mascarpone cream—rich, smooth, and egg-free for ease and safety.
 date: 2025-05-13
-featured: true
+featured: false
 image: /images/recipes/category-name/recipe-name/classic-tiramisu-no-eggs.webp
 prepTime: 20
 cookTime: 0

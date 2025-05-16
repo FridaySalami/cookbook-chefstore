@@ -5,7 +5,7 @@ const metadata = {
   "slug": "glace-cherry-white-chocolate-blondies",
   "description": "Fudgy, golden blondies studded with sweet glacé cherries and creamy white chocolate. A nostalgic bake with a modern twist.",
   "date": "2025-05-14T00:00:00.000Z",
-  "featured": true,
+  "featured": false,
   "image": "/images/recipes/category-name/recipe-name/glace-cherry-white-chocolate-blondies.webp",
   "prepTime": 10,
   "cookTime": 25,

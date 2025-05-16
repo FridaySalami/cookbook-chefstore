@@ -3,7 +3,7 @@ export const metadata = {
   "slug": "salted-caramel-chocolate-tart",
   "description": "A decadent tart with a buttery base, luscious Callebaut caramel filling, and rich dark chocolate topping—finished with a sprinkle of sea salt.",
   "date": "2025-04-24T00:00:00.000Z",
-  "featured": true,
+  "featured": false,
   "image": "/images/recipes/category-name/recipe-name/salted-caramel-chocolate-tart.webp",
   "prepTime": 20,
   "cookTime": 10,

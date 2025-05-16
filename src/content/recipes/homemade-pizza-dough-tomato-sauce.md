@@ -3,6 +3,7 @@ title: Homemade Pizza Dough & Tomato Sauce Base
 slug: homemade-pizza-dough-tomato-sauce
 description: Soft, chewy, golden-edged pizza dough with a rich tomato sauce base—this is your canvas for pizza night perfection.
 date: 2025-05-14
+featured: false
 image: /images/recipes/category-name/recipe-name/homemade-pizza-dough-tomato-sauce.webp
 prepTime: 20
 cookTime: 20
