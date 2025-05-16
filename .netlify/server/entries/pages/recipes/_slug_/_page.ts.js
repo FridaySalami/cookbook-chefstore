@@ -148,10 +148,22 @@ const load = async ({ params, parent }) => {
           const id = urlParts[urlParts.length - 1].split("?")[0];
           productLinks.push({ id, url });
         }
-      } else if (currentSection === "instructions" && /^\d+\.\s/.test(trimmedLine)) {
+      } else if (currentSection === "instructions" && /^\*\*.*\*\*/.test(trimmedLine)) {
+        const boldMatch = trimmedLine.match(/\*\*(.*?)\*\*/);
+        const name = boldMatch ? boldMatch[1] : `Step ${instructions.length + 1}`;
         instructions.push({
           "@type": "HowToStep",
-          text: trimmedLine.replace(/^\d+\.\s/, "").trim()
+          name,
+          text: trimmedLine
+        });
+      } else if (currentSection === "instructions" && /^\d+\.\s/.test(trimmedLine)) {
+        const stepText = trimmedLine.replace(/^\d+\.\s/, "").trim();
+        const boldMatch = stepText.match(/\*\*(.*?)\*\*/);
+        const name = boldMatch ? boldMatch[1] : `Step ${instructions.length + 1}`;
+        instructions.push({
+          "@type": "HowToStep",
+          name,
+          text: stepText
         });
       }
     }

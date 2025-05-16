@@ -32,7 +32,7 @@ interface RecipeModule {
 export interface LoadReturn {
   metadata: RecipeMetadata;
   ingredients: string[];
-  instructions: { '@type': 'HowToStep'; text: string }[];
+  instructions: { '@type': 'HowToStep'; text: string; name?: string }[];
   relatedRecipes: RecipeMetadata[];
   productLinks: Array<{ id: string, url: string }>;
   rawContent: string;
@@ -129,10 +129,24 @@ export const load: PageLoad<LoadReturn> = async ({ params, parent }) => {
           const id = urlParts[urlParts.length - 1].split('?')[0];
           productLinks.push({ id, url });
         }
-      } else if (currentSection === 'instructions' && /^\d+\.\s/.test(trimmedLine)) {
+      } else if (currentSection === 'instructions' && /^\*\*.*\*\*/.test(trimmedLine)) {
+        // Handle steps that start with bold (for unnumbered or bolded steps)
+        const boldMatch = trimmedLine.match(/\*\*(.*?)\*\*/);
+        const name = boldMatch ? boldMatch[1] : `Step ${instructions.length + 1}`;
         instructions.push({
           '@type': 'HowToStep',
-          text: trimmedLine.replace(/^\d+\.\s/, '').trim()
+          name,
+          text: trimmedLine
+        });
+      } else if (currentSection === 'instructions' && /^\d+\.\s/.test(trimmedLine)) {
+        // Numbered steps (with or without bold)
+        const stepText = trimmedLine.replace(/^\d+\.\s/, '').trim();
+        const boldMatch = stepText.match(/\*\*(.*?)\*\*/);
+        const name = boldMatch ? boldMatch[1] : `Step ${instructions.length + 1}`;
+        instructions.push({
+          '@type': 'HowToStep',
+          name,
+          text: stepText
         });
       }
     }
