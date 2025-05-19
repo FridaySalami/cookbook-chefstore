@@ -42,7 +42,7 @@ function _page($$payload, $$props) {
   const featuredRecipes = data.featuredRecipes;
   head($$payload, ($$payload2) => {
     $$payload2.title = `<title>Chefstore Cookbook - Home</title>`;
-    $$payload2.out += `<meta name="description" content="Welcome to the Chefstore Cookbook. Discover delicious recipes for every occasion.">`;
+    $$payload2.out += `<meta name="description" content="Delicious, no-fuss recipes made with real ingredients. From weeknight wonders to weekend crowd-pleasers.">`;
   });
   $$payload.out += `<main class="flex-grow py-8 lg:py-12"><section class="mb-16 text-center"><h1 class="text-foreground mb-4 font-serif text-4xl font-bold tracking-tight md:text-5xl lg:text-5xl">Real meals for real tables</h1> <p class="text-muted-foreground mx-auto mb-8 max-w-3xl text-lg md:text-xl">Simple, satisfying recipes for your everyday life.</p> <p class="text-muted-foreground mx-auto mb-8 max-w-3xl text-sm md:text-base">Browse recipes and shop ingredients straight from the kitchen.</p> `;
   Button($$payload, {

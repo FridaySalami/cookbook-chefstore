@@ -33,7 +33,7 @@
 	<title>Chefstore Cookbook - Home</title>
 	<meta
 		name="description"
-		content="Welcome to the Chefstore Cookbook. Discover delicious recipes for every occasion."
+		content="Delicious, no-fuss recipes made with real ingredients. From weeknight wonders to weekend crowd-pleasers."
 	/>
 </svelte:head>
 

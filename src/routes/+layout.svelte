@@ -8,7 +8,7 @@
 
 <svelte:head>
 	<title>Chefstore Cookbook | Simple Recipes, Real Ingredients</title>
-	<meta name="description" content="Delicious recipes from the Chefstore team." />
+	<!-- <meta name="description" content="Delicious recipes from the Chefstore team." /> -->
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
