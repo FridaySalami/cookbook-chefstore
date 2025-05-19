@@ -1939,7 +1939,7 @@ function ShadcnRecipeSearch($$payload, $$props) {
         $$payload2.out += `<li>`;
         Button($$payload2, {
           variant: "ghost",
-          class: "h-auto w-full justify-start px-2 py-1.5 text-sm font-normal",
+          class: "h-auto w-full justify-start px-2 py-1.5 text-sm font-normal hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300",
           style: "text-align:left;",
           onmousedown: () => selectRecipe(recipe),
           children: ($$payload3) => {
@@ -1965,9 +1965,9 @@ function ShadcnRecipeSearch($$payload, $$props) {
 }
 function _layout($$payload, $$props) {
   push();
-  let { children } = $$props;
   let allRecipes = [];
   let showSearch = false;
+  let { children } = $$props;
   let $$settled = true;
   let $$inner_payload;
   function $$render_inner($$payload2) {
@@ -1988,63 +1988,72 @@ function _layout($$payload, $$props) {
 	<\/script>`;
     });
     Mode_watcher($$payload2, {});
-    $$payload2.out += `<!----> <div class="flex min-h-screen flex-col font-sans"><a href="#main-content" class="focus:bg-background focus:text-foreground sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4">Skip to main content</a> <header class="text-header-foreground fixed top-0 z-50 w-full border-b border-black bg-white py-4"><div class="container mx-auto flex max-w-7xl items-center justify-between px-4 md:px-6"><a href="/" class="font-serif text-2xl font-bold text-inherit transition-colors hover:text-inherit/80">Chefstore Cookbook</a> <nav class="flex items-center space-x-4" aria-label="Primary Navigation"><a href="/recipes" class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none" style="transition-property: background-color, color, box-shadow;">Recipes</a> <a href="https://www.thechefstoreuk.co.uk" target="_blank" rel="noopener noreferrer" class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none" style="transition-property: background-color, color, box-shadow;">Shop</a> <a href="/about" class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none" style="transition-property: background-color, color, box-shadow;">About Us</a> <!---->`;
-    Root($$payload2, {
-      get open() {
-        return showSearch;
-      },
-      set open($$value) {
-        showSearch = $$value;
-        $$settled = false;
-      },
-      children: ($$payload3) => {
-        $$payload3.out += `<!---->`;
-        Trigger($$payload3, {
-          asChild: true,
-          children: invalid_default_snippet,
-          $$slots: {
-            default: ($$payload4, { builder }) => {
-              Button($$payload4, {
-                builders: [builder],
-                variant: "ghost",
-                size: "icon",
-                class: "ml-2 rounded-full hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300",
-                "aria-label": "Search",
-                children: ($$payload5) => {
-                  Search($$payload5, { class: "h-5 w-5" });
-                },
-                $$slots: { default: true }
-              });
+    $$payload2.out += `<!----> <div class="flex min-h-screen flex-col font-sans"><a href="#main-content" class="focus:bg-background focus:text-foreground sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4">Skip to main content</a> <header class="text-header-foreground fixed top-0 z-50 w-full border-b border-black bg-white py-4"><div class="container mx-auto flex max-w-7xl items-center justify-between px-4 md:px-6"><a href="/" class="font-serif text-2xl font-bold text-inherit transition-colors hover:text-inherit/80">Chefstore Cookbook</a> `;
+    {
+      $$payload2.out += "<!--[-->";
+      $$payload2.out += `<nav class="hidden items-center space-x-4 md:flex" aria-label="Primary Navigation"><a href="/recipes" class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none">Recipes</a> <a href="https://www.thechefstoreuk.co.uk" target="_blank" rel="noopener noreferrer" class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none">Shop</a> <a href="/about" class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none">About Us</a> <div class="relative"><!---->`;
+      Root($$payload2, {
+        get open() {
+          return showSearch;
+        },
+        set open($$value) {
+          showSearch = $$value;
+          $$settled = false;
+        },
+        children: ($$payload3) => {
+          $$payload3.out += `<!---->`;
+          Trigger($$payload3, {
+            asChild: true,
+            children: invalid_default_snippet,
+            $$slots: {
+              default: ($$payload4, { builder }) => {
+                Button($$payload4, {
+                  builders: [builder],
+                  variant: "ghost",
+                  size: "icon",
+                  class: "ml-2 rounded-full hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300",
+                  "aria-label": "Search",
+                  children: ($$payload5) => {
+                    Search($$payload5, { class: "h-5 w-5" });
+                  },
+                  $$slots: { default: true }
+                });
+              }
             }
-          }
-        });
-        $$payload3.out += `<!----> <!---->`;
-        Popover_content($$payload3, {
-          class: "w-[350px] bg-white p-3",
-          sideOffset: 16,
-          align: "end",
-          children: ($$payload4) => {
-            if (allRecipes.length > 0) {
-              $$payload4.out += "<!--[-->";
-              $$payload4.out += `<div class="mb-0">`;
-              ShadcnRecipeSearch($$payload4, {
-                recipes: allRecipes,
-                placeholder: "Search recipes..."
-              });
-              $$payload4.out += `<!----></div>`;
-            } else {
-              $$payload4.out += "<!--[!-->";
-              $$payload4.out += `<p class="text-muted-foreground p-2 text-center text-sm">Loading recipes...</p>`;
-            }
-            $$payload4.out += `<!--]-->`;
-          },
-          $$slots: { default: true }
-        });
-        $$payload3.out += `<!---->`;
-      },
-      $$slots: { default: true }
-    });
-    $$payload2.out += `<!----></nav></div></header> <main id="main-content" class="container mx-auto mt-16 flex-grow px-4 py-8 md:px-6 lg:py-12">`;
+          });
+          $$payload3.out += `<!----> <!---->`;
+          Popover_content($$payload3, {
+            class: "w-[350px] bg-white p-3",
+            sideOffset: 8,
+            align: "start",
+            children: ($$payload4) => {
+              if (allRecipes.length > 0) {
+                $$payload4.out += "<!--[-->";
+                $$payload4.out += `<div class="mb-0">`;
+                ShadcnRecipeSearch($$payload4, {
+                  recipes: allRecipes,
+                  placeholder: "Search recipes..."
+                });
+                $$payload4.out += `<!----></div>`;
+              } else {
+                $$payload4.out += "<!--[!-->";
+                $$payload4.out += `<p class="text-muted-foreground p-2 text-center text-sm">Loading recipes...</p>`;
+              }
+              $$payload4.out += `<!--]-->`;
+            },
+            $$slots: { default: true }
+          });
+          $$payload3.out += `<!---->`;
+        },
+        $$slots: { default: true }
+      });
+      $$payload2.out += `<!----></div></nav>`;
+    }
+    $$payload2.out += `<!--]--></div> `;
+    {
+      $$payload2.out += "<!--[!-->";
+    }
+    $$payload2.out += `<!--]--></header> <main id="main-content" class="container mx-auto mt-16 flex-grow px-4 py-8 md:px-6 lg:py-12">`;
     children($$payload2);
     $$payload2.out += `<!----></main> <footer class="bg-muted/50 text-muted-foreground mt-auto border-t py-6 text-center text-sm"><div class="container mx-auto max-w-7xl px-4 md:px-6">© ${escape_html((/* @__PURE__ */ new Date()).getFullYear())} Chefstore Cookbook. All rights reserved.</div></footer></div>`;
   }

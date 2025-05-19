@@ -81,7 +81,7 @@
 				<li>
 					<Button
 						variant="ghost"
-						class="h-auto w-full justify-start px-2 py-1.5 text-sm font-normal"
+						class="h-auto w-full justify-start px-2 py-1.5 text-sm font-normal hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300"
 						style="text-align:left;"
 						onmousedown={() => selectRecipe(recipe)}
 					>

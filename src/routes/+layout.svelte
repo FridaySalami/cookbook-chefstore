@@ -2,30 +2,42 @@
 	import type { Snippet } from 'svelte';
 	import '../app.css';
 	import { ModeWatcher } from 'mode-watcher';
-	import { Search } from 'lucide-svelte';
+	import { Search, Menu } from 'lucide-svelte';
 	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
 
 	import * as Popover from '$lib/components/ui/popover';
 	import { Button } from '$lib/components/ui/button';
 	import RecipeSearch from '$lib/components/RecipeSearch.svelte';
 	import ShadcnRecipeSearch from '$lib/components/ShadcnRecipeSearch.svelte';
 
-	let { children }: { children: Snippet } = $props();
 	let allRecipes = $state<{ title: string; slug: string; tags?: string[] }[]>([]);
 	let showSearch = $state(false);
-	
+	let showMobileMenu = $state(false);
+	let isMobile = $state(false);
+	let { children } = $props();
+
 	// Fetch recipes on mount
 	$effect(() => {
 		if (showSearch) {
 			fetch('/api/recipes.json')
-				.then(res => res.ok ? res.json() : [])
-				.then(data => {
+				.then(async (res) => (res.ok ? await res.json() : []))
+				.then((data) => {
 					allRecipes = data;
 				});
 		}
 	});
-	
-	function handleRecipeSelect(event: CustomEvent<{recipe: {title: string, slug: string}}>) {
+
+	onMount(() => {
+		function handleResize() {
+			isMobile = window.innerWidth < 768;
+		}
+		handleResize();
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	});
+
+	function handleRecipeSelect(event: CustomEvent<{ recipe: { title: string; slug: string } }>) {
 		goto(`/recipes/${event.detail.recipe.slug}`);
 		showSearch = false;
 	}
@@ -90,61 +102,152 @@
 			<a
 				href="/"
 				class="font-serif text-2xl font-bold text-inherit transition-colors hover:text-inherit/80"
-				>Chefstore Cookbook</a
 			>
-			<!-- Navigation Links -->
-			<nav class="flex items-center space-x-4" aria-label="Primary Navigation">
-				<a
-					href="/recipes"
-					class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none"
-					style="transition-property: background-color, color, box-shadow;"
-				>
-					Recipes
-				</a>
-				<a
-					href="https://www.thechefstoreuk.co.uk"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none"
-					style="transition-property: background-color, color, box-shadow;"
-				>
-					Shop
-				</a>
-				<a
-					href="/about"
-					class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none"
-					style="transition-property: background-color, color, box-shadow;"
-				>
-					About Us
-				</a>
-				<Popover.Root bind:open={showSearch}>
-					<Popover.Trigger asChild let:builder>
-						<Button
-							builders={[builder]}
-							variant="ghost"
-							size="icon"
-							class="ml-2 rounded-full hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300"
-							aria-label="Search"
-						>
-							<Search class="h-5 w-5" />
-						</Button>
-					</Popover.Trigger>
-					<Popover.Content class="w-[350px] bg-white p-3" sideOffset={16} align="end">
-						{#if allRecipes.length > 0}
-							<div class="mb-0">
-									<ShadcnRecipeSearch 
-										recipes={allRecipes} 
-										on:select={handleRecipeSelect} 
-										placeholder="Search recipes..."
-									/>
-							</div>
-						{:else}
-							<p class="text-muted-foreground p-2 text-center text-sm">Loading recipes...</p>
-						{/if}
-					</Popover.Content>
-				</Popover.Root>
-			</nav>
+				Chefstore Cookbook
+			</a>
+			{#if !isMobile}
+				<!-- Desktop Navigation Links -->
+				<nav class="hidden items-center space-x-4 md:flex" aria-label="Primary Navigation">
+					<a
+						href="/recipes"
+						class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none"
+					>
+						Recipes
+					</a>
+					<a
+						href="https://www.thechefstoreuk.co.uk"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none"
+					>
+						Shop
+					</a>
+					<a
+						href="/about"
+						class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none"
+					>
+						About Us
+					</a>
+					<div class="relative">
+						<Popover.Root bind:open={showSearch}>
+							<Popover.Trigger asChild let:builder>
+								<Button
+									builders={[builder]}
+									variant="ghost"
+									size="icon"
+									class="ml-2 rounded-full hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300"
+									aria-label="Search"
+								>
+									<Search class="h-5 w-5" />
+								</Button>
+							</Popover.Trigger>
+							<Popover.Content class="w-[350px] bg-white p-3" sideOffset={8} align="start">
+								{#if allRecipes.length > 0}
+									<div class="mb-0">
+										<ShadcnRecipeSearch
+											recipes={allRecipes}
+											on:select={handleRecipeSelect}
+											placeholder="Search recipes..."
+										/>
+									</div>
+								{:else}
+									<p class="text-muted-foreground p-2 text-center text-sm">Loading recipes...</p>
+								{/if}
+							</Popover.Content>
+						</Popover.Root>
+					</div>
+				</nav>
+			{:else}
+				<!-- Mobile Hamburger & Search -->
+				<div class="flex items-center space-x-2 md:hidden">
+					<Button
+						variant="ghost"
+						size="icon"
+						aria-label="Open menu"
+						onclick={() => (showMobileMenu = !showMobileMenu)}
+					>
+						<Menu class="h-6 w-6" />
+					</Button>
+					<div class="relative">
+						<Popover.Root bind:open={showSearch}>
+							<Popover.Trigger asChild let:builder>
+								<Button
+									builders={[builder]}
+									variant="ghost"
+									size="icon"
+									class="rounded-full hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300"
+									aria-label="Search"
+								>
+									<Search class="h-5 w-5" />
+								</Button>
+							</Popover.Trigger>
+							<Popover.Content class="w-[350px] bg-white p-3" sideOffset={8} align="start">
+								{#if allRecipes.length > 0}
+									<div class="mb-0">
+										<ShadcnRecipeSearch
+											recipes={allRecipes}
+											on:select={handleRecipeSelect}
+											placeholder="Search recipes..."
+										/>
+									</div>
+								{:else}
+									<p class="text-muted-foreground p-2 text-center text-sm">Loading recipes...</p>
+								{/if}
+							</Popover.Content>
+						</Popover.Root>
+					</div>
+				</div>
+			{/if}
 		</div>
+		<!-- Mobile Dropdown -->
+		{#if showMobileMenu}
+			<!-- Overlay to close menu on outside click, now accessible -->
+			<div
+				class="fixed inset-0 z-30 md:hidden"
+				role="button"
+				tabindex="0"
+				aria-label="Close mobile menu"
+				onclick={() => (showMobileMenu = false)}
+				onkeydown={(e) => {
+					if (e.key === 'Enter' || e.key === ' ') {
+						showMobileMenu = false;
+					}
+				}}
+				style="background: transparent;"
+			></div>
+			<div
+				class="animate-fade-in absolute top-full left-0 z-40 w-full border-b bg-white shadow-lg md:hidden"
+			>
+				<nav class="flex flex-col py-2" aria-label="Mobile Navigation">
+					<!-- Recipes link -->
+					<a
+						href="/recipes"
+						class="px-6 py-3 text-base font-medium text-inherit hover:bg-blue-100 hover:text-blue-800"
+						onclick={() => (showMobileMenu = false)}
+					>
+						Recipes
+					</a>
+					<!-- Shop link -->
+					<a
+						href="https://www.thechefstoreuk.co.uk"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="px-6 py-3 text-base font-medium text-inherit hover:bg-blue-100 hover:text-blue-800"
+						onclick={() => (showMobileMenu = false)}
+					>
+						Shop
+					</a>
+					<!-- About Us link -->
+					<a
+						href="/about"
+						class="px-6 py-3 text-base font-medium text-inherit hover:bg-blue-100 hover:text-blue-800"
+						onclick={() => (showMobileMenu = false)}
+					>
+						About Us
+					</a>
+				</nav>
+			</div>
+		{/if}
 	</header>
 
 	<!-- Main Content -->
