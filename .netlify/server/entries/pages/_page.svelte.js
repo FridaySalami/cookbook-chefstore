@@ -1,9 +1,10 @@
-import { I as sanitize_props, J as spread_props, K as slot, E as head, M as ensure_array_like, C as pop, A as push, D as attr, N as stringify, F as escape_html } from "../../chunks/index2.js";
+import { D as sanitize_props, E as spread_props, F as slot, I as head, U as ensure_array_like, C as pop, A as push, G as attr, X as stringify, V as escape_html } from "../../chunks/index2.js";
 import { C as Card, a as Card_header, b as Card_title, c as Card_description, d as Card_content } from "../../chunks/card-title.js";
 import "clsx";
 import { B as Button } from "../../chunks/index4.js";
 import { g as goto } from "../../chunks/client.js";
-import { I as Icon, C as Clock } from "../../chunks/clock.js";
+import { C as Clock } from "../../chunks/clock.js";
+import { I as Icon } from "../../chunks/Icon.js";
 function Utensils_crossed($$payload, $$props) {
   const $$sanitized_props = sanitize_props($$props);
   const iconNode = [
@@ -44,11 +45,11 @@ function _page($$payload, $$props) {
     $$payload2.title = `<title>Chefstore Cookbook - Home</title>`;
     $$payload2.out += `<meta name="description" content="Delicious, no-fuss recipes made with real ingredients. From weeknight wonders to weekend crowd-pleasers.">`;
   });
-  $$payload.out += `<main class="flex-grow py-8 lg:py-12"><section class="mb-16 text-center"><h1 class="text-foreground mb-4 font-serif text-4xl font-bold tracking-tight md:text-5xl lg:text-5xl">Real meals for real tables</h1> <p class="text-muted-foreground mx-auto mb-8 max-w-3xl text-lg md:text-xl">Simple, satisfying recipes for your everyday life.</p> <p class="text-muted-foreground mx-auto mb-8 max-w-3xl text-sm md:text-base">Browse recipes and shop ingredients straight from the kitchen.</p> `;
+  $$payload.out += `<main class="flex-grow py-8 lg:py-12"><section class="mb-8 text-center"><h1 class="text-foreground mb-4 font-serif text-4xl font-bold tracking-tight md:text-5xl lg:text-5xl">Real meals for real tables</h1> <p class="text-muted-foreground mx-auto mb-8 max-w-3xl text-lg md:text-xl">Simple, satisfying recipes for your everyday life.</p> <p class="text-muted-foreground mx-auto mb-8 max-w-3xl text-sm md:text-base">Browse recipes and shop ingredients straight from the kitchen.</p> `;
   Button($$payload, {
     href: "/recipes",
     size: "lg",
-    class: "bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:ring-ring mb-8 rounded-full px-8 py-3 text-base font-semibold shadow-md transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none",
+    class: "bg-primary text-primary-foreground hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 mb-8 rounded-full px-8 py-3 text-base font-semibold shadow-lg border-2 border-primary/70 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none",
     children: ($$payload2) => {
       $$payload2.out += `<!---->Explore All Recipes`;
     },
@@ -63,6 +64,7 @@ function _page($$payload, $$props) {
       variant: "outline",
       size: "sm",
       onclick: () => goto(),
+      class: "hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:outline-none cursor-pointer",
       children: ($$payload2) => {
         $$payload2.out += `<!---->Crowd Pleasers`;
       },
@@ -73,6 +75,7 @@ function _page($$payload, $$props) {
       variant: "outline",
       size: "sm",
       onclick: () => goto(),
+      class: "hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:outline-none cursor-pointer",
       children: ($$payload2) => {
         $$payload2.out += `<!---->Comfort Food`;
       },
@@ -83,6 +86,7 @@ function _page($$payload, $$props) {
       variant: "outline",
       size: "sm",
       onclick: () => goto(),
+      class: "hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:outline-none cursor-pointer",
       children: ($$payload2) => {
         $$payload2.out += `<!---->Quick Dinners`;
       },
@@ -125,7 +129,7 @@ function _page($$payload, $$props) {
                 $$payload3.out += `<div class="mt-2 flex flex-wrap gap-1"><!--[-->`;
                 for (let $$index = 0, $$length2 = each_array_1.length; $$index < $$length2; $$index++) {
                   let tag = each_array_1[$$index];
-                  $$payload3.out += `<button type="button" class="bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground border-muted-foreground/10 inline-block cursor-pointer rounded-full border px-2 py-0.5 text-xs font-medium transition-colors"${attr("title", `Show recipes tagged '${tag}'`)}>${escape_html(tag.startsWith("difficulty-") ? tag.replace("difficulty-", "").replace(/\b\w/g, (c) => c.toUpperCase()) : tag.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()))}</button>`;
+                  $$payload3.out += `<button type="button" class="bg-muted text-muted-foreground hover:bg-blue-100 hover:text-blue-800 border-muted-foreground/10 inline-block cursor-pointer rounded-full border px-2 py-0.5 text-xs font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none"${attr("title", `Show recipes tagged '${tag}'`)}>${escape_html(tag.startsWith("difficulty-") ? tag.replace("difficulty-", "").replace(/\b\w/g, (c) => c.toUpperCase()) : tag.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()))}</button>`;
                 }
                 $$payload3.out += `<!--]--></div>`;
               } else {

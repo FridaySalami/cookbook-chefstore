@@ -63,10 +63,10 @@
     /* Mid blue-gray */
 
     /* Accent colors (can reuse primary/secondary or define new) */
-    --accent: 203 10% 90%;
-    /* Same as muted */
-    --accent-foreground: 203 48% 15%;
-    /* Dark Blue-Gray */
+    --accent: 203 48% 80%;
+    /* More saturated and darker for visible hover */
+    --accent-foreground: 203 48% 20%;
+    /* Darker text for contrast */
 
     /* Define font variables */
     --font-sans: 'Poppins', sans-serif;

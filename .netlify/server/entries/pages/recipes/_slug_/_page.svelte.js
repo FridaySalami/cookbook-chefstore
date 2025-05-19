@@ -1,11 +1,12 @@
-import { A as push, C as pop, I as sanitize_props, R as rest_props, S as fallback, U as spread_attributes, V as clsx, K as slot, Q as bind_props, W as attr_class, E as head, M as ensure_array_like, D as attr, F as escape_html, O as store_get, P as unsubscribe_stores } from "../../../../chunks/index2.js";
+import { A as push, C as pop, D as sanitize_props, P as rest_props, K as fallback, Q as spread_attributes, R as clsx, F as slot, O as bind_props, $ as attr_class, I as head, U as ensure_array_like, G as attr, V as escape_html, M as store_get, N as unsubscribe_stores } from "../../../../chunks/index2.js";
 import { p as page, B as Badge, U as Users } from "../../../../chunks/users.js";
 import "clsx";
-import { c as cn, C as Clock } from "../../../../chunks/clock.js";
+import { c as cn } from "../../../../chunks/Icon.js";
 import { a as Chevron_right, C as Card_footer } from "../../../../chunks/chevron-right.js";
 import { C as Card, a as Card_header, d as Card_content, b as Card_title, c as Card_description } from "../../../../chunks/card-title.js";
 import { R as RecipeLayout } from "../../../../chunks/RecipeLayout.js";
 import { marked } from "marked";
+import { C as Clock } from "../../../../chunks/clock.js";
 import { h as html } from "../../../../chunks/html.js";
 function RelatedProducts($$payload, $$props) {
   push();

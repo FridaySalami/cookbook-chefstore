@@ -39,7 +39,7 @@
 
 <main class="flex-grow py-8 lg:py-12">
 	<!-- Hero Section: Adjusted text colors and button style -->
-	<section class="mb-16 text-center">
+	<section class="mb-8 text-center">
 		<h1
 			class="text-foreground mb-4 font-serif text-4xl font-bold tracking-tight md:text-5xl lg:text-5xl"
 		>
@@ -54,7 +54,7 @@
 		<Button
 			href="/recipes"
 			size="lg"
-			class="bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:ring-ring mb-8 rounded-full px-8 py-3 text-base font-semibold shadow-md transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+			class="bg-primary text-primary-foreground hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 mb-8 rounded-full px-8 py-3 text-base font-semibold shadow-lg border-2 border-primary/70 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
 		>
 			Explore All Recipes
 		</Button>
@@ -69,15 +69,30 @@
 
 			<!-- Category Filter Placeholder -->
 			<div class="mb-8 flex justify-center gap-2">
-				<Button variant="outline" size="sm" onclick={() => goto('/recipes?tag=crowd-pleaser')}
-					>Crowd Pleasers</Button
-				>
-				<Button variant="outline" size="sm" onclick={() => goto('/recipes?tag=comfort-food')}
-					>Comfort Food</Button
-				>
-				<Button variant="outline" size="sm" onclick={() => goto('/recipes?tag=quick')}
-					>Quick Dinners</Button
-				>
+					<Button
+						variant="outline"
+						size="sm"
+						onclick={() => goto('/recipes?tag=crowd-pleaser')}
+						class="hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:outline-none cursor-pointer"
+					>
+						Crowd Pleasers
+					</Button>
+					<Button
+						variant="outline"
+						size="sm"
+						onclick={() => goto('/recipes?tag=comfort-food')}
+						class="hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:outline-none cursor-pointer"
+					>
+						Comfort Food
+					</Button>
+					<Button
+						variant="outline"
+						size="sm"
+						onclick={() => goto('/recipes?tag=quick')}
+						class="hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:outline-none cursor-pointer"
+					>
+						Quick Dinners
+					</Button>
 			</div>
 
 			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -115,7 +130,7 @@
 											{#each recipe.tags as tag}
 												<button
 													type="button"
-													class="bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground border-muted-foreground/10 inline-block cursor-pointer rounded-full border px-2 py-0.5 text-xs font-medium transition-colors"
+													class="bg-muted text-muted-foreground hover:bg-blue-100 hover:text-blue-800 border-muted-foreground/10 inline-block cursor-pointer rounded-full border px-2 py-0.5 text-xs font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none"
 													title={`Show recipes tagged '${tag}'`}
 													onclick={() => goto(`/recipes?tag=${encodeURIComponent(tag)}`)}
 												>

@@ -87,6 +87,11 @@ const HYDRATION_ERROR = {};
 const ELEMENT_IS_NAMESPACED = 1;
 const ELEMENT_PRESERVE_ATTRIBUTE_CASE = 1 << 1;
 const UNINITIALIZED = Symbol();
+function invalid_default_snippet() {
+  {
+    throw new Error(`https://svelte.dev/e/invalid_default_snippet`);
+  }
+}
 function lifecycle_outside_component(name) {
   {
     throw new Error(`https://svelte.dev/e/lifecycle_outside_component`);
@@ -1422,6 +1427,24 @@ class Payload {
     this.head.uid = this.uid;
   }
 }
+function copy_payload({ out, css, head: head2, uid }) {
+  const payload = new Payload();
+  payload.out = out;
+  payload.css = new Set(css);
+  payload.uid = uid;
+  payload.head = new HeadPayload();
+  payload.head.out = head2.out;
+  payload.head.css = new Set(head2.css);
+  payload.head.title = head2.title;
+  payload.head.uid = head2.uid;
+  return payload;
+}
+function assign_payload(p1, p2) {
+  p1.out = p2.out;
+  p1.css = p2.css;
+  p1.head = p2.head;
+  p1.uid = p2.uid;
+}
 function props_id_generator(prefix) {
   let uid = 1;
   return () => `${prefix}s${uid++}`;
@@ -1579,34 +1602,38 @@ function ensure_array_like(array_like_or_iterator) {
   return [];
 }
 export {
+  attr_class as $,
   push as A,
   setContext as B,
   pop as C,
-  attr as D,
-  head as E,
-  escape_html as F,
-  getContext as G,
+  sanitize_props as D,
+  spread_props as E,
+  slot as F,
+  attr as G,
   HYDRATION_ERROR as H,
-  sanitize_props as I,
-  spread_props as J,
-  slot as K,
+  head as I,
+  getContext as J,
+  fallback as K,
   LEGACY_PROPS as L,
-  ensure_array_like as M,
-  stringify as N,
-  store_get as O,
-  unsubscribe_stores as P,
-  bind_props as Q,
-  rest_props as R,
-  fallback as S,
-  element as T,
-  spread_attributes as U,
-  clsx as V,
-  attr_class as W,
-  noop as X,
-  safe_not_equal as Y,
-  subscribe_to_store as Z,
-  run_all as _,
+  store_get as M,
+  unsubscribe_stores as N,
+  bind_props as O,
+  rest_props as P,
+  spread_attributes as Q,
+  clsx as R,
+  copy_payload as S,
+  assign_payload as T,
+  ensure_array_like as U,
+  escape_html as V,
+  invalid_default_snippet as W,
+  stringify as X,
+  current_component as Y,
+  noop as Z,
+  element as _,
   set_active_effect as a,
+  safe_not_equal as a0,
+  subscribe_to_store as a1,
+  run_all as a2,
   active_effect as b,
   active_reaction as c,
   define_property as d,

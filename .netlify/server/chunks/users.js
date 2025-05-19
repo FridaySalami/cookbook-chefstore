@@ -1,6 +1,6 @@
-import { G as getContext, I as sanitize_props, R as rest_props, S as fallback, T as element, Q as bind_props, C as pop, A as push, K as slot, U as spread_attributes, V as clsx, J as spread_props } from "./index2.js";
+import { J as getContext, D as sanitize_props, P as rest_props, K as fallback, _ as element, O as bind_props, C as pop, A as push, F as slot, Q as spread_attributes, R as clsx, E as spread_props } from "./index2.js";
 import "./client.js";
-import { c as cn, I as Icon } from "./clock.js";
+import { c as cn, I as Icon } from "./Icon.js";
 import { tv } from "tailwind-variants";
 import "clsx";
 const getStores = () => {

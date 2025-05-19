@@ -186,7 +186,7 @@
 							href={getTagUrl(null)}
 							variant={selectedTag === null ? 'default' : 'outline'}
 							size="sm"
-							class={selectedTag === null ? 'selected' : ''}
+							class={`hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === null ? ' selected' : ''}`}
 							aria-current={selectedTag === null ? 'page' : undefined}
 						>
 							All Recipes
@@ -203,7 +203,7 @@
 									href={getTagUrl(tag)}
 									variant={selectedTag === tag ? 'default' : 'outline'}
 									size="sm"
-									class={`capitalize${selectedTag === tag ? ' selected' : ''}`}
+									class={`capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? ' selected' : ''}`}
 									aria-current={selectedTag === tag ? 'page' : undefined}
 								>
 									{formatTag(tag)}
@@ -222,7 +222,7 @@
 									href={getTagUrl(tag)}
 									variant={selectedTag === tag ? 'default' : 'outline'}
 									size="sm"
-									class={`capitalize${selectedTag === tag ? ' selected' : ''}`}
+									class={`capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? ' selected' : ''}`}
 									aria-current={selectedTag === tag ? 'page' : undefined}
 								>
 									{formatTag(tag)}
@@ -241,7 +241,7 @@
 									href={getTagUrl(tag)}
 									variant={selectedTag === tag ? 'default' : 'outline'}
 									size="sm"
-									class={`capitalize${selectedTag === tag ? ' selected' : ''}`}
+									class={`capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? ' selected' : ''}`}
 									aria-current={selectedTag === tag ? 'page' : undefined}
 								>
 									{formatTag(tag)}
@@ -263,7 +263,7 @@
 						href={getTagUrl(null)}
 						variant={selectedTag === null ? 'default' : 'outline'}
 						size="sm"
-						class={selectedTag === null ? 'selected' : ''}
+						class={`hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === null ? ' selected' : ''}`}
 						aria-current={selectedTag === null ? 'page' : undefined}
 					>
 						All Recipes
@@ -280,7 +280,7 @@
 								href={getTagUrl(tag)}
 								variant={selectedTag === tag ? 'default' : 'outline'}
 								size="sm"
-								class={`capitalize${selectedTag === tag ? ' selected' : ''}`}
+								class={`capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? ' selected' : ''}`}
 								aria-current={selectedTag === tag ? 'page' : undefined}
 							>
 								{formatTag(tag)}
@@ -299,7 +299,7 @@
 								href={getTagUrl(tag)}
 								variant={selectedTag === tag ? 'default' : 'outline'}
 								size="sm"
-								class={`capitalize${selectedTag === tag ? ' selected' : ''}`}
+								class={`capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? ' selected' : ''}`}
 								aria-current={selectedTag === tag ? 'page' : undefined}
 							>
 								{formatTag(tag)}
@@ -318,7 +318,7 @@
 								href={getTagUrl(tag)}
 								variant={selectedTag === tag ? 'default' : 'outline'}
 								size="sm"
-								class={`capitalize${selectedTag === tag ? ' selected' : ''}`}
+								class={`capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? ' selected' : ''}`}
 								aria-current={selectedTag === tag ? 'page' : undefined}
 							>
 								{formatTag(tag)}
@@ -459,7 +459,7 @@
 									{#if recipe.tags && recipe.tags.length > 0}
 										<div class="mt-2 flex flex-wrap gap-1">
 											{#each recipe.tags.slice(0, 3) as tag}
-												<Badge variant="secondary">{formatTag(tag)}</Badge>
+												<Badge variant="secondary" class="hover:bg-blue-100 hover:text-blue-800 cursor-pointer transition-all duration-200">{formatTag(tag)}</Badge>
 											{/each}
 										</div>
 									{/if}

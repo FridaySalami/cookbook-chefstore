@@ -9,6 +9,13 @@
       "_environment.js"
     ]
   },
+  "_Icon.js": {
+    "file": "chunks/Icon.js",
+    "name": "Icon",
+    "imports": [
+      "_index2.js"
+    ]
+  },
   "_RecipeLayout.TG1l-nGk.css": {
     "file": "_app/immutable/assets/RecipeLayout.TG1l-nGk.css",
     "src": "_RecipeLayout.TG1l-nGk.css"
@@ -57,7 +64,7 @@
     "name": "card-title",
     "imports": [
       "_index2.js",
-      "_clock.js"
+      "_Icon.js"
     ]
   },
   "_cheesy-leek-potato-gratin.js": {
@@ -74,7 +81,7 @@
     "name": "chevron-right",
     "imports": [
       "_index2.js",
-      "_clock.js"
+      "_Icon.js"
     ]
   },
   "_chicken-pearl-barley-broth.js": {
@@ -116,7 +123,8 @@
     "file": "chunks/clock.js",
     "name": "clock",
     "imports": [
-      "_index2.js"
+      "_index2.js",
+      "_Icon.js"
     ]
   },
   "_coconut-milk-rice-pudding.js": {
@@ -300,7 +308,7 @@
     "name": "index",
     "imports": [
       "_index2.js",
-      "_clock.js",
+      "_Icon.js",
       "_exports.js"
     ]
   },
@@ -516,7 +524,7 @@
     "imports": [
       "_index2.js",
       "_client.js",
-      "_clock.js"
+      "_Icon.js"
     ]
   },
   "_white-bean-rosemary-stew.js": {
@@ -832,10 +840,14 @@
     "isEntry": true,
     "imports": [
       "_index2.js",
-      "_html.js"
+      "_html.js",
+      "_client.js",
+      "_index4.js",
+      "_exports.js",
+      "_Icon.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.DTUuguvZ.css"
+      "_app/immutable/assets/_layout.DGB3ck96.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -848,7 +860,8 @@
       "_card-title.js",
       "_index4.js",
       "_client.js",
-      "_clock.js"
+      "_clock.js",
+      "_Icon.js"
     ]
   },
   "src/routes/+page.ts": {
@@ -861,6 +874,15 @@
       "_index3.js"
     ]
   },
+  "src/routes/about/+page.svelte": {
+    "file": "entries/pages/about/_page.svelte.js",
+    "name": "entries/pages/about/_page.svelte",
+    "src": "src/routes/about/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js"
+    ]
+  },
   "src/routes/api/products/+server.ts": {
     "file": "entries/endpoints/api/products/_server.ts.js",
     "name": "entries/endpoints/api/products/_server.ts",
@@ -870,6 +892,15 @@
       "_index.js",
       "_environment.js",
       "_index3.js"
+    ]
+  },
+  "src/routes/api/recipes.json/+server.ts": {
+    "file": "entries/endpoints/api/recipes.json/_server.ts.js",
+    "name": "entries/endpoints/api/recipes.json/_server.ts",
+    "src": "src/routes/api/recipes.json/+server.ts",
+    "isEntry": true,
+    "imports": [
+      "_white-bean-rosemary-stew.metadata.js"
     ]
   },
   "src/routes/recipes/+page.svelte": {
@@ -885,6 +916,7 @@
       "_index4.js",
       "_client.js",
       "_clock.js",
+      "_Icon.js",
       "_html.js"
     ]
   },
@@ -1053,10 +1085,11 @@
     "imports": [
       "_index2.js",
       "_users.js",
-      "_clock.js",
+      "_Icon.js",
       "_chevron-right.js",
       "_card-title.js",
       "_RecipeLayout.js",
+      "_clock.js",
       "_html.js"
     ]
   },

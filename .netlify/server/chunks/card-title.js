@@ -1,5 +1,5 @@
-import { I as sanitize_props, R as rest_props, S as fallback, U as spread_attributes, V as clsx, K as slot, Q as bind_props, C as pop, A as push, T as element } from "./index2.js";
-import { c as cn } from "./clock.js";
+import { D as sanitize_props, P as rest_props, K as fallback, Q as spread_attributes, R as clsx, F as slot, O as bind_props, C as pop, A as push, _ as element } from "./index2.js";
+import { c as cn } from "./Icon.js";
 function Card($$payload, $$props) {
   const $$sanitized_props = sanitize_props($$props);
   const $$restProps = rest_props($$sanitized_props, ["class"]);

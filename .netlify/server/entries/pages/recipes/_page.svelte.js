@@ -1,10 +1,11 @@
-import { I as sanitize_props, J as spread_props, K as slot, D as attr, C as pop, A as push, O as store_get, E as head, M as ensure_array_like, F as escape_html, P as unsubscribe_stores, Q as bind_props } from "../../../chunks/index2.js";
+import { D as sanitize_props, E as spread_props, F as slot, G as attr, C as pop, A as push, M as store_get, I as head, U as ensure_array_like, V as escape_html, N as unsubscribe_stores, O as bind_props } from "../../../chunks/index2.js";
 import { B as Badge, U as Users, p as page } from "../../../chunks/users.js";
 import { C as Card, a as Card_header, d as Card_content, b as Card_title, c as Card_description } from "../../../chunks/card-title.js";
 import { C as Card_footer, a as Chevron_right } from "../../../chunks/chevron-right.js";
 import { B as Button } from "../../../chunks/index4.js";
 import "../../../chunks/client.js";
-import { I as Icon, C as Clock } from "../../../chunks/clock.js";
+import { C as Clock } from "../../../chunks/clock.js";
+import { I as Icon } from "../../../chunks/Icon.js";
 import { h as html } from "../../../chunks/html.js";
 function Chevron_left($$payload, $$props) {
   const $$sanitized_props = sanitize_props($$props);
@@ -150,7 +151,7 @@ function _page($$payload, $$props) {
     href: getTagUrl(null),
     variant: selectedTag === null ? "default" : "outline",
     size: "sm",
-    class: selectedTag === null ? "selected" : "",
+    class: `hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === null ? " selected" : ""}`,
     "aria-current": selectedTag === null ? "page" : void 0,
     children: ($$payload2) => {
       $$payload2.out += `<!---->All Recipes`;
@@ -168,7 +169,7 @@ function _page($$payload, $$props) {
         href: getTagUrl(tag),
         variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
-        class: `capitalize${selectedTag === tag ? " selected" : ""}`,
+        class: `capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? " selected" : ""}`,
         "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
@@ -191,7 +192,7 @@ function _page($$payload, $$props) {
         href: getTagUrl(tag),
         variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
-        class: `capitalize${selectedTag === tag ? " selected" : ""}`,
+        class: `capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? " selected" : ""}`,
         "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
@@ -214,7 +215,7 @@ function _page($$payload, $$props) {
         href: getTagUrl(tag),
         variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
-        class: `capitalize${selectedTag === tag ? " selected" : ""}`,
+        class: `capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? " selected" : ""}`,
         "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
@@ -231,7 +232,7 @@ function _page($$payload, $$props) {
     href: getTagUrl(null),
     variant: selectedTag === null ? "default" : "outline",
     size: "sm",
-    class: selectedTag === null ? "selected" : "",
+    class: `hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === null ? " selected" : ""}`,
     "aria-current": selectedTag === null ? "page" : void 0,
     children: ($$payload2) => {
       $$payload2.out += `<!---->All Recipes`;
@@ -249,7 +250,7 @@ function _page($$payload, $$props) {
         href: getTagUrl(tag),
         variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
-        class: `capitalize${selectedTag === tag ? " selected" : ""}`,
+        class: `capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? " selected" : ""}`,
         "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
@@ -272,7 +273,7 @@ function _page($$payload, $$props) {
         href: getTagUrl(tag),
         variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
-        class: `capitalize${selectedTag === tag ? " selected" : ""}`,
+        class: `capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? " selected" : ""}`,
         "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
@@ -295,7 +296,7 @@ function _page($$payload, $$props) {
         href: getTagUrl(tag),
         variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
-        class: `capitalize${selectedTag === tag ? " selected" : ""}`,
+        class: `capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? " selected" : ""}`,
         "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
@@ -452,6 +453,7 @@ function _page($$payload, $$props) {
                   let tag = each_array_7[$$index_6];
                   Badge($$payload3, {
                     variant: "secondary",
+                    class: "hover:bg-blue-100 hover:text-blue-800 cursor-pointer transition-all duration-200",
                     children: ($$payload4) => {
                       $$payload4.out += `<!---->${escape_html(formatTag(tag))}`;
                     },

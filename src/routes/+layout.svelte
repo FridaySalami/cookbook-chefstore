@@ -2,14 +2,37 @@
 	import type { Snippet } from 'svelte';
 	import '../app.css';
 	import { ModeWatcher } from 'mode-watcher';
+	import { Search } from 'lucide-svelte';
+	import { goto } from '$app/navigation';
+
+	import * as Popover from '$lib/components/ui/popover';
+	import { Button } from '$lib/components/ui/button';
+	import RecipeSearch from '$lib/components/RecipeSearch.svelte';
+	import ShadcnRecipeSearch from '$lib/components/ShadcnRecipeSearch.svelte';
 
 	let { children }: { children: Snippet } = $props();
+	let allRecipes = $state<{ title: string; slug: string; tags?: string[] }[]>([]);
+	let showSearch = $state(false);
+	
+	// Fetch recipes on mount
+	$effect(() => {
+		if (showSearch) {
+			fetch('/api/recipes.json')
+				.then(res => res.ok ? res.json() : [])
+				.then(data => {
+					allRecipes = data;
+				});
+		}
+	});
+	
+	function handleRecipeSelect(event: CustomEvent<{recipe: {title: string, slug: string}}>) {
+		goto(`/recipes/${event.detail.recipe.slug}`);
+		showSearch = false;
+	}
 </script>
 
 <svelte:head>
 	<title>Chefstore Cookbook | Simple Recipes, Real Ingredients</title>
-	<!-- <meta name="description" content="Delicious recipes from the Chefstore team." /> -->
-
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta property="og:locale" content="en_GB" />
@@ -60,7 +83,9 @@
 		Skip to main content
 	</a>
 	<!-- Header -->
-	<header class="text-header-foreground fixed top-0 z-50 w-full bg-white py-4 shadow-md">
+	<header
+		class="text-header-foreground fixed top-0 z-50 w-full border-b border-black bg-white py-4"
+	>
 		<div class="container mx-auto flex max-w-7xl items-center justify-between px-4 md:px-6">
 			<a
 				href="/"
@@ -71,15 +96,53 @@
 			<nav class="flex items-center space-x-4" aria-label="Primary Navigation">
 				<a
 					href="/recipes"
-					class="text-sm font-medium text-inherit transition-colors hover:text-inherit/80"
-					>Recipes</a
+					class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none"
+					style="transition-property: background-color, color, box-shadow;"
 				>
+					Recipes
+				</a>
 				<a
 					href="https://www.thechefstoreuk.co.uk"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-sm font-medium text-inherit transition-colors hover:text-inherit/80">Shop</a
+					class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none"
+					style="transition-property: background-color, color, box-shadow;"
 				>
+					Shop
+				</a>
+				<a
+					href="/about"
+					class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none"
+					style="transition-property: background-color, color, box-shadow;"
+				>
+					About Us
+				</a>
+				<Popover.Root bind:open={showSearch}>
+					<Popover.Trigger asChild let:builder>
+						<Button
+							builders={[builder]}
+							variant="ghost"
+							size="icon"
+							class="ml-2 rounded-full hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300"
+							aria-label="Search"
+						>
+							<Search class="h-5 w-5" />
+						</Button>
+					</Popover.Trigger>
+					<Popover.Content class="w-[350px] bg-white p-3" sideOffset={16} align="end">
+						{#if allRecipes.length > 0}
+							<div class="mb-0">
+									<ShadcnRecipeSearch 
+										recipes={allRecipes} 
+										on:select={handleRecipeSelect} 
+										placeholder="Search recipes..."
+									/>
+							</div>
+						{:else}
+							<p class="text-muted-foreground p-2 text-center text-sm">Loading recipes...</p>
+						{/if}
+					</Popover.Content>
+				</Popover.Root>
 			</nav>
 		</div>
 	</header>

@@ -1,4 +1,4 @@
-import { X as noop, Y as safe_not_equal, Z as subscribe_to_store, _ as run_all } from "./index2.js";
+import { Z as noop, a0 as safe_not_equal, a1 as subscribe_to_store, a2 as run_all } from "./index2.js";
 const internal = new URL("sveltekit-internal://");
 function resolve(base, path) {
   if (path[0] === "/" && path[1] === "/") return path;
@@ -196,6 +196,17 @@ function derived(stores, fn, initial_value) {
     };
   });
 }
+function readonly(store) {
+  return {
+    // @ts-expect-error TODO i suspect the bind is unnecessary
+    subscribe: store.subscribe.bind(store)
+  };
+}
+function get(store) {
+  let value;
+  subscribe_to_store(store, (_) => value = _)();
+  return value;
+}
 function validator(expected) {
   function validate(module, file) {
     if (!module) return;
@@ -269,6 +280,8 @@ export {
   decode_pathname as g,
   validate_server_exports as h,
   derived as i,
+  readonly as j,
+  get as k,
   make_trackable as m,
   normalize_path as n,
   readable as r,

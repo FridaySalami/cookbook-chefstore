@@ -1,9 +1,18 @@
-import { I as sanitize_props, R as rest_props, S as fallback, T as element, Q as bind_props, C as pop, A as push, K as slot, U as spread_attributes, J as spread_props } from "./index2.js";
+import { Y as current_component, Z as noop$1, D as sanitize_props, P as rest_props, K as fallback, _ as element, O as bind_props, C as pop, A as push, F as slot, Q as spread_attributes, E as spread_props } from "./index2.js";
 import "dequal";
 import "clsx";
-import { c as cn } from "./clock.js";
+import { c as cn } from "./Icon.js";
 import { tv } from "tailwind-variants";
-import { i as derived, r as readable } from "./exports.js";
+import { i as derived, k as get, w as writable, r as readable } from "./exports.js";
+function onDestroy(fn) {
+  var context = (
+    /** @type {Component} */
+    current_component
+  );
+  (context.d ??= []).push(fn);
+}
+async function tick() {
+}
 function styleToString(style) {
   return Object.keys(style).reduce((str, key) => {
     if (style[key] === void 0)
@@ -20,6 +29,12 @@ function styleToString(style) {
     transform: "translateX(-100%)"
   })
 });
+function portalAttr(portal) {
+  if (portal !== null) {
+    return "";
+  }
+  return void 0;
+}
 function lightable(value) {
   function subscribe(run) {
     run(value);
@@ -43,7 +58,7 @@ const isFunctionWithParams = (fn) => {
 };
 makeElement("empty");
 function makeElement(name, args) {
-  const { stores, action, returned } = {};
+  const { stores, action, returned } = args ?? {};
   const derivedStore = (() => {
     if (stores && returned) {
       return derived(stores, (values) => {
@@ -91,6 +106,41 @@ function makeElement(name, args) {
   actionFn.subscribe = derivedStore.subscribe;
   return actionFn;
 }
+function createElHelpers(prefix) {
+  const name = (part) => part ? `${prefix}-${part}` : prefix;
+  const attribute = (part) => `data-melt-${prefix}${part ? `-${part}` : ""}`;
+  const selector = (part) => `[data-melt-${prefix}${part ? `-${part}` : ""}]`;
+  const getEl = (part) => document.querySelector(selector(part));
+  return {
+    name,
+    attribute,
+    selector,
+    getEl
+  };
+}
+const isBrowser = typeof document !== "undefined";
+const isFunction = (v) => typeof v === "function";
+function isElement(element2) {
+  return element2 instanceof Element;
+}
+function isHTMLElement(element2) {
+  return element2 instanceof HTMLElement;
+}
+function isObject(value) {
+  return value !== null && typeof value === "object";
+}
+function isReadable(value) {
+  return isObject(value) && "subscribe" in value;
+}
+function executeCallbacks(...callbacks) {
+  return (...args) => {
+    for (const callback of callbacks) {
+      if (typeof callback === "function") {
+        callback(...args);
+      }
+    }
+  };
+}
 function noop() {
 }
 function addEventListener(target, event, handler, options) {
@@ -100,6 +150,52 @@ function addEventListener(target, event, handler, options) {
     events.forEach((_event) => target.removeEventListener(_event, handler, options));
   };
 }
+function addMeltEventListener(target, event, handler, options) {
+  const events = Array.isArray(event) ? event : [event];
+  if (typeof handler === "function") {
+    const handlerWithMelt = withMelt((_event) => handler(_event));
+    events.forEach((_event) => target.addEventListener(_event, handlerWithMelt, options));
+    return () => {
+      events.forEach((_event) => target.removeEventListener(_event, handlerWithMelt, options));
+    };
+  }
+  return () => noop();
+}
+function dispatchMeltEvent(originalEvent) {
+  const node = originalEvent.currentTarget;
+  if (!isHTMLElement(node))
+    return null;
+  const customMeltEvent = new CustomEvent(`m-${originalEvent.type}`, {
+    detail: {
+      originalEvent
+    },
+    cancelable: true
+  });
+  node.dispatchEvent(customMeltEvent);
+  return customMeltEvent;
+}
+function withMelt(handler) {
+  return (event) => {
+    const customEvent = dispatchMeltEvent(event);
+    if (customEvent?.defaultPrevented)
+      return;
+    return handler(event);
+  };
+}
+const safeOnMount = (fn) => {
+  try {
+    noop$1(fn);
+  } catch {
+    return fn;
+  }
+};
+const safeOnDestroy = (fn) => {
+  try {
+    onDestroy(fn);
+  } catch {
+    return fn;
+  }
+};
 function omit(obj, ...keys) {
   const result = {};
   for (const key of Object.keys(obj)) {
@@ -109,9 +205,80 @@ function omit(obj, ...keys) {
   }
   return result;
 }
-const kbd = {
-  ESCAPE: "Escape"
+function withGet(store) {
+  return {
+    ...store,
+    get: () => get(store)
+  };
+}
+withGet.writable = function(initial) {
+  const internal = writable(initial);
+  let value = initial;
+  return {
+    subscribe: internal.subscribe,
+    set(newValue) {
+      internal.set(newValue);
+      value = newValue;
+    },
+    update(updater) {
+      const newValue = updater(value);
+      internal.set(newValue);
+      value = newValue;
+    },
+    get() {
+      return value;
+    }
+  };
 };
+withGet.derived = function(stores, fn) {
+  const subscribers = /* @__PURE__ */ new Map();
+  const get2 = () => {
+    const values = Array.isArray(stores) ? stores.map((store) => store.get()) : stores.get();
+    return fn(values);
+  };
+  const subscribe = (subscriber) => {
+    const unsubscribers = [];
+    const storesArr = Array.isArray(stores) ? stores : [stores];
+    storesArr.forEach((store) => {
+      unsubscribers.push(store.subscribe(() => {
+        subscriber(get2());
+      }));
+    });
+    subscriber(get2());
+    subscribers.set(subscriber, unsubscribers);
+    return () => {
+      const unsubscribers2 = subscribers.get(subscriber);
+      if (unsubscribers2) {
+        for (const unsubscribe of unsubscribers2) {
+          unsubscribe();
+        }
+      }
+      subscribers.delete(subscriber);
+    };
+  };
+  return {
+    get: get2,
+    subscribe
+  };
+};
+const kbd = {
+  ENTER: "Enter",
+  ESCAPE: "Escape",
+  SPACE: " "
+};
+function effect(stores, fn) {
+  let cb = void 0;
+  const destroy = derived(stores, (stores2) => {
+    cb?.();
+    cb = fn(stores2);
+  }).subscribe(noop);
+  const unsub = () => {
+    destroy();
+    cb?.();
+  };
+  safeOnDestroy(unsub);
+  return unsub;
+}
 readable(void 0, (set) => {
   function clicked(event) {
     set(event);
@@ -123,7 +290,7 @@ readable(void 0, (set) => {
   });
   return unsubscribe;
 });
-readable(void 0, (set) => {
+const documentEscapeKeyStore = readable(void 0, (set) => {
   function keydown(event) {
     if (event && event.key === kbd.ESCAPE) {
       set(event);
@@ -135,6 +302,53 @@ readable(void 0, (set) => {
   });
   return unsubscribe;
 });
+const useEscapeKeydown = (node, config = {}) => {
+  let unsub = noop;
+  function update(config2 = {}) {
+    unsub();
+    const options = { enabled: true, ...config2 };
+    const enabled = isReadable(options.enabled) ? options.enabled : readable(options.enabled);
+    unsub = executeCallbacks(
+      // Handle escape keydowns
+      documentEscapeKeyStore.subscribe((e) => {
+        if (!e || !get(enabled))
+          return;
+        const target = e.target;
+        if (!isHTMLElement(target) || target.closest("[data-escapee]") !== node) {
+          return;
+        }
+        e.preventDefault();
+        if (options.ignore) {
+          if (isFunction(options.ignore)) {
+            if (options.ignore(e))
+              return;
+          } else if (Array.isArray(options.ignore)) {
+            if (options.ignore.length > 0 && options.ignore.some((ignoreEl) => {
+              return ignoreEl && target === ignoreEl;
+            }))
+              return;
+          }
+        }
+        options.handler?.(e);
+      }),
+      effect(enabled, ($enabled) => {
+        if ($enabled) {
+          node.dataset.escapee = "";
+        } else {
+          delete node.dataset.escapee;
+        }
+      })
+    );
+  }
+  update(config);
+  return {
+    update,
+    destroy() {
+      node.removeAttribute("data-escapee");
+      unsub();
+    }
+  };
+};
 ({
   disabled: readable(false),
   required: readable(false),
@@ -281,5 +495,24 @@ const buttonVariants = tv({
   }
 });
 export {
-  Button as B
+  Button as B,
+  isFunction as a,
+  isElement as b,
+  addEventListener as c,
+  effect as d,
+  executeCallbacks as e,
+  styleToString as f,
+  isBrowser as g,
+  createElHelpers as h,
+  isHTMLElement as i,
+  addMeltEventListener as j,
+  kbd as k,
+  makeElement as m,
+  noop as n,
+  omit as o,
+  portalAttr as p,
+  safeOnMount as s,
+  tick as t,
+  useEscapeKeydown as u,
+  withGet as w
 };

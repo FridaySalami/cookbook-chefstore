@@ -1,4 +1,4 @@
-import { I as sanitize_props, J as spread_props } from "./index2.js";
+import { D as sanitize_props, E as spread_props } from "./index2.js";
 import { R as RecipeLayout } from "./RecipeLayout.js";
 const metadata = {
   "title": "Romanian-Style Sarmale (Stuffed Cabbage Rolls)",

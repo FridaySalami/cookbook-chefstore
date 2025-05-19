@@ -1,4 +1,4 @@
-import { G as getContext, F as escape_html, C as pop, A as push } from "../../chunks/index2.js";
+import { J as getContext, V as escape_html, C as pop, A as push } from "../../chunks/index2.js";
 import "clsx";
 import { s as stores } from "../../chunks/client.js";
 ({

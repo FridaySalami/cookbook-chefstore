@@ -1,6 +1,6 @@
 import "clsx";
 import { w as writable } from "./exports.js";
-import { X as noop } from "./index2.js";
+import { Z as noop } from "./index2.js";
 function get(key, parse = JSON.parse) {
   try {
     return parse(sessionStorage[key]);
