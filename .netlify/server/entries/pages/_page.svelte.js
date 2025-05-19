@@ -94,7 +94,7 @@ function _page($$payload, $$props) {
       Card($$payload, {
         class: "group bg-card text-card-foreground flex flex-col overflow-hidden rounded-lg border shadow-sm transition-shadow hover:shadow-lg",
         children: ($$payload2) => {
-          $$payload2.out += `<a${attr("href", `/recipes/${stringify(recipe.slug)}`)} class="flex h-full flex-col"><div class="overflow-hidden"><img${attr("src", recipe.image ?? "/placeholder.png")}${attr("alt", recipe.title)} class="aspect-[16/10] w-full object-cover transition-transform duration-300 group-hover:scale-105"${attr("loading", index === 0 ? "eager" : "lazy")}${attr("fetchpriority", index === 0 ? "high" : "auto")} onload="this.__e=event" onerror="this.__e=event"></div> <div class="flex flex-grow flex-col p-4 md:p-5">`;
+          $$payload2.out += `<a${attr("href", `/recipes/${stringify(recipe.slug)}`)} class="flex h-full flex-col"><div class="overflow-hidden"><img${attr("src", `https://www.chefstorecookbook.com${recipe.image ?? "/placeholder.png"}`)}${attr("alt", recipe.title)} class="aspect-[16/10] w-full object-cover transition-transform duration-300 group-hover:scale-105"${attr("loading", index === 0 ? "eager" : "lazy")}${attr("fetchpriority", index === 0 ? "high" : "auto")} onload="this.__e=event" onerror="this.__e=event"></div> <div class="flex flex-grow flex-col p-4 md:p-5">`;
           Card_header($$payload2, {
             class: "p-0 pb-2",
             children: ($$payload3) => {

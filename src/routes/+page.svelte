@@ -88,7 +88,7 @@
 						<a href="/recipes/{recipe.slug}" class="flex h-full flex-col">
 							<div class="overflow-hidden">
 								<img
-									src={recipe.image ?? '/placeholder.png'}
+									src={`https://www.chefstorecookbook.com${recipe.image ?? '/placeholder.png'}`}
 									alt={recipe.title}
 									class="aspect-[16/10] w-full object-cover transition-transform duration-300 group-hover:scale-105"
 									use:fallbackImage
