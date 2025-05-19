@@ -7,24 +7,45 @@
 </script>
 
 <svelte:head>
-	<title>Chefstore Cookbook</title>
+	<title>Chefstore Cookbook | Simple Recipes, Real Ingredients</title>
 	<meta name="description" content="Delicious recipes from the Chefstore team." />
 
-	<!-- OpenGraph & Twitter Card Meta Tags -->
-	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="Chefstore Cookbook" />
-	<meta property="og:image" content="/default-og-image.png" />
-	<!-- Ensure this image exists -->
-	<meta name="twitter:card" content="summary_large_image" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta property="og:locale" content="en_GB" />
 
+	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="/favicon.png" sizes="64x64" />
 
+	<!-- OpenGraph & Twitter Card Defaults -->
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Chefstore Cookbook" />
+	<meta property="og:title" content="Chefstore Cookbook | Simple Recipes, Real Ingredients" />
+	<meta
+		property="og:description"
+		content="Delicious, no-fuss recipes made with real ingredients. From weeknight wonders to weekend crowd-pleasers."
+	/>
+	<meta property="og:image" content="https://www.chefstorecookbook.com/default-og-image.png" />
+	<meta property="og:url" content="https://www.chefstorecookbook.com/" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Chefstore Cookbook | Simple Recipes, Real Ingredients" />
+	<meta
+		name="twitter:description"
+		content="Delicious, no-fuss recipes made with real ingredients. Cook like you mean it."
+	/>
+
+	<!-- Structured Data -->
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
 			"@type": "WebSite",
 			"name": "Chefstore Cookbook",
-			"url": "https://www.chefstorecookbook.com/"
+			"url": "https://www.chefstorecookbook.com/",
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://www.chefstorecookbook.com/search?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			}
 		}
 	</script>
 </svelte:head>

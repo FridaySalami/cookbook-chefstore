@@ -1,10 +1,9 @@
-import { A as push, C as pop, I as sanitize_props, R as rest_props, S as fallback, U as spread_attributes, V as clsx, K as slot, Q as bind_props, W as attr_class, E as head, M as ensure_array_like, D as attr, F as escape_html } from "../../../../chunks/index2.js";
-import "../../../../chunks/client.js";
+import { A as push, C as pop, I as sanitize_props, R as rest_props, S as fallback, U as spread_attributes, V as clsx, K as slot, Q as bind_props, W as attr_class, E as head, M as ensure_array_like, D as attr, F as escape_html, O as store_get, P as unsubscribe_stores } from "../../../../chunks/index2.js";
+import { p as page, B as Badge, U as Users } from "../../../../chunks/users.js";
 import "clsx";
 import { c as cn, C as Clock } from "../../../../chunks/clock.js";
 import { a as Chevron_right, C as Card_footer } from "../../../../chunks/chevron-right.js";
 import { C as Card, a as Card_header, d as Card_content, b as Card_title, c as Card_description } from "../../../../chunks/card-title.js";
-import { B as Badge, U as Users } from "../../../../chunks/users.js";
 import { R as RecipeLayout } from "../../../../chunks/RecipeLayout.js";
 import { marked } from "marked";
 import { h as html } from "../../../../chunks/html.js";
@@ -140,6 +139,7 @@ function Breadcrumb_page($$payload, $$props) {
 }
 function _page($$payload, $$props) {
   push();
+  var $$store_subs;
   let data = $$props["data"];
   let parsedContent = "";
   let whyYouLlLoveThis = "";
@@ -247,7 +247,21 @@ function _page($$payload, $$props) {
     } else {
       $$payload2.out += "<!--[!-->";
     }
-    $$payload2.out += `<!--]--> `;
+    $$payload2.out += `<!--]--> <link rel="canonical"${attr("href", `https://www.chefstorecookbook.com/recipes/${data.metadata.slug ?? store_get($$store_subs ??= {}, "$page", page).params.slug}/`)}> <meta property="og:type" content="article"> <meta property="og:title"${attr("content", `${recipeTitle} | Chefstore Cookbook`)}> `;
+    if (data.metadata?.description) {
+      $$payload2.out += "<!--[-->";
+      $$payload2.out += `<meta property="og:description"${attr("content", data.metadata.description)}>`;
+    } else {
+      $$payload2.out += "<!--[!-->";
+    }
+    $$payload2.out += `<!--]--> <meta property="og:url"${attr("content", `https://www.chefstorecookbook.com/recipes/${data.metadata.slug ?? store_get($$store_subs ??= {}, "$page", page).params.slug}/`)}> <meta property="og:site_name" content="Chefstore Cookbook"> <meta property="og:image"${attr("content", `https://www.chefstorecookbook.com${data.metadata.image ?? "/default-og-image.png"}`)}> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:title"${attr("content", `${recipeTitle} | Chefstore Cookbook`)}> `;
+    if (data.metadata?.description) {
+      $$payload2.out += "<!--[-->";
+      $$payload2.out += `<meta name="twitter:description"${attr("content", data.metadata.description)}>`;
+    } else {
+      $$payload2.out += "<!--[!-->";
+    }
+    $$payload2.out += `<!--]--> <meta name="twitter:image"${attr("content", `https://www.chefstorecookbook.com${data.metadata.image ?? "/default-og-image.png"}`)}> `;
     if (Object.keys(schema).length > 2) {
       $$payload2.out += "<!--[-->";
       $$payload2.out += `${html((() => {
@@ -462,6 +476,7 @@ function _page($$payload, $$props) {
     $$payload.out += "<!--[!-->";
   }
   $$payload.out += `<!--]--></div>`;
+  if ($$store_subs) unsubscribe_stores($$store_subs);
   bind_props($$props, { data });
   pop();
 }

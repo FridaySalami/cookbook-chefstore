@@ -198,8 +198,27 @@
 	{#if data.metadata?.description}
 		<meta name="description" content={data.metadata.description} />
 	{/if}
+	<link rel="canonical" href={`https://www.chefstorecookbook.com/recipes/${data.metadata.slug ?? $page.params.slug}/`} />
 
-	<!-- Construct and render JSON-LD directly inside @html -->
+	<!-- Open Graph -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content={`${recipeTitle} | Chefstore Cookbook`} />
+	{#if data.metadata?.description}
+		<meta property="og:description" content={data.metadata.description} />
+	{/if}
+	<meta property="og:url" content={`https://www.chefstorecookbook.com/recipes/${data.metadata.slug ?? $page.params.slug}/`} />
+	<meta property="og:site_name" content="Chefstore Cookbook" />
+	<meta property="og:image" content={`https://www.chefstorecookbook.com${data.metadata.image ?? '/default-og-image.png'}`} />
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={`${recipeTitle} | Chefstore Cookbook`} />
+	{#if data.metadata?.description}
+		<meta name="twitter:description" content={data.metadata.description} />
+	{/if}
+	<meta name="twitter:image" content={`https://www.chefstorecookbook.com${data.metadata.image ?? '/default-og-image.png'}`} />
+
+	<!-- Structured Data (JSON-LD) -->
 	{#if Object.keys(schema).length > 2}
 		{@html (() => {
 			const safeJsonString = JSON.stringify(schema, null, 2).replace(/</g, '\\u003c');
