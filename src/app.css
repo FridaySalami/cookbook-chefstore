@@ -106,11 +106,17 @@
   }
 
   /* Ensure all inputs have at least 16px font size on mobile to prevent iOS zoom */
-  input, input[type="text"], input[type="search"] {
+  input,
+  input[type="text"],
+  input[type="search"] {
     font-size: 16px;
   }
+
   @media (min-width: 768px) {
-    input, input[type="text"], input[type="search"] {
+
+    input,
+    input[type="text"],
+    input[type="search"] {
       font-size: inherit;
     }
   }

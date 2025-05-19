@@ -48,6 +48,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta property="og:locale" content="en_GB" />
+	<meta name="robots" content="index, follow" />
 
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="/favicon.png" sizes="64x64" />

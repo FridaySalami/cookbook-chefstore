@@ -99,7 +99,8 @@
 </div>
 
 <style>
-:global(input[type="text"]), :global(input[type="search"]) {
-  font-size: 16px !important;
-}
+	:global(input[type='text']),
+	:global(input[type='search']) {
+		font-size: 16px !important;
+	}
 </style>
