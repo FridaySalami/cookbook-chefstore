@@ -124,7 +124,7 @@
 	};
 
 	// Define your site's base URL
-	const siteBaseUrl = 'https://chefstorecookbook.netlify.app';
+	const siteBaseUrl = 'https://www.chefstorecookbook.com';
 
 	// Helper function to get difficulty from tags
 	function getDifficultyFromTags(tags: string[] | undefined): string {

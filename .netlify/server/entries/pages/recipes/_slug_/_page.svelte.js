@@ -183,7 +183,7 @@ function _page($$payload, $$props) {
     }
   };
   const recipeTitle = data.metadata?.title ?? "Recipe";
-  const siteBaseUrl = "https://chefstorecookbook.netlify.app";
+  const siteBaseUrl = "https://www.chefstorecookbook.com";
   function getDifficultyFromTags(tags) {
     if (!tags) return "N/A";
     const difficultyTag = tags.find((tag) => tag.startsWith("difficulty-"));
