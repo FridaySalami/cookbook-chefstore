@@ -84,10 +84,14 @@
 			}
 		}
 	</script>
-</svelte:head>
 
-<!-- Plausible Analytics -->
-{@html `<script defer data-domain="chefstorecookbook.com" src="https://plausible.io/js/script.js"></script>`}
+	<!-- Plausible Analytics -->
+	<script
+		defer
+		data-domain="chefstorecookbook.com"
+		src="https://plausible.io/js/script.js"
+	></script>
+</svelte:head>
 
 <ModeWatcher />
 

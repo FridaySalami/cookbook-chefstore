@@ -1985,9 +1985,8 @@ function _layout($$payload, $$props) {
 				"query-input": "required name=search_term_string"
 			}
 		}
-	<\/script>`;
+	<\/script> <script defer data-domain="chefstorecookbook.com" src="https://plausible.io/js/script.js"><\/script>`;
     });
-    $$payload2.out += `${html(`<script defer data-domain="chefstorecookbook.com" src="https://plausible.io/js/script.js"><\/script>`)} `;
     Mode_watcher($$payload2, {});
     $$payload2.out += `<!----> <div class="flex min-h-screen flex-col font-sans"><a href="#main-content" class="focus:bg-background focus:text-foreground sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4">Skip to main content</a> <header class="text-header-foreground fixed top-0 z-50 w-full border-b border-black bg-white py-4"><div class="container mx-auto flex max-w-7xl items-center justify-between px-4 md:px-6"><a href="/" class="font-serif text-2xl font-bold text-inherit transition-colors hover:text-inherit/80">Chefstore Cookbook</a> `;
     {
