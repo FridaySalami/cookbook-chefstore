@@ -22,7 +22,7 @@ function RecipeLayout($$payload, $$props) {
   let slug = props.slug ?? "";
   const siteBaseUrl = "https://www.chefstorecookbook.com";
   const fullImageUrl = image ? image.startsWith("http") ? image : `${siteBaseUrl}${image.startsWith("/") ? "" : "/"}${image}` : `${siteBaseUrl}/default-og-image.png`;
-  const canonicalUrl = `${siteBaseUrl}/recipes/${store_get($$store_subs ??= {}, "$page", page).params.slug}`;
+  const canonicalUrl = `${siteBaseUrl}/recipes/${store_get($$store_subs ??= {}, "$page", page).params.slug}/`;
   function formatTime(minutes) {
     if (minutes === null) return "N/A";
     return `${minutes} min`;

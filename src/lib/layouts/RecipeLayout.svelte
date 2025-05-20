@@ -62,7 +62,7 @@
 	);
 
 	// Construct the canonical URL
-	const canonicalUrl = $derived(`${siteBaseUrl}/recipes/${$page.params.slug}`);
+	const canonicalUrl = $derived(`${siteBaseUrl}/recipes/${$page.params.slug}/`);
 
 	// Format time for display
 	function formatTime(minutes: number | null): string {
