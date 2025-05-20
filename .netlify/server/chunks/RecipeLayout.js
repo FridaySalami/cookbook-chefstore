@@ -20,7 +20,7 @@ function RecipeLayout($$payload, $$props) {
   props.relatedProducts ?? [];
   let content = props.content;
   let slug = props.slug ?? "";
-  const siteBaseUrl = "https://chefstorecookbook.netlify.app";
+  const siteBaseUrl = "https://www.chefstorecookbook.com";
   const fullImageUrl = image ? image.startsWith("http") ? image : `${siteBaseUrl}${image.startsWith("/") ? "" : "/"}${image}` : `${siteBaseUrl}/default-og-image.png`;
   const canonicalUrl = `${siteBaseUrl}/recipes/${store_get($$store_subs ??= {}, "$page", page).params.slug}`;
   function formatTime(minutes) {

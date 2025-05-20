@@ -52,7 +52,7 @@
 	let showRelatedProducts = $state(false); // State for dynamic loading
 
 	// Fix image path if needed
-	const siteBaseUrl = 'https://chefstorecookbook.netlify.app';
+	const siteBaseUrl = 'https://www.chefstorecookbook.com';
 	const fullImageUrl = $derived(
 		image
 			? image.startsWith('http')
