@@ -1,21 +1,5 @@
 import { D as sanitize_props, P as rest_props, K as fallback, Q as spread_attributes, R as clsx, F as slot, O as bind_props, C as pop, A as push, _ as element } from "./index2.js";
 import { c as cn } from "./Icon.js";
-function Card($$payload, $$props) {
-  const $$sanitized_props = sanitize_props($$props);
-  const $$restProps = rest_props($$sanitized_props, ["class"]);
-  push();
-  let className = fallback($$props["class"], void 0);
-  $$payload.out += `<div${spread_attributes(
-    {
-      class: clsx(cn("bg-card text-card-foreground rounded-xl border shadow", className)),
-      ...$$restProps
-    }
-  )}><!---->`;
-  slot($$payload, $$props, "default", {}, null);
-  $$payload.out += `<!----></div>`;
-  bind_props($$props, { class: className });
-  pop();
-}
 function Card_content($$payload, $$props) {
   const $$sanitized_props = sanitize_props($$props);
   const $$restProps = rest_props($$sanitized_props, ["class"]);
@@ -91,9 +75,8 @@ function Card_title($$payload, $$props) {
   pop();
 }
 export {
-  Card as C,
-  Card_header as a,
+  Card_header as C,
+  Card_content as a,
   Card_title as b,
-  Card_description as c,
-  Card_content as d
+  Card_description as c
 };

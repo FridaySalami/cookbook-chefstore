@@ -2,8 +2,8 @@ import { A as push, C as pop, D as sanitize_props, P as rest_props, K as fallbac
 import { p as page, B as Badge, U as Users } from "../../../../chunks/users.js";
 import "clsx";
 import { c as cn } from "../../../../chunks/Icon.js";
-import { a as Chevron_right, C as Card_footer } from "../../../../chunks/chevron-right.js";
-import { C as Card, a as Card_header, d as Card_content, b as Card_title, c as Card_description } from "../../../../chunks/card-title.js";
+import { a as Chevron_right, C as Card, b as Card_footer } from "../../../../chunks/chevron-right.js";
+import { C as Card_header, a as Card_content, b as Card_title, c as Card_description } from "../../../../chunks/card-title.js";
 import { R as RecipeLayout } from "../../../../chunks/RecipeLayout.js";
 import { marked } from "marked";
 import { C as Clock } from "../../../../chunks/clock.js";

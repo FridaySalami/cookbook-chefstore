@@ -1,6 +1,6 @@
-import { D as sanitize_props, E as spread_props, F as slot, I as head, U as ensure_array_like, C as pop, A as push, G as attr, X as stringify, V as escape_html } from "../../chunks/index2.js";
-import { C as Card, a as Card_header, b as Card_title, c as Card_description, d as Card_content } from "../../chunks/card-title.js";
+import { D as sanitize_props, E as spread_props, F as slot, I as head, U as ensure_array_like, G as attr, X as stringify, C as pop, A as push, V as escape_html } from "../../chunks/index2.js";
 import "clsx";
+import { C as Card_header, a as Card_content, b as Card_title, c as Card_description } from "../../chunks/card-title.js";
 import { B as Button } from "../../chunks/index4.js";
 import { g as goto } from "../../chunks/client.js";
 import { C as Clock } from "../../chunks/clock.js";
@@ -49,7 +49,7 @@ function _page($$payload, $$props) {
   Button($$payload, {
     href: "/recipes",
     size: "lg",
-    class: "bg-primary text-primary-foreground hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 mb-8 rounded-full px-8 py-3 text-base font-semibold shadow-lg border-2 border-primary/70 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none",
+    class: "bg-primary text-primary-foreground border-primary/70 mb-8 rounded-full border-2 px-8 py-3 text-base font-semibold shadow-lg transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:ring-offset-2 focus-visible:outline-none",
     children: ($$payload2) => {
       $$payload2.out += `<!---->Explore All Recipes`;
     },
@@ -64,7 +64,7 @@ function _page($$payload, $$props) {
       variant: "outline",
       size: "sm",
       onclick: () => goto(),
-      class: "hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:outline-none cursor-pointer",
+      class: "cursor-pointer rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none",
       children: ($$payload2) => {
         $$payload2.out += `<!---->Crowd Pleasers`;
       },
@@ -75,7 +75,7 @@ function _page($$payload, $$props) {
       variant: "outline",
       size: "sm",
       onclick: () => goto(),
-      class: "hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:outline-none cursor-pointer",
+      class: "cursor-pointer rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none",
       children: ($$payload2) => {
         $$payload2.out += `<!---->Comfort Food`;
       },
@@ -86,7 +86,7 @@ function _page($$payload, $$props) {
       variant: "outline",
       size: "sm",
       onclick: () => goto(),
-      class: "hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:outline-none cursor-pointer",
+      class: "cursor-pointer rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none",
       children: ($$payload2) => {
         $$payload2.out += `<!---->Quick Dinners`;
       },
@@ -95,80 +95,74 @@ function _page($$payload, $$props) {
     $$payload.out += `<!----></div> <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"><!--[-->`;
     for (let index = 0, $$length = each_array.length; index < $$length; index++) {
       let recipe = each_array[index];
-      Card($$payload, {
-        class: "group bg-card text-card-foreground flex flex-col overflow-hidden rounded-lg border shadow-sm transition-shadow hover:shadow-lg",
+      $$payload.out += `<a${attr("href", `/recipes/${stringify(recipe.slug)}`)} class="group bg-card text-card-foreground flex flex-col overflow-hidden rounded-lg border shadow-sm transition-shadow hover:shadow-lg"><div class="overflow-hidden"><img${attr("src", `https://www.chefstorecookbook.com${recipe.image ?? "/placeholder.png"}`)}${attr("alt", recipe.title)} class="aspect-[16/10] w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="eager" fetchpriority="high" onload="this.__e=event" onerror="this.__e=event"></div> <div class="flex flex-grow flex-col p-4 md:p-5">`;
+      Card_header($$payload, {
+        class: "p-0 pb-2",
         children: ($$payload2) => {
-          $$payload2.out += `<a${attr("href", `/recipes/${stringify(recipe.slug)}`)} class="flex h-full flex-col"><div class="overflow-hidden"><img${attr("src", `https://www.chefstorecookbook.com${recipe.image ?? "/placeholder.png"}`)}${attr("alt", recipe.title)} class="aspect-[16/10] w-full object-cover transition-transform duration-300 group-hover:scale-105"${attr("loading", index === 0 ? "eager" : "lazy")}${attr("fetchpriority", index === 0 ? "high" : "auto")} onload="this.__e=event" onerror="this.__e=event"></div> <div class="flex flex-grow flex-col p-4 md:p-5">`;
-          Card_header($$payload2, {
-            class: "p-0 pb-2",
+          Card_title($$payload2, {
+            class: "group-hover:text-primary font-serif text-lg leading-tight font-semibold md:text-xl",
             children: ($$payload3) => {
-              Card_title($$payload3, {
-                class: "group-hover:text-primary font-serif text-lg leading-tight font-semibold md:text-xl",
-                children: ($$payload4) => {
-                  $$payload4.out += `<!---->${escape_html(recipe.title)}`;
-                },
-                $$slots: { default: true }
-              });
-              $$payload3.out += `<!----> `;
-              if (recipe.description) {
-                $$payload3.out += "<!--[-->";
-                Card_description($$payload3, {
-                  class: "text-muted-foreground mt-1 line-clamp-3 h-[4.5em] text-sm",
-                  children: ($$payload4) => {
-                    $$payload4.out += `<!---->${escape_html(recipe.description)}`;
-                  },
-                  $$slots: { default: true }
-                });
-              } else {
-                $$payload3.out += "<!--[!-->";
-              }
-              $$payload3.out += `<!--]--> `;
-              if (recipe.tags && recipe.tags.length > 0) {
-                $$payload3.out += "<!--[-->";
-                const each_array_1 = ensure_array_like(recipe.tags);
-                $$payload3.out += `<div class="mt-2 flex flex-wrap gap-1"><!--[-->`;
-                for (let $$index = 0, $$length2 = each_array_1.length; $$index < $$length2; $$index++) {
-                  let tag = each_array_1[$$index];
-                  $$payload3.out += `<button type="button" class="bg-muted text-muted-foreground hover:bg-blue-100 hover:text-blue-800 border-muted-foreground/10 inline-block cursor-pointer rounded-full border px-2 py-0.5 text-xs font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none"${attr("title", `Show recipes tagged '${tag}'`)}>${escape_html(tag.startsWith("difficulty-") ? tag.replace("difficulty-", "").replace(/\b\w/g, (c) => c.toUpperCase()) : tag.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()))}</button>`;
-                }
-                $$payload3.out += `<!--]--></div>`;
-              } else {
-                $$payload3.out += "<!--[!-->";
-              }
-              $$payload3.out += `<!--]-->`;
+              $$payload3.out += `<!---->${escape_html(recipe.title)}`;
             },
             $$slots: { default: true }
           });
           $$payload2.out += `<!----> `;
-          Card_content($$payload2, {
-            class: "mt-auto p-0 pt-3",
-            children: ($$payload3) => {
-              $$payload3.out += `<div class="text-muted-foreground flex flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t pt-3 text-xs">`;
-              if (recipe.totalTime) {
-                $$payload3.out += "<!--[-->";
-                $$payload3.out += `<span class="flex items-center gap-1">`;
-                Clock($$payload3, { class: "h-3.5 w-3.5" });
-                $$payload3.out += `<!----> ${escape_html(recipe.totalTime)} min</span>`;
-              } else {
-                $$payload3.out += "<!--[!-->";
-              }
-              $$payload3.out += `<!--]--> `;
-              if (recipe.difficulty) {
-                $$payload3.out += "<!--[-->";
-                $$payload3.out += `<span class="flex items-center gap-1">`;
-                Utensils_crossed($$payload3, { class: "h-3.5 w-3.5" });
-                $$payload3.out += `<!----> ${escape_html(recipe.difficulty)}</span>`;
-              } else {
-                $$payload3.out += "<!--[!-->";
-              }
-              $$payload3.out += `<!--]--></div>`;
-            },
-            $$slots: { default: true }
-          });
-          $$payload2.out += `<!----></div></a>`;
+          if (recipe.description) {
+            $$payload2.out += "<!--[-->";
+            Card_description($$payload2, {
+              class: "text-muted-foreground mt-1 line-clamp-3 h-[4.5em] text-sm",
+              children: ($$payload3) => {
+                $$payload3.out += `<!---->${escape_html(recipe.description)}`;
+              },
+              $$slots: { default: true }
+            });
+          } else {
+            $$payload2.out += "<!--[!-->";
+          }
+          $$payload2.out += `<!--]--> `;
+          if (recipe.tags && recipe.tags.length > 0) {
+            $$payload2.out += "<!--[-->";
+            const each_array_1 = ensure_array_like(recipe.tags);
+            $$payload2.out += `<div class="mt-2 flex flex-wrap gap-1"><!--[-->`;
+            for (let $$index = 0, $$length2 = each_array_1.length; $$index < $$length2; $$index++) {
+              let tag = each_array_1[$$index];
+              $$payload2.out += `<span class="bg-muted text-muted-foreground border-muted-foreground/10 inline-block rounded-full border px-2 py-0.5 text-xs font-medium">${escape_html(tag.startsWith("difficulty-") ? tag.replace("difficulty-", "").replace(/\b\w/g, (c) => c.toUpperCase()) : tag.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()))}</span>`;
+            }
+            $$payload2.out += `<!--]--></div>`;
+          } else {
+            $$payload2.out += "<!--[!-->";
+          }
+          $$payload2.out += `<!--]-->`;
         },
         $$slots: { default: true }
       });
+      $$payload.out += `<!----> `;
+      Card_content($$payload, {
+        class: "mt-auto p-0 pt-3",
+        children: ($$payload2) => {
+          $$payload2.out += `<div class="text-muted-foreground flex flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t pt-3 text-xs">`;
+          if (recipe.totalTime) {
+            $$payload2.out += "<!--[-->";
+            $$payload2.out += `<span class="flex items-center gap-1">`;
+            Clock($$payload2, { class: "h-3.5 w-3.5" });
+            $$payload2.out += `<!----> ${escape_html(recipe.totalTime)} min</span>`;
+          } else {
+            $$payload2.out += "<!--[!-->";
+          }
+          $$payload2.out += `<!--]--> `;
+          if (recipe.difficulty) {
+            $$payload2.out += "<!--[-->";
+            $$payload2.out += `<span class="flex items-center gap-1">`;
+            Utensils_crossed($$payload2, { class: "h-3.5 w-3.5" });
+            $$payload2.out += `<!----> ${escape_html(recipe.difficulty)}</span>`;
+          } else {
+            $$payload2.out += "<!--[!-->";
+          }
+          $$payload2.out += `<!--]--></div>`;
+        },
+        $$slots: { default: true }
+      });
+      $$payload.out += `<!----></div></a>`;
     }
     $$payload.out += `<!--]--></div></section>`;
   } else {
