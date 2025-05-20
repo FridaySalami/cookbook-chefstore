@@ -207,6 +207,15 @@
     "file": "chunks/environment.js",
     "name": "environment"
   },
+  "_everyday-pesto-spaghetti.js": {
+    "file": "chunks/everyday-pesto-spaghetti.js",
+    "name": "everyday-pesto-spaghetti",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_exports.js": {
     "file": "chunks/exports.js",
     "name": "exports",
@@ -698,6 +707,12 @@
     "src": "src/content/recipes/duck-fat-roast-potatoes-garlic-rosemary.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/everyday-pesto-spaghetti.md?raw": {
+    "file": "chunks/everyday-pesto-spaghetti2.js",
+    "name": "everyday-pesto-spaghetti",
+    "src": "src/content/recipes/everyday-pesto-spaghetti.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/family-mac-cheese-hidden-veg.md?raw": {
     "file": "chunks/family-mac-cheese-hidden-veg2.js",
     "name": "family-mac-cheese-hidden-veg",
@@ -1026,6 +1041,7 @@
       "_crunchy-asian-slaw.js",
       "_dark-chocolate-orange-blossom-sea-salt.js",
       "_duck-fat-roast-potatoes-garlic-rosemary.js",
+      "_everyday-pesto-spaghetti.js",
       "_family-mac-cheese-hidden-veg.js",
       "_fluffy-buttermilk-pancakes.js",
       "_freekeh-pilaf-apricots-almonds.js",
@@ -1080,6 +1096,7 @@
       "_crunchy-asian-slaw.js",
       "_dark-chocolate-orange-blossom-sea-salt.js",
       "_duck-fat-roast-potatoes-garlic-rosemary.js",
+      "_everyday-pesto-spaghetti.js",
       "_family-mac-cheese-hidden-veg.js",
       "_fluffy-buttermilk-pancakes.js",
       "_freekeh-pilaf-apricots-almonds.js",
@@ -1130,6 +1147,7 @@
       "src/content/recipes/crunchy-asian-slaw.md?raw",
       "src/content/recipes/dark-chocolate-orange-blossom-sea-salt.md?raw",
       "src/content/recipes/duck-fat-roast-potatoes-garlic-rosemary.md?raw",
+      "src/content/recipes/everyday-pesto-spaghetti.md?raw",
       "src/content/recipes/family-mac-cheese-hidden-veg.md?raw",
       "src/content/recipes/fluffy-buttermilk-pancakes.md?raw",
       "src/content/recipes/freekeh-pilaf-apricots-almonds.md?raw",
@@ -1210,6 +1228,7 @@
       "_crunchy-asian-slaw.js",
       "_dark-chocolate-orange-blossom-sea-salt.js",
       "_duck-fat-roast-potatoes-garlic-rosemary.js",
+      "_everyday-pesto-spaghetti.js",
       "_family-mac-cheese-hidden-veg.js",
       "_fluffy-buttermilk-pancakes.js",
       "_freekeh-pilaf-apricots-almonds.js",
@@ -1260,6 +1279,7 @@
       "src/content/recipes/crunchy-asian-slaw.md?raw",
       "src/content/recipes/dark-chocolate-orange-blossom-sea-salt.md?raw",
       "src/content/recipes/duck-fat-roast-potatoes-garlic-rosemary.md?raw",
+      "src/content/recipes/everyday-pesto-spaghetti.md?raw",
       "src/content/recipes/family-mac-cheese-hidden-veg.md?raw",
       "src/content/recipes/fluffy-buttermilk-pancakes.md?raw",
       "src/content/recipes/freekeh-pilaf-apricots-almonds.md?raw",
@@ -1330,6 +1350,7 @@
       "_crunchy-asian-slaw.js",
       "_dark-chocolate-orange-blossom-sea-salt.js",
       "_duck-fat-roast-potatoes-garlic-rosemary.js",
+      "_everyday-pesto-spaghetti.js",
       "_family-mac-cheese-hidden-veg.js",
       "_fluffy-buttermilk-pancakes.js",
       "_freekeh-pilaf-apricots-almonds.js",
