@@ -194,21 +194,30 @@
 </script>
 
 <svelte:head>
-	<title>{recipeTitle} | Chefstore Cookbook</title>
+	<title>{recipeTitle}</title>
 	{#if data.metadata?.description}
 		<meta name="description" content={data.metadata.description} />
 	{/if}
-	<link rel="canonical" href={`https://www.chefstorecookbook.com/recipes/${data.metadata.slug ?? $page.params.slug}/`} />
+	<link
+		rel="canonical"
+		href={`https://www.chefstorecookbook.com/recipes/${data.metadata.slug ?? $page.params.slug}/`}
+	/>
 
 	<!-- Open Graph -->
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content={`${recipeTitle} | Chefstore Cookbook`} />
+	<meta property="og:title" content={recipeTitle} />
 	{#if data.metadata?.description}
 		<meta property="og:description" content={data.metadata.description} />
 	{/if}
-	<meta property="og:url" content={`https://www.chefstorecookbook.com/recipes/${data.metadata.slug ?? $page.params.slug}/`} />
+	<meta
+		property="og:url"
+		content={`https://www.chefstorecookbook.com/recipes/${data.metadata.slug ?? $page.params.slug}/`}
+	/>
 	<meta property="og:site_name" content="Chefstore Cookbook" />
-	<meta property="og:image" content={`https://www.chefstorecookbook.com${data.metadata.image ?? '/default-og-image.png'}`} />
+	<meta
+		property="og:image"
+		content={`https://www.chefstorecookbook.com${data.metadata.image ?? '/default-og-image.png'}`}
+	/>
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -216,7 +225,10 @@
 	{#if data.metadata?.description}
 		<meta name="twitter:description" content={data.metadata.description} />
 	{/if}
-	<meta name="twitter:image" content={`https://www.chefstorecookbook.com${data.metadata.image ?? '/default-og-image.png'}`} />
+	<meta
+		name="twitter:image"
+		content={`https://www.chefstorecookbook.com${data.metadata.image ?? '/default-og-image.png'}`}
+	/>
 
 	<!-- Structured Data (JSON-LD) -->
 	{#if Object.keys(schema).length > 2}

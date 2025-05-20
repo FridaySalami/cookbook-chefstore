@@ -241,14 +241,14 @@ function _page($$payload, $$props) {
     goesGreatWith = "";
   }
   head($$payload, ($$payload2) => {
-    $$payload2.title = `<title>${escape_html(recipeTitle)} | Chefstore Cookbook</title>`;
+    $$payload2.title = `<title>${escape_html(recipeTitle)}</title>`;
     if (data.metadata?.description) {
       $$payload2.out += "<!--[-->";
       $$payload2.out += `<meta name="description"${attr("content", data.metadata.description)}>`;
     } else {
       $$payload2.out += "<!--[!-->";
     }
-    $$payload2.out += `<!--]--> <link rel="canonical"${attr("href", `https://www.chefstorecookbook.com/recipes/${data.metadata.slug ?? store_get($$store_subs ??= {}, "$page", page).params.slug}/`)}> <meta property="og:type" content="article"> <meta property="og:title"${attr("content", `${recipeTitle} | Chefstore Cookbook`)}> `;
+    $$payload2.out += `<!--]--> <link rel="canonical"${attr("href", `https://www.chefstorecookbook.com/recipes/${data.metadata.slug ?? store_get($$store_subs ??= {}, "$page", page).params.slug}/`)}> <meta property="og:type" content="article"> <meta property="og:title"${attr("content", recipeTitle)}> `;
     if (data.metadata?.description) {
       $$payload2.out += "<!--[-->";
       $$payload2.out += `<meta property="og:description"${attr("content", data.metadata.description)}>`;

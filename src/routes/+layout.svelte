@@ -70,6 +70,9 @@
 		content="Delicious, no-fuss recipes made with real ingredients. Cook like you mean it."
 	/>
 
+	<!-- Site Name for Google -->
+	<meta name="site_name" content="Chefstore Cookbook" />
+
 	<!-- Structured Data -->
 	<script type="application/ld+json">
 		{
@@ -82,6 +85,16 @@
 				"target": "https://www.chefstorecookbook.com/search?q={search_term_string}",
 				"query-input": "required name=search_term_string"
 			}
+		}
+	</script>
+
+	<!-- Structured Data for Site Name -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "Chefstore Cookbook",
+			"url": "https://www.chefstorecookbook.com/"
 		}
 	</script>
 
