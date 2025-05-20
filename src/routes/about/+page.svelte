@@ -19,34 +19,13 @@
 		class="text-foreground space-y-6 rounded-xl border border-gray-200 bg-white/80 p-6 text-lg leading-relaxed shadow"
 	>
 		<p>
-			Parkers Foodservice is a family run business with over 25 years of experience and expertise in
-			sourcing and delivering an ever growing cross-category product range. Growing from our local
-			roots to serve discerning customers both near and far, we pride ourselves in providing high
-			quality products, with exceptional service and at fantastic prices.
+			The Chef Store is a family run business with over 25 years of experience and expertise in sourcing and delivering an ever growing cross-category range of quality ingredients and catering supplies. Growing from our local roots in the South of England we proudly serve discerning customers both near and far, priding ourselves in providing high quality products at fantastic prices.
 		</p>
 		<p>
-			Established in 2017 by Chichester born brothers Richard & Ashley; Parkers Foodservice is a
-			second-generation business following the retirement of their parents, Carol & Andrew, after
-			more than 30 years of running Premier Meats. Carol & Andrew started the business as a husband
-			& wife duo on a small holding in Eastergate, West Sussex, selling poultry & eggs to
-			restaurants, cafés, and shops. A lot has changed over the years from our humble beginnings to
-			where we are today as one of the fastest growing Foodservice providers on the South Coast.
+			Established in 2025 by brothers Richard & Ashley who have over 25 years of experience in Foodservice; The Chef Store is a second-generation business following the retirement of their parents, Carol & Andy, after more than 30 years in the industry. Based in Ford, just outside of Arundel, West Sussex, we offer an extensive range of cooking essentials from dried goods to dairy and desserts, tins and jars to kitchen supplies and cleaning products too.
 		</p>
 		<p>
-			Based in Ford, just outside of Arundel, West Sussex, we offer an extensive range of items
-			across frozen, ambient, chilled, dairy, hygiene, seasonal and butchery. Our fleet of
-			refrigerated vans delivers directly from our warehouse 6 days a week, with no minimum order,
-			throughout West Sussex and parts of Hampshire and Surrey. We live track all of our vehicles
-			enabling us to accurately inform you of delivery times and proactively avoid traffic ensuring
-			we get to you as quickly as possible.
+			Our wonderful team at The Chef Store fulfils over 500 orders on a daily basis; we serve a diverse array of customers treating each one with equal importance. We supply to commercial customers as well as the general public and home chefs; we also offer national delivery meaning no matter who you are, The Chef Store is here to meet your every culinary need.
 		</p>
-		<p>
-			Our wonderful team here at Parkers Foodservice fulfils over 500 orders on a daily basis; we
-			serve a diverse array of businesses and treat each customer with equal importance. We supply
-			to restaurants, hotels, coffee shops, golf clubs, care homes, and the general public too.
-			Alongside our dedicated teams directly serving our local commercial customers we also offer
-			national delivery meaning no matter who you are, Parkers Foodservice is here to meet your
-			every culinary need.
-		</p>
-	</div>
+		</div>
 </main>
