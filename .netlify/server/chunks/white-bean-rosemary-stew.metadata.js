@@ -1,4 +1,4 @@
-const metadata$I = {
+const metadata$N = {
   "title": "Baked Camembert with Bay Tree Cheeseboard Chutney",
   "slug": "baked-camembert-cheeseboard-chutney",
   "description": "Soft, gooey Camembert baked until molten and spoonable—topped with Bay Tree Cheeseboard Chutney and served with crusty bread for sharing.",
@@ -30,9 +30,9 @@ const metadata$I = {
 };
 const __vite_glob_4_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$I
+  metadata: metadata$N
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$H = {
+const metadata$M = {
   "title": "Balsamic Honey Glazed Sausages with Roasted Grapes & Shallots",
   "slug": "balsamic-honey-sausages-grapes",
   "description": "Juicy sausages roasted in a sticky balsamic-honey glaze, nestled among jammy grapes and golden shallots. Sweet, savoury, and perfect for tearing bread and dunking into the syrupy tray juices.",
@@ -70,9 +70,9 @@ const metadata$H = {
 };
 const __vite_glob_4_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$H
+  metadata: metadata$M
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$G = {
+const metadata$L = {
   "title": "Buttermilk Chicken Tenders with Honey Mustard Dip",
   "slug": "buttermilk-chicken-tenders",
   "description": "Crispy golden chicken tenders marinated in buttermilk, coated in seasoned crumbs, and served with a sweet-spicy honey mustard dip. Perfect for kids, parties, or snacking straight from the tray.",
@@ -105,9 +105,9 @@ const metadata$G = {
 };
 const __vite_glob_4_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$G
+  metadata: metadata$L
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$F = {
+const metadata$K = {
   "title": "Cheesy Leek & Potato Gratin",
   "slug": "cheesy-leek-potato-gratin",
   "description": "A creamy baked gratin of soft potatoes and sweet leeks, finished with golden panko breadcrumbs and bubbling cheese—perfect as a side or a vegetarian main.",
@@ -146,9 +146,9 @@ const metadata$F = {
 };
 const __vite_glob_4_3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$F
+  metadata: metadata$K
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$E = {
+const metadata$J = {
   "title": "Chicken & Pearl Barley Broth",
   "slug": "chicken-pearl-barley-broth",
   "description": "A golden, soul-soothing broth loaded with tender chicken, pearl barley, and soft vegetables—finished with lemon, thyme, and a crack of black pepper.",
@@ -183,9 +183,9 @@ const metadata$E = {
 };
 const __vite_glob_4_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$E
+  metadata: metadata$J
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$D = {
+const metadata$I = {
   "title": "Preserved Lemon & Rose Harissa Chickpea Tagine",
   "slug": "chickpea-tagine-preserved-lemon-harissa",
   "description": "Fragrant with preserved lemon, fiery with harissa, and slow-cooked till rich and comforting—this chickpea tagine is a soulful stew that tastes like it’s been passed down.",
@@ -224,9 +224,9 @@ const metadata$D = {
 };
 const __vite_glob_4_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$D
+  metadata: metadata$I
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$C = {
+const metadata$H = {
   "title": "Classic Tiramisu (No Eggs)",
   "slug": "classic-tiramisu-no-eggs",
   "description": "A layered dessert of coffee-soaked Savoiardi sponge fingers and mascarpone cream—rich, smooth, and egg-free for ease and safety.",
@@ -259,9 +259,9 @@ const metadata$C = {
 };
 const __vite_glob_4_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$C
+  metadata: metadata$H
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$B = {
+const metadata$G = {
   "title": "Coconut Milk Rice Pudding",
   "slug": "coconut-milk-rice-pudding",
   "description": "A silky, tropical twist on comforting rice pudding—made with rich coconut milk and infused with warming cardamom and vanilla.",
@@ -292,9 +292,9 @@ const metadata$B = {
 };
 const __vite_glob_4_7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$B
+  metadata: metadata$G
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$A = {
+const metadata$F = {
   "title": "Creamy Chicken Korma",
   "slug": "creamy-chicken-korma",
   "description": "A rich, crowd-pleasin’ curry with tender chicken, aromatic spices, and a luxuriously creamy coconut-almond sauce—fit for weeknight comfort or weekend showstoppin’.",
@@ -332,9 +332,9 @@ const metadata$A = {
 };
 const __vite_glob_4_8 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$A
+  metadata: metadata$F
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$z = {
+const metadata$E = {
   "title": "Creamy Polenta with Wild Mushrooms and Truffle Oil",
   "slug": "creamy-polenta-wild-mushrooms-truffle",
   "description": "A bowl of comfort—creamy polenta topped with wild mushrooms sautéed in garlic and thyme, finished with a generous drizzle of black truffle oil.",
@@ -375,9 +375,9 @@ const metadata$z = {
 };
 const __vite_glob_4_9 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$z
+  metadata: metadata$E
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$y = {
+const metadata$D = {
   "title": "Crispy Chicken Katsu Curry",
   "slug": "crispy-chicken-katsu-curry",
   "description": "Breaded, golden chicken breast sliced over fluffy rice and smothered in rich, Japanese-style katsu curry made with Yutaka paste.",
@@ -411,9 +411,9 @@ const metadata$y = {
 };
 const __vite_glob_4_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$y
+  metadata: metadata$D
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$x = {
+const metadata$C = {
   "title": "Crispy Panko Chicken Bites",
   "slug": "crispy-panko-chicken-bites",
   "description": "Golden, crunchy chicken bites coated in light panko breadcrumbs—perfect for dipping, snacking, or tossing into wraps and salads.",
@@ -447,9 +447,9 @@ const metadata$x = {
 };
 const __vite_glob_4_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$x
+  metadata: metadata$C
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$w = {
+const metadata$B = {
   "title": "Crunchy Asian Slaw with Sesame-Ginger Dressing",
   "slug": "crunchy-asian-slaw",
   "description": "A light, zesty slaw loaded with crisp veg and tossed in a sesame-ginger dressing—perfect alongside rich mains or piled high in wraps and buns.",
@@ -481,9 +481,9 @@ const metadata$w = {
 };
 const __vite_glob_4_12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$w
+  metadata: metadata$B
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$v = {
+const metadata$A = {
   "title": "Dark Chocolate Pots with Orange Blossom and Sea Salt",
   "slug": "dark-chocolate-orange-blossom-sea-salt",
   "description": "Silky dark chocolate pots infused with floral orange blossom water and finished with a pinch of flaked sea salt. A no-bake dessert with big impact.",
@@ -521,9 +521,9 @@ const metadata$v = {
 };
 const __vite_glob_4_13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$v
+  metadata: metadata$A
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$u = {
+const metadata$z = {
   "title": "Duck Fat Roast Potatoes with Garlic & Rosemary",
   "slug": "duck-fat-roast-potatoes-garlic-rosemary",
   "description": "Crispy on the outside, fluffy within—these golden roasties are infused with garlic, rosemary, and rich duck fat. The ultimate side dish that steals the show.",
@@ -561,9 +561,49 @@ const metadata$u = {
 };
 const __vite_glob_4_14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$u
+  metadata: metadata$z
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$t = {
+const metadata$y = {
+  "title": "Family-Friendly Mac & Cheese with Hidden Veg",
+  "slug": "family-mac-cheese-hidden-veg",
+  "description": "A golden, bubbling tray of mac and cheese the whole family will eat without negotiation. Creamy cheddar sauce, soft pasta, and blended veg snuck in for peace of mind. Comfort food that doesn’t need to shout.",
+  "date": "2025-05-20T00:00:00.000Z",
+  "featured": true,
+  "image": "/images/recipes/category-name/recipe-name/family-mac-cheese-hidden-veg.webp",
+  "prepTime": 15,
+  "cookTime": 30,
+  "totalTime": 45,
+  "servings": 4,
+  "categories": [
+    "dinner",
+    "pasta",
+    "comfort-food"
+  ],
+  "tags": [
+    "vegetarian-option",
+    "comfort-food",
+    "difficulty-easy"
+  ],
+  "relatedProducts": [
+    {
+      "handle": "maldon-sea-salt",
+      "featured": true
+    },
+    {
+      "handle": "colavita-100-italian-extra-virgin-olive-oil-750ml",
+      "featured": false
+    },
+    {
+      "handle": "triple-lion-elbow-macaroni-pasta-3kg",
+      "featured": false
+    }
+  ]
+};
+const __vite_glob_4_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  metadata: metadata$y
+}, Symbol.toStringTag, { value: "Module" }));
+const metadata$x = {
   "title": "Fluffy Buttermilk Pancakes",
   "slug": "fluffy-buttermilk-pancakes",
   "description": "Light, golden pancakes with a tender crumb and just enough fluff to soak up all that syrupy joy.",
@@ -589,11 +629,11 @@ const metadata$t = {
     }
   ]
 };
-const __vite_glob_4_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_16 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$t
+  metadata: metadata$x
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$s = {
+const metadata$w = {
   "title": "Middle Eastern Freekeh Pilaf with Apricots & Almonds",
   "slug": "freekeh-pilaf-apricots-almonds",
   "description": "A fragrant, textured grain dish made with smoky freekeh, sweet dried apricots, crunchy almonds, and a drizzle of tangy pomegranate molasses.",
@@ -634,11 +674,11 @@ const metadata$s = {
     }
   ]
 };
-const __vite_glob_4_16 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_17 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$s
+  metadata: metadata$w
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$r = {
+const metadata$v = {
   "title": "Fruity Flapjacks with Cherries & Sultanas",
   "slug": "fruity-flapjacks-cherries-sultanas",
   "description": "Chewy golden oat bars packed with glace cherries and sultanas. Sticky, sweet, and perfect with a cup of tea or packed in a lunchbox.",
@@ -676,11 +716,47 @@ const metadata$r = {
     }
   ]
 };
-const __vite_glob_4_17 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_18 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$r
+  metadata: metadata$v
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$q = {
+const metadata$u = {
+  "title": "Garlic Butter Steak Bites with Crispy Potatoes",
+  "slug": "garlic-butter-steak-bites",
+  "description": "Juicy, golden-seared steak bites tossed in garlic butter, served with crisped potatoes. A hearty meal built on simple pleasures.",
+  "date": "2025-05-20T00:00:00.000Z",
+  "featured": false,
+  "image": "/images/recipes/category-name/recipe-name/garlic-butter-steak-bites.webp",
+  "prepTime": 15,
+  "cookTime": 25,
+  "totalTime": 40,
+  "servings": 2,
+  "categories": [
+    "dinner",
+    "meat"
+  ],
+  "tags": [
+    "comfort-food",
+    "difficulty-easy",
+    "crowd-pleaser",
+    "beef"
+  ],
+  "relatedProducts": [
+    {
+      "handle": "colavita-100-italian-extra-virgin-olive-oil-750ml",
+      "featured": true
+    },
+    {
+      "handle": "maldon-sea-salt",
+      "featured": true
+    }
+  ]
+};
+const __vite_glob_4_19 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  metadata: metadata$u
+}, Symbol.toStringTag, { value: "Module" }));
+const metadata$t = {
   "title": "Garlic & Herb Tear-and-Share Bread",
   "slug": "garlic-herb-tear-and-share-bread",
   "description": "Soft, golden balls of freshly baked dough slathered in garlic-herb butter—made for sharing, pulling apart, and mopping up everything on the table.",
@@ -717,11 +793,11 @@ const metadata$q = {
     }
   ]
 };
-const __vite_glob_4_18 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_20 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$q
+  metadata: metadata$t
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$p = {
+const metadata$s = {
   "title": "Glace Cherry & White Chocolate Blondies",
   "slug": "glace-cherry-white-chocolate-blondies",
   "description": "Fudgy, golden blondies studded with sweet glacé cherries and creamy white chocolate. A nostalgic bake with a modern twist.",
@@ -759,11 +835,11 @@ const metadata$p = {
     }
   ]
 };
-const __vite_glob_4_19 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_21 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$p
+  metadata: metadata$s
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$o = {
+const metadata$r = {
   "title": "Goat’s Cheese & Caramelised Onion Vol-au-Vents",
   "slug": "goats-cheese-onion-vol-au-vents",
   "description": "Buttery puff pastry cases filled with sweet caramelised onions, creamy goat’s cheese, and a sprinkle of thyme. A perfect starter or elegant party bite.",
@@ -791,11 +867,11 @@ const metadata$o = {
     }
   ]
 };
-const __vite_glob_4_20 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_22 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$o
+  metadata: metadata$r
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$n = {
+const metadata$q = {
   "title": "Homemade Pizza Dough & Tomato Sauce Base",
   "slug": "homemade-pizza-dough-tomato-sauce",
   "description": "Soft, chewy, golden-edged pizza dough with a rich tomato sauce base—this is your canvas for pizza night perfection.",
@@ -825,11 +901,11 @@ const metadata$n = {
     }
   ]
 };
-const __vite_glob_4_21 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_23 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$n
+  metadata: metadata$q
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$m = {
+const metadata$p = {
   "title": "Kimchi Fried Rice (Bokkeumbap)",
   "slug": "kimchi-fried-rice",
   "description": "A fiery, tangy, deeply savoury fried rice made with kimchi, garlic, and soy sauce—finished with a crispy fried egg and a drizzle of sesame oil.",
@@ -858,11 +934,11 @@ const metadata$m = {
     }
   ]
 };
-const __vite_glob_4_22 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_24 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$m
+  metadata: metadata$p
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$l = {
+const metadata$o = {
   "title": "Lemon Posset with Shortbread Crumble",
   "slug": "lemon-posset-shortbread",
   "description": "A simple, elegant lemon cream dessert that sets with just cream, sugar, and citrus—topped with a buttery shortbread crumble for crunch.",
@@ -893,11 +969,56 @@ const metadata$l = {
     }
   ]
 };
-const __vite_glob_4_23 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_25 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$l
+  metadata: metadata$o
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$k = {
+const metadata$n = {
+  "title": "Mini Turkey Meatballs in Tomato Sauce",
+  "slug": "mini-turkey-meatballs-tomato-sauce",
+  "description": "Juicy little turkey meatballs baked until golden, then simmered in a rich tomato sauce sweetened with slow-cooked onion and finished with a swirl of butter. Family-friendly, comforting, and surprisingly full of flavour.",
+  "date": "2025-05-20T00:00:00.000Z",
+  "featured": true,
+  "image": "/images/recipes/category-name/recipe-name/mini-turkey-meatballs-tomato-sauce.webp",
+  "prepTime": 25,
+  "cookTime": 35,
+  "totalTime": 60,
+  "servings": 4,
+  "categories": [
+    "dinner",
+    "comfort-food",
+    "one-pot"
+  ],
+  "tags": [
+    "family-friendly",
+    "turkey",
+    "pasta",
+    "difficulty-easy"
+  ],
+  "relatedProducts": [
+    {
+      "handle": "maldon-sea-salt",
+      "featured": true
+    },
+    {
+      "handle": "ballerina-tomato-paste-800g-tin",
+      "featured": true
+    },
+    {
+      "handle": "manfredi-barbera-unfiltered-italian-extra-virgin-oil",
+      "featured": true
+    },
+    {
+      "handle": "fattoria-estense-silver-label-balsamic-modena-vin",
+      "featured": true
+    }
+  ]
+};
+const __vite_glob_4_26 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  metadata: metadata$n
+}, Symbol.toStringTag, { value: "Module" }));
+const metadata$m = {
   "title": "Miso Glazed Roasted Vegetables",
   "slug": "miso-glazed-roasted-vegetables",
   "description": "A savory-sweet vegetable medley with a rich umami glaze—the perfect side dish that might just steal the show.",
@@ -932,11 +1053,11 @@ const metadata$k = {
     }
   ]
 };
-const __vite_glob_4_24 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_27 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$k
+  metadata: metadata$m
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$j = {
+const metadata$l = {
   "title": "One-Pan Harissa Chickpeas with Eggs",
   "slug": "one-pan-harissa-chickpeas-eggs",
   "description": "A rich, spiced tomato and harissa chickpea stew finished with soft eggs and fresh herbs. Perfect for brunch, lunch, or mopping up with warm bread.",
@@ -967,11 +1088,11 @@ const metadata$j = {
     }
   ]
 };
-const __vite_glob_4_25 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_28 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$j
+  metadata: metadata$l
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$i = {
+const metadata$k = {
   "title": "Pesto Tagliatelle with Belazu Genovese",
   "slug": "pesto-tagliatelle-belazu",
   "description": "A quick yet luxurious bowl of silky tagliatelle coated in vibrant, herby Belazu Genovese pesto—ready in the time it takes to boil pasta.",
@@ -1003,11 +1124,11 @@ const metadata$i = {
     }
   ]
 };
-const __vite_glob_4_26 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_29 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$i
+  metadata: metadata$k
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$h = {
+const metadata$j = {
   "title": "Poppadom Snack Platter",
   "slug": "poppadom-snack-platter",
   "description": "Turn humble uncooked popadoms into a crowd-pleasing snack board with dips, toppings, and spice. Fast, crispy, and endlessly customizable.",
@@ -1034,11 +1155,11 @@ const metadata$h = {
     }
   ]
 };
-const __vite_glob_4_27 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_30 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$h
+  metadata: metadata$j
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$g = {
+const metadata$i = {
   "title": "Roasted Beetroot, Orange & Walnut Salad with Truffle Oil",
   "slug": "roasted-beetroot-orange-walnut-salad",
   "description": "Sweet roasted beetroot, juicy orange segments, crunchy walnuts and peppery rocket—brought together with a drizzle of truffle oil for a salad that sings with texture and elegance.",
@@ -1069,11 +1190,11 @@ const metadata$g = {
     }
   ]
 };
-const __vite_glob_4_28 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_31 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$g
+  metadata: metadata$i
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$f = {
+const metadata$h = {
   "title": "Romanian-Style Sarmale (Stuffed Cabbage Rolls)",
   "slug": "romanian-sarmale-cabbage-rolls",
   "description": "These traditional Romanian cabbage rolls are slow-cooked in tomato broth, stuffed with pork, rice, and herbs—wrapped in sauerkraut leaves and steeped in comfort.",
@@ -1108,11 +1229,11 @@ const metadata$f = {
     }
   ]
 };
-const __vite_glob_4_29 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_32 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$f
+  metadata: metadata$h
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$e = {
+const metadata$g = {
   "title": "Salted Caramel Chocolate Tart",
   "slug": "salted-caramel-chocolate-tart",
   "description": "A decadent tart with a buttery base, luscious Callebaut caramel filling, and rich dark chocolate topping—finished with a sprinkle of sea salt.",
@@ -1141,11 +1262,11 @@ const metadata$e = {
     }
   ]
 };
-const __vite_glob_4_30 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_33 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$e
+  metadata: metadata$g
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$d = {
+const metadata$f = {
   "title": "Salted Caramel Mocha",
   "slug": "salted-caramel-mocha",
   "description": "A silky, café-style mocha made with rich chocolate, a kiss of salted caramel, and topped with cream for the ultimate indulgent treat—no barista required.",
@@ -1179,11 +1300,55 @@ const metadata$d = {
     }
   ]
 };
-const __vite_glob_4_31 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_34 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$d
+  metadata: metadata$f
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$c = {
+const metadata$e = {
+  "title": "Sausage & Sweet Potato Traybake with Apples, Garlic and Greens",
+  "slug": "sausage-sweet-potato-traybake",
+  "description": "A golden tray of sausages roasted with sweet potatoes, apples, jammy red onions and whole garlic cloves, finished with a handful of greens and a mustard-maple glaze. Sweet, savoury, and ready to feed the family with ease.",
+  "date": "2025-05-20T00:00:00.000Z",
+  "featured": true,
+  "image": "/images/recipes/category-name/recipe-name/sausage-sweet-potato-traybake.webp",
+  "prepTime": 15,
+  "cookTime": 40,
+  "totalTime": 55,
+  "servings": 4,
+  "categories": [
+    "dinner",
+    "traybake",
+    "comfort-food"
+  ],
+  "tags": [
+    "family-friendly",
+    "pork",
+    "difficulty-easy"
+  ],
+  "relatedProducts": [
+    {
+      "handle": "maldon-sea-salt",
+      "featured": true
+    },
+    {
+      "handle": "colavita-100-italian-extra-virgin-olive-oil-750ml",
+      "featured": true
+    },
+    {
+      "handle": "centaur-dijon-mustard-1kg",
+      "featured": true
+    },
+    {
+      "handle": "hyve-squeezy-honey-340g",
+      "featured": false
+    }
+  ]
+};
+const __vite_glob_4_35 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  metadata: metadata$e
+}, Symbol.toStringTag, { value: "Module" }));
+const metadata$d = {
   "title": "Pan-Fried Sea Bass with Lemon Caper Butter",
   "slug": "sea-bass-lemon-caper-butter",
   "description": "Crispy-skinned sea bass fillets served with a quick lemon caper butter sauce—bright, buttery, and full of bold flavour.",
@@ -1213,11 +1378,11 @@ const metadata$c = {
     }
   ]
 };
-const __vite_glob_4_32 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_36 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  metadata: metadata$c
+  metadata: metadata$d
 }, Symbol.toStringTag, { value: "Module" }));
-const metadata$b = {
+const metadata$c = {
   "title": "Silky Milk Chocolate Mousse",
   "slug": "silky-milk-chocolate-mousse",
   "description": "Light, airy mousse made with premium Callebaut milk chocolate callets—perfect for an effortless yet luxurious dessert.",
@@ -1243,7 +1408,51 @@ const metadata$b = {
     }
   ]
 };
-const __vite_glob_4_33 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_37 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  metadata: metadata$c
+}, Symbol.toStringTag, { value: "Module" }));
+const metadata$b = {
+  "title": "Slow-Cooked Beef Stew with Red Wine & Thyme",
+  "slug": "slow-cooked-beef-stew-red-wine-thyme",
+  "description": "A rich, slow-simmered beef stew layered with red wine, thyme, and deep umami—finished with a touch of miso for unexpected depth.",
+  "date": "2025-05-20T00:00:00.000Z",
+  "featured": false,
+  "image": "/images/recipes/category-name/recipe-name/slow-cooked-beef-stew-red-wine-thyme.webp",
+  "prepTime": 20,
+  "cookTime": 180,
+  "totalTime": 200,
+  "servings": 4,
+  "categories": [
+    "dinner",
+    "comfort-food"
+  ],
+  "tags": [
+    "slow-cooked",
+    "beef",
+    "winter-warmer",
+    "difficulty-medium"
+  ],
+  "relatedProducts": [
+    {
+      "handle": "oscar-all-natural-beef-stock-1ltr",
+      "featured": true
+    },
+    {
+      "handle": "colavita-100-italian-extra-virgin-olive-oil-750ml",
+      "featured": false
+    },
+    {
+      "handle": "maldon-sea-salt",
+      "featured": false
+    },
+    {
+      "handle": "ballerina-tomato-paste-800g-tin",
+      "featured": false
+    }
+  ]
+};
+const __vite_glob_4_38 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   metadata: metadata$b
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1277,7 +1486,7 @@ const metadata$a = {
     }
   ]
 };
-const __vite_glob_4_34 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_39 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   metadata: metadata$a
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1317,7 +1526,7 @@ const metadata$9 = {
     }
   ]
 };
-const __vite_glob_4_35 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_40 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   metadata: metadata$9
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1355,7 +1564,7 @@ const metadata$8 = {
     }
   ]
 };
-const __vite_glob_4_36 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_41 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   metadata: metadata$8
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1392,7 +1601,7 @@ const metadata$7 = {
     }
   ]
 };
-const __vite_glob_4_37 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_42 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   metadata: metadata$7
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1428,7 +1637,7 @@ const metadata$6 = {
     }
   ]
 };
-const __vite_glob_4_38 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_43 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   metadata: metadata$6
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1468,7 +1677,7 @@ const metadata$5 = {
     }
   ]
 };
-const __vite_glob_4_39 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_44 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   metadata: metadata$5
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1511,7 +1720,7 @@ const metadata$4 = {
     }
   ]
 };
-const __vite_glob_4_40 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_45 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   metadata: metadata$4
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1547,7 +1756,7 @@ const metadata$3 = {
     }
   ]
 };
-const __vite_glob_4_41 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_46 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   metadata: metadata$3
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1585,7 +1794,7 @@ const metadata$2 = {
     }
   ]
 };
-const __vite_glob_4_42 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_47 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   metadata: metadata$2
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1616,7 +1825,7 @@ const metadata$1 = {
     }
   ]
 };
-const __vite_glob_4_43 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_48 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   metadata: metadata$1
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1656,54 +1865,59 @@ const metadata = {
     }
   ]
 };
-const __vite_glob_4_44 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_4_49 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   metadata
 }, Symbol.toStringTag, { value: "Module" }));
 export {
-  __vite_glob_4_17 as A,
-  __vite_glob_4_16 as B,
-  __vite_glob_4_15 as C,
-  __vite_glob_4_14 as D,
-  __vite_glob_4_13 as E,
-  __vite_glob_4_12 as F,
-  __vite_glob_4_11 as G,
-  __vite_glob_4_10 as H,
-  __vite_glob_4_9 as I,
-  __vite_glob_4_8 as J,
-  __vite_glob_4_7 as K,
-  __vite_glob_4_6 as L,
-  __vite_glob_4_5 as M,
-  __vite_glob_4_4 as N,
-  __vite_glob_4_3 as O,
-  __vite_glob_4_2 as P,
-  __vite_glob_4_1 as Q,
-  __vite_glob_4_0 as R,
-  __vite_glob_4_44 as _,
-  __vite_glob_4_43 as a,
-  __vite_glob_4_42 as b,
-  __vite_glob_4_41 as c,
-  __vite_glob_4_40 as d,
-  __vite_glob_4_39 as e,
-  __vite_glob_4_38 as f,
-  __vite_glob_4_37 as g,
-  __vite_glob_4_36 as h,
-  __vite_glob_4_35 as i,
-  __vite_glob_4_34 as j,
-  __vite_glob_4_33 as k,
-  __vite_glob_4_32 as l,
-  __vite_glob_4_31 as m,
-  __vite_glob_4_30 as n,
-  __vite_glob_4_29 as o,
-  __vite_glob_4_28 as p,
-  __vite_glob_4_27 as q,
-  __vite_glob_4_26 as r,
-  __vite_glob_4_25 as s,
-  __vite_glob_4_24 as t,
-  __vite_glob_4_23 as u,
-  __vite_glob_4_22 as v,
-  __vite_glob_4_21 as w,
-  __vite_glob_4_20 as x,
-  __vite_glob_4_19 as y,
-  __vite_glob_4_18 as z
+  __vite_glob_4_22 as A,
+  __vite_glob_4_21 as B,
+  __vite_glob_4_20 as C,
+  __vite_glob_4_19 as D,
+  __vite_glob_4_18 as E,
+  __vite_glob_4_17 as F,
+  __vite_glob_4_16 as G,
+  __vite_glob_4_15 as H,
+  __vite_glob_4_14 as I,
+  __vite_glob_4_13 as J,
+  __vite_glob_4_12 as K,
+  __vite_glob_4_11 as L,
+  __vite_glob_4_10 as M,
+  __vite_glob_4_9 as N,
+  __vite_glob_4_8 as O,
+  __vite_glob_4_7 as P,
+  __vite_glob_4_6 as Q,
+  __vite_glob_4_5 as R,
+  __vite_glob_4_4 as S,
+  __vite_glob_4_3 as T,
+  __vite_glob_4_2 as U,
+  __vite_glob_4_1 as V,
+  __vite_glob_4_0 as W,
+  __vite_glob_4_49 as _,
+  __vite_glob_4_48 as a,
+  __vite_glob_4_47 as b,
+  __vite_glob_4_46 as c,
+  __vite_glob_4_45 as d,
+  __vite_glob_4_44 as e,
+  __vite_glob_4_43 as f,
+  __vite_glob_4_42 as g,
+  __vite_glob_4_41 as h,
+  __vite_glob_4_40 as i,
+  __vite_glob_4_39 as j,
+  __vite_glob_4_38 as k,
+  __vite_glob_4_37 as l,
+  __vite_glob_4_36 as m,
+  __vite_glob_4_35 as n,
+  __vite_glob_4_34 as o,
+  __vite_glob_4_33 as p,
+  __vite_glob_4_32 as q,
+  __vite_glob_4_31 as r,
+  __vite_glob_4_30 as s,
+  __vite_glob_4_29 as t,
+  __vite_glob_4_28 as u,
+  __vite_glob_4_27 as v,
+  __vite_glob_4_26 as w,
+  __vite_glob_4_25 as x,
+  __vite_glob_4_24 as y,
+  __vite_glob_4_23 as z
 };
