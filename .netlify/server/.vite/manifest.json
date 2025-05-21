@@ -145,6 +145,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_creamy-chicken-sweetcorn-pasta-bake.js": {
+    "file": "chunks/creamy-chicken-sweetcorn-pasta-bake.js",
+    "name": "creamy-chicken-sweetcorn-pasta-bake",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_creamy-polenta-wild-mushrooms-truffle.js": {
     "file": "chunks/creamy-polenta-wild-mushrooms-truffle.js",
     "name": "creamy-polenta-wild-mushrooms-truffle",
@@ -671,6 +680,12 @@
     "src": "src/content/recipes/creamy-chicken-korma.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/creamy-chicken-sweetcorn-pasta-bake.md?raw": {
+    "file": "chunks/creamy-chicken-sweetcorn-pasta-bake2.js",
+    "name": "creamy-chicken-sweetcorn-pasta-bake",
+    "src": "src/content/recipes/creamy-chicken-sweetcorn-pasta-bake.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw": {
     "file": "chunks/creamy-polenta-wild-mushrooms-truffle2.js",
     "name": "creamy-polenta-wild-mushrooms-truffle",
@@ -1035,6 +1050,7 @@
       "_classic-tiramisu-no-eggs.js",
       "_coconut-milk-rice-pudding.js",
       "_creamy-chicken-korma.js",
+      "_creamy-chicken-sweetcorn-pasta-bake.js",
       "_creamy-polenta-wild-mushrooms-truffle.js",
       "_crispy-chicken-katsu-curry.js",
       "_crispy-panko-chicken-bites.js",
@@ -1090,6 +1106,7 @@
       "_classic-tiramisu-no-eggs.js",
       "_coconut-milk-rice-pudding.js",
       "_creamy-chicken-korma.js",
+      "_creamy-chicken-sweetcorn-pasta-bake.js",
       "_creamy-polenta-wild-mushrooms-truffle.js",
       "_crispy-chicken-katsu-curry.js",
       "_crispy-panko-chicken-bites.js",
@@ -1141,6 +1158,7 @@
       "src/content/recipes/classic-tiramisu-no-eggs.md?raw",
       "src/content/recipes/coconut-milk-rice-pudding.md?raw",
       "src/content/recipes/creamy-chicken-korma.md?raw",
+      "src/content/recipes/creamy-chicken-sweetcorn-pasta-bake.md?raw",
       "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw",
       "src/content/recipes/crispy-chicken-katsu-curry.md?raw",
       "src/content/recipes/crispy-panko-chicken-bites.md?raw",
@@ -1222,6 +1240,7 @@
       "_classic-tiramisu-no-eggs.js",
       "_coconut-milk-rice-pudding.js",
       "_creamy-chicken-korma.js",
+      "_creamy-chicken-sweetcorn-pasta-bake.js",
       "_creamy-polenta-wild-mushrooms-truffle.js",
       "_crispy-chicken-katsu-curry.js",
       "_crispy-panko-chicken-bites.js",
@@ -1273,6 +1292,7 @@
       "src/content/recipes/classic-tiramisu-no-eggs.md?raw",
       "src/content/recipes/coconut-milk-rice-pudding.md?raw",
       "src/content/recipes/creamy-chicken-korma.md?raw",
+      "src/content/recipes/creamy-chicken-sweetcorn-pasta-bake.md?raw",
       "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw",
       "src/content/recipes/crispy-chicken-katsu-curry.md?raw",
       "src/content/recipes/crispy-panko-chicken-bites.md?raw",
@@ -1344,6 +1364,7 @@
       "_classic-tiramisu-no-eggs.js",
       "_coconut-milk-rice-pudding.js",
       "_creamy-chicken-korma.js",
+      "_creamy-chicken-sweetcorn-pasta-bake.js",
       "_creamy-polenta-wild-mushrooms-truffle.js",
       "_crispy-chicken-katsu-curry.js",
       "_crispy-panko-chicken-bites.js",
