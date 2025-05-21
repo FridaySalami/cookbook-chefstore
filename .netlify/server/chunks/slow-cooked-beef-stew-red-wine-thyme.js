@@ -65,12 +65,12 @@ function Slow_cooked_beef_stew_red_wine_thyme_md($$payload, $$props) {
     }
   ]));
 }
-const __vite_glob_2_40 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_2_41 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Slow_cooked_beef_stew_red_wine_thyme_md,
   metadata
 }, Symbol.toStringTag, { value: "Module" }));
 export {
-  __vite_glob_2_40 as _,
+  __vite_glob_2_41 as _,
   metadata as m
 };

@@ -464,6 +464,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_savoury-mince-vegetable-potato-pie.js": {
+    "file": "chunks/savoury-mince-vegetable-potato-pie.js",
+    "name": "savoury-mince-vegetable-potato-pie",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_sea-bass-lemon-caper-butter.js": {
     "file": "chunks/sea-bass-lemon-caper-butter.js",
     "name": "sea-bass-lemon-caper-butter",
@@ -854,6 +863,12 @@
     "src": "src/content/recipes/sausage-sweet-potato-traybake.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/savoury-mince-vegetable-potato-pie.md?raw": {
+    "file": "chunks/savoury-mince-vegetable-potato-pie2.js",
+    "name": "savoury-mince-vegetable-potato-pie",
+    "src": "src/content/recipes/savoury-mince-vegetable-potato-pie.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/sea-bass-lemon-caper-butter.md?raw": {
     "file": "chunks/sea-bass-lemon-caper-butter2.js",
     "name": "sea-bass-lemon-caper-butter",
@@ -1079,6 +1094,7 @@
       "_salted-caramel-chocolate-tart.js",
       "_salted-caramel-mocha.js",
       "_sausage-sweet-potato-traybake.js",
+      "_savoury-mince-vegetable-potato-pie.js",
       "_sea-bass-lemon-caper-butter.js",
       "_silky-milk-chocolate-mousse.js",
       "_slow-cooked-beef-stew-red-wine-thyme.js",
@@ -1135,6 +1151,7 @@
       "_salted-caramel-chocolate-tart.js",
       "_salted-caramel-mocha.js",
       "_sausage-sweet-potato-traybake.js",
+      "_savoury-mince-vegetable-potato-pie.js",
       "_sea-bass-lemon-caper-butter.js",
       "_silky-milk-chocolate-mousse.js",
       "_slow-cooked-beef-stew-red-wine-thyme.js",
@@ -1187,6 +1204,7 @@
       "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
       "src/content/recipes/salted-caramel-mocha.md?raw",
       "src/content/recipes/sausage-sweet-potato-traybake.md?raw",
+      "src/content/recipes/savoury-mince-vegetable-potato-pie.md?raw",
       "src/content/recipes/sea-bass-lemon-caper-butter.md?raw",
       "src/content/recipes/silky-milk-chocolate-mousse.md?raw",
       "src/content/recipes/slow-cooked-beef-stew-red-wine-thyme.md?raw",
@@ -1269,6 +1287,7 @@
       "_salted-caramel-chocolate-tart.js",
       "_salted-caramel-mocha.js",
       "_sausage-sweet-potato-traybake.js",
+      "_savoury-mince-vegetable-potato-pie.js",
       "_sea-bass-lemon-caper-butter.js",
       "_silky-milk-chocolate-mousse.js",
       "_slow-cooked-beef-stew-red-wine-thyme.js",
@@ -1321,6 +1340,7 @@
       "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
       "src/content/recipes/salted-caramel-mocha.md?raw",
       "src/content/recipes/sausage-sweet-potato-traybake.md?raw",
+      "src/content/recipes/savoury-mince-vegetable-potato-pie.md?raw",
       "src/content/recipes/sea-bass-lemon-caper-butter.md?raw",
       "src/content/recipes/silky-milk-chocolate-mousse.md?raw",
       "src/content/recipes/slow-cooked-beef-stew-red-wine-thyme.md?raw",
@@ -1393,6 +1413,7 @@
       "_salted-caramel-chocolate-tart.js",
       "_salted-caramel-mocha.js",
       "_sausage-sweet-potato-traybake.js",
+      "_savoury-mince-vegetable-potato-pie.js",
       "_sea-bass-lemon-caper-butter.js",
       "_silky-milk-chocolate-mousse.js",
       "_slow-cooked-beef-stew-red-wine-thyme.js",

@@ -1,4 +1,4 @@
-import { _ as __vite_glob_4_51, a as __vite_glob_4_50, b as __vite_glob_4_49, c as __vite_glob_4_48, d as __vite_glob_4_47, e as __vite_glob_4_46, f as __vite_glob_4_45, g as __vite_glob_4_44, h as __vite_glob_4_43, i as __vite_glob_4_42, j as __vite_glob_4_41, k as __vite_glob_4_40, l as __vite_glob_4_39, m as __vite_glob_4_38, n as __vite_glob_4_37, o as __vite_glob_4_36, p as __vite_glob_4_35, q as __vite_glob_4_34, r as __vite_glob_4_33, s as __vite_glob_4_32, t as __vite_glob_4_31, u as __vite_glob_4_30, v as __vite_glob_4_29, w as __vite_glob_4_28, x as __vite_glob_4_27, y as __vite_glob_4_26, z as __vite_glob_4_25, A as __vite_glob_4_24, B as __vite_glob_4_23, C as __vite_glob_4_22, D as __vite_glob_4_21, E as __vite_glob_4_20, F as __vite_glob_4_19, G as __vite_glob_4_18, H as __vite_glob_4_17, I as __vite_glob_4_16, J as __vite_glob_4_15, K as __vite_glob_4_14, L as __vite_glob_4_13, M as __vite_glob_4_12, N as __vite_glob_4_11, O as __vite_glob_4_10, P as __vite_glob_4_9, Q as __vite_glob_4_8, R as __vite_glob_4_7, S as __vite_glob_4_6, T as __vite_glob_4_5, U as __vite_glob_4_4, V as __vite_glob_4_3, W as __vite_glob_4_2, X as __vite_glob_4_1, Y as __vite_glob_4_0 } from "../../../chunks/white-bean-rosemary-stew.metadata.js";
+import { _ as __vite_glob_4_52, a as __vite_glob_4_51, b as __vite_glob_4_50, c as __vite_glob_4_49, d as __vite_glob_4_48, e as __vite_glob_4_47, f as __vite_glob_4_46, g as __vite_glob_4_45, h as __vite_glob_4_44, i as __vite_glob_4_43, j as __vite_glob_4_42, k as __vite_glob_4_41, l as __vite_glob_4_40, m as __vite_glob_4_39, n as __vite_glob_4_38, o as __vite_glob_4_37, p as __vite_glob_4_36, q as __vite_glob_4_35, r as __vite_glob_4_34, s as __vite_glob_4_33, t as __vite_glob_4_32, u as __vite_glob_4_31, v as __vite_glob_4_30, w as __vite_glob_4_29, x as __vite_glob_4_28, y as __vite_glob_4_27, z as __vite_glob_4_26, A as __vite_glob_4_25, B as __vite_glob_4_24, C as __vite_glob_4_23, D as __vite_glob_4_22, E as __vite_glob_4_21, F as __vite_glob_4_20, G as __vite_glob_4_19, H as __vite_glob_4_18, I as __vite_glob_4_17, J as __vite_glob_4_16, K as __vite_glob_4_15, L as __vite_glob_4_14, M as __vite_glob_4_13, N as __vite_glob_4_12, O as __vite_glob_4_11, P as __vite_glob_4_10, Q as __vite_glob_4_9, R as __vite_glob_4_8, S as __vite_glob_4_7, T as __vite_glob_4_6, U as __vite_glob_4_5, V as __vite_glob_4_4, W as __vite_glob_4_3, X as __vite_glob_4_2, Y as __vite_glob_4_1, Z as __vite_glob_4_0 } from "../../../chunks/white-bean-rosemary-stew.metadata.js";
 import { d as dev } from "../../../chunks/index3.js";
 const load = async () => {
   try {
@@ -41,20 +41,21 @@ const load = async () => {
       "/src/content/recipe-metadata/salted-caramel-chocolate-tart.metadata.js": __vite_glob_4_35,
       "/src/content/recipe-metadata/salted-caramel-mocha.metadata.js": __vite_glob_4_36,
       "/src/content/recipe-metadata/sausage-sweet-potato-traybake.metadata.js": __vite_glob_4_37,
-      "/src/content/recipe-metadata/sea-bass-lemon-caper-butter.metadata.js": __vite_glob_4_38,
-      "/src/content/recipe-metadata/silky-milk-chocolate-mousse.metadata.js": __vite_glob_4_39,
-      "/src/content/recipe-metadata/slow-cooked-beef-stew-red-wine-thyme.metadata.js": __vite_glob_4_40,
-      "/src/content/recipe-metadata/spiced-lamb-mint-sausage-rolls.metadata.js": __vite_glob_4_41,
-      "/src/content/recipe-metadata/spicy-chickpea-spinach-stew.metadata.js": __vite_glob_4_42,
-      "/src/content/recipe-metadata/spinach-ricotta-cannelloni.metadata.js": __vite_glob_4_43,
-      "/src/content/recipe-metadata/sticky-banana-bread-chocolate-walnuts.metadata.js": __vite_glob_4_44,
-      "/src/content/recipe-metadata/sticky-soy-braised-pork-ribs.metadata.js": __vite_glob_4_45,
-      "/src/content/recipe-metadata/sticky-soy-garlic-noodles.metadata.js": __vite_glob_4_46,
-      "/src/content/recipe-metadata/sticky-toffee-pudding.metadata.js": __vite_glob_4_47,
-      "/src/content/recipe-metadata/sweetcorn-fritters-chilli-jam.metadata.js": __vite_glob_4_48,
-      "/src/content/recipe-metadata/tagliatelle-bolognese-traditional.metadata.js": __vite_glob_4_49,
-      "/src/content/recipe-metadata/thai-green-curry.metadata.js": __vite_glob_4_50,
-      "/src/content/recipe-metadata/white-bean-rosemary-stew.metadata.js": __vite_glob_4_51
+      "/src/content/recipe-metadata/savoury-mince-vegetable-potato-pie.metadata.js": __vite_glob_4_38,
+      "/src/content/recipe-metadata/sea-bass-lemon-caper-butter.metadata.js": __vite_glob_4_39,
+      "/src/content/recipe-metadata/silky-milk-chocolate-mousse.metadata.js": __vite_glob_4_40,
+      "/src/content/recipe-metadata/slow-cooked-beef-stew-red-wine-thyme.metadata.js": __vite_glob_4_41,
+      "/src/content/recipe-metadata/spiced-lamb-mint-sausage-rolls.metadata.js": __vite_glob_4_42,
+      "/src/content/recipe-metadata/spicy-chickpea-spinach-stew.metadata.js": __vite_glob_4_43,
+      "/src/content/recipe-metadata/spinach-ricotta-cannelloni.metadata.js": __vite_glob_4_44,
+      "/src/content/recipe-metadata/sticky-banana-bread-chocolate-walnuts.metadata.js": __vite_glob_4_45,
+      "/src/content/recipe-metadata/sticky-soy-braised-pork-ribs.metadata.js": __vite_glob_4_46,
+      "/src/content/recipe-metadata/sticky-soy-garlic-noodles.metadata.js": __vite_glob_4_47,
+      "/src/content/recipe-metadata/sticky-toffee-pudding.metadata.js": __vite_glob_4_48,
+      "/src/content/recipe-metadata/sweetcorn-fritters-chilli-jam.metadata.js": __vite_glob_4_49,
+      "/src/content/recipe-metadata/tagliatelle-bolognese-traditional.metadata.js": __vite_glob_4_50,
+      "/src/content/recipe-metadata/thai-green-curry.metadata.js": __vite_glob_4_51,
+      "/src/content/recipe-metadata/white-bean-rosemary-stew.metadata.js": __vite_glob_4_52
     });
     const recipes = Object.entries(recipeMetadataImports).filter(([, module]) => module?.metadata).map(([path, module]) => {
       const filename = path.split("/").pop()?.replace(".metadata.js", "") || "";
