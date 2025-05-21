@@ -18,11 +18,10 @@ const metadata = {
     "difficulty-medium"
   ],
   "relatedProducts": [
+    { "handle": "callebaut-extra-bitter-callets-5kg" },
     {
-      "handle": "callebaut-caramel-filling-5kg",
-      "featured": true
-    },
-    { "handle": "callebaut-extra-bitter-callets-5kg" }
+      "handle": "schar-free-from-digestive-biscuits-150gm"
+    }
   ]
 };
 const {
