@@ -1,18 +1,19 @@
-import { m as metadata$14 } from "../../../chunks/baked-beef-bean-quesadilla-casserole.js";
-import { m as metadata$13 } from "../../../chunks/baked-camembert-cheeseboard-chutney.js";
-import { m as metadata$12 } from "../../../chunks/balsamic-honey-sausages-grapes.js";
-import { m as metadata$11 } from "../../../chunks/buttermilk-chicken-tenders.js";
-import { m as metadata$10 } from "../../../chunks/cheesy-broccoli-potato-frittata-bake.js";
-import { m as metadata$$ } from "../../../chunks/cheesy-leek-potato-gratin.js";
-import { m as metadata$_ } from "../../../chunks/cheesy-tuna-pasta-bake.js";
-import { m as metadata$Z } from "../../../chunks/chicken-pearl-barley-broth.js";
-import { m as metadata$Y } from "../../../chunks/chicken-veggie-enchilada-bake.js";
-import { m as metadata$X } from "../../../chunks/chickpea-tagine-preserved-lemon-harissa.js";
-import { m as metadata$W } from "../../../chunks/classic-tiramisu-no-eggs.js";
-import { m as metadata$V } from "../../../chunks/coconut-milk-rice-pudding.js";
-import { m as metadata$U } from "../../../chunks/creamy-chicken-broccoli-rice-bake.js";
-import { m as metadata$T } from "../../../chunks/creamy-chicken-korma.js";
-import { m as metadata$S } from "../../../chunks/creamy-chicken-sweetcorn-pasta-bake.js";
+import { m as metadata$15 } from "../../../chunks/baked-beef-bean-quesadilla-casserole.js";
+import { m as metadata$14 } from "../../../chunks/baked-camembert-cheeseboard-chutney.js";
+import { m as metadata$13 } from "../../../chunks/balsamic-honey-sausages-grapes.js";
+import { m as metadata$12 } from "../../../chunks/buttermilk-chicken-tenders.js";
+import { m as metadata$11 } from "../../../chunks/cheesy-broccoli-potato-frittata-bake.js";
+import { m as metadata$10 } from "../../../chunks/cheesy-leek-potato-gratin.js";
+import { m as metadata$$ } from "../../../chunks/cheesy-tuna-pasta-bake.js";
+import { m as metadata$_ } from "../../../chunks/chicken-pearl-barley-broth.js";
+import { m as metadata$Z } from "../../../chunks/chicken-veggie-enchilada-bake.js";
+import { m as metadata$Y } from "../../../chunks/chickpea-tagine-preserved-lemon-harissa.js";
+import { m as metadata$X } from "../../../chunks/classic-tiramisu-no-eggs.js";
+import { m as metadata$W } from "../../../chunks/coconut-milk-rice-pudding.js";
+import { m as metadata$V } from "../../../chunks/creamy-chicken-broccoli-rice-bake.js";
+import { m as metadata$U } from "../../../chunks/creamy-chicken-korma.js";
+import { m as metadata$T } from "../../../chunks/creamy-chicken-sweetcorn-pasta-bake.js";
+import { m as metadata$S } from "../../../chunks/creamy-garlic-mushroom-tagliatelle.js";
 import { m as metadata$R } from "../../../chunks/creamy-pesto-chicken-cherry-tomatoes.js";
 import { m as metadata$Q } from "../../../chunks/creamy-polenta-wild-mushrooms-truffle.js";
 import { m as metadata$P } from "../../../chunks/creamy-sausage-spinach-gnocchi.js";
@@ -70,21 +71,22 @@ import { m as metadata } from "../../../chunks/white-bean-rosemary-stew.js";
 const site = "https://www.chefstorecookbook.com";
 const GET = async () => {
   const recipeModules = /* @__PURE__ */ Object.assign({
-    "/src/content/recipes/baked-beef-bean-quesadilla-casserole.md": metadata$14,
-    "/src/content/recipes/baked-camembert-cheeseboard-chutney.md": metadata$13,
-    "/src/content/recipes/balsamic-honey-sausages-grapes.md": metadata$12,
-    "/src/content/recipes/buttermilk-chicken-tenders.md": metadata$11,
-    "/src/content/recipes/cheesy-broccoli-potato-frittata-bake.md": metadata$10,
-    "/src/content/recipes/cheesy-leek-potato-gratin.md": metadata$$,
-    "/src/content/recipes/cheesy-tuna-pasta-bake.md": metadata$_,
-    "/src/content/recipes/chicken-pearl-barley-broth.md": metadata$Z,
-    "/src/content/recipes/chicken-veggie-enchilada-bake.md": metadata$Y,
-    "/src/content/recipes/chickpea-tagine-preserved-lemon-harissa.md": metadata$X,
-    "/src/content/recipes/classic-tiramisu-no-eggs.md": metadata$W,
-    "/src/content/recipes/coconut-milk-rice-pudding.md": metadata$V,
-    "/src/content/recipes/creamy-chicken-broccoli-rice-bake.md": metadata$U,
-    "/src/content/recipes/creamy-chicken-korma.md": metadata$T,
-    "/src/content/recipes/creamy-chicken-sweetcorn-pasta-bake.md": metadata$S,
+    "/src/content/recipes/baked-beef-bean-quesadilla-casserole.md": metadata$15,
+    "/src/content/recipes/baked-camembert-cheeseboard-chutney.md": metadata$14,
+    "/src/content/recipes/balsamic-honey-sausages-grapes.md": metadata$13,
+    "/src/content/recipes/buttermilk-chicken-tenders.md": metadata$12,
+    "/src/content/recipes/cheesy-broccoli-potato-frittata-bake.md": metadata$11,
+    "/src/content/recipes/cheesy-leek-potato-gratin.md": metadata$10,
+    "/src/content/recipes/cheesy-tuna-pasta-bake.md": metadata$$,
+    "/src/content/recipes/chicken-pearl-barley-broth.md": metadata$_,
+    "/src/content/recipes/chicken-veggie-enchilada-bake.md": metadata$Z,
+    "/src/content/recipes/chickpea-tagine-preserved-lemon-harissa.md": metadata$Y,
+    "/src/content/recipes/classic-tiramisu-no-eggs.md": metadata$X,
+    "/src/content/recipes/coconut-milk-rice-pudding.md": metadata$W,
+    "/src/content/recipes/creamy-chicken-broccoli-rice-bake.md": metadata$V,
+    "/src/content/recipes/creamy-chicken-korma.md": metadata$U,
+    "/src/content/recipes/creamy-chicken-sweetcorn-pasta-bake.md": metadata$T,
+    "/src/content/recipes/creamy-garlic-mushroom-tagliatelle.md": metadata$S,
     "/src/content/recipes/creamy-pesto-chicken-cherry-tomatoes.md": metadata$R,
     "/src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md": metadata$Q,
     "/src/content/recipes/creamy-sausage-spinach-gnocchi.md": metadata$P,

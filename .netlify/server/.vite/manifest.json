@@ -199,6 +199,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_creamy-garlic-mushroom-tagliatelle.js": {
+    "file": "chunks/creamy-garlic-mushroom-tagliatelle.js",
+    "name": "creamy-garlic-mushroom-tagliatelle",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_creamy-pesto-chicken-cherry-tomatoes.js": {
     "file": "chunks/creamy-pesto-chicken-cherry-tomatoes.js",
     "name": "creamy-pesto-chicken-cherry-tomatoes",
@@ -869,6 +878,12 @@
     "src": "src/content/recipes/creamy-chicken-sweetcorn-pasta-bake.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/creamy-garlic-mushroom-tagliatelle.md?raw": {
+    "file": "chunks/creamy-garlic-mushroom-tagliatelle2.js",
+    "name": "creamy-garlic-mushroom-tagliatelle",
+    "src": "src/content/recipes/creamy-garlic-mushroom-tagliatelle.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/creamy-pesto-chicken-cherry-tomatoes.md?raw": {
     "file": "chunks/creamy-pesto-chicken-cherry-tomatoes2.js",
     "name": "creamy-pesto-chicken-cherry-tomatoes",
@@ -1311,6 +1326,7 @@
       "_creamy-chicken-broccoli-rice-bake.js",
       "_creamy-chicken-korma.js",
       "_creamy-chicken-sweetcorn-pasta-bake.js",
+      "_creamy-garlic-mushroom-tagliatelle.js",
       "_creamy-pesto-chicken-cherry-tomatoes.js",
       "_creamy-polenta-wild-mushrooms-truffle.js",
       "_creamy-sausage-spinach-gnocchi.js",
@@ -1384,6 +1400,7 @@
       "_creamy-chicken-broccoli-rice-bake.js",
       "_creamy-chicken-korma.js",
       "_creamy-chicken-sweetcorn-pasta-bake.js",
+      "_creamy-garlic-mushroom-tagliatelle.js",
       "_creamy-pesto-chicken-cherry-tomatoes.js",
       "_creamy-polenta-wild-mushrooms-truffle.js",
       "_creamy-sausage-spinach-gnocchi.js",
@@ -1453,6 +1470,7 @@
       "src/content/recipes/creamy-chicken-broccoli-rice-bake.md?raw",
       "src/content/recipes/creamy-chicken-korma.md?raw",
       "src/content/recipes/creamy-chicken-sweetcorn-pasta-bake.md?raw",
+      "src/content/recipes/creamy-garlic-mushroom-tagliatelle.md?raw",
       "src/content/recipes/creamy-pesto-chicken-cherry-tomatoes.md?raw",
       "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw",
       "src/content/recipes/creamy-sausage-spinach-gnocchi.md?raw",
@@ -1552,6 +1570,7 @@
       "_creamy-chicken-broccoli-rice-bake.js",
       "_creamy-chicken-korma.js",
       "_creamy-chicken-sweetcorn-pasta-bake.js",
+      "_creamy-garlic-mushroom-tagliatelle.js",
       "_creamy-pesto-chicken-cherry-tomatoes.js",
       "_creamy-polenta-wild-mushrooms-truffle.js",
       "_creamy-sausage-spinach-gnocchi.js",
@@ -1621,6 +1640,7 @@
       "src/content/recipes/creamy-chicken-broccoli-rice-bake.md?raw",
       "src/content/recipes/creamy-chicken-korma.md?raw",
       "src/content/recipes/creamy-chicken-sweetcorn-pasta-bake.md?raw",
+      "src/content/recipes/creamy-garlic-mushroom-tagliatelle.md?raw",
       "src/content/recipes/creamy-pesto-chicken-cherry-tomatoes.md?raw",
       "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw",
       "src/content/recipes/creamy-sausage-spinach-gnocchi.md?raw",
@@ -1710,6 +1730,7 @@
       "_creamy-chicken-broccoli-rice-bake.js",
       "_creamy-chicken-korma.js",
       "_creamy-chicken-sweetcorn-pasta-bake.js",
+      "_creamy-garlic-mushroom-tagliatelle.js",
       "_creamy-pesto-chicken-cherry-tomatoes.js",
       "_creamy-polenta-wild-mushrooms-truffle.js",
       "_creamy-sausage-spinach-gnocchi.js",
