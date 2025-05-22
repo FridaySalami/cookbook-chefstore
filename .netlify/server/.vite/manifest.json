@@ -491,6 +491,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_one-pot-chicken-mushroom-orzo.js": {
+    "file": "chunks/one-pot-chicken-mushroom-orzo.js",
+    "name": "one-pot-chicken-mushroom-orzo",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_pesto-tagliatelle-belazu.js": {
     "file": "chunks/pesto-tagliatelle-belazu.js",
     "name": "pesto-tagliatelle-belazu",
@@ -998,6 +1007,12 @@
     "src": "src/content/recipes/one-pan-harissa-chickpeas-eggs.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/one-pot-chicken-mushroom-orzo.md?raw": {
+    "file": "chunks/one-pot-chicken-mushroom-orzo2.js",
+    "name": "one-pot-chicken-mushroom-orzo",
+    "src": "src/content/recipes/one-pot-chicken-mushroom-orzo.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/pesto-tagliatelle-belazu.md?raw": {
     "file": "chunks/pesto-tagliatelle-belazu2.js",
     "name": "pesto-tagliatelle-belazu",
@@ -1292,6 +1307,7 @@
       "_mini-turkey-meatballs-tomato-sauce.js",
       "_miso-glazed-roasted-vegetables.js",
       "_one-pan-harissa-chickpeas-eggs.js",
+      "_one-pot-chicken-mushroom-orzo.js",
       "_pesto-tagliatelle-belazu.js",
       "_poppadom-snack-platter.js",
       "_roasted-beetroot-orange-walnut-salad.js",
@@ -1362,6 +1378,7 @@
       "_mini-turkey-meatballs-tomato-sauce.js",
       "_miso-glazed-roasted-vegetables.js",
       "_one-pan-harissa-chickpeas-eggs.js",
+      "_one-pot-chicken-mushroom-orzo.js",
       "_pesto-tagliatelle-belazu.js",
       "_poppadom-snack-platter.js",
       "_roasted-beetroot-orange-walnut-salad.js",
@@ -1428,6 +1445,7 @@
       "src/content/recipes/mini-turkey-meatballs-tomato-sauce.md?raw",
       "src/content/recipes/miso-glazed-roasted-vegetables.md?raw",
       "src/content/recipes/one-pan-harissa-chickpeas-eggs.md?raw",
+      "src/content/recipes/one-pot-chicken-mushroom-orzo.md?raw",
       "src/content/recipes/pesto-tagliatelle-belazu.md?raw",
       "src/content/recipes/poppadom-snack-platter.md?raw",
       "src/content/recipes/roasted-beetroot-orange-walnut-salad.md?raw",
@@ -1524,6 +1542,7 @@
       "_mini-turkey-meatballs-tomato-sauce.js",
       "_miso-glazed-roasted-vegetables.js",
       "_one-pan-harissa-chickpeas-eggs.js",
+      "_one-pot-chicken-mushroom-orzo.js",
       "_pesto-tagliatelle-belazu.js",
       "_poppadom-snack-platter.js",
       "_roasted-beetroot-orange-walnut-salad.js",
@@ -1590,6 +1609,7 @@
       "src/content/recipes/mini-turkey-meatballs-tomato-sauce.md?raw",
       "src/content/recipes/miso-glazed-roasted-vegetables.md?raw",
       "src/content/recipes/one-pan-harissa-chickpeas-eggs.md?raw",
+      "src/content/recipes/one-pot-chicken-mushroom-orzo.md?raw",
       "src/content/recipes/pesto-tagliatelle-belazu.md?raw",
       "src/content/recipes/poppadom-snack-platter.md?raw",
       "src/content/recipes/roasted-beetroot-orange-walnut-salad.md?raw",
@@ -1676,6 +1696,7 @@
       "_mini-turkey-meatballs-tomato-sauce.js",
       "_miso-glazed-roasted-vegetables.js",
       "_one-pan-harissa-chickpeas-eggs.js",
+      "_one-pot-chicken-mushroom-orzo.js",
       "_pesto-tagliatelle-belazu.js",
       "_poppadom-snack-platter.js",
       "_roasted-beetroot-orange-walnut-salad.js",
