@@ -1,8 +1,9 @@
-import { m as metadata$Z } from "../../../chunks/baked-camembert-cheeseboard-chutney.js";
-import { m as metadata$Y } from "../../../chunks/balsamic-honey-sausages-grapes.js";
-import { m as metadata$X } from "../../../chunks/buttermilk-chicken-tenders.js";
-import { m as metadata$W } from "../../../chunks/cheesy-broccoli-potato-frittata-bake.js";
-import { m as metadata$V } from "../../../chunks/cheesy-leek-potato-gratin.js";
+import { m as metadata$_ } from "../../../chunks/baked-camembert-cheeseboard-chutney.js";
+import { m as metadata$Z } from "../../../chunks/balsamic-honey-sausages-grapes.js";
+import { m as metadata$Y } from "../../../chunks/buttermilk-chicken-tenders.js";
+import { m as metadata$X } from "../../../chunks/cheesy-broccoli-potato-frittata-bake.js";
+import { m as metadata$W } from "../../../chunks/cheesy-leek-potato-gratin.js";
+import { m as metadata$V } from "../../../chunks/cheesy-tuna-pasta-bake.js";
 import { m as metadata$U } from "../../../chunks/chicken-pearl-barley-broth.js";
 import { m as metadata$T } from "../../../chunks/chicken-veggie-enchilada-bake.js";
 import { m as metadata$S } from "../../../chunks/chickpea-tagine-preserved-lemon-harissa.js";
@@ -63,11 +64,12 @@ import { m as metadata } from "../../../chunks/white-bean-rosemary-stew.js";
 const site = "https://www.chefstorecookbook.com";
 const GET = async () => {
   const recipeModules = /* @__PURE__ */ Object.assign({
-    "/src/content/recipes/baked-camembert-cheeseboard-chutney.md": metadata$Z,
-    "/src/content/recipes/balsamic-honey-sausages-grapes.md": metadata$Y,
-    "/src/content/recipes/buttermilk-chicken-tenders.md": metadata$X,
-    "/src/content/recipes/cheesy-broccoli-potato-frittata-bake.md": metadata$W,
-    "/src/content/recipes/cheesy-leek-potato-gratin.md": metadata$V,
+    "/src/content/recipes/baked-camembert-cheeseboard-chutney.md": metadata$_,
+    "/src/content/recipes/balsamic-honey-sausages-grapes.md": metadata$Z,
+    "/src/content/recipes/buttermilk-chicken-tenders.md": metadata$Y,
+    "/src/content/recipes/cheesy-broccoli-potato-frittata-bake.md": metadata$X,
+    "/src/content/recipes/cheesy-leek-potato-gratin.md": metadata$W,
+    "/src/content/recipes/cheesy-tuna-pasta-bake.md": metadata$V,
     "/src/content/recipes/chicken-pearl-barley-broth.md": metadata$U,
     "/src/content/recipes/chicken-veggie-enchilada-bake.md": metadata$T,
     "/src/content/recipes/chickpea-tagine-preserved-lemon-harissa.md": metadata$S,

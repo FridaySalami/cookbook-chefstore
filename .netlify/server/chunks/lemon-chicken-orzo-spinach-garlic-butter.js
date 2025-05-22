@@ -61,12 +61,12 @@ function Lemon_chicken_orzo_spinach_garlic_butter_md($$payload, $$props) {
     }
   ]));
 }
-const __vite_glob_2_32 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_2_33 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Lemon_chicken_orzo_spinach_garlic_butter_md,
   metadata
 }, Symbol.toStringTag, { value: "Module" }));
 export {
-  __vite_glob_2_32 as _,
+  __vite_glob_2_33 as _,
   metadata as m
 };
