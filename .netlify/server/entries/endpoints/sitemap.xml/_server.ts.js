@@ -1,6 +1,7 @@
-import { m as metadata$Q } from "../../../chunks/baked-camembert-cheeseboard-chutney.js";
-import { m as metadata$P } from "../../../chunks/balsamic-honey-sausages-grapes.js";
-import { m as metadata$O } from "../../../chunks/buttermilk-chicken-tenders.js";
+import { m as metadata$R } from "../../../chunks/baked-camembert-cheeseboard-chutney.js";
+import { m as metadata$Q } from "../../../chunks/balsamic-honey-sausages-grapes.js";
+import { m as metadata$P } from "../../../chunks/buttermilk-chicken-tenders.js";
+import { m as metadata$O } from "../../../chunks/cheesy-broccoli-potato-frittata-bake.js";
 import { m as metadata$N } from "../../../chunks/cheesy-leek-potato-gratin.js";
 import { m as metadata$M } from "../../../chunks/chicken-pearl-barley-broth.js";
 import { m as metadata$L } from "../../../chunks/chickpea-tagine-preserved-lemon-harissa.js";
@@ -54,9 +55,10 @@ import { m as metadata } from "../../../chunks/white-bean-rosemary-stew.js";
 const site = "https://www.chefstorecookbook.com";
 const GET = async () => {
   const recipeModules = /* @__PURE__ */ Object.assign({
-    "/src/content/recipes/baked-camembert-cheeseboard-chutney.md": metadata$Q,
-    "/src/content/recipes/balsamic-honey-sausages-grapes.md": metadata$P,
-    "/src/content/recipes/buttermilk-chicken-tenders.md": metadata$O,
+    "/src/content/recipes/baked-camembert-cheeseboard-chutney.md": metadata$R,
+    "/src/content/recipes/balsamic-honey-sausages-grapes.md": metadata$Q,
+    "/src/content/recipes/buttermilk-chicken-tenders.md": metadata$P,
+    "/src/content/recipes/cheesy-broccoli-potato-frittata-bake.md": metadata$O,
     "/src/content/recipes/cheesy-leek-potato-gratin.md": metadata$N,
     "/src/content/recipes/chicken-pearl-barley-broth.md": metadata$M,
     "/src/content/recipes/chickpea-tagine-preserved-lemon-harissa.md": metadata$L,

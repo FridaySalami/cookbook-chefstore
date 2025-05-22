@@ -60,12 +60,12 @@ function Creamy_polenta_wild_mushrooms_truffle_md($$payload, $$props) {
     }
   ]));
 }
-const __vite_glob_2_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_2_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Creamy_polenta_wild_mushrooms_truffle_md,
   metadata
 }, Symbol.toStringTag, { value: "Module" }));
 export {
-  __vite_glob_2_10 as _,
+  __vite_glob_2_11 as _,
   metadata as m
 };
