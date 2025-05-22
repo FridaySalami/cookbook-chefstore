@@ -52,12 +52,12 @@ function Salted_caramel_chocolate_tart_md($$payload, $$props) {
     }
   ]));
 }
-const __vite_glob_2_36 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_2_37 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Salted_caramel_chocolate_tart_md,
   metadata
 }, Symbol.toStringTag, { value: "Module" }));
 export {
-  __vite_glob_2_36 as _,
+  __vite_glob_2_37 as _,
   metadata as m
 };
