@@ -446,6 +446,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_roasted-veg-couscous-bake-feta.js": {
+    "file": "chunks/roasted-veg-couscous-bake-feta.js",
+    "name": "roasted-veg-couscous-bake-feta",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_romanian-sarmale-cabbage-rolls.js": {
     "file": "chunks/romanian-sarmale-cabbage-rolls.js",
     "name": "romanian-sarmale-cabbage-rolls",
@@ -878,6 +887,12 @@
     "src": "src/content/recipes/roasted-beetroot-orange-walnut-salad.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/roasted-veg-couscous-bake-feta.md?raw": {
+    "file": "chunks/roasted-veg-couscous-bake-feta2.js",
+    "name": "roasted-veg-couscous-bake-feta",
+    "src": "src/content/recipes/roasted-veg-couscous-bake-feta.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/romanian-sarmale-cabbage-rolls.md?raw": {
     "file": "chunks/romanian-sarmale-cabbage-rolls2.js",
     "name": "romanian-sarmale-cabbage-rolls",
@@ -1137,6 +1152,7 @@
       "_pesto-tagliatelle-belazu.js",
       "_poppadom-snack-platter.js",
       "_roasted-beetroot-orange-walnut-salad.js",
+      "_roasted-veg-couscous-bake-feta.js",
       "_romanian-sarmale-cabbage-rolls.js",
       "_salted-caramel-chocolate-tart.js",
       "_salted-caramel-mocha.js",
@@ -1197,6 +1213,7 @@
       "_pesto-tagliatelle-belazu.js",
       "_poppadom-snack-platter.js",
       "_roasted-beetroot-orange-walnut-salad.js",
+      "_roasted-veg-couscous-bake-feta.js",
       "_romanian-sarmale-cabbage-rolls.js",
       "_salted-caramel-chocolate-tart.js",
       "_salted-caramel-mocha.js",
@@ -1253,6 +1270,7 @@
       "src/content/recipes/pesto-tagliatelle-belazu.md?raw",
       "src/content/recipes/poppadom-snack-platter.md?raw",
       "src/content/recipes/roasted-beetroot-orange-walnut-salad.md?raw",
+      "src/content/recipes/roasted-veg-couscous-bake-feta.md?raw",
       "src/content/recipes/romanian-sarmale-cabbage-rolls.md?raw",
       "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
       "src/content/recipes/salted-caramel-mocha.md?raw",
@@ -1339,6 +1357,7 @@
       "_pesto-tagliatelle-belazu.js",
       "_poppadom-snack-platter.js",
       "_roasted-beetroot-orange-walnut-salad.js",
+      "_roasted-veg-couscous-bake-feta.js",
       "_romanian-sarmale-cabbage-rolls.js",
       "_salted-caramel-chocolate-tart.js",
       "_salted-caramel-mocha.js",
@@ -1395,6 +1414,7 @@
       "src/content/recipes/pesto-tagliatelle-belazu.md?raw",
       "src/content/recipes/poppadom-snack-platter.md?raw",
       "src/content/recipes/roasted-beetroot-orange-walnut-salad.md?raw",
+      "src/content/recipes/roasted-veg-couscous-bake-feta.md?raw",
       "src/content/recipes/romanian-sarmale-cabbage-rolls.md?raw",
       "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
       "src/content/recipes/salted-caramel-mocha.md?raw",
@@ -1471,6 +1491,7 @@
       "_pesto-tagliatelle-belazu.js",
       "_poppadom-snack-platter.js",
       "_roasted-beetroot-orange-walnut-salad.js",
+      "_roasted-veg-couscous-bake-feta.js",
       "_romanian-sarmale-cabbage-rolls.js",
       "_salted-caramel-chocolate-tart.js",
       "_salted-caramel-mocha.js",
