@@ -199,6 +199,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_creamy-chicken-leek-pie.js": {
+    "file": "chunks/creamy-chicken-leek-pie.js",
+    "name": "creamy-chicken-leek-pie",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_creamy-chicken-sweetcorn-pasta-bake.js": {
     "file": "chunks/creamy-chicken-sweetcorn-pasta-bake.js",
     "name": "creamy-chicken-sweetcorn-pasta-bake",
@@ -887,6 +896,12 @@
     "src": "src/content/recipes/creamy-chicken-korma.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/creamy-chicken-leek-pie.md?raw": {
+    "file": "chunks/creamy-chicken-leek-pie2.js",
+    "name": "creamy-chicken-leek-pie",
+    "src": "src/content/recipes/creamy-chicken-leek-pie.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/creamy-chicken-sweetcorn-pasta-bake.md?raw": {
     "file": "chunks/creamy-chicken-sweetcorn-pasta-bake2.js",
     "name": "creamy-chicken-sweetcorn-pasta-bake",
@@ -1341,6 +1356,7 @@
       "_coconut-milk-rice-pudding.js",
       "_creamy-chicken-broccoli-rice-bake.js",
       "_creamy-chicken-korma.js",
+      "_creamy-chicken-leek-pie.js",
       "_creamy-chicken-sweetcorn-pasta-bake.js",
       "_creamy-garlic-mushroom-tagliatelle.js",
       "_creamy-pesto-chicken-cherry-tomatoes.js",
@@ -1416,6 +1432,7 @@
       "_coconut-milk-rice-pudding.js",
       "_creamy-chicken-broccoli-rice-bake.js",
       "_creamy-chicken-korma.js",
+      "_creamy-chicken-leek-pie.js",
       "_creamy-chicken-sweetcorn-pasta-bake.js",
       "_creamy-garlic-mushroom-tagliatelle.js",
       "_creamy-pesto-chicken-cherry-tomatoes.js",
@@ -1487,6 +1504,7 @@
       "src/content/recipes/coconut-milk-rice-pudding.md?raw",
       "src/content/recipes/creamy-chicken-broccoli-rice-bake.md?raw",
       "src/content/recipes/creamy-chicken-korma.md?raw",
+      "src/content/recipes/creamy-chicken-leek-pie.md?raw",
       "src/content/recipes/creamy-chicken-sweetcorn-pasta-bake.md?raw",
       "src/content/recipes/creamy-garlic-mushroom-tagliatelle.md?raw",
       "src/content/recipes/creamy-pesto-chicken-cherry-tomatoes.md?raw",
@@ -1588,6 +1606,7 @@
       "_coconut-milk-rice-pudding.js",
       "_creamy-chicken-broccoli-rice-bake.js",
       "_creamy-chicken-korma.js",
+      "_creamy-chicken-leek-pie.js",
       "_creamy-chicken-sweetcorn-pasta-bake.js",
       "_creamy-garlic-mushroom-tagliatelle.js",
       "_creamy-pesto-chicken-cherry-tomatoes.js",
@@ -1659,6 +1678,7 @@
       "src/content/recipes/coconut-milk-rice-pudding.md?raw",
       "src/content/recipes/creamy-chicken-broccoli-rice-bake.md?raw",
       "src/content/recipes/creamy-chicken-korma.md?raw",
+      "src/content/recipes/creamy-chicken-leek-pie.md?raw",
       "src/content/recipes/creamy-chicken-sweetcorn-pasta-bake.md?raw",
       "src/content/recipes/creamy-garlic-mushroom-tagliatelle.md?raw",
       "src/content/recipes/creamy-pesto-chicken-cherry-tomatoes.md?raw",
@@ -1750,6 +1770,7 @@
       "_coconut-milk-rice-pudding.js",
       "_creamy-chicken-broccoli-rice-bake.js",
       "_creamy-chicken-korma.js",
+      "_creamy-chicken-leek-pie.js",
       "_creamy-chicken-sweetcorn-pasta-bake.js",
       "_creamy-garlic-mushroom-tagliatelle.js",
       "_creamy-pesto-chicken-cherry-tomatoes.js",

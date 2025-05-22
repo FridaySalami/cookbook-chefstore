@@ -54,12 +54,12 @@ function Garlic_butter_steak_bites_md($$payload, $$props) {
     }
   ]));
 }
-const __vite_glob_2_33 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_2_34 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Garlic_butter_steak_bites_md,
   metadata
 }, Symbol.toStringTag, { value: "Module" }));
 export {
-  __vite_glob_2_33 as _,
+  __vite_glob_2_34 as _,
   metadata as m
 };

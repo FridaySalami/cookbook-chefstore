@@ -65,12 +65,12 @@ function Crispy_baked_chicken_goujons_md($$payload, $$props) {
     }
   ]));
 }
-const __vite_glob_2_21 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_2_22 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Crispy_baked_chicken_goujons_md,
   metadata
 }, Symbol.toStringTag, { value: "Module" }));
 export {
-  __vite_glob_2_21 as _,
+  __vite_glob_2_22 as _,
   metadata as m
 };
