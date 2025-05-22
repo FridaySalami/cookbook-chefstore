@@ -181,6 +181,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_creamy-sausage-spinach-gnocchi.js": {
+    "file": "chunks/creamy-sausage-spinach-gnocchi.js",
+    "name": "creamy-sausage-spinach-gnocchi",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_creamy-tomato-butter-bean-pasta.js": {
     "file": "chunks/creamy-tomato-butter-bean-pasta.js",
     "name": "creamy-tomato-butter-bean-pasta",
@@ -785,6 +794,12 @@
     "src": "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/creamy-sausage-spinach-gnocchi.md?raw": {
+    "file": "chunks/creamy-sausage-spinach-gnocchi2.js",
+    "name": "creamy-sausage-spinach-gnocchi",
+    "src": "src/content/recipes/creamy-sausage-spinach-gnocchi.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/creamy-tomato-butter-bean-pasta.md?raw": {
     "file": "chunks/creamy-tomato-butter-bean-pasta2.js",
     "name": "creamy-tomato-butter-bean-pasta",
@@ -1189,6 +1204,7 @@
       "_creamy-chicken-korma.js",
       "_creamy-chicken-sweetcorn-pasta-bake.js",
       "_creamy-polenta-wild-mushrooms-truffle.js",
+      "_creamy-sausage-spinach-gnocchi.js",
       "_creamy-tomato-butter-bean-pasta.js",
       "_crispy-chicken-katsu-curry.js",
       "_crispy-halloumi-wraps-lemon-yogurt.js",
@@ -1254,6 +1270,7 @@
       "_creamy-chicken-korma.js",
       "_creamy-chicken-sweetcorn-pasta-bake.js",
       "_creamy-polenta-wild-mushrooms-truffle.js",
+      "_creamy-sausage-spinach-gnocchi.js",
       "_creamy-tomato-butter-bean-pasta.js",
       "_crispy-chicken-katsu-curry.js",
       "_crispy-halloumi-wraps-lemon-yogurt.js",
@@ -1315,6 +1332,7 @@
       "src/content/recipes/creamy-chicken-korma.md?raw",
       "src/content/recipes/creamy-chicken-sweetcorn-pasta-bake.md?raw",
       "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw",
+      "src/content/recipes/creamy-sausage-spinach-gnocchi.md?raw",
       "src/content/recipes/creamy-tomato-butter-bean-pasta.md?raw",
       "src/content/recipes/crispy-chicken-katsu-curry.md?raw",
       "src/content/recipes/crispy-halloumi-wraps-lemon-yogurt.md?raw",
@@ -1406,6 +1424,7 @@
       "_creamy-chicken-korma.js",
       "_creamy-chicken-sweetcorn-pasta-bake.js",
       "_creamy-polenta-wild-mushrooms-truffle.js",
+      "_creamy-sausage-spinach-gnocchi.js",
       "_creamy-tomato-butter-bean-pasta.js",
       "_crispy-chicken-katsu-curry.js",
       "_crispy-halloumi-wraps-lemon-yogurt.js",
@@ -1467,6 +1486,7 @@
       "src/content/recipes/creamy-chicken-korma.md?raw",
       "src/content/recipes/creamy-chicken-sweetcorn-pasta-bake.md?raw",
       "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw",
+      "src/content/recipes/creamy-sausage-spinach-gnocchi.md?raw",
       "src/content/recipes/creamy-tomato-butter-bean-pasta.md?raw",
       "src/content/recipes/crispy-chicken-katsu-curry.md?raw",
       "src/content/recipes/crispy-halloumi-wraps-lemon-yogurt.md?raw",
@@ -1548,6 +1568,7 @@
       "_creamy-chicken-korma.js",
       "_creamy-chicken-sweetcorn-pasta-bake.js",
       "_creamy-polenta-wild-mushrooms-truffle.js",
+      "_creamy-sausage-spinach-gnocchi.js",
       "_creamy-tomato-butter-bean-pasta.js",
       "_crispy-chicken-katsu-curry.js",
       "_crispy-halloumi-wraps-lemon-yogurt.js",
