@@ -1,4 +1,5 @@
-import { m as metadata$15 } from "../../../chunks/baked-beef-bean-quesadilla-casserole.js";
+import { m as metadata$16 } from "../../../chunks/baked-beef-bean-quesadilla-casserole.js";
+import { m as metadata$15 } from "../../../chunks/baked-cajun-salmon-rice-corn.js";
 import { m as metadata$14 } from "../../../chunks/baked-camembert-cheeseboard-chutney.js";
 import { m as metadata$13 } from "../../../chunks/balsamic-honey-sausages-grapes.js";
 import { m as metadata$12 } from "../../../chunks/buttermilk-chicken-tenders.js";
@@ -71,7 +72,8 @@ import { m as metadata } from "../../../chunks/white-bean-rosemary-stew.js";
 const site = "https://www.chefstorecookbook.com";
 const GET = async () => {
   const recipeModules = /* @__PURE__ */ Object.assign({
-    "/src/content/recipes/baked-beef-bean-quesadilla-casserole.md": metadata$15,
+    "/src/content/recipes/baked-beef-bean-quesadilla-casserole.md": metadata$16,
+    "/src/content/recipes/baked-cajun-salmon-rice-corn.md": metadata$15,
     "/src/content/recipes/baked-camembert-cheeseboard-chutney.md": metadata$14,
     "/src/content/recipes/balsamic-honey-sausages-grapes.md": metadata$13,
     "/src/content/recipes/buttermilk-chicken-tenders.md": metadata$12,

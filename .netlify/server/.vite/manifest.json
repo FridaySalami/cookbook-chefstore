@@ -41,6 +41,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_baked-cajun-salmon-rice-corn.js": {
+    "file": "chunks/baked-cajun-salmon-rice-corn.js",
+    "name": "baked-cajun-salmon-rice-corn",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_baked-camembert-cheeseboard-chutney.js": {
     "file": "chunks/baked-camembert-cheeseboard-chutney.js",
     "name": "baked-camembert-cheeseboard-chutney",
@@ -794,6 +803,12 @@
     "src": "src/content/recipes/baked-beef-bean-quesadilla-casserole.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/baked-cajun-salmon-rice-corn.md?raw": {
+    "file": "chunks/baked-cajun-salmon-rice-corn2.js",
+    "name": "baked-cajun-salmon-rice-corn",
+    "src": "src/content/recipes/baked-cajun-salmon-rice-corn.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/baked-camembert-cheeseboard-chutney.md?raw": {
     "file": "chunks/baked-camembert-cheeseboard-chutney2.js",
     "name": "baked-camembert-cheeseboard-chutney",
@@ -1312,6 +1327,7 @@
     "isEntry": true,
     "imports": [
       "_baked-beef-bean-quesadilla-casserole.js",
+      "_baked-cajun-salmon-rice-corn.js",
       "_baked-camembert-cheeseboard-chutney.js",
       "_balsamic-honey-sausages-grapes.js",
       "_buttermilk-chicken-tenders.js",
@@ -1386,6 +1402,7 @@
     ],
     "dynamicImports": [
       "_baked-beef-bean-quesadilla-casserole.js",
+      "_baked-cajun-salmon-rice-corn.js",
       "_baked-camembert-cheeseboard-chutney.js",
       "_balsamic-honey-sausages-grapes.js",
       "_buttermilk-chicken-tenders.js",
@@ -1456,6 +1473,7 @@
       "_thai-green-curry.js",
       "_white-bean-rosemary-stew.js",
       "src/content/recipes/baked-beef-bean-quesadilla-casserole.md?raw",
+      "src/content/recipes/baked-cajun-salmon-rice-corn.md?raw",
       "src/content/recipes/baked-camembert-cheeseboard-chutney.md?raw",
       "src/content/recipes/balsamic-honey-sausages-grapes.md?raw",
       "src/content/recipes/buttermilk-chicken-tenders.md?raw",
@@ -1556,6 +1574,7 @@
     ],
     "dynamicImports": [
       "_baked-beef-bean-quesadilla-casserole.js",
+      "_baked-cajun-salmon-rice-corn.js",
       "_baked-camembert-cheeseboard-chutney.js",
       "_balsamic-honey-sausages-grapes.js",
       "_buttermilk-chicken-tenders.js",
@@ -1626,6 +1645,7 @@
       "_thai-green-curry.js",
       "_white-bean-rosemary-stew.js",
       "src/content/recipes/baked-beef-bean-quesadilla-casserole.md?raw",
+      "src/content/recipes/baked-cajun-salmon-rice-corn.md?raw",
       "src/content/recipes/baked-camembert-cheeseboard-chutney.md?raw",
       "src/content/recipes/balsamic-honey-sausages-grapes.md?raw",
       "src/content/recipes/buttermilk-chicken-tenders.md?raw",
@@ -1716,6 +1736,7 @@
     "isEntry": true,
     "imports": [
       "_baked-beef-bean-quesadilla-casserole.js",
+      "_baked-cajun-salmon-rice-corn.js",
       "_baked-camembert-cheeseboard-chutney.js",
       "_balsamic-honey-sausages-grapes.js",
       "_buttermilk-chicken-tenders.js",
