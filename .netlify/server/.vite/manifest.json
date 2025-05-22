@@ -617,6 +617,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_sweet-potato-red-lentil-dhal.js": {
+    "file": "chunks/sweet-potato-red-lentil-dhal.js",
+    "name": "sweet-potato-red-lentil-dhal",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_sweetcorn-fritters-chilli-jam.js": {
     "file": "chunks/sweetcorn-fritters-chilli-jam.js",
     "name": "sweetcorn-fritters-chilli-jam",
@@ -1019,6 +1028,12 @@
     "src": "src/content/recipes/sticky-toffee-pudding.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/sweet-potato-red-lentil-dhal.md?raw": {
+    "file": "chunks/sweet-potato-red-lentil-dhal2.js",
+    "name": "sweet-potato-red-lentil-dhal",
+    "src": "src/content/recipes/sweet-potato-red-lentil-dhal.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/sweetcorn-fritters-chilli-jam.md?raw": {
     "file": "chunks/sweetcorn-fritters-chilli-jam2.js",
     "name": "sweetcorn-fritters-chilli-jam",
@@ -1201,6 +1216,7 @@
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
       "_sticky-toffee-pudding.js",
+      "_sweet-potato-red-lentil-dhal.js",
       "_sweetcorn-fritters-chilli-jam.js",
       "_tagliatelle-bolognese-traditional.js",
       "_thai-green-curry.js",
@@ -1264,6 +1280,7 @@
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
       "_sticky-toffee-pudding.js",
+      "_sweet-potato-red-lentil-dhal.js",
       "_sweetcorn-fritters-chilli-jam.js",
       "_tagliatelle-bolognese-traditional.js",
       "_thai-green-curry.js",
@@ -1323,6 +1340,7 @@
       "src/content/recipes/sticky-soy-braised-pork-ribs.md?raw",
       "src/content/recipes/sticky-soy-garlic-noodles.md?raw",
       "src/content/recipes/sticky-toffee-pudding.md?raw",
+      "src/content/recipes/sweet-potato-red-lentil-dhal.md?raw",
       "src/content/recipes/sweetcorn-fritters-chilli-jam.md?raw",
       "src/content/recipes/tagliatelle-bolognese-traditional.md?raw",
       "src/content/recipes/thai-green-curry.md?raw",
@@ -1412,6 +1430,7 @@
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
       "_sticky-toffee-pudding.js",
+      "_sweet-potato-red-lentil-dhal.js",
       "_sweetcorn-fritters-chilli-jam.js",
       "_tagliatelle-bolognese-traditional.js",
       "_thai-green-curry.js",
@@ -1471,6 +1490,7 @@
       "src/content/recipes/sticky-soy-braised-pork-ribs.md?raw",
       "src/content/recipes/sticky-soy-garlic-noodles.md?raw",
       "src/content/recipes/sticky-toffee-pudding.md?raw",
+      "src/content/recipes/sweet-potato-red-lentil-dhal.md?raw",
       "src/content/recipes/sweetcorn-fritters-chilli-jam.md?raw",
       "src/content/recipes/tagliatelle-bolognese-traditional.md?raw",
       "src/content/recipes/thai-green-curry.md?raw",
@@ -1550,6 +1570,7 @@
       "_sticky-soy-braised-pork-ribs.js",
       "_sticky-soy-garlic-noodles.js",
       "_sticky-toffee-pudding.js",
+      "_sweet-potato-red-lentil-dhal.js",
       "_sweetcorn-fritters-chilli-jam.js",
       "_tagliatelle-bolognese-traditional.js",
       "_thai-green-curry.js",

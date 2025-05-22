@@ -1,4 +1,4 @@
-import { _ as __vite_glob_4_58, a as __vite_glob_4_57, b as __vite_glob_4_56, c as __vite_glob_4_55, d as __vite_glob_4_54, e as __vite_glob_4_53, f as __vite_glob_4_52, g as __vite_glob_4_51, h as __vite_glob_4_50, i as __vite_glob_4_49, j as __vite_glob_4_48, k as __vite_glob_4_47, l as __vite_glob_4_46, m as __vite_glob_4_45, n as __vite_glob_4_44, o as __vite_glob_4_43, p as __vite_glob_4_42, q as __vite_glob_4_41, r as __vite_glob_4_40, s as __vite_glob_4_39, t as __vite_glob_4_38, u as __vite_glob_4_37, v as __vite_glob_4_36, w as __vite_glob_4_35, x as __vite_glob_4_34, y as __vite_glob_4_33, z as __vite_glob_4_32, A as __vite_glob_4_31, B as __vite_glob_4_30, C as __vite_glob_4_29, D as __vite_glob_4_28, E as __vite_glob_4_27, F as __vite_glob_4_26, G as __vite_glob_4_25, H as __vite_glob_4_24, I as __vite_glob_4_23, J as __vite_glob_4_22, K as __vite_glob_4_21, L as __vite_glob_4_20, M as __vite_glob_4_19, N as __vite_glob_4_18, O as __vite_glob_4_17, P as __vite_glob_4_16, Q as __vite_glob_4_15, R as __vite_glob_4_14, S as __vite_glob_4_13, T as __vite_glob_4_12, U as __vite_glob_4_11, V as __vite_glob_4_10, W as __vite_glob_4_9, X as __vite_glob_4_8, Y as __vite_glob_4_7, Z as __vite_glob_4_6, $ as __vite_glob_4_5, a0 as __vite_glob_4_4, a1 as __vite_glob_4_3, a2 as __vite_glob_4_2, a3 as __vite_glob_4_1, a4 as __vite_glob_4_0 } from "../../../chunks/white-bean-rosemary-stew.metadata.js";
+import { _ as __vite_glob_4_59, a as __vite_glob_4_58, b as __vite_glob_4_57, c as __vite_glob_4_56, d as __vite_glob_4_55, e as __vite_glob_4_54, f as __vite_glob_4_53, g as __vite_glob_4_52, h as __vite_glob_4_51, i as __vite_glob_4_50, j as __vite_glob_4_49, k as __vite_glob_4_48, l as __vite_glob_4_47, m as __vite_glob_4_46, n as __vite_glob_4_45, o as __vite_glob_4_44, p as __vite_glob_4_43, q as __vite_glob_4_42, r as __vite_glob_4_41, s as __vite_glob_4_40, t as __vite_glob_4_39, u as __vite_glob_4_38, v as __vite_glob_4_37, w as __vite_glob_4_36, x as __vite_glob_4_35, y as __vite_glob_4_34, z as __vite_glob_4_33, A as __vite_glob_4_32, B as __vite_glob_4_31, C as __vite_glob_4_30, D as __vite_glob_4_29, E as __vite_glob_4_28, F as __vite_glob_4_27, G as __vite_glob_4_26, H as __vite_glob_4_25, I as __vite_glob_4_24, J as __vite_glob_4_23, K as __vite_glob_4_22, L as __vite_glob_4_21, M as __vite_glob_4_20, N as __vite_glob_4_19, O as __vite_glob_4_18, P as __vite_glob_4_17, Q as __vite_glob_4_16, R as __vite_glob_4_15, S as __vite_glob_4_14, T as __vite_glob_4_13, U as __vite_glob_4_12, V as __vite_glob_4_11, W as __vite_glob_4_10, X as __vite_glob_4_9, Y as __vite_glob_4_8, Z as __vite_glob_4_7, $ as __vite_glob_4_6, a0 as __vite_glob_4_5, a1 as __vite_glob_4_4, a2 as __vite_glob_4_3, a3 as __vite_glob_4_2, a4 as __vite_glob_4_1, a5 as __vite_glob_4_0 } from "../../../chunks/white-bean-rosemary-stew.metadata.js";
 import { d as dev } from "../../../chunks/index3.js";
 const load = async () => {
   try {
@@ -58,10 +58,11 @@ const load = async () => {
       "/src/content/recipe-metadata/sticky-soy-braised-pork-ribs.metadata.js": __vite_glob_4_52,
       "/src/content/recipe-metadata/sticky-soy-garlic-noodles.metadata.js": __vite_glob_4_53,
       "/src/content/recipe-metadata/sticky-toffee-pudding.metadata.js": __vite_glob_4_54,
-      "/src/content/recipe-metadata/sweetcorn-fritters-chilli-jam.metadata.js": __vite_glob_4_55,
-      "/src/content/recipe-metadata/tagliatelle-bolognese-traditional.metadata.js": __vite_glob_4_56,
-      "/src/content/recipe-metadata/thai-green-curry.metadata.js": __vite_glob_4_57,
-      "/src/content/recipe-metadata/white-bean-rosemary-stew.metadata.js": __vite_glob_4_58
+      "/src/content/recipe-metadata/sweet-potato-red-lentil-dhal.metadata.js": __vite_glob_4_55,
+      "/src/content/recipe-metadata/sweetcorn-fritters-chilli-jam.metadata.js": __vite_glob_4_56,
+      "/src/content/recipe-metadata/tagliatelle-bolognese-traditional.metadata.js": __vite_glob_4_57,
+      "/src/content/recipe-metadata/thai-green-curry.metadata.js": __vite_glob_4_58,
+      "/src/content/recipe-metadata/white-bean-rosemary-stew.metadata.js": __vite_glob_4_59
     });
     const recipes = Object.entries(recipeMetadataImports).filter(([, module]) => module?.metadata).map(([path, module]) => {
       const filename = path.split("/").pop()?.replace(".metadata.js", "") || "";
