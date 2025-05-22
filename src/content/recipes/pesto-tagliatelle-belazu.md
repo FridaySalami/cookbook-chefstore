@@ -58,7 +58,7 @@ One pot. One bowl. One very content sigh.
 
 - Use the heat of the pasta to warm the pesto gently—no need to cook it.  
 - Lemon zest or a spoonful of ricotta adds brightness and richness.  
-- Make it heartier with grilled chicken, roasted vegetables, or pan-fried mushrooms.
+- Make it heartier with grilled chicken, roasted vegetables, or pan fried mushrooms.
 
 ## Goes Great With
 
