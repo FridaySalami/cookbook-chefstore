@@ -102,6 +102,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_chicken-veggie-enchilada-bake.js": {
+    "file": "chunks/chicken-veggie-enchilada-bake.js",
+    "name": "chicken-veggie-enchilada-bake",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_chickpea-tagine-preserved-lemon-harissa.js": {
     "file": "chunks/chickpea-tagine-preserved-lemon-harissa.js",
     "name": "chickpea-tagine-preserved-lemon-harissa",
@@ -716,6 +725,12 @@
     "src": "src/content/recipes/chicken-pearl-barley-broth.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/chicken-veggie-enchilada-bake.md?raw": {
+    "file": "chunks/chicken-veggie-enchilada-bake2.js",
+    "name": "chicken-veggie-enchilada-bake",
+    "src": "src/content/recipes/chicken-veggie-enchilada-bake.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/chickpea-tagine-preserved-lemon-harissa.md?raw": {
     "file": "chunks/chickpea-tagine-preserved-lemon-harissa2.js",
     "name": "chickpea-tagine-preserved-lemon-harissa",
@@ -1137,6 +1152,7 @@
       "_cheesy-broccoli-potato-frittata-bake.js",
       "_cheesy-leek-potato-gratin.js",
       "_chicken-pearl-barley-broth.js",
+      "_chicken-veggie-enchilada-bake.js",
       "_chickpea-tagine-preserved-lemon-harissa.js",
       "_classic-tiramisu-no-eggs.js",
       "_coconut-milk-rice-pudding.js",
@@ -1199,6 +1215,7 @@
       "_cheesy-broccoli-potato-frittata-bake.js",
       "_cheesy-leek-potato-gratin.js",
       "_chicken-pearl-barley-broth.js",
+      "_chicken-veggie-enchilada-bake.js",
       "_chickpea-tagine-preserved-lemon-harissa.js",
       "_classic-tiramisu-no-eggs.js",
       "_coconut-milk-rice-pudding.js",
@@ -1257,6 +1274,7 @@
       "src/content/recipes/cheesy-broccoli-potato-frittata-bake.md?raw",
       "src/content/recipes/cheesy-leek-potato-gratin.md?raw",
       "src/content/recipes/chicken-pearl-barley-broth.md?raw",
+      "src/content/recipes/chicken-veggie-enchilada-bake.md?raw",
       "src/content/recipes/chickpea-tagine-preserved-lemon-harissa.md?raw",
       "src/content/recipes/classic-tiramisu-no-eggs.md?raw",
       "src/content/recipes/coconut-milk-rice-pudding.md?raw",
@@ -1345,6 +1363,7 @@
       "_cheesy-broccoli-potato-frittata-bake.js",
       "_cheesy-leek-potato-gratin.js",
       "_chicken-pearl-barley-broth.js",
+      "_chicken-veggie-enchilada-bake.js",
       "_chickpea-tagine-preserved-lemon-harissa.js",
       "_classic-tiramisu-no-eggs.js",
       "_coconut-milk-rice-pudding.js",
@@ -1403,6 +1422,7 @@
       "src/content/recipes/cheesy-broccoli-potato-frittata-bake.md?raw",
       "src/content/recipes/cheesy-leek-potato-gratin.md?raw",
       "src/content/recipes/chicken-pearl-barley-broth.md?raw",
+      "src/content/recipes/chicken-veggie-enchilada-bake.md?raw",
       "src/content/recipes/chickpea-tagine-preserved-lemon-harissa.md?raw",
       "src/content/recipes/classic-tiramisu-no-eggs.md?raw",
       "src/content/recipes/coconut-milk-rice-pudding.md?raw",
@@ -1481,6 +1501,7 @@
       "_cheesy-broccoli-potato-frittata-bake.js",
       "_cheesy-leek-potato-gratin.js",
       "_chicken-pearl-barley-broth.js",
+      "_chicken-veggie-enchilada-bake.js",
       "_chickpea-tagine-preserved-lemon-harissa.js",
       "_classic-tiramisu-no-eggs.js",
       "_coconut-milk-rice-pudding.js",

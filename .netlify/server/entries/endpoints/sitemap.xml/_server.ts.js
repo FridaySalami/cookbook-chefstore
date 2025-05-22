@@ -1,9 +1,10 @@
-import { m as metadata$V } from "../../../chunks/baked-camembert-cheeseboard-chutney.js";
-import { m as metadata$U } from "../../../chunks/balsamic-honey-sausages-grapes.js";
-import { m as metadata$T } from "../../../chunks/buttermilk-chicken-tenders.js";
-import { m as metadata$S } from "../../../chunks/cheesy-broccoli-potato-frittata-bake.js";
-import { m as metadata$R } from "../../../chunks/cheesy-leek-potato-gratin.js";
-import { m as metadata$Q } from "../../../chunks/chicken-pearl-barley-broth.js";
+import { m as metadata$W } from "../../../chunks/baked-camembert-cheeseboard-chutney.js";
+import { m as metadata$V } from "../../../chunks/balsamic-honey-sausages-grapes.js";
+import { m as metadata$U } from "../../../chunks/buttermilk-chicken-tenders.js";
+import { m as metadata$T } from "../../../chunks/cheesy-broccoli-potato-frittata-bake.js";
+import { m as metadata$S } from "../../../chunks/cheesy-leek-potato-gratin.js";
+import { m as metadata$R } from "../../../chunks/chicken-pearl-barley-broth.js";
+import { m as metadata$Q } from "../../../chunks/chicken-veggie-enchilada-bake.js";
 import { m as metadata$P } from "../../../chunks/chickpea-tagine-preserved-lemon-harissa.js";
 import { m as metadata$O } from "../../../chunks/classic-tiramisu-no-eggs.js";
 import { m as metadata$N } from "../../../chunks/coconut-milk-rice-pudding.js";
@@ -59,12 +60,13 @@ import { m as metadata } from "../../../chunks/white-bean-rosemary-stew.js";
 const site = "https://www.chefstorecookbook.com";
 const GET = async () => {
   const recipeModules = /* @__PURE__ */ Object.assign({
-    "/src/content/recipes/baked-camembert-cheeseboard-chutney.md": metadata$V,
-    "/src/content/recipes/balsamic-honey-sausages-grapes.md": metadata$U,
-    "/src/content/recipes/buttermilk-chicken-tenders.md": metadata$T,
-    "/src/content/recipes/cheesy-broccoli-potato-frittata-bake.md": metadata$S,
-    "/src/content/recipes/cheesy-leek-potato-gratin.md": metadata$R,
-    "/src/content/recipes/chicken-pearl-barley-broth.md": metadata$Q,
+    "/src/content/recipes/baked-camembert-cheeseboard-chutney.md": metadata$W,
+    "/src/content/recipes/balsamic-honey-sausages-grapes.md": metadata$V,
+    "/src/content/recipes/buttermilk-chicken-tenders.md": metadata$U,
+    "/src/content/recipes/cheesy-broccoli-potato-frittata-bake.md": metadata$T,
+    "/src/content/recipes/cheesy-leek-potato-gratin.md": metadata$S,
+    "/src/content/recipes/chicken-pearl-barley-broth.md": metadata$R,
+    "/src/content/recipes/chicken-veggie-enchilada-bake.md": metadata$Q,
     "/src/content/recipes/chickpea-tagine-preserved-lemon-harissa.md": metadata$P,
     "/src/content/recipes/classic-tiramisu-no-eggs.md": metadata$O,
     "/src/content/recipes/coconut-milk-rice-pudding.md": metadata$N,
