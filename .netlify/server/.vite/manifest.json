@@ -217,6 +217,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_crispy-baked-chicken-goujons.js": {
+    "file": "chunks/crispy-baked-chicken-goujons.js",
+    "name": "crispy-baked-chicken-goujons",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_crispy-chicken-katsu-curry.js": {
     "file": "chunks/crispy-chicken-katsu-curry.js",
     "name": "crispy-chicken-katsu-curry",
@@ -836,6 +845,12 @@
     "src": "src/content/recipes/creamy-tomato-butter-bean-pasta.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/crispy-baked-chicken-goujons.md?raw": {
+    "file": "chunks/crispy-baked-chicken-goujons2.js",
+    "name": "crispy-baked-chicken-goujons",
+    "src": "src/content/recipes/crispy-baked-chicken-goujons.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/crispy-chicken-katsu-curry.md?raw": {
     "file": "chunks/crispy-chicken-katsu-curry2.js",
     "name": "crispy-chicken-katsu-curry",
@@ -1238,6 +1253,7 @@
       "_creamy-polenta-wild-mushrooms-truffle.js",
       "_creamy-sausage-spinach-gnocchi.js",
       "_creamy-tomato-butter-bean-pasta.js",
+      "_crispy-baked-chicken-goujons.js",
       "_crispy-chicken-katsu-curry.js",
       "_crispy-halloumi-wraps-lemon-yogurt.js",
       "_crispy-panko-chicken-bites.js",
@@ -1306,6 +1322,7 @@
       "_creamy-polenta-wild-mushrooms-truffle.js",
       "_creamy-sausage-spinach-gnocchi.js",
       "_creamy-tomato-butter-bean-pasta.js",
+      "_crispy-baked-chicken-goujons.js",
       "_crispy-chicken-katsu-curry.js",
       "_crispy-halloumi-wraps-lemon-yogurt.js",
       "_crispy-panko-chicken-bites.js",
@@ -1370,6 +1387,7 @@
       "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw",
       "src/content/recipes/creamy-sausage-spinach-gnocchi.md?raw",
       "src/content/recipes/creamy-tomato-butter-bean-pasta.md?raw",
+      "src/content/recipes/crispy-baked-chicken-goujons.md?raw",
       "src/content/recipes/crispy-chicken-katsu-curry.md?raw",
       "src/content/recipes/crispy-halloumi-wraps-lemon-yogurt.md?raw",
       "src/content/recipes/crispy-panko-chicken-bites.md?raw",
@@ -1464,6 +1482,7 @@
       "_creamy-polenta-wild-mushrooms-truffle.js",
       "_creamy-sausage-spinach-gnocchi.js",
       "_creamy-tomato-butter-bean-pasta.js",
+      "_crispy-baked-chicken-goujons.js",
       "_crispy-chicken-katsu-curry.js",
       "_crispy-halloumi-wraps-lemon-yogurt.js",
       "_crispy-panko-chicken-bites.js",
@@ -1528,6 +1547,7 @@
       "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw",
       "src/content/recipes/creamy-sausage-spinach-gnocchi.md?raw",
       "src/content/recipes/creamy-tomato-butter-bean-pasta.md?raw",
+      "src/content/recipes/crispy-baked-chicken-goujons.md?raw",
       "src/content/recipes/crispy-chicken-katsu-curry.md?raw",
       "src/content/recipes/crispy-halloumi-wraps-lemon-yogurt.md?raw",
       "src/content/recipes/crispy-panko-chicken-bites.md?raw",
@@ -1612,6 +1632,7 @@
       "_creamy-polenta-wild-mushrooms-truffle.js",
       "_creamy-sausage-spinach-gnocchi.js",
       "_creamy-tomato-butter-bean-pasta.js",
+      "_crispy-baked-chicken-goujons.js",
       "_crispy-chicken-katsu-curry.js",
       "_crispy-halloumi-wraps-lemon-yogurt.js",
       "_crispy-panko-chicken-bites.js",

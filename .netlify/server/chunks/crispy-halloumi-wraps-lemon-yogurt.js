@@ -52,12 +52,12 @@ function Crispy_halloumi_wraps_lemon_yogurt_md($$payload, $$props) {
     }
   ]));
 }
-const __vite_glob_2_18 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_2_19 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Crispy_halloumi_wraps_lemon_yogurt_md,
   metadata
 }, Symbol.toStringTag, { value: "Module" }));
 export {
-  __vite_glob_2_18 as _,
+  __vite_glob_2_19 as _,
   metadata as m
 };
