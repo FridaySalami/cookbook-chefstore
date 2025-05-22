@@ -32,6 +32,15 @@
       "_app/immutable/assets/RecipeLayout.TG1l-nGk.css"
     ]
   },
+  "_baked-beef-bean-quesadilla-casserole.js": {
+    "file": "chunks/baked-beef-bean-quesadilla-casserole.js",
+    "name": "baked-beef-bean-quesadilla-casserole",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_baked-camembert-cheeseboard-chutney.js": {
     "file": "chunks/baked-camembert-cheeseboard-chutney.js",
     "name": "baked-camembert-cheeseboard-chutney",
@@ -743,6 +752,12 @@
       "_environment.js"
     ]
   },
+  "src/content/recipes/baked-beef-bean-quesadilla-casserole.md?raw": {
+    "file": "chunks/baked-beef-bean-quesadilla-casserole2.js",
+    "name": "baked-beef-bean-quesadilla-casserole",
+    "src": "src/content/recipes/baked-beef-bean-quesadilla-casserole.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/baked-camembert-cheeseboard-chutney.md?raw": {
     "file": "chunks/baked-camembert-cheeseboard-chutney2.js",
     "name": "baked-camembert-cheeseboard-chutney",
@@ -1236,6 +1251,7 @@
     "src": "src/routes/recipes/[slug]/+page.server.ts",
     "isEntry": true,
     "imports": [
+      "_baked-beef-bean-quesadilla-casserole.js",
       "_baked-camembert-cheeseboard-chutney.js",
       "_balsamic-honey-sausages-grapes.js",
       "_buttermilk-chicken-tenders.js",
@@ -1305,6 +1321,7 @@
       "_index.js"
     ],
     "dynamicImports": [
+      "_baked-beef-bean-quesadilla-casserole.js",
       "_baked-camembert-cheeseboard-chutney.js",
       "_balsamic-honey-sausages-grapes.js",
       "_buttermilk-chicken-tenders.js",
@@ -1370,6 +1387,7 @@
       "_tagliatelle-bolognese-traditional.js",
       "_thai-green-curry.js",
       "_white-bean-rosemary-stew.js",
+      "src/content/recipes/baked-beef-bean-quesadilla-casserole.md?raw",
       "src/content/recipes/baked-camembert-cheeseboard-chutney.md?raw",
       "src/content/recipes/balsamic-honey-sausages-grapes.md?raw",
       "src/content/recipes/buttermilk-chicken-tenders.md?raw",
@@ -1465,6 +1483,7 @@
       "_index3.js"
     ],
     "dynamicImports": [
+      "_baked-beef-bean-quesadilla-casserole.js",
       "_baked-camembert-cheeseboard-chutney.js",
       "_balsamic-honey-sausages-grapes.js",
       "_buttermilk-chicken-tenders.js",
@@ -1530,6 +1549,7 @@
       "_tagliatelle-bolognese-traditional.js",
       "_thai-green-curry.js",
       "_white-bean-rosemary-stew.js",
+      "src/content/recipes/baked-beef-bean-quesadilla-casserole.md?raw",
       "src/content/recipes/baked-camembert-cheeseboard-chutney.md?raw",
       "src/content/recipes/balsamic-honey-sausages-grapes.md?raw",
       "src/content/recipes/buttermilk-chicken-tenders.md?raw",
@@ -1615,6 +1635,7 @@
     "src": "src/routes/sitemap.xml/+server.ts",
     "isEntry": true,
     "imports": [
+      "_baked-beef-bean-quesadilla-casserole.js",
       "_baked-camembert-cheeseboard-chutney.js",
       "_balsamic-honey-sausages-grapes.js",
       "_buttermilk-chicken-tenders.js",

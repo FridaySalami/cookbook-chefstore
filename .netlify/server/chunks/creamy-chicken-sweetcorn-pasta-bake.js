@@ -57,12 +57,12 @@ function Creamy_chicken_sweetcorn_pasta_bake_md($$payload, $$props) {
     }
   ]));
 }
-const __vite_glob_2_13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_2_14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Creamy_chicken_sweetcorn_pasta_bake_md,
   metadata
 }, Symbol.toStringTag, { value: "Module" }));
 export {
-  __vite_glob_2_13 as _,
+  __vite_glob_2_14 as _,
   metadata as m
 };

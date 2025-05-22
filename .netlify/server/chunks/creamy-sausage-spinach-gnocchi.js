@@ -56,12 +56,12 @@ function Creamy_sausage_spinach_gnocchi_md($$payload, $$props) {
     }
   ]));
 }
-const __vite_glob_2_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_2_16 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Creamy_sausage_spinach_gnocchi_md,
   metadata
 }, Symbol.toStringTag, { value: "Module" }));
 export {
-  __vite_glob_2_15 as _,
+  __vite_glob_2_16 as _,
   metadata as m
 };
