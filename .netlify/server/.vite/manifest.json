@@ -199,6 +199,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_crispy-halloumi-wraps-lemon-yogurt.js": {
+    "file": "chunks/crispy-halloumi-wraps-lemon-yogurt.js",
+    "name": "crispy-halloumi-wraps-lemon-yogurt",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_crispy-panko-chicken-bites.js": {
     "file": "chunks/crispy-panko-chicken-bites.js",
     "name": "crispy-panko-chicken-bites",
@@ -788,6 +797,12 @@
     "src": "src/content/recipes/crispy-chicken-katsu-curry.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/crispy-halloumi-wraps-lemon-yogurt.md?raw": {
+    "file": "chunks/crispy-halloumi-wraps-lemon-yogurt2.js",
+    "name": "crispy-halloumi-wraps-lemon-yogurt",
+    "src": "src/content/recipes/crispy-halloumi-wraps-lemon-yogurt.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/crispy-panko-chicken-bites.md?raw": {
     "file": "chunks/crispy-panko-chicken-bites2.js",
     "name": "crispy-panko-chicken-bites",
@@ -1176,6 +1191,7 @@
       "_creamy-polenta-wild-mushrooms-truffle.js",
       "_creamy-tomato-butter-bean-pasta.js",
       "_crispy-chicken-katsu-curry.js",
+      "_crispy-halloumi-wraps-lemon-yogurt.js",
       "_crispy-panko-chicken-bites.js",
       "_crunchy-asian-slaw.js",
       "_dark-chocolate-orange-blossom-sea-salt.js",
@@ -1240,6 +1256,7 @@
       "_creamy-polenta-wild-mushrooms-truffle.js",
       "_creamy-tomato-butter-bean-pasta.js",
       "_crispy-chicken-katsu-curry.js",
+      "_crispy-halloumi-wraps-lemon-yogurt.js",
       "_crispy-panko-chicken-bites.js",
       "_crunchy-asian-slaw.js",
       "_dark-chocolate-orange-blossom-sea-salt.js",
@@ -1300,6 +1317,7 @@
       "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw",
       "src/content/recipes/creamy-tomato-butter-bean-pasta.md?raw",
       "src/content/recipes/crispy-chicken-katsu-curry.md?raw",
+      "src/content/recipes/crispy-halloumi-wraps-lemon-yogurt.md?raw",
       "src/content/recipes/crispy-panko-chicken-bites.md?raw",
       "src/content/recipes/crunchy-asian-slaw.md?raw",
       "src/content/recipes/dark-chocolate-orange-blossom-sea-salt.md?raw",
@@ -1390,6 +1408,7 @@
       "_creamy-polenta-wild-mushrooms-truffle.js",
       "_creamy-tomato-butter-bean-pasta.js",
       "_crispy-chicken-katsu-curry.js",
+      "_crispy-halloumi-wraps-lemon-yogurt.js",
       "_crispy-panko-chicken-bites.js",
       "_crunchy-asian-slaw.js",
       "_dark-chocolate-orange-blossom-sea-salt.js",
@@ -1450,6 +1469,7 @@
       "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw",
       "src/content/recipes/creamy-tomato-butter-bean-pasta.md?raw",
       "src/content/recipes/crispy-chicken-katsu-curry.md?raw",
+      "src/content/recipes/crispy-halloumi-wraps-lemon-yogurt.md?raw",
       "src/content/recipes/crispy-panko-chicken-bites.md?raw",
       "src/content/recipes/crunchy-asian-slaw.md?raw",
       "src/content/recipes/dark-chocolate-orange-blossom-sea-salt.md?raw",
@@ -1530,6 +1550,7 @@
       "_creamy-polenta-wild-mushrooms-truffle.js",
       "_creamy-tomato-butter-bean-pasta.js",
       "_crispy-chicken-katsu-curry.js",
+      "_crispy-halloumi-wraps-lemon-yogurt.js",
       "_crispy-panko-chicken-bites.js",
       "_crunchy-asian-slaw.js",
       "_dark-chocolate-orange-blossom-sea-salt.js",
