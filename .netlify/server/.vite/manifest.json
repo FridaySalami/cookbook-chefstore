@@ -455,6 +455,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_lemon-herb-chicken-traybake.js": {
+    "file": "chunks/lemon-herb-chicken-traybake.js",
+    "name": "lemon-herb-chicken-traybake",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_lemon-posset-shortbread.js": {
     "file": "chunks/lemon-posset-shortbread.js",
     "name": "lemon-posset-shortbread",
@@ -983,6 +992,12 @@
     "src": "src/content/recipes/lemon-chicken-orzo-spinach-garlic-butter.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/lemon-herb-chicken-traybake.md?raw": {
+    "file": "chunks/lemon-herb-chicken-traybake2.js",
+    "name": "lemon-herb-chicken-traybake",
+    "src": "src/content/recipes/lemon-herb-chicken-traybake.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/lemon-posset-shortbread.md?raw": {
     "file": "chunks/lemon-posset-shortbread2.js",
     "name": "lemon-posset-shortbread",
@@ -1303,6 +1318,7 @@
       "_homemade-pizza-dough-tomato-sauce.js",
       "_kimchi-fried-rice.js",
       "_lemon-chicken-orzo-spinach-garlic-butter.js",
+      "_lemon-herb-chicken-traybake.js",
       "_lemon-posset-shortbread.js",
       "_mini-turkey-meatballs-tomato-sauce.js",
       "_miso-glazed-roasted-vegetables.js",
@@ -1374,6 +1390,7 @@
       "_homemade-pizza-dough-tomato-sauce.js",
       "_kimchi-fried-rice.js",
       "_lemon-chicken-orzo-spinach-garlic-butter.js",
+      "_lemon-herb-chicken-traybake.js",
       "_lemon-posset-shortbread.js",
       "_mini-turkey-meatballs-tomato-sauce.js",
       "_miso-glazed-roasted-vegetables.js",
@@ -1441,6 +1458,7 @@
       "src/content/recipes/homemade-pizza-dough-tomato-sauce.md?raw",
       "src/content/recipes/kimchi-fried-rice.md?raw",
       "src/content/recipes/lemon-chicken-orzo-spinach-garlic-butter.md?raw",
+      "src/content/recipes/lemon-herb-chicken-traybake.md?raw",
       "src/content/recipes/lemon-posset-shortbread.md?raw",
       "src/content/recipes/mini-turkey-meatballs-tomato-sauce.md?raw",
       "src/content/recipes/miso-glazed-roasted-vegetables.md?raw",
@@ -1538,6 +1556,7 @@
       "_homemade-pizza-dough-tomato-sauce.js",
       "_kimchi-fried-rice.js",
       "_lemon-chicken-orzo-spinach-garlic-butter.js",
+      "_lemon-herb-chicken-traybake.js",
       "_lemon-posset-shortbread.js",
       "_mini-turkey-meatballs-tomato-sauce.js",
       "_miso-glazed-roasted-vegetables.js",
@@ -1605,6 +1624,7 @@
       "src/content/recipes/homemade-pizza-dough-tomato-sauce.md?raw",
       "src/content/recipes/kimchi-fried-rice.md?raw",
       "src/content/recipes/lemon-chicken-orzo-spinach-garlic-butter.md?raw",
+      "src/content/recipes/lemon-herb-chicken-traybake.md?raw",
       "src/content/recipes/lemon-posset-shortbread.md?raw",
       "src/content/recipes/mini-turkey-meatballs-tomato-sauce.md?raw",
       "src/content/recipes/miso-glazed-roasted-vegetables.md?raw",
@@ -1692,6 +1712,7 @@
       "_homemade-pizza-dough-tomato-sauce.js",
       "_kimchi-fried-rice.js",
       "_lemon-chicken-orzo-spinach-garlic-butter.js",
+      "_lemon-herb-chicken-traybake.js",
       "_lemon-posset-shortbread.js",
       "_mini-turkey-meatballs-tomato-sauce.js",
       "_miso-glazed-roasted-vegetables.js",
