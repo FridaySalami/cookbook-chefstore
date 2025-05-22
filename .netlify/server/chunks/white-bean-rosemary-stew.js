@@ -56,12 +56,12 @@ function White_bean_rosemary_stew_md($$payload, $$props) {
     }
   ]));
 }
-const __vite_glob_2_54 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_2_55 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: White_bean_rosemary_stew_md,
   metadata
 }, Symbol.toStringTag, { value: "Module" }));
 export {
-  __vite_glob_2_54 as _,
+  __vite_glob_2_55 as _,
   metadata as m
 };

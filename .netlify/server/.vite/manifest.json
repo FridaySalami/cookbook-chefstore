@@ -473,6 +473,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_sausage-bean-one-pot-herby-crumbs.js": {
+    "file": "chunks/sausage-bean-one-pot-herby-crumbs.js",
+    "name": "sausage-bean-one-pot-herby-crumbs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_sausage-sweet-potato-traybake.js": {
     "file": "chunks/sausage-sweet-potato-traybake.js",
     "name": "sausage-sweet-potato-traybake",
@@ -887,6 +896,12 @@
     "src": "src/content/recipes/salted-caramel-mocha.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/sausage-bean-one-pot-herby-crumbs.md?raw": {
+    "file": "chunks/sausage-bean-one-pot-herby-crumbs2.js",
+    "name": "sausage-bean-one-pot-herby-crumbs",
+    "src": "src/content/recipes/sausage-bean-one-pot-herby-crumbs.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/sausage-sweet-potato-traybake.md?raw": {
     "file": "chunks/sausage-sweet-potato-traybake2.js",
     "name": "sausage-sweet-potato-traybake",
@@ -1125,6 +1140,7 @@
       "_romanian-sarmale-cabbage-rolls.js",
       "_salted-caramel-chocolate-tart.js",
       "_salted-caramel-mocha.js",
+      "_sausage-bean-one-pot-herby-crumbs.js",
       "_sausage-sweet-potato-traybake.js",
       "_savoury-mince-vegetable-potato-pie.js",
       "_sea-bass-lemon-caper-butter.js",
@@ -1184,6 +1200,7 @@
       "_romanian-sarmale-cabbage-rolls.js",
       "_salted-caramel-chocolate-tart.js",
       "_salted-caramel-mocha.js",
+      "_sausage-bean-one-pot-herby-crumbs.js",
       "_sausage-sweet-potato-traybake.js",
       "_savoury-mince-vegetable-potato-pie.js",
       "_sea-bass-lemon-caper-butter.js",
@@ -1239,6 +1256,7 @@
       "src/content/recipes/romanian-sarmale-cabbage-rolls.md?raw",
       "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
       "src/content/recipes/salted-caramel-mocha.md?raw",
+      "src/content/recipes/sausage-bean-one-pot-herby-crumbs.md?raw",
       "src/content/recipes/sausage-sweet-potato-traybake.md?raw",
       "src/content/recipes/savoury-mince-vegetable-potato-pie.md?raw",
       "src/content/recipes/sea-bass-lemon-caper-butter.md?raw",
@@ -1324,6 +1342,7 @@
       "_romanian-sarmale-cabbage-rolls.js",
       "_salted-caramel-chocolate-tart.js",
       "_salted-caramel-mocha.js",
+      "_sausage-bean-one-pot-herby-crumbs.js",
       "_sausage-sweet-potato-traybake.js",
       "_savoury-mince-vegetable-potato-pie.js",
       "_sea-bass-lemon-caper-butter.js",
@@ -1379,6 +1398,7 @@
       "src/content/recipes/romanian-sarmale-cabbage-rolls.md?raw",
       "src/content/recipes/salted-caramel-chocolate-tart.md?raw",
       "src/content/recipes/salted-caramel-mocha.md?raw",
+      "src/content/recipes/sausage-bean-one-pot-herby-crumbs.md?raw",
       "src/content/recipes/sausage-sweet-potato-traybake.md?raw",
       "src/content/recipes/savoury-mince-vegetable-potato-pie.md?raw",
       "src/content/recipes/sea-bass-lemon-caper-butter.md?raw",
@@ -1454,6 +1474,7 @@
       "_romanian-sarmale-cabbage-rolls.js",
       "_salted-caramel-chocolate-tart.js",
       "_salted-caramel-mocha.js",
+      "_sausage-bean-one-pot-herby-crumbs.js",
       "_sausage-sweet-potato-traybake.js",
       "_savoury-mince-vegetable-potato-pie.js",
       "_sea-bass-lemon-caper-butter.js",
