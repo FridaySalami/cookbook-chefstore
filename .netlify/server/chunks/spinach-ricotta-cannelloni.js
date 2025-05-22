@@ -59,12 +59,12 @@ function Spinach_ricotta_cannelloni_md($$payload, $$props) {
     }
   ]));
 }
-const __vite_glob_2_53 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_2_54 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Spinach_ricotta_cannelloni_md,
   metadata
 }, Symbol.toStringTag, { value: "Module" }));
 export {
-  __vite_glob_2_53 as _,
+  __vite_glob_2_54 as _,
   metadata as m
 };

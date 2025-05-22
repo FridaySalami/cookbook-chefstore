@@ -163,6 +163,15 @@
       "_RecipeLayout.js"
     ]
   },
+  "_creamy-chicken-broccoli-rice-bake.js": {
+    "file": "chunks/creamy-chicken-broccoli-rice-bake.js",
+    "name": "creamy-chicken-broccoli-rice-bake",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index2.js",
+      "_RecipeLayout.js"
+    ]
+  },
   "_creamy-chicken-korma.js": {
     "file": "chunks/creamy-chicken-korma.js",
     "name": "creamy-chicken-korma",
@@ -791,6 +800,12 @@
     "src": "src/content/recipes/coconut-milk-rice-pudding.md?raw",
     "isDynamicEntry": true
   },
+  "src/content/recipes/creamy-chicken-broccoli-rice-bake.md?raw": {
+    "file": "chunks/creamy-chicken-broccoli-rice-bake2.js",
+    "name": "creamy-chicken-broccoli-rice-bake",
+    "src": "src/content/recipes/creamy-chicken-broccoli-rice-bake.md?raw",
+    "isDynamicEntry": true
+  },
   "src/content/recipes/creamy-chicken-korma.md?raw": {
     "file": "chunks/creamy-chicken-korma2.js",
     "name": "creamy-chicken-korma",
@@ -1217,6 +1232,7 @@
       "_chickpea-tagine-preserved-lemon-harissa.js",
       "_classic-tiramisu-no-eggs.js",
       "_coconut-milk-rice-pudding.js",
+      "_creamy-chicken-broccoli-rice-bake.js",
       "_creamy-chicken-korma.js",
       "_creamy-chicken-sweetcorn-pasta-bake.js",
       "_creamy-polenta-wild-mushrooms-truffle.js",
@@ -1284,6 +1300,7 @@
       "_chickpea-tagine-preserved-lemon-harissa.js",
       "_classic-tiramisu-no-eggs.js",
       "_coconut-milk-rice-pudding.js",
+      "_creamy-chicken-broccoli-rice-bake.js",
       "_creamy-chicken-korma.js",
       "_creamy-chicken-sweetcorn-pasta-bake.js",
       "_creamy-polenta-wild-mushrooms-truffle.js",
@@ -1347,6 +1364,7 @@
       "src/content/recipes/chickpea-tagine-preserved-lemon-harissa.md?raw",
       "src/content/recipes/classic-tiramisu-no-eggs.md?raw",
       "src/content/recipes/coconut-milk-rice-pudding.md?raw",
+      "src/content/recipes/creamy-chicken-broccoli-rice-bake.md?raw",
       "src/content/recipes/creamy-chicken-korma.md?raw",
       "src/content/recipes/creamy-chicken-sweetcorn-pasta-bake.md?raw",
       "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw",
@@ -1440,6 +1458,7 @@
       "_chickpea-tagine-preserved-lemon-harissa.js",
       "_classic-tiramisu-no-eggs.js",
       "_coconut-milk-rice-pudding.js",
+      "_creamy-chicken-broccoli-rice-bake.js",
       "_creamy-chicken-korma.js",
       "_creamy-chicken-sweetcorn-pasta-bake.js",
       "_creamy-polenta-wild-mushrooms-truffle.js",
@@ -1503,6 +1522,7 @@
       "src/content/recipes/chickpea-tagine-preserved-lemon-harissa.md?raw",
       "src/content/recipes/classic-tiramisu-no-eggs.md?raw",
       "src/content/recipes/coconut-milk-rice-pudding.md?raw",
+      "src/content/recipes/creamy-chicken-broccoli-rice-bake.md?raw",
       "src/content/recipes/creamy-chicken-korma.md?raw",
       "src/content/recipes/creamy-chicken-sweetcorn-pasta-bake.md?raw",
       "src/content/recipes/creamy-polenta-wild-mushrooms-truffle.md?raw",
@@ -1586,6 +1606,7 @@
       "_chickpea-tagine-preserved-lemon-harissa.js",
       "_classic-tiramisu-no-eggs.js",
       "_coconut-milk-rice-pudding.js",
+      "_creamy-chicken-broccoli-rice-bake.js",
       "_creamy-chicken-korma.js",
       "_creamy-chicken-sweetcorn-pasta-bake.js",
       "_creamy-polenta-wild-mushrooms-truffle.js",
