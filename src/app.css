@@ -69,8 +69,8 @@
     /* Darker text for contrast */
 
     /* Define font variables */
-    --font-sans: 'Poppins', 'Mulish', 'Rubik', sans-serif;
-    --font-serif: 'Georgia', serif;
+    --font-sans: 'Poppins', 'Mulish', 'Rubik', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Merriweather', 'Georgia', serif;
   }
 
   /* Add dark mode overrides if needed later */
@@ -98,14 +98,14 @@
     border-color: hsl(var(--border));
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    /* Use CSS variable for font family */
-    font-family: var(--font-serif);
+  /* Apply serif font to headings that don't have explicit font classes */
+  h1:where(:not([class*="font-"])),
+  h2:where(:not([class*="font-"])),
+  h3:where(:not([class*="font-"])),
+  h4:where(:not([class*="font-"])),
+  h5:where(:not([class*="font-"])),
+  h6:where(:not([class*="font-"])) {
+    font-family: var(--font-serif) !important;
   }
 
   .selected {

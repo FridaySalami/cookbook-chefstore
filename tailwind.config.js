@@ -16,7 +16,8 @@ const config = {
 		},
 		extend: {
 			fontFamily: {
-				serif: ['Merriweather', 'Georgia', 'serif'],
+				sans: ['var(--font-sans)'],
+				serif: ['var(--font-serif)'],
 			},
 			colors: {
 				border: "hsl(var(--border))",
