@@ -141,4 +141,31 @@
       font-size: inherit;
     }
   }
+
+  .recipe-tip {
+    background: #f3f2f1;
+    /* darker grey than card, adjust as needed */
+    color: hsl(var(--foreground));
+    padding: 2rem 2.5rem 1.5rem 2.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    border-bottom: 4px solid #2d463c;
+    /* deep green, adjust as needed */
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    /* Remove font-family override so it inherits from .prose or parent */
+    box-shadow: none;
+  }
+
+  .recipe-tip strong:first-child {
+    font-weight: 700;
+    font-size: 1.1em;
+  }
+
+  @media (max-width: 640px) {
+    .recipe-tip {
+      padding: 1.25rem 1rem 1rem 1rem;
+      font-size: 1.05rem;
+    }
+  }
 }

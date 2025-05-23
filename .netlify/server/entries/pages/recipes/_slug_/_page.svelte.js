@@ -361,7 +361,7 @@ function _page($$payload, $$props) {
       $$payload2.out += `<!--]--> `;
       if (tips) {
         $$payload2.out += "<!--[-->";
-        $$payload2.out += `<div class="mb-12"><h2 id="tips" class="mb-6 font-serif text-2xl tracking-wide">Tips</h2> <div class="prose prose-amber max-w-none">${html(tips)}</div></div>`;
+        $$payload2.out += `<div class="mb-12"><h2 id="tips" class="mb-6 font-serif text-2xl tracking-wide">Tips</h2> <div class="recipe-tip"><div class="prose prose-amber max-w-none">${html(tips.replace(/^<p>(Tip:|Tip\.|Tip\s*\:)?/i, "<strong>Tip:</strong> "))}</div></div></div>`;
       } else {
         $$payload2.out += "<!--[!-->";
       }
