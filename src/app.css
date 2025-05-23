@@ -5,8 +5,8 @@
 @layer base {
   :root {
     /* Light background for main content */
-    --background: 40 100% 98.6%;
-    /* Light Beige/Off-white: #FFFBF5 */
+    --background: 30 6% 96%;
+    /* Light Gray-Beige: #f7f6f5 */
     --foreground: 203 48% 15%;
     /* Dark Blue-Gray for text on light bg */
 
@@ -69,8 +69,8 @@
     /* Darker text for contrast */
 
     /* Define font variables */
-    --font-sans: 'Poppins', sans-serif;
-    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Poppins', 'Mulish', 'Rubik', sans-serif;
+    --font-serif: 'Georgia', serif;
   }
 
   /* Add dark mode overrides if needed later */
@@ -83,6 +83,14 @@
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     font-family: var(--font-sans);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    color: #333;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
   }
 
   * {

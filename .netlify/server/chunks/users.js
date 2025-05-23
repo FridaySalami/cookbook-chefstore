@@ -1,8 +1,9 @@
 import { J as getContext, D as sanitize_props, P as rest_props, K as fallback, _ as element, O as bind_props, C as pop, A as push, F as slot, Q as spread_attributes, R as clsx, E as spread_props } from "./index2.js";
 import "./client.js";
-import { c as cn, I as Icon } from "./Icon.js";
+import { c as cn } from "./utils.js";
 import { tv } from "tailwind-variants";
 import "clsx";
+import { I as Icon } from "./Icon.js";
 const getStores = () => {
   const stores$1 = getContext("__svelte__");
   return {
@@ -66,6 +67,29 @@ const badgeVariants = tv({
     variant: "default"
   }
 });
+function Clock($$payload, $$props) {
+  const $$sanitized_props = sanitize_props($$props);
+  const iconNode = [
+    [
+      "circle",
+      { "cx": "12", "cy": "12", "r": "10" }
+    ],
+    ["polyline", { "points": "12 6 12 12 16 14" }]
+  ];
+  Icon($$payload, spread_props([
+    { name: "clock" },
+    $$sanitized_props,
+    {
+      iconNode,
+      children: ($$payload2) => {
+        $$payload2.out += `<!---->`;
+        slot($$payload2, $$props, "default", {}, null);
+        $$payload2.out += `<!---->`;
+      },
+      $$slots: { default: true }
+    }
+  ]));
+}
 function Users($$payload, $$props) {
   const $$sanitized_props = sanitize_props($$props);
   const iconNode = [
@@ -95,6 +119,7 @@ function Users($$payload, $$props) {
 }
 export {
   Badge as B,
+  Clock as C,
   Users as U,
   page as p
 };

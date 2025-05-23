@@ -3,7 +3,7 @@ export const metadata = {
   "slug": "family-mac-cheese-hidden-veg",
   "description": "A golden, bubbling tray of mac and cheese the whole family will eat without negotiation. Creamy cheddar sauce, soft pasta, and blended veg snuck in for peace of mind. Comfort food that doesn’t need to shout.",
   "date": "2025-05-20T00:00:00.000Z",
-  "featured": true,
+  "featured": false,
   "image": "/images/recipes/category-name/recipe-name/family-mac-cheese-hidden-veg.webp",
   "prepTime": 15,
   "cookTime": 30,

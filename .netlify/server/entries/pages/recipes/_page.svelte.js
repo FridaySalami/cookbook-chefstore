@@ -1,11 +1,9 @@
 import { D as sanitize_props, E as spread_props, F as slot, G as attr, C as pop, A as push, M as store_get, I as head, U as ensure_array_like, V as escape_html, N as unsubscribe_stores, O as bind_props } from "../../../chunks/index2.js";
-import { p as page, B as Badge, U as Users } from "../../../chunks/users.js";
-import { C as Card, a as Chevron_right, b as Card_footer } from "../../../chunks/chevron-right.js";
-import { C as Card_header, a as Card_content, b as Card_title, c as Card_description } from "../../../chunks/card-title.js";
+import { p as page, B as Badge, C as Clock, U as Users } from "../../../chunks/users.js";
+import { C as Card, a as Chevron_right, b as Card_header, c as Card_content, d as Card_title, e as Card_description, f as Card_footer } from "../../../chunks/chevron-right.js";
 import { B as Button } from "../../../chunks/index4.js";
 import "../../../chunks/client.js";
 import { I as Icon } from "../../../chunks/Icon.js";
-import { C as Clock } from "../../../chunks/clock.js";
 import { h as html } from "../../../chunks/html.js";
 function Chevron_left($$payload, $$props) {
   const $$sanitized_props = sanitize_props($$props);
@@ -141,7 +139,7 @@ function _page($$payload, $$props) {
     }
     $$payload2.out += `<!--]-->`;
   });
-  $$payload.out += `<section class="bg-background text-foreground px-6 pt-10 pb-20 sm:px-10 md:px-16 lg:px-20"><div class="container mx-auto max-w-7xl"><header class="mb-16 text-center"><h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">All Recipes</h1> <p class="mx-auto mt-4 max-w-2xl pb-6 text-xl text-[hsl(var(--muted-foreground))]">Browse our collection of chef-tested recipes for every meal and occasion.</p> `;
+  $$payload.out += `<section class="bg-background text-foreground px-6 pt-4 pb-20 sm:px-10 md:px-16 lg:px-20"><div class="container mx-auto max-w-7xl"><header class="mb-16 text-center"><h1 class="mb-8 scroll-m-20 font-serif text-4xl font-extrabold tracking-widest lg:text-5xl">All Recipes</h1> `;
   RecipeSearch($$payload, {
     recipes: data.recipes ? data.recipes.map((r) => ({ title: r.title, slug: r.slug })) : [],
     placeholder: "Search recipes..."
@@ -151,7 +149,7 @@ function _page($$payload, $$props) {
     href: getTagUrl(null),
     variant: selectedTag === null ? "default" : "outline",
     size: "sm",
-    class: `hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === null ? " selected" : ""}`,
+    class: `min-h-[44px] cursor-pointer rounded-full border-2 px-6 transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === null ? "border-amber-900/40 bg-amber-900 text-white" : "border-amber-900/40"}`,
     "aria-current": selectedTag === null ? "page" : void 0,
     children: ($$payload2) => {
       $$payload2.out += `<!---->All Recipes`;
@@ -169,7 +167,7 @@ function _page($$payload, $$props) {
         href: getTagUrl(tag),
         variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
-        class: `capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? " selected" : ""}`,
+        class: `min-h-[44px] cursor-pointer rounded-full border-2 px-4 capitalize transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === tag ? "border-amber-900/40 bg-amber-900 text-white" : "border-amber-900/40"}`,
         "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
@@ -192,7 +190,7 @@ function _page($$payload, $$props) {
         href: getTagUrl(tag),
         variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
-        class: `capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? " selected" : ""}`,
+        class: `min-h-[44px] cursor-pointer rounded-full border-2 px-4 capitalize transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === tag ? "border-amber-900/40 bg-amber-900 text-white" : "border-amber-900/40"}`,
         "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
@@ -215,7 +213,7 @@ function _page($$payload, $$props) {
         href: getTagUrl(tag),
         variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
-        class: `capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? " selected" : ""}`,
+        class: `min-h-[44px] cursor-pointer rounded-full border-2 px-4 capitalize transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === tag ? "border-amber-900/40 bg-amber-900 text-white" : "border-amber-900/40"}`,
         "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
@@ -227,12 +225,12 @@ function _page($$payload, $$props) {
   } else {
     $$payload.out += "<!--[!-->";
   }
-  $$payload.out += `<!--]--></nav></details> <nav aria-label="Recipe tags" class="mt-8 hidden flex-col items-center gap-4 sm:flex"><div class="mb-2">`;
+  $$payload.out += `<!--]--></nav></details> <details class="mt-8 hidden w-full text-center sm:block"><summary class="cursor-pointer py-2 font-medium transition-colors hover:text-amber-900">Filter By Category</summary> <nav aria-label="Recipe tags" class="mt-4 flex flex-col items-center gap-4"><div class="mb-2">`;
   Button($$payload, {
     href: getTagUrl(null),
     variant: selectedTag === null ? "default" : "outline",
     size: "sm",
-    class: `hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === null ? " selected" : ""}`,
+    class: `min-h-[44px] cursor-pointer rounded-full border-2 px-6 transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === null ? "border-amber-900/40 bg-amber-900 text-white" : "border-amber-900/40"}`,
     "aria-current": selectedTag === null ? "page" : void 0,
     children: ($$payload2) => {
       $$payload2.out += `<!---->All Recipes`;
@@ -250,7 +248,7 @@ function _page($$payload, $$props) {
         href: getTagUrl(tag),
         variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
-        class: `capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? " selected" : ""}`,
+        class: `min-h-[44px] cursor-pointer rounded-full border-2 px-4 capitalize transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === tag ? "border-amber-900/40 bg-amber-900 text-white" : "border-amber-900/40"}`,
         "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
@@ -273,7 +271,7 @@ function _page($$payload, $$props) {
         href: getTagUrl(tag),
         variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
-        class: `capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? " selected" : ""}`,
+        class: `min-h-[44px] cursor-pointer rounded-full border-2 px-4 capitalize transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === tag ? "border-amber-900/40 bg-amber-900 text-white" : "border-amber-900/40"}`,
         "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
@@ -296,7 +294,7 @@ function _page($$payload, $$props) {
         href: getTagUrl(tag),
         variant: selectedTag === tag ? "default" : "outline",
         size: "sm",
-        class: `capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? " selected" : ""}`,
+        class: `min-h-[44px] cursor-pointer rounded-full border-2 px-4 capitalize transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === tag ? "border-amber-900/40 bg-amber-900 text-white" : "border-amber-900/40"}`,
         "aria-current": selectedTag === tag ? "page" : void 0,
         children: ($$payload2) => {
           $$payload2.out += `<!---->${escape_html(formatTag(tag))}`;
@@ -308,10 +306,10 @@ function _page($$payload, $$props) {
   } else {
     $$payload.out += "<!--[!-->";
   }
-  $$payload.out += `<!--]--></nav></header> <div class="mb-6 text-center">`;
+  $$payload.out += `<!--]--></nav></details></header> <div class="mb-6 text-center">`;
   if (selectedTag) {
     $$payload.out += "<!--[-->";
-    $$payload.out += `<h2 class="mb-1 text-2xl font-semibold tracking-tight">Filtered by: <span class="capitalize">${escape_html(formatTag(selectedTag))}</span></h2>`;
+    $$payload.out += `<h2 class="mb-1 font-serif text-2xl font-semibold tracking-wider">Filtered by: <span class="capitalize">${escape_html(formatTag(selectedTag))}</span></h2>`;
   } else {
     $$payload.out += "<!--[!-->";
   }
@@ -383,16 +381,16 @@ function _page($$payload, $$props) {
     $$payload.out += `<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"><!--[-->`;
     for (let $$index_7 = 0, $$length = each_array_6.length; $$index_7 < $$length; $$index_7++) {
       let recipe = each_array_6[$$index_7];
-      $$payload.out += `<a${attr("href", `/recipes/${recipe.slug}`)} class="group block"><article>`;
+      $$payload.out += `<a${attr("href", `/recipes/${recipe.slug}`)} class="group block"><article class="overflow-hidden rounded-lg">`;
       Card($$payload, {
-        class: "flex h-full flex-col overflow-hidden transition-all group-hover:-translate-y-1 group-hover:shadow-lg",
+        class: "flex h-full flex-col overflow-hidden rounded-lg",
         children: ($$payload2) => {
           Card_header($$payload2, {
-            class: "relative p-0",
+            class: "relative overflow-hidden p-0",
             children: ($$payload3) => {
               if (recipe.slug) {
                 $$payload3.out += "<!--[-->";
-                $$payload3.out += `<div class="bg-muted relative aspect-video w-full animate-pulse" style="z-index:1; position:absolute;"></div> <picture style="position:relative; z-index:2;"><source${attr("srcset", `
+                $$payload3.out += `<div class="bg-muted relative aspect-video w-full animate-pulse" style="z-index:1; position:absolute;"></div> <picture class="block overflow-hidden transition-transform duration-300 ease-out group-hover:scale-105" style="position:relative; z-index:2;"><source${attr("srcset", `
 													${getResizedImagePath(recipe.slug, 400)} 400w,
 													${getResizedImagePath(recipe.slug, 800)} 800w,
 													${getResizedImagePath(recipe.slug, 1200)} 1200w
@@ -425,7 +423,7 @@ function _page($$payload, $$props) {
             class: "flex-grow p-4",
             children: ($$payload3) => {
               Card_title($$payload3, {
-                class: "mb-1 text-lg leading-tight font-semibold tracking-tight",
+                class: "mb-1 font-serif text-lg leading-tight tracking-wide",
                 children: ($$payload4) => {
                   $$payload4.out += `<!---->${escape_html(recipe.title)}`;
                 },
@@ -453,7 +451,7 @@ function _page($$payload, $$props) {
                   let tag = each_array_7[$$index_6];
                   Badge($$payload3, {
                     variant: "secondary",
-                    class: "hover:bg-blue-100 hover:text-blue-800 cursor-pointer transition-all duration-200",
+                    class: "cursor-pointer transition-all duration-200 hover:bg-blue-100 hover:text-blue-800",
                     children: ($$payload4) => {
                       $$payload4.out += `<!---->${escape_html(formatTag(tag))}`;
                     },

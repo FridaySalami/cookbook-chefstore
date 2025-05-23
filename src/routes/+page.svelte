@@ -37,11 +37,63 @@
 	/>
 </svelte:head>
 
-<main class="flex-grow py-8 lg:py-12">
+<main class="flex-grow pt-4 pb-8 lg:pt-6 lg:pb-12">
+	<!-- Featured Recipes Section: Ensure card styles use new variables -->
+	{#if featuredRecipes && featuredRecipes.length > 0}
+		<section class="mb-6">
+			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+				{#each featuredRecipes as recipe, index (recipe.slug)}
+					<a href="/recipes/{recipe.slug}" class="group relative block overflow-hidden">
+						<div class="relative overflow-hidden">
+							<img
+								src={recipe.image ?? '/placeholder.png'}
+								alt={recipe.title}
+								class="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-105"
+								use:fallbackImage
+								loading="eager"
+								fetchpriority="high"
+							/>
+							<div
+								class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/80 to-transparent"
+							>
+								<div class="absolute bottom-0 w-full p-4">
+									<h3
+										class="mb-3 text-center font-sans text-base leading-tight font-medium tracking-wide text-white md:text-lg"
+									>
+										{recipe.title}
+									</h3>
+									<div class="text-center">
+										<button
+											class="min-h-[44px] w-full cursor-pointer rounded-full bg-white/95 px-6 py-2 text-base font-semibold text-amber-900 transition-colors duration-200 hover:bg-white focus:bg-white focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:outline-none"
+											aria-label="View recipe for {recipe.title}"
+										>
+											View Recipe
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				{/each}
+			</div>
+			<div class="mt-4 text-center">
+				<Button
+					href="/recipes"
+					size="lg"
+					class="min-h-[44px] w-auto cursor-pointer rounded-full border-2 border-amber-900/40 bg-white px-8 py-3 text-base font-semibold text-amber-900 shadow-lg transition-colors duration-200 hover:bg-white/90 focus:bg-white focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:outline-none"
+				>
+					Explore All Recipes
+				</Button>
+			</div>
+		</section>
+	{:else}
+		<p class="text-muted-foreground text-center">No featured recipes available at the moment.</p>
+	{/if}
+
 	<!-- Hero Section: Adjusted text colors and button style -->
 	<section class="mb-8 text-center">
 		<h1
-			class="text-foreground mb-4 font-serif text-4xl font-bold tracking-tight md:text-5xl lg:text-5xl"
+			class="text-foreground mb-4 font-serif text-4xl font-bold tracking-widest md:text-5xl lg:text-5xl"
 		>
 			Real meals for real tables
 		</h1>
@@ -51,120 +103,7 @@
 		<p class="text-muted-foreground mx-auto mb-8 max-w-3xl text-sm md:text-base">
 			Browse recipes and shop ingredients straight from the kitchen.
 		</p>
-		<Button
-			href="/recipes"
-			size="lg"
-			class="bg-primary text-primary-foreground border-primary/70 mb-8 rounded-full border-2 px-8 py-3 text-base font-semibold shadow-lg transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:ring-offset-2 focus-visible:outline-none"
-		>
-			Explore All Recipes
-		</Button>
 	</section>
-
-	<!-- Featured Recipes Section: Ensure card styles use new variables -->
-	{#if featuredRecipes && featuredRecipes.length > 0}
-		<section class="mb-12">
-			<h2 class="text-foreground mb-8 text-center font-serif text-3xl font-semibold md:text-4xl">
-				Featured Recipes
-			</h2>
-
-			<!-- Category Filter Placeholder -->
-			<div class="mb-8 flex justify-center gap-2">
-				<Button
-					variant="outline"
-					size="sm"
-					onclick={() => goto('/recipes?tag=crowd-pleaser')}
-					class="cursor-pointer rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none"
-				>
-					Crowd Pleasers
-				</Button>
-				<Button
-					variant="outline"
-					size="sm"
-					onclick={() => goto('/recipes?tag=comfort-food')}
-					class="cursor-pointer rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none"
-				>
-					Comfort Food
-				</Button>
-				<Button
-					variant="outline"
-					size="sm"
-					onclick={() => goto('/recipes?tag=quick')}
-					class="cursor-pointer rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none"
-				>
-					Quick Dinners
-				</Button>
-			</div>
-
-			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-				{#each featuredRecipes as recipe, index (recipe.slug)}
-					<a
-						href="/recipes/{recipe.slug}"
-						class="group bg-card text-card-foreground flex flex-col overflow-hidden rounded-lg border shadow-sm transition-shadow hover:shadow-lg"
-					>
-						<div class="overflow-hidden">
-							<img
-								src={recipe.image ?? '/placeholder.png'}
-								alt={recipe.title}
-								class="aspect-[16/10] w-full object-cover transition-transform duration-300 group-hover:scale-105"
-								use:fallbackImage
-								loading="eager"
-								fetchpriority="high"
-							/>
-						</div>
-						<div class="flex flex-grow flex-col p-4 md:p-5">
-							<CardHeader class="p-0 pb-2">
-								<CardTitle
-									class="group-hover:text-primary font-serif text-lg leading-tight font-semibold md:text-xl"
-								>
-									{recipe.title}
-								</CardTitle>
-								{#if recipe.description}
-									<CardDescription
-										class="text-muted-foreground mt-1 line-clamp-3 h-[4.5em] text-sm"
-									>
-										{recipe.description}
-									</CardDescription>
-								{/if}
-								{#if recipe.tags && recipe.tags.length > 0}
-									<div class="mt-2 flex flex-wrap gap-1">
-										{#each recipe.tags as tag}
-											<span
-												class="bg-muted text-muted-foreground border-muted-foreground/10 inline-block rounded-full border px-2 py-0.5 text-xs font-medium"
-											>
-												{tag.startsWith('difficulty-')
-													? tag.replace('difficulty-', '').replace(/\b\w/g, (c) => c.toUpperCase())
-													: tag.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())}
-											</span>
-										{/each}
-									</div>
-								{/if}
-							</CardHeader>
-							<CardContent class="mt-auto p-0 pt-3">
-								<div
-									class="text-muted-foreground flex flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t pt-3 text-xs"
-								>
-									{#if recipe.totalTime}
-										<span class="flex items-center gap-1">
-											<Clock class="h-3.5 w-3.5" />
-											{recipe.totalTime} min
-										</span>
-									{/if}
-									{#if recipe.difficulty}
-										<span class="flex items-center gap-1">
-											<UtensilsCrossed class="h-3.5 w-3.5" />
-											{recipe.difficulty}
-										</span>
-									{/if}
-								</div>
-							</CardContent>
-						</div>
-					</a>
-				{/each}
-			</div>
-		</section>
-	{:else}
-		<p class="text-muted-foreground text-center">No featured recipes available at the moment.</p>
-	{/if}
 
 	<!-- You can add more sections here, like categories, latest recipes, etc. -->
 </main>

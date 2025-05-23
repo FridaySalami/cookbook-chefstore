@@ -3,7 +3,7 @@ title: Sausage & Sweet Potato Traybake with Apples, Garlic and Greens
 slug: sausage-sweet-potato-traybake
 description: A golden tray of sausages roasted with sweet potatoes, apples, jammy red onions and whole garlic cloves, finished with a handful of greens and a mustard-maple glaze. Sweet, savoury, and ready to feed the family with ease.
 date: 2025-05-20
-featured: true
+featured: false
 image: /images/recipes/category-name/recipe-name/sausage-sweet-potato-traybake.webp
 prepTime: 15
 cookTime: 40

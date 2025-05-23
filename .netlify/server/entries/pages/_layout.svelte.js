@@ -9,7 +9,8 @@ import { i as derived, w as writable, j as readonly } from "../../chunks/exports
 import { nanoid } from "nanoid/non-secure";
 import { flip, offset, shift, arrow, size, autoUpdate, computePosition } from "@floating-ui/dom";
 import { createFocusTrap as createFocusTrap$1 } from "focus-trap";
-import { I as Icon, f as flyAndScale, c as cn } from "../../chunks/Icon.js";
+import { f as flyAndScale, c as cn } from "../../chunks/utils.js";
+import { I as Icon } from "../../chunks/Icon.js";
 function Search($$payload, $$props) {
   const $$sanitized_props = sanitize_props($$props);
   const iconNode = [
@@ -1995,7 +1996,7 @@ function _layout($$payload, $$props) {
 	<\/script> <script defer data-domain="chefstorecookbook.com" src="https://plausible.io/js/script.js"><\/script>`;
     });
     Mode_watcher($$payload2, {});
-    $$payload2.out += `<!----> <div class="flex min-h-screen flex-col font-sans"><a href="#main-content" class="focus:bg-background focus:text-foreground sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4">Skip to main content</a> <header class="text-header-foreground fixed top-0 z-50 w-full border-b border-black bg-white py-4"><div class="container mx-auto flex max-w-7xl items-center justify-between px-4 md:px-6"><a href="/" class="font-serif text-2xl font-bold text-inherit transition-colors hover:text-inherit/80">Chefstore Cookbook</a> `;
+    $$payload2.out += `<!----> <div class="flex min-h-screen flex-col font-sans"><a href="#main-content" class="focus:bg-background focus:text-foreground sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4">Skip to main content</a> <header class="text-header-foreground fixed top-0 z-50 w-full border-b border-black bg-white py-4"><div class="container mx-auto flex max-w-7xl items-center justify-between px-4 md:px-6"><a href="/" class="font-serif text-2xl font-bold tracking-widest text-inherit transition-colors hover:text-inherit/80">Chefstore Cookbook</a> `;
     {
       $$payload2.out += "<!--[-->";
       $$payload2.out += `<nav class="hidden items-center space-x-4 md:flex" aria-label="Primary Navigation"><a href="/recipes" class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none">Recipes</a> <a href="https://www.thechefstoreuk.co.uk" target="_blank" rel="noopener noreferrer" class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none">Shop</a> <a href="/about" class="rounded-full px-3 py-1 text-sm font-medium text-inherit transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none">About Us</a> <div class="relative"><!---->`;

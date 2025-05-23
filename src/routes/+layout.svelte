@@ -122,7 +122,7 @@
 		<div class="container mx-auto flex max-w-7xl items-center justify-between px-4 md:px-6">
 			<a
 				href="/"
-				class="font-serif text-2xl font-bold text-inherit transition-colors hover:text-inherit/80"
+				class="font-serif text-2xl font-bold tracking-widest text-inherit transition-colors hover:text-inherit/80"
 			>
 				Chefstore Cookbook
 			</a>

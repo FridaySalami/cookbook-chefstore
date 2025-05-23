@@ -1,12 +1,10 @@
 import { A as push, C as pop, D as sanitize_props, P as rest_props, K as fallback, Q as spread_attributes, R as clsx, F as slot, O as bind_props, $ as attr_class, I as head, U as ensure_array_like, G as attr, V as escape_html, M as store_get, N as unsubscribe_stores } from "../../../../chunks/index2.js";
-import { p as page, B as Badge, U as Users } from "../../../../chunks/users.js";
+import { p as page, B as Badge, C as Clock, U as Users } from "../../../../chunks/users.js";
 import "clsx";
-import { c as cn } from "../../../../chunks/Icon.js";
-import { a as Chevron_right, C as Card, b as Card_footer } from "../../../../chunks/chevron-right.js";
-import { C as Card_header, a as Card_content, b as Card_title, c as Card_description } from "../../../../chunks/card-title.js";
+import { c as cn } from "../../../../chunks/utils.js";
+import { a as Chevron_right, C as Card, b as Card_header, c as Card_content, d as Card_title, e as Card_description, f as Card_footer } from "../../../../chunks/chevron-right.js";
 import { R as RecipeLayout } from "../../../../chunks/RecipeLayout.js";
 import { marked } from "marked";
-import { C as Clock } from "../../../../chunks/clock.js";
 import { h as html } from "../../../../chunks/html.js";
 function RelatedProducts($$payload, $$props) {
   push();
@@ -274,9 +272,9 @@ function _page($$payload, $$props) {
     }
     $$payload2.out += `<!--]-->`;
   });
-  $$payload.out += `<div class="container mx-auto px-4 py-6">`;
+  $$payload.out += `<div class="container mx-auto px-4 py-6 sm:px-0 md:px-4">`;
   Breadcrumb($$payload, {
-    class: "mb-6",
+    class: "mb-6 px-4 sm:px-0",
     children: ($$payload2) => {
       Breadcrumb_list($$payload2, {
         children: ($$payload3) => {
@@ -333,14 +331,14 @@ function _page($$payload, $$props) {
     let content = function($$payload2) {
       if (whyYouLlLoveThis) {
         $$payload2.out += "<!--[-->";
-        $$payload2.out += `<div class="mb-8"><h2 class="border-border mb-4 border-b pb-2 text-xl font-semibold">Why You'll Love This</h2> ${html(whyYouLlLoveThis)}</div>`;
+        $$payload2.out += `<div class="mb-12"><h2 class="mb-6 font-serif text-2xl tracking-wide">Why You'll Love This</h2> <div class="prose prose-amber max-w-none">${html(whyYouLlLoveThis)}</div></div>`;
       } else {
         $$payload2.out += "<!--[!-->";
       }
       $$payload2.out += `<!--]--> `;
       if (ingredients) {
         $$payload2.out += "<!--[-->";
-        $$payload2.out += `<div class="mb-8"><h2 class="border-border mb-4 border-b pb-2 text-xl font-semibold">Ingredients</h2> ${html(ingredients)}</div>`;
+        $$payload2.out += `<div class="mb-12"><h2 class="mb-6 font-serif text-2xl tracking-wide">Ingredients</h2> <div class="prose prose-amber max-w-none">${html(ingredients)}</div></div>`;
       } else {
         $$payload2.out += "<!--[!-->";
       }
@@ -356,21 +354,21 @@ function _page($$payload, $$props) {
       $$payload2.out += `<!--]--> `;
       if (instructions) {
         $$payload2.out += "<!--[-->";
-        $$payload2.out += `<div class="mb-8"><h2 class="border-border mb-4 border-b pb-2 text-xl font-semibold">Instructions</h2> ${html(instructions)}</div>`;
+        $$payload2.out += `<div class="mb-12"><h2 class="mb-6 font-serif text-2xl tracking-wide">Instructions</h2> <div class="prose prose-amber prose-ol:pl-4 prose-li:pl-2 prose-li:mb-6 max-w-none">${html(instructions)}</div></div>`;
       } else {
         $$payload2.out += "<!--[!-->";
       }
       $$payload2.out += `<!--]--> `;
       if (tips) {
         $$payload2.out += "<!--[-->";
-        $$payload2.out += `<div class="mb-8"><h2 id="tips" class="border-border mb-4 border-b pb-2 text-xl font-semibold">Tips</h2> ${html(tips)}</div>`;
+        $$payload2.out += `<div class="mb-12"><h2 id="tips" class="mb-6 font-serif text-2xl tracking-wide">Tips</h2> <div class="prose prose-amber max-w-none">${html(tips)}</div></div>`;
       } else {
         $$payload2.out += "<!--[!-->";
       }
       $$payload2.out += `<!--]--> `;
       if (goesGreatWith) {
         $$payload2.out += "<!--[-->";
-        $$payload2.out += `<div class="mb-8"><h2 id="goes-great-with" class="border-border mb-4 border-b pb-2 text-xl font-semibold">Goes Great With</h2> ${html(goesGreatWith)}</div>`;
+        $$payload2.out += `<div class="mb-12"><h2 id="goes-great-with" class="mb-6 font-serif text-2xl tracking-wide">Goes Great With</h2> <div class="prose prose-amber max-w-none">${html(goesGreatWith)}</div></div>`;
       } else {
         $$payload2.out += "<!--[!-->";
       }

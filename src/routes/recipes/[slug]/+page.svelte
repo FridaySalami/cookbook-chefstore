@@ -239,9 +239,9 @@
 	{/if}
 </svelte:head>
 
-<div class="container mx-auto px-4 py-6">
+<div class="container mx-auto px-4 py-6 sm:px-0 md:px-4">
 	<!-- Breadcrumb navigation -->
-	<Breadcrumb class="mb-6">
+	<Breadcrumb class="mb-6 px-4 sm:px-0">
 		<BreadcrumbList>
 			<BreadcrumbItem>
 				<BreadcrumbLink href="/">Home</BreadcrumbLink>
@@ -274,18 +274,20 @@
 		{#snippet content()}
 			<!-- Render the parsed markdown content by section -->
 			{#if whyYouLlLoveThis}
-				<div class="mb-8">
-					<h2 class="border-border mb-4 border-b pb-2 text-xl font-semibold">
-						Why You'll Love This
-					</h2>
-					{@html whyYouLlLoveThis}
+				<div class="mb-12">
+					<h2 class="mb-6 font-serif text-2xl tracking-wide">Why You'll Love This</h2>
+					<div class="prose prose-amber max-w-none">
+						{@html whyYouLlLoveThis}
+					</div>
 				</div>
 			{/if}
 
 			{#if ingredients}
-				<div class="mb-8">
-					<h2 class="border-border mb-4 border-b pb-2 text-xl font-semibold">Ingredients</h2>
-					{@html ingredients}
+				<div class="mb-12">
+					<h2 class="mb-6 font-serif text-2xl tracking-wide">Ingredients</h2>
+					<div class="prose prose-amber max-w-none">
+						{@html ingredients}
+					</div>
 				</div>
 			{/if}
 
@@ -297,25 +299,31 @@
 			{/if}
 
 			{#if instructions}
-				<div class="mb-8">
-					<h2 class="border-border mb-4 border-b pb-2 text-xl font-semibold">Instructions</h2>
-					{@html instructions}
+				<div class="mb-12">
+					<h2 class="mb-6 font-serif text-2xl tracking-wide">Instructions</h2>
+					<div class="prose prose-amber prose-ol:pl-4 prose-li:pl-2 prose-li:mb-6 max-w-none">
+						{@html instructions}
+					</div>
 				</div>
 			{/if}
 
 			{#if tips}
-				<div class="mb-8">
-					<h2 id="tips" class="border-border mb-4 border-b pb-2 text-xl font-semibold">Tips</h2>
-					{@html tips}
+				<div class="mb-12">
+					<h2 id="tips" class="mb-6 font-serif text-2xl tracking-wide">Tips</h2>
+					<div class="prose prose-amber max-w-none">
+						{@html tips}
+					</div>
 				</div>
 			{/if}
 
 			{#if goesGreatWith}
-				<div class="mb-8">
-					<h2 id="goes-great-with" class="border-border mb-4 border-b pb-2 text-xl font-semibold">
+				<div class="mb-12">
+					<h2 id="goes-great-with" class="mb-6 font-serif text-2xl tracking-wide">
 						Goes Great With
 					</h2>
-					{@html goesGreatWith}
+					<div class="prose prose-amber max-w-none">
+						{@html goesGreatWith}
+					</div>
 				</div>
 			{/if}
 		{/snippet}

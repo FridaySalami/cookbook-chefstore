@@ -1,44 +1,4 @@
-import { clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-import { D as sanitize_props, P as rest_props, K as fallback, U as ensure_array_like, Q as spread_attributes, R as clsx$1, _ as element, F as slot, O as bind_props, C as pop, A as push } from "./index2.js";
-function cubicOut(t) {
-  const f = t - 1;
-  return f * f * f + 1;
-}
-function cn(...inputs) {
-  return twMerge(clsx(inputs));
-}
-const flyAndScale = (node, params = { y: -8, x: 0, start: 0.95, duration: 150 }) => {
-  const style = getComputedStyle(node);
-  const transform = style.transform === "none" ? "" : style.transform;
-  const scaleConversion = (valueA, scaleA, scaleB) => {
-    const [minA, maxA] = scaleA;
-    const [minB, maxB] = scaleB;
-    const percentage = (valueA - minA) / (maxA - minA);
-    const valueB = percentage * (maxB - minB) + minB;
-    return valueB;
-  };
-  const styleToString = (style2) => {
-    return Object.keys(style2).reduce((str, key) => {
-      if (style2[key] === void 0) return str;
-      return str + `${key}:${style2[key]};`;
-    }, "");
-  };
-  return {
-    duration: params.duration ?? 200,
-    delay: 0,
-    css: (t) => {
-      const y = scaleConversion(t, [0, 1], [params.y ?? 5, 0]);
-      const x = scaleConversion(t, [0, 1], [params.x ?? 0, 0]);
-      const scale = scaleConversion(t, [0, 1], [params.start ?? 0.95, 1]);
-      return styleToString({
-        transform: `${transform} translate3d(${x}px, ${y}px, 0) scale(${scale})`,
-        opacity: t
-      });
-    },
-    easing: cubicOut
-  };
-};
+import { D as sanitize_props, P as rest_props, K as fallback, U as ensure_array_like, Q as spread_attributes, R as clsx, _ as element, F as slot, O as bind_props, C as pop, A as push } from "./index2.js";
 /**
  * @license lucide-svelte v0.503.0 - ISC
  *
@@ -99,7 +59,7 @@ function Icon($$payload, $$props) {
       height: size,
       stroke: color,
       "stroke-width": absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth,
-      class: clsx$1(mergeClasses("lucide-icon", "lucide", name ? `lucide-${name}` : "", $$sanitized_props.class))
+      class: clsx(mergeClasses("lucide-icon", "lucide", name ? `lucide-${name}` : "", $$sanitized_props.class))
     },
     null,
     void 0,
@@ -126,7 +86,5 @@ function Icon($$payload, $$props) {
   pop();
 }
 export {
-  Icon as I,
-  cn as c,
-  flyAndScale as f
+  Icon as I
 };

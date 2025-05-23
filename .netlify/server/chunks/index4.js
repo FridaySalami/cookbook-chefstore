@@ -1,7 +1,7 @@
 import { Y as current_component, Z as noop$1, D as sanitize_props, P as rest_props, K as fallback, _ as element, O as bind_props, C as pop, A as push, F as slot, Q as spread_attributes, E as spread_props } from "./index2.js";
 import "dequal";
 import "clsx";
-import { c as cn } from "./Icon.js";
+import { c as cn } from "./utils.js";
 import { tv } from "tailwind-variants";
 import { i as derived, k as get, w as writable, r as readable } from "./exports.js";
 function onDestroy(fn) {

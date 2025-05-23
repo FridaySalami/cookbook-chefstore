@@ -477,11 +477,11 @@ const options = {
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Georgia&family=Mulish:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap"
 		rel="stylesheet" media="print" onload="this.media='all'" />
 	<noscript>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Georgia&family=Mulish:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap"
 			rel="stylesheet" />
 	</noscript>
 	` + head + '\n</head>\n\n<body data-sveltekit-preload-data="hover" class="antialiased"> <!-- Add antialiased for smoother fonts -->\n	<div style="display: contents">' + body + "</div>\n</body>\n\n</html>",
@@ -556,7 +556,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "8a3v6g"
+  version_hash: "il85g8"
 };
 async function get_hooks() {
   let handle;

@@ -149,13 +149,12 @@
 	{/if}
 </svelte:head>
 
-<section class="bg-background text-foreground px-6 pt-10 pb-20 sm:px-10 md:px-16 lg:px-20">
+<section class="bg-background text-foreground px-6 pt-4 pb-20 sm:px-10 md:px-16 lg:px-20">
 	<div class="container mx-auto max-w-7xl">
 		<header class="mb-16 text-center">
-			<h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">All Recipes</h1>
-			<p class="mx-auto mt-4 max-w-2xl pb-6 text-xl text-[hsl(var(--muted-foreground))]">
-				Browse our collection of chef-tested recipes for every meal and occasion.
-			</p>
+			<h1 class="mb-8 scroll-m-20 font-serif text-4xl font-extrabold tracking-widest lg:text-5xl">
+				All Recipes
+			</h1>
 
 			<!-- Recipe Search Bar -->
 			<RecipeSearch
@@ -186,7 +185,7 @@
 							href={getTagUrl(null)}
 							variant={selectedTag === null ? 'default' : 'outline'}
 							size="sm"
-							class={`hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === null ? ' selected' : ''}`}
+							class={`min-h-[44px] cursor-pointer rounded-full border-2 px-6 transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === null ? 'border-amber-900/40 bg-amber-900 text-white' : 'border-amber-900/40'}`}
 							aria-current={selectedTag === null ? 'page' : undefined}
 						>
 							All Recipes
@@ -203,7 +202,7 @@
 									href={getTagUrl(tag)}
 									variant={selectedTag === tag ? 'default' : 'outline'}
 									size="sm"
-									class={`capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? ' selected' : ''}`}
+									class={`min-h-[44px] cursor-pointer rounded-full border-2 px-4 capitalize transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === tag ? 'border-amber-900/40 bg-amber-900 text-white' : 'border-amber-900/40'}`}
 									aria-current={selectedTag === tag ? 'page' : undefined}
 								>
 									{formatTag(tag)}
@@ -222,7 +221,7 @@
 									href={getTagUrl(tag)}
 									variant={selectedTag === tag ? 'default' : 'outline'}
 									size="sm"
-									class={`capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? ' selected' : ''}`}
+									class={`min-h-[44px] cursor-pointer rounded-full border-2 px-4 capitalize transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === tag ? 'border-amber-900/40 bg-amber-900 text-white' : 'border-amber-900/40'}`}
 									aria-current={selectedTag === tag ? 'page' : undefined}
 								>
 									{formatTag(tag)}
@@ -241,7 +240,7 @@
 									href={getTagUrl(tag)}
 									variant={selectedTag === tag ? 'default' : 'outline'}
 									size="sm"
-									class={`capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? ' selected' : ''}`}
+									class={`min-h-[44px] cursor-pointer rounded-full border-2 px-4 capitalize transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === tag ? 'border-amber-900/40 bg-amber-900 text-white' : 'border-amber-900/40'}`}
 									aria-current={selectedTag === tag ? 'page' : undefined}
 								>
 									{formatTag(tag)}
@@ -253,87 +252,92 @@
 			</details>
 
 			<!-- Desktop tag filters -->
-			<nav aria-label="Recipe tags" class="mt-8 hidden flex-col items-center gap-4 sm:flex">
-				<div class="mb-2">
-					<Button.Root
-						on:click={(e) => {
-							e.preventDefault();
-							goto(getTagUrl(null), { keepFocus: true, noScroll: true });
-						}}
-						href={getTagUrl(null)}
-						variant={selectedTag === null ? 'default' : 'outline'}
-						size="sm"
-						class={`hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === null ? ' selected' : ''}`}
-						aria-current={selectedTag === null ? 'page' : undefined}
-					>
-						All Recipes
-					</Button.Root>
-				</div>
-				{#if difficultyTags.length > 0}
-					<div class="flex flex-wrap justify-center gap-2 sm:gap-3">
-						{#each difficultyTags as tag}
-							<Button.Root
-								on:click={(e) => {
-									e.preventDefault();
-									goto(getTagUrl(tag), { keepFocus: true, noScroll: true });
-								}}
-								href={getTagUrl(tag)}
-								variant={selectedTag === tag ? 'default' : 'outline'}
-								size="sm"
-								class={`capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? ' selected' : ''}`}
-								aria-current={selectedTag === tag ? 'page' : undefined}
-							>
-								{formatTag(tag)}
-							</Button.Root>
-						{/each}
+			<details class="mt-8 hidden w-full text-center sm:block">
+				<summary class="cursor-pointer py-2 font-medium transition-colors hover:text-amber-900"
+					>Filter By Category</summary
+				>
+				<nav aria-label="Recipe tags" class="mt-4 flex flex-col items-center gap-4">
+					<div class="mb-2">
+						<Button.Root
+							on:click={(e) => {
+								e.preventDefault();
+								goto(getTagUrl(null), { keepFocus: true, noScroll: true });
+							}}
+							href={getTagUrl(null)}
+							variant={selectedTag === null ? 'default' : 'outline'}
+							size="sm"
+							class={`min-h-[44px] cursor-pointer rounded-full border-2 px-6 transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === null ? 'border-amber-900/40 bg-amber-900 text-white' : 'border-amber-900/40'}`}
+							aria-current={selectedTag === null ? 'page' : undefined}
+						>
+							All Recipes
+						</Button.Root>
 					</div>
-				{/if}
-				{#if dietaryTags.length > 0}
-					<div class="flex flex-wrap justify-center gap-2 sm:gap-3">
-						{#each dietaryTags as tag}
-							<Button.Root
-								on:click={(e) => {
-									e.preventDefault();
-									goto(getTagUrl(tag), { keepFocus: true, noScroll: true });
-								}}
-								href={getTagUrl(tag)}
-								variant={selectedTag === tag ? 'default' : 'outline'}
-								size="sm"
-								class={`capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? ' selected' : ''}`}
-								aria-current={selectedTag === tag ? 'page' : undefined}
-							>
-								{formatTag(tag)}
-							</Button.Root>
-						{/each}
-					</div>
-				{/if}
-				{#if otherTags.length > 0}
-					<div class="flex flex-wrap justify-center gap-2 sm:gap-3">
-						{#each otherTags as tag}
-							<Button.Root
-								on:click={(e) => {
-									e.preventDefault();
-									goto(getTagUrl(tag), { keepFocus: true, noScroll: true });
-								}}
-								href={getTagUrl(tag)}
-								variant={selectedTag === tag ? 'default' : 'outline'}
-								size="sm"
-								class={`capitalize hover:bg-blue-100 hover:text-blue-800 focus-visible:ring-blue-300 cursor-pointer transition-all duration-200${selectedTag === tag ? ' selected' : ''}`}
-								aria-current={selectedTag === tag ? 'page' : undefined}
-							>
-								{formatTag(tag)}
-							</Button.Root>
-						{/each}
-					</div>
-				{/if}
-			</nav>
+					{#if difficultyTags.length > 0}
+						<div class="flex flex-wrap justify-center gap-2 sm:gap-3">
+							{#each difficultyTags as tag}
+								<Button.Root
+									on:click={(e) => {
+										e.preventDefault();
+										goto(getTagUrl(tag), { keepFocus: true, noScroll: true });
+									}}
+									href={getTagUrl(tag)}
+									variant={selectedTag === tag ? 'default' : 'outline'}
+									size="sm"
+									class={`min-h-[44px] cursor-pointer rounded-full border-2 px-4 capitalize transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === tag ? 'border-amber-900/40 bg-amber-900 text-white' : 'border-amber-900/40'}`}
+									aria-current={selectedTag === tag ? 'page' : undefined}
+								>
+									{formatTag(tag)}
+								</Button.Root>
+							{/each}
+						</div>
+					{/if}
+					{#if dietaryTags.length > 0}
+						<div class="flex flex-wrap justify-center gap-2 sm:gap-3">
+							{#each dietaryTags as tag}
+								<Button.Root
+									on:click={(e) => {
+										e.preventDefault();
+										goto(getTagUrl(tag), { keepFocus: true, noScroll: true });
+									}}
+									href={getTagUrl(tag)}
+									variant={selectedTag === tag ? 'default' : 'outline'}
+									size="sm"
+									class={`min-h-[44px] cursor-pointer rounded-full border-2 px-4 capitalize transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === tag ? 'border-amber-900/40 bg-amber-900 text-white' : 'border-amber-900/40'}`}
+									aria-current={selectedTag === tag ? 'page' : undefined}
+								>
+									{formatTag(tag)}
+								</Button.Root>
+							{/each}
+						</div>
+					{/if}
+					{#if otherTags.length > 0}
+						<div class="flex flex-wrap justify-center gap-2 sm:gap-3">
+							{#each otherTags as tag}
+								<Button.Root
+									on:click={(e) => {
+										e.preventDefault();
+										goto(getTagUrl(tag), { keepFocus: true, noScroll: true });
+									}}
+									href={getTagUrl(tag)}
+									variant={selectedTag === tag ? 'default' : 'outline'}
+									size="sm"
+									class={`min-h-[44px] cursor-pointer rounded-full border-2 px-4 capitalize transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === tag ? 'border-amber-900/40 bg-amber-900 text-white' : 'border-amber-900/40'}`}
+									aria-current={selectedTag === tag ? 'page' : undefined}
+								>
+									{formatTag(tag)}
+								</Button.Root>
+							{/each}
+						</div>
+					{/if}
+				</nav>
+			</details>
 		</header>
 
 		<!-- Add container for filter heading and count -->
 		<div class="mb-6 text-center">
 			<!-- Conditionally render the selected tag heading -->
 			{#if selectedTag}
-				<h2 class="mb-1 text-2xl font-semibold tracking-tight">
+				<h2 class="mb-1 font-serif text-2xl font-semibold tracking-wider">
 					Filtered by: <span class="capitalize">{formatTag(selectedTag)}</span>
 				</h2>
 			{/if}
@@ -389,17 +393,18 @@
 							img.src = getResizedImagePath(recipe.slug, 800);
 						}}
 					>
-						<article>
-							<Card.Root
-								class="flex h-full flex-col overflow-hidden transition-all group-hover:-translate-y-1 group-hover:shadow-lg"
-							>
-								<Card.Header class="relative p-0">
+						<article class="overflow-hidden rounded-lg">
+							<Card.Root class="flex h-full flex-col overflow-hidden rounded-lg">
+								<Card.Header class="relative overflow-hidden p-0">
 									{#if recipe.slug}
 										<div
 											class="bg-muted relative aspect-video w-full animate-pulse"
 											style="z-index:1; position:absolute;"
 										></div>
-										<picture style="position:relative; z-index:2;">
+										<picture
+											class="block overflow-hidden transition-transform duration-300 ease-out group-hover:scale-105"
+											style="position:relative; z-index:2;"
+										>
 											<source
 												srcset={`
 													${getResizedImagePath(recipe.slug, 400)} 400w,
@@ -447,7 +452,7 @@
 									{/if}
 								</Card.Header>
 								<Card.Content class="flex-grow p-4">
-									<Card.Title class="mb-1 text-lg leading-tight font-semibold tracking-tight">
+									<Card.Title class="mb-1 font-serif text-lg leading-tight tracking-wide">
 										{recipe.title}
 									</Card.Title>
 									{#if recipe.description}
@@ -459,7 +464,11 @@
 									{#if recipe.tags && recipe.tags.length > 0}
 										<div class="mt-2 flex flex-wrap gap-1">
 											{#each recipe.tags.slice(0, 3) as tag}
-												<Badge variant="secondary" class="hover:bg-blue-100 hover:text-blue-800 cursor-pointer transition-all duration-200">{formatTag(tag)}</Badge>
+												<Badge
+													variant="secondary"
+													class="cursor-pointer transition-all duration-200 hover:bg-blue-100 hover:text-blue-800"
+													>{formatTag(tag)}</Badge
+												>
 											{/each}
 										</div>
 									{/if}

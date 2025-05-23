@@ -326,8 +326,19 @@
 		max-width: 48rem;
 		margin-left: auto;
 		margin-right: auto;
-		padding: 1rem;
-		background: #fffdf8;
+		padding: 2rem;
+		background-color: white;
+		border-radius: 1rem;
+	}
+
+	@media (max-width: 640px) {
+		.recipe-article {
+			max-width: none;
+			margin-left: -1.5rem;
+			margin-right: -1.5rem;
+			padding: 2rem 1.5rem;
+			border-radius: 1rem;
+		}
 	}
 
 	.mb-6 {
