@@ -66,34 +66,34 @@ function RecipeLayout($$payload, $$props) {
     }
     $$payload2.out += `<!--]-->`;
   });
-  $$payload.out += `<article class="recipe-article mx-auto max-w-3xl svelte-djohy8">`;
+  $$payload.out += `<article class="recipe-article mx-auto max-w-3xl svelte-19oq7iy">`;
   if (image) {
     $$payload.out += "<!--[-->";
-    $$payload.out += `<div class="mb-6 overflow-hidden rounded-lg svelte-djohy8">`;
+    $$payload.out += `<div class="mb-6 overflow-hidden rounded-lg svelte-19oq7iy" style="aspect-ratio: 16/9;"><div class="relative h-full w-full bg-gray-100 svelte-19oq7iy">`;
     if (responsiveImage) {
       $$payload.out += "<!--[-->";
-      $$payload.out += `<picture><source${attr("srcset", responsiveImage.srcset)}${attr("sizes", responsiveImage.sizes)} type="image/webp"> <img${attr("src", responsiveImage.fallback)}${attr("alt", title)} class="aspect-video w-full object-cover svelte-djohy8" width="800" height="450" fetchpriority="high" onload="this.__e=event" onerror="this.__e=event"></picture>`;
+      $$payload.out += `<picture><source${attr("srcset", responsiveImage.srcset)}${attr("sizes", responsiveImage.sizes)} type="image/webp"> <img${attr("src", responsiveImage.fallback)}${attr("alt", title)} class="absolute inset-0 h-full w-full object-cover svelte-19oq7iy" width="800" height="450" fetchpriority="high" decoding="async" loading="eager" onload="this.__e=event" onerror="this.__e=event"></picture>`;
     } else {
       $$payload.out += "<!--[!-->";
-      $$payload.out += `<img${attr("src", image || "/placeholder.png")}${attr("srcset", image && image.startsWith("/images/recipes/") ? `/images/recipes/${slug}/resized/${slug}-400w.webp 400w, /images/recipes/${slug}/resized/${slug}-800w.webp 800w, /images/recipes/${slug}/resized/${slug}-1200w.webp 1200w` : void 0)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"${attr("alt", title)} class="aspect-video w-full object-cover svelte-djohy8" width="800" height="450" fetchpriority="high" onload="this.__e=event" onerror="this.__e=event">`;
+      $$payload.out += `<img${attr("src", image || "/placeholder.png")}${attr("srcset", image && image.startsWith("/images/recipes/") ? `/images/recipes/${slug}/resized/${slug}-400w.webp 400w, /images/recipes/${slug}/resized/${slug}-800w.webp 800w, /images/recipes/${slug}/resized/${slug}-1200w.webp 1200w` : void 0)} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"${attr("alt", title)} class="absolute inset-0 h-full w-full object-cover svelte-19oq7iy" width="800" height="450" fetchpriority="high" decoding="async" loading="eager" onload="this.__e=event" onerror="this.__e=event">`;
     }
-    $$payload.out += `<!--]--></div>`;
+    $$payload.out += `<!--]--></div></div>`;
   } else {
     $$payload.out += "<!--[!-->";
   }
-  $$payload.out += `<!--]--> <header class="mb-8 svelte-djohy8"><h1 class="mb-4 text-3xl leading-tight font-bold lg:text-4xl svelte-djohy8">${escape_html(title)}</h1> `;
+  $$payload.out += `<!--]--> <header class="mb-8 svelte-19oq7iy"><h1 class="mb-4 text-3xl leading-tight font-bold lg:text-4xl svelte-19oq7iy">${escape_html(title)}</h1> `;
   if (description) {
     $$payload.out += "<!--[-->";
-    $$payload.out += `<p class="text-muted-foreground mb-6 text-lg svelte-djohy8">${escape_html(description)}</p>`;
+    $$payload.out += `<p class="text-muted-foreground mb-6 text-lg svelte-19oq7iy">${escape_html(description)}</p>`;
   } else {
     $$payload.out += "<!--[!-->";
   }
-  $$payload.out += `<!--]--> <div class="flex flex-wrap items-center gap-x-6 gap-y-2 svelte-djohy8">`;
+  $$payload.out += `<!--]--> <div class="flex flex-wrap items-center gap-x-6 gap-y-2 svelte-19oq7iy">`;
   if (prepTime !== null || cookTime !== null || totalTime !== null) {
     $$payload.out += "<!--[-->";
-    $$payload.out += `<div class="flex items-center gap-2 svelte-djohy8">`;
+    $$payload.out += `<div class="flex items-center gap-2 svelte-19oq7iy">`;
     Clock($$payload, { class: "h-5 w-5 text-amber-600" });
-    $$payload.out += `<!----> <div class="text-sm svelte-djohy8">`;
+    $$payload.out += `<!----> <div class="text-sm svelte-19oq7iy">`;
     if (totalTime !== null) {
       $$payload.out += "<!--[-->";
       $$payload.out += `<strong>Total:</strong> ${escape_html(formatTime(totalTime))}`;
@@ -128,9 +128,9 @@ function RecipeLayout($$payload, $$props) {
   $$payload.out += `<!--]--> `;
   if (servings !== null) {
     $$payload.out += "<!--[-->";
-    $$payload.out += `<div class="flex items-center gap-2 svelte-djohy8">`;
+    $$payload.out += `<div class="flex items-center gap-2 svelte-19oq7iy">`;
     Users($$payload, { class: "h-5 w-5 text-amber-600" });
-    $$payload.out += `<!----> <div class="text-sm svelte-djohy8"><strong>Serves:</strong> ${escape_html(servings)}</div></div>`;
+    $$payload.out += `<!----> <div class="text-sm svelte-19oq7iy"><strong>Serves:</strong> ${escape_html(servings)}</div></div>`;
   } else {
     $$payload.out += "<!--[!-->";
   }
@@ -160,7 +160,7 @@ function RecipeLayout($$payload, $$props) {
   if (tags && tags.length > 0) {
     $$payload.out += "<!--[-->";
     const each_array = ensure_array_like(tags.filter((tag) => !tag.startsWith("difficulty-")));
-    $$payload.out += `<div class="mt-8 flex flex-wrap gap-2 border-t pt-6 svelte-djohy8"><!--[-->`;
+    $$payload.out += `<div class="mt-8 flex flex-wrap gap-2 border-t pt-6 svelte-19oq7iy"><!--[-->`;
     for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
       let tag = each_array[$$index];
       Badge($$payload, {

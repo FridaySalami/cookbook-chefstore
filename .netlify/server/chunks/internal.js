@@ -471,7 +471,37 @@ const options = {
   root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '<!doctype html>\n<html lang="en-GB">\n\n<head>\n	<meta charset="utf-8" />\n	<link rel="icon" href="' + assets2 + '/favicon.png" />\n	<meta name="viewport" content="width=device-width, initial-scale=1" />\n	<!-- Google Fonts -->\n	<link rel="preconnect" href="https://fonts.googleapis.com" />\n	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\n	<link\n		href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Mulish:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap"\n		rel="stylesheet" />\n	' + head + '\n</head>\n\n<body data-sveltekit-preload-data="hover" class="antialiased"> <!-- Add antialiased for smoother fonts -->\n	<div style="display: contents">' + body + "</div>\n</body>\n\n</html>",
+    app: ({ head, body, assets: assets2, nonce, env }) => '<!doctype html>\n<html lang="en-GB">\n\n<head>\n	<meta charset="utf-8" />\n	<link rel="icon" href="' + assets2 + `/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- Google Fonts with performance optimizations -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Mulish:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet" media="print" onload="this.media='all'" />
+	<noscript>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Mulish:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet" />
+	</noscript>
+	<!-- Font loading optimization -->
+	<style>
+		/* Fallback font metrics matching Poppins */
+		@font-face {
+			font-family: 'Poppins Fallback';
+			src: local(Arial);
+			ascent-override: 95%;
+			descent-override: 25%;
+			line-gap-override: 0%;
+			size-adjust: 107%;
+		}
+
+		/* Temporary fallback to prevent layout shift */
+		body {
+			font-family: 'Poppins Fallback', sans-serif;
+		}
+	</style>
+	` + head + '\n</head>\n\n<body data-sveltekit-preload-data="hover" class="antialiased"> <!-- Add antialiased for smoother fonts -->\n	<div style="display: contents">' + body + "</div>\n</body>\n\n</html>",
     error: ({ status, message }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -543,7 +573,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "k69o2k"
+  version_hash: "gnzird"
 };
 async function get_hooks() {
   let handle;

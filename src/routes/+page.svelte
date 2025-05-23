@@ -50,8 +50,8 @@
 								alt={recipe.title}
 								class="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-105"
 								use:fallbackImage
-								loading="eager"
-								fetchpriority="high"
+								loading={index < 3 ? 'eager' : 'lazy'}
+								fetchpriority={index < 3 ? 'high' : 'auto'}
 							/>
 							<div
 								class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/80 to-transparent"

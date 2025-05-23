@@ -160,35 +160,45 @@
 
 <article class="recipe-article mx-auto max-w-3xl">
 	{#if image}
-		<div class="mb-6 overflow-hidden rounded-lg">
-			{#if responsiveImage}
-				<picture>
-					<source srcset={responsiveImage.srcset} sizes={responsiveImage.sizes} type="image/webp" />
+		<div class="mb-6 overflow-hidden rounded-lg" style="aspect-ratio: 16/9;">
+			<div class="relative h-full w-full bg-gray-100">
+				{#if responsiveImage}
+					<picture>
+						<source
+							srcset={responsiveImage.srcset}
+							sizes={responsiveImage.sizes}
+							type="image/webp"
+						/>
+						<img
+							src={responsiveImage.fallback}
+							alt={title}
+							class="absolute inset-0 h-full w-full object-cover"
+							use:fallbackImage
+							width="800"
+							height="450"
+							fetchpriority="high"
+							decoding="async"
+							loading="eager"
+						/>
+					</picture>
+				{:else}
 					<img
-						src={responsiveImage.fallback}
+						src={image || '/placeholder.png'}
+						srcset={image && image.startsWith('/images/recipes/')
+							? `/images/recipes/${slug}/resized/${slug}-400w.webp 400w, /images/recipes/${slug}/resized/${slug}-800w.webp 800w, /images/recipes/${slug}/resized/${slug}-1200w.webp 1200w`
+							: undefined}
+						sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
 						alt={title}
-						class="aspect-video w-full object-cover"
+						class="absolute inset-0 h-full w-full object-cover"
 						use:fallbackImage
 						width="800"
 						height="450"
 						fetchpriority="high"
+						decoding="async"
+						loading="eager"
 					/>
-				</picture>
-			{:else}
-				<img
-					src={image || '/placeholder.png'}
-					srcset={image && image.startsWith('/images/recipes/')
-						? `/images/recipes/${slug}/resized/${slug}-400w.webp 400w, /images/recipes/${slug}/resized/${slug}-800w.webp 800w, /images/recipes/${slug}/resized/${slug}-1200w.webp 1200w`
-						: undefined}
-					sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
-					alt={title}
-					class="aspect-video w-full object-cover"
-					use:fallbackImage
-					width="800"
-					height="450"
-					fetchpriority="high"
-				/>
-			{/if}
+				{/if}
+			</div>
 		</div>
 	{/if}
 
@@ -351,10 +361,6 @@
 
 	.rounded-lg {
 		border-radius: 0.75rem;
-	}
-
-	.aspect-video {
-		aspect-ratio: 16 / 9;
 	}
 
 	.w-full {
