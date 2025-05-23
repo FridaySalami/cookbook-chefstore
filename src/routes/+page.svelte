@@ -105,5 +105,136 @@
 		</p>
 	</section>
 
+	<!-- Tag Categories Section -->
+	<section class="relative right-[50%] left-[50%] mr-[-50vw] ml-[-50vw] w-screen bg-white">
+		<div class="mx-auto max-w-7xl px-4 py-12">
+			<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+				<!-- Recipes Column -->
+				<div>
+					<h2 class="mb-6 font-serif text-2xl font-semibold text-gray-800">Recipes</h2>
+					<ul class="space-y-3">
+						<li>
+							<a
+								href="/recipes?tag=chicken&page=1"
+								class="text-gray-600 transition-colors hover:text-amber-600">Chicken</a
+							>
+						</li>
+						<li>
+							<a
+								href="/recipes?tag=beef&page=1"
+								class="text-gray-600 transition-colors hover:text-amber-600">Beef</a
+							>
+						</li>
+						<li>
+							<a
+								href="/recipes?tag=pork&page=1"
+								class="text-gray-600 transition-colors hover:text-amber-600">Pork</a
+							>
+						</li>
+						<li>
+							<a
+								href="/recipes?tag=pasta&page=1"
+								class="text-gray-600 transition-colors hover:text-amber-600">Pasta</a
+							>
+						</li>
+						<li>
+							<a
+								href="/recipes?tag=snack&page=1"
+								class="text-gray-600 transition-colors hover:text-amber-600">Snacks</a
+							>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Cooking Method Column -->
+				<div>
+					<h2 class="mb-6 font-serif text-2xl font-semibold text-gray-800">Cooking Method</h2>
+					<ul class="space-y-3">
+						<li>
+							<a
+								href="/recipes?tag=slow-cooked&page=1"
+								class="text-gray-600 transition-colors hover:text-amber-600">Slow Cooked</a
+							>
+						</li>
+						<li>
+							<a
+								href="/recipes?tag=baked&page=1"
+								class="text-gray-600 transition-colors hover:text-amber-600">Baked</a
+							>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Cuisine Column -->
+				<div>
+					<h2 class="mb-6 font-serif text-2xl font-semibold text-gray-800">Cuisine</h2>
+					<ul class="space-y-3">
+						<li>
+							<a
+								href="/recipes?tag=italian&page=1"
+								class="text-gray-600 transition-colors hover:text-amber-600">Italian</a
+							>
+						</li>
+						<li>
+							<a
+								href="/recipes?tag=middle-eastern&page=1"
+								class="text-gray-600 transition-colors hover:text-amber-600">Middle Eastern</a
+							>
+						</li>
+						<li>
+							<a
+								href="/recipes?tag=british-twist&page=1"
+								class="text-gray-600 transition-colors hover:text-amber-600">British Twist</a
+							>
+						</li>
+						<li>
+							<a
+								href="/recipes?tag=asian&page=1"
+								class="text-gray-600 transition-colors hover:text-amber-600">Asian</a
+							>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Recipe Type Column -->
+				<div>
+					<h2 class="mb-6 font-serif text-2xl font-semibold text-gray-800">Recipe Type</h2>
+					<ul class="space-y-3">
+						<li>
+							<a
+								href="/recipes?tag=difficulty-easy&page=1"
+								class="text-gray-600 transition-colors hover:text-amber-600">Easy</a
+							>
+						</li>
+						<li>
+							<a
+								href="/recipes?tag=difficulty-medium&page=1"
+								class="text-gray-600 transition-colors hover:text-amber-600">Medium Dishes</a
+							>
+						</li>
+						<li>
+							<a
+								href="/recipes?tag=difficulty-hard&page=1"
+								class="text-gray-600 transition-colors hover:text-amber-600">Harder Dishes</a
+							>
+						</li>
+						<li>
+							<a
+								href="/recipes?tag=vegetarian&page=1"
+								class="text-gray-600 transition-colors hover:text-amber-600">Vegetarian</a
+							>
+						</li>
+						<li>
+							<a
+								href="/recipes?tag=vegetarian-option&page=1"
+								class="text-gray-600 transition-colors hover:text-amber-600">Vegetarian Option</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- You can add more sections here, like categories, latest recipes, etc. -->
 </main>

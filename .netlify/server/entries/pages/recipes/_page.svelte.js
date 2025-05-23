@@ -139,12 +139,12 @@ function _page($$payload, $$props) {
     }
     $$payload2.out += `<!--]-->`;
   });
-  $$payload.out += `<section class="bg-background text-foreground px-6 pt-4 pb-20 sm:px-10 md:px-16 lg:px-20"><div class="container mx-auto max-w-7xl"><header class="mb-16 text-center"><h1 class="mb-8 scroll-m-20 font-serif text-4xl font-extrabold tracking-widest lg:text-5xl">All Recipes</h1> `;
+  $$payload.out += `<section class="relative right-[50%] left-[50%] mr-[-50vw] ml-[-50vw] w-screen bg-white"><div class="mx-auto max-w-7xl px-6 pt-4 pb-4 sm:px-10 md:px-16 lg:px-20"><header class="mb-8 text-center"><h1 class="mb-8 scroll-m-20 font-serif text-4xl font-extrabold tracking-widest lg:text-5xl">All Recipes</h1> `;
   RecipeSearch($$payload, {
-    recipes: data.recipes ? data.recipes.map((r) => ({ title: r.title, slug: r.slug })) : [],
+    recipes: data?.recipes?.map((r) => ({ title: r.title || "", slug: r.slug || "" })) || [],
     placeholder: "Search recipes..."
   });
-  $$payload.out += `<!----> <details class="mb-6 w-full text-center sm:hidden"><summary class="cursor-pointer py-2 font-medium">Filter Tags</summary> <nav aria-label="Recipe tags" class="mt-4 flex flex-col items-center gap-4"><div class="mb-2">`;
+  $$payload.out += `<!----></header> <div class="mx-auto max-w-7xl px-4 py-8"><div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"><div><h2 class="mb-6 font-serif text-2xl font-semibold text-gray-800">Recipes</h2> <ul class="space-y-3"><li><button type="button" role="link" tabindex="0" class="text-gray-600 transition-colors hover:text-amber-600">Chicken</button></li> <li><button type="button" role="link" tabindex="0" class="text-gray-600 transition-colors hover:text-amber-600">Beef</button></li> <li><button type="button" role="link" tabindex="0" class="text-gray-600 transition-colors hover:text-amber-600">Pork</button></li> <li><button type="button" role="link" tabindex="0" class="text-gray-600 transition-colors hover:text-amber-600">Pasta</button></li> <li><button type="button" role="link" tabindex="0" class="text-gray-600 transition-colors hover:text-amber-600">Snacks</button></li></ul></div> <div><h2 class="mb-6 font-serif text-2xl font-semibold text-gray-800">Cooking Method</h2> <ul class="space-y-3"><li><button type="button" role="link" tabindex="0" class="text-gray-600 transition-colors hover:text-amber-600">Slow Cooked</button></li> <li><button type="button" role="link" tabindex="0" class="text-gray-600 transition-colors hover:text-amber-600">Baked</button></li></ul></div> <div><h2 class="mb-6 font-serif text-2xl font-semibold text-gray-800">Cuisine</h2> <ul class="space-y-3"><li><button type="button" role="link" tabindex="0" class="text-gray-600 transition-colors hover:text-amber-600">Italian</button></li> <li><button type="button" role="link" tabindex="0" class="text-gray-600 transition-colors hover:text-amber-600">Middle Eastern</button></li> <li><button type="button" role="link" tabindex="0" class="text-gray-600 transition-colors hover:text-amber-600">British Twist</button></li> <li><button type="button" role="link" tabindex="0" class="text-gray-600 transition-colors hover:text-amber-600">Asian</button></li></ul></div> <div><h2 class="mb-6 font-serif text-2xl font-semibold text-gray-800">Recipe Type</h2> <ul class="space-y-3"><li><button type="button" role="link" tabindex="0" class="text-gray-600 transition-colors hover:text-amber-600">Easy</button></li> <li><button type="button" role="link" tabindex="0" class="text-gray-600 transition-colors hover:text-amber-600">Medium Dishes</button></li> <li><button type="button" role="link" tabindex="0" class="text-gray-600 transition-colors hover:text-amber-600">Harder Dishes</button></li> <li><button type="button" role="link" tabindex="0" class="text-gray-600 transition-colors hover:text-amber-600">Vegetarian</button></li> <li><button type="button" role="link" tabindex="0" class="text-gray-600 transition-colors hover:text-amber-600">Vegetarian Option</button></li></ul></div></div></div></div></section> <div class="mx-auto max-w-7xl px-6 sm:px-10 md:px-16 lg:px-20"><details class="mb-6 w-full text-center sm:hidden"><summary class="cursor-pointer py-2 font-medium">Filter Tags</summary> <nav aria-label="Recipe tags" class="mt-4 flex flex-col items-center gap-4"><div class="mb-2">`;
   Button($$payload, {
     href: getTagUrl(null),
     variant: selectedTag === null ? "default" : "outline",
@@ -225,7 +225,19 @@ function _page($$payload, $$props) {
   } else {
     $$payload.out += "<!--[!-->";
   }
-  $$payload.out += `<!--]--></nav></details> <details class="mt-8 hidden w-full text-center sm:block"><summary class="cursor-pointer py-2 font-medium transition-colors hover:text-amber-900">Filter By Category</summary> <nav aria-label="Recipe tags" class="mt-4 flex flex-col items-center gap-4"><div class="mb-2">`;
+  $$payload.out += `<!--]--></nav></details> <div class="mt-8 w-full text-center">`;
+  Button($$payload, {
+    href: getTagUrl(null),
+    variant: selectedTag === null ? "default" : "outline",
+    size: "sm",
+    class: `mb-2 min-h-[44px] cursor-pointer rounded-full border-2 px-6 transition-all duration-200 hover:bg-blue-100 hover:text-blue-800 focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:outline-none ${selectedTag === null ? "border-amber-900/40 bg-amber-900 text-white" : "border-amber-900/40"}`,
+    "aria-current": selectedTag === null ? "page" : void 0,
+    children: ($$payload2) => {
+      $$payload2.out += `<!---->All Recipes`;
+    },
+    $$slots: { default: true }
+  });
+  $$payload.out += `<!----></div> <details class="mt-8 hidden w-full text-center sm:block"><summary class="cursor-pointer py-2 font-medium transition-colors hover:text-amber-900">See all categories</summary> <nav aria-label="Recipe tags" class="mt-4 flex flex-col items-center gap-4"><div class="mb-2">`;
   Button($$payload, {
     href: getTagUrl(null),
     variant: selectedTag === null ? "default" : "outline",
@@ -306,7 +318,7 @@ function _page($$payload, $$props) {
   } else {
     $$payload.out += "<!--[!-->";
   }
-  $$payload.out += `<!--]--></nav></details></header> <div class="mb-6 text-center">`;
+  $$payload.out += `<!--]--></nav></details> <div class="mb-6 text-center">`;
   if (selectedTag) {
     $$payload.out += "<!--[-->";
     $$payload.out += `<h2 class="mb-1 font-serif text-2xl font-semibold tracking-wider">Filtered by: <span class="capitalize">${escape_html(formatTag(selectedTag))}</span></h2>`;
@@ -495,7 +507,7 @@ function _page($$payload, $$props) {
   } else {
     $$payload.out += "<!--[!-->";
     $$payload.out += `<p class="text-muted-foreground col-span-full text-center">No recipes found${escape_html(selectedTag ? ` matching the tag "${formatTag(selectedTag)}"` : "")}. Try
-				removing the filter.</p>`;
+			removing the filter.</p>`;
   }
   $$payload.out += `<!--]--> `;
   if (totalPages > 1) {
@@ -558,7 +570,7 @@ function _page($$payload, $$props) {
   } else {
     $$payload.out += "<!--[!-->";
   }
-  $$payload.out += `<!--]--></div></section>`;
+  $$payload.out += `<!--]--></div>`;
   if ($$store_subs) unsubscribe_stores($$store_subs);
   bind_props($$props, { data });
   pop();
