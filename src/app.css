@@ -85,6 +85,12 @@
 }
 
 @layer base {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   html {
     /* Apply base background and text colors to the html element */
     background-color: hsl(var(--background));

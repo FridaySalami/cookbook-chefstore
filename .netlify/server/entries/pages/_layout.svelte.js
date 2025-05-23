@@ -2061,7 +2061,7 @@ function _layout($$payload, $$props) {
     {
       $$payload2.out += "<!--[!-->";
     }
-    $$payload2.out += `<!--]--></header> <main id="main-content" class="container mx-auto mt-16 flex-grow px-4 py-8 md:px-6 lg:py-12">`;
+    $$payload2.out += `<!--]--></header> <main id="main-content" class="mt-16 flex-grow py-8 lg:py-12">`;
     children($$payload2);
     $$payload2.out += `<!----></main> <footer class="bg-muted/50 text-muted-foreground mt-auto border-t py-6 text-center text-sm"><div class="container mx-auto max-w-7xl px-4 md:px-6">© ${escape_html((/* @__PURE__ */ new Date()).getFullYear())} Chefstore Cookbook. All rights reserved.</div></footer></div>`;
   }
