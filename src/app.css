@@ -3,12 +3,14 @@
 
 /* Updated Color Palette based on target image */
 @layer base {
+
   :root,
-  :host {
-    /* Override Tailwind's default font stacks */
+  :host,
+  html[data-theme] {
+    /* Override Tailwind's default font stacks with higher specificity */
     --font-sans: 'Poppins', 'Mulish', 'Rubik', system-ui, -apple-system, sans-serif !important;
     --font-serif: 'Merriweather', 'Georgia', serif !important;
-    
+
     /* Light background for main content */
     --background: 30 6% 96%;
     /* Light Gray-Beige: #f7f6f5 */
