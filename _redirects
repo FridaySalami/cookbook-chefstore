@@ -2,3 +2,4 @@
 # @sveltejs/adapter-netlify will generate the necessary redirects in the build output.
 # If you have custom (non-SvelteKit) redirects, place them in static/_redirects
 /recipes/:slug/  /recipes/:slug  301!
+/*  /index.html  200
